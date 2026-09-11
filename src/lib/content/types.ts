@@ -77,7 +77,12 @@ export interface Product {
   seo: ProductSeo;
 }
 
-export type ProductSort = "price-asc" | "price-desc";
+/**
+ * popularity/newest используют badges (bestseller/new) как единственный
+ * доступный сегодня сигнал — реальных данных о продажах или дате
+ * публикации в домене нет (см. TODO_CLIENT в content/products).
+ */
+export type ProductSort = "popularity" | "price-asc" | "price-desc" | "newest";
 
 export interface ProductFilters {
   category?: ProductCategory;

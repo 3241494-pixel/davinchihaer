@@ -220,6 +220,44 @@ describe("filterProducts", () => {
       "accessory",
     ]);
   });
+
+  it("defaults to popularity sort, keeping original order when nothing is tagged", () => {
+    const api = createContentApi(fakeSource());
+    expect(api.filterProducts().map((p) => p.slug)).toEqual(
+      fixtureProducts.map((p) => p.slug),
+    );
+    expect(api.filterProducts({ sort: "popularity" }).map((p) => p.slug)).toEqual(
+      fixtureProducts.map((p) => p.slug),
+    );
+  });
+
+  it("sorts by popularity, moving bestseller-tagged products first", () => {
+    const tagged = fixtureProducts.map((p) =>
+      p.slug === "imitation-1" ? { ...p, badges: ["bestseller" as const] } : p,
+    );
+    const api = createContentApi(fakeSource(tagged));
+    const result = api.filterProducts({ sort: "popularity" });
+    expect(result.map((p) => p.slug)).toEqual([
+      "imitation-1",
+      "classic-cheap",
+      "classic-expensive",
+      "accessory",
+    ]);
+  });
+
+  it("sorts by newest, moving new-tagged products first", () => {
+    const tagged = fixtureProducts.map((p) =>
+      p.slug === "accessory" ? { ...p, badges: ["new" as const] } : p,
+    );
+    const api = createContentApi(fakeSource(tagged));
+    const result = api.filterProducts({ sort: "newest" });
+    expect(result.map((p) => p.slug)).toEqual([
+      "accessory",
+      "classic-cheap",
+      "classic-expensive",
+      "imitation-1",
+    ]);
+  });
 });
 
 describe("createContentApi lookups", () => {

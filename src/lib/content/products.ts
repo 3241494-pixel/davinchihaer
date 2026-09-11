@@ -1,13 +1,15 @@
 import type { ContentSource } from "./source/content-source";
 import { fileContentSource } from "./source/file-source";
 import { productSchema, hairColorSchema } from "./schemas";
+import { filterProducts as filterProductsPure } from "./filter-logic";
 import type {
   HairColor,
-  PriceRange,
   Product,
   ProductCategory,
   ProductFilters,
 } from "./types";
+
+export { getPriceRange } from "./filter-logic";
 
 export const PRODUCT_CATEGORIES: readonly ProductCategory[] = [
   "tape-classic",
@@ -85,84 +87,7 @@ export function createContentApi(source: ContentSource) {
   }
 
   function filterProducts(filters: ProductFilters = {}): Product[] {
-    const colors = getColors();
-    const colorGroupByCode = new Map(
-      colors.map((color) => [color.code, color.group] as const),
-    );
-
-    const priceMin = filters.priceMin ?? -Infinity;
-    const priceMax = filters.priceMax ?? Infinity;
-
-    let result = getAllProducts().filter((product) => {
-      if (filters.category && product.category !== filters.category) {
-        return false;
-      }
-
-      if (filters.tapeWidth && product.tapeWidth !== filters.tapeWidth) {
-        return false;
-      }
-
-      if (
-        filters.inStockOnly &&
-        !product.variants.some((variant) => variant.inStock)
-      ) {
-        return false;
-      }
-
-      if (
-        filters.lengths?.length &&
-        !product.variants.some((variant) =>
-          filters.lengths!.includes(variant.length),
-        )
-      ) {
-        return false;
-      }
-
-      if (
-        filters.colorCodes?.length &&
-        !product.variants.some((variant) =>
-          filters.colorCodes!.includes(variant.color),
-        )
-      ) {
-        return false;
-      }
-
-      if (
-        filters.colorGroups?.length &&
-        !product.variants.some((variant) => {
-          const group = colorGroupByCode.get(variant.color);
-          return group !== undefined && filters.colorGroups!.includes(group);
-        })
-      ) {
-        return false;
-      }
-
-      if (
-        (filters.priceMin !== undefined || filters.priceMax !== undefined) &&
-        !product.variants.some(
-          (variant) => variant.price >= priceMin && variant.price <= priceMax,
-        )
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-
-    if (filters.sort) {
-      const withRange = result.map((product) => ({
-        product,
-        range: getPriceRange(product),
-      }));
-      withRange.sort((a, b) =>
-        filters.sort === "price-asc"
-          ? a.range.min - b.range.min
-          : b.range.min - a.range.min,
-      );
-      result = withRange.map(({ product }) => product);
-    }
-
-    return result;
+    return filterProductsPure(getAllProducts(), getColors(), filters);
   }
 
   return {
@@ -173,14 +98,6 @@ export function createContentApi(source: ContentSource) {
     getColorByCode,
     getCategories,
     filterProducts,
-  };
-}
-
-export function getPriceRange(product: Product): PriceRange {
-  const prices = product.variants.map((variant) => variant.price);
-  return {
-    min: Math.min(...prices),
-    max: Math.max(...prices),
   };
 }
 
