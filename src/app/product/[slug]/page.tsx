@@ -9,7 +9,7 @@ import { VariantPriceActions } from "@/components/product/VariantPriceActions";
 import { TrustBadges } from "@/components/product/TrustBadges";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
-import { LeadFormPlaceholder } from "@/components/product/LeadFormPlaceholder";
+import { ProductLeadForm } from "@/components/product/ProductLeadForm";
 import { getAllProducts, getColors, getProductBySlug } from "@/lib/content/products";
 import { publicImageExists } from "@/lib/image-exists";
 import { ru } from "@/i18n/messages";
@@ -97,7 +97,7 @@ export default async function ProductPage({
 
         <RelatedProducts products={related} colorsByCode={colorsByCode} />
 
-        <LeadFormPlaceholder />
+        <ProductLeadForm />
       </Container>
     </VariantProvider>
   );

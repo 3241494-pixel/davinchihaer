@@ -195,9 +195,52 @@
     "deliveryTodo": "TODO_CLIENT: условия доставки и оплаты не предоставлены клиентом (бриф, раздел 11, блок «Блокирует запуск»).",
     "related": "Похожие товары",
     "leadFormPlaceholder": {
+      "title": "Заявка на подбор"
+    }
+  },
+  "forms": {
+    "core": {
+      "name": "Имя",
+      "contact": "Телефон или Telegram",
+      "contactPlaceholder": "+995 555 123456 или @username",
+      "contactHint": "Код страны по умолчанию — Грузия (+995), можно указать любой другой.",
+      "channel": "Удобный канал связи",
+      "channelTelegram": "Telegram",
+      "channelWhatsapp": "WhatsApp",
+      "channelPhone": "Звонок",
+      "comment": "Комментарий",
+      "consentLabel": "Согласен(-на) на обработку персональных данных",
+      "consentLinkPrefix": "Подробнее:",
+      "consentLinkText": "Политика конфиденциальности",
+      "submit": "Отправить заявку"
+    },
+    "retail": {
       "title": "Заявка на подбор",
-      "note": "Форма заявки появится на этапе 6. Сейчас передан выбор: {summary}.",
-      "noteEmpty": "Форма заявки появится на этапе 6."
+      "submit": "Оставить заявку"
+    },
+    "wholesale": {
+      "title": "Заявка на опт",
+      "salonName": "Название салона (если есть)",
+      "city": "Город",
+      "experience": "Опыт работы",
+      "estimatedVolume": "Ориентировочный объём закупки",
+      "submit": "Отправить заявку на опт"
+    },
+    "training": {
+      "title": "Заявка на обучение",
+      "format": "Формат обучения",
+      "formatOnline": "Онлайн",
+      "formatOffline": "Тбилиси (очно)",
+      "experience": "Ваш опыт",
+      "preferredDates": "Предпочтительные даты",
+      "submit": "Записаться на обучение"
+    },
+    "status": {
+      "successTitle": "Заявка отправлена",
+      "successDescription": "Мы отвечаем в течение нескольких часов в рабочее время (Тбилиси, GMT+4).",
+      "successTelegramCta": "Написать сейчас в Telegram",
+      "errorTitle": "Не получилось отправить",
+      "retry": "Попробовать снова"
     }
   }
 }

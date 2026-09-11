@@ -20,6 +20,8 @@ export interface SiteConfig {
   email?: string;
   /** TODO_CLIENT: телефон не предоставлен. */
   phone?: string;
+  /** TODO_CLIENT: номер WhatsApp для wa.me-ссылок не предоставлен. */
+  whatsappNumber?: string;
 }
 
 export const siteConfig: SiteConfig = {
