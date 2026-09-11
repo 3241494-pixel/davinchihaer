@@ -1,0 +1,64 @@
+{
+  "_todoClient": [
+    "Весь товар — заглушка. Список аксессуаров и расходников клиент ещё не предоставил (бриф, раздел 11).",
+    "description, shortDescription, seo — содержат только служебную заметку, не реальный текст.",
+    "price, weight, tapesCount, inStock, sku — placeholder-значения, см. общие TODO_CLIENT по числовым полям.",
+    "length/color на уровне варианта заполнены формально ради соответствия общей схеме ProductVariant — для аксессуаров это поле почти не имеет смысла (архитектурная заметка, не вопрос к клиенту).",
+    "images — путь placeholder, ждём фотосессию."
+  ],
+  "slug": "accessory-tape-strips",
+  "category": "accessories",
+  "title": {
+    "ru": "Расходные ленты для коррекции Tape-In",
+    "en": "Tape-In correction strips",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "shortDescription": {
+    "ru": "TODO_CLIENT: описание аксессуара не предоставлено. Сама категория «расходники к системе» и «цветовой круг» — из разбора референсов в брифе (раздел 4, hairtalk.com). Нужны реальный состав, материалы, назначение и фото от клиента (бриф, раздел 11, блок «Блокирует каталог»).",
+    "en": "TODO_CLIENT: accessory description not provided yet. The category itself (consumables per system, colour ring) comes from the reference review in the brief (section 4, hairtalk.com). Real contents, materials, purpose and photos are needed from the client.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "description": {
+    "ru": "TODO_CLIENT: описание аксессуара не предоставлено. Сама категория «расходники к системе» и «цветовой круг» — из разбора референсов в брифе (раздел 4, hairtalk.com). Нужны реальный состав, материалы, назначение и фото от клиента (бриф, раздел 11, блок «Блокирует каталог»).",
+    "en": "TODO_CLIENT: accessory description not provided yet. The category itself (consumables per system, colour ring) comes from the reference review in the brief (section 4, hairtalk.com). Real contents, materials, purpose and photos are needed from the client.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "variants": [
+    {
+      "id": "accessory-tape-strips-default",
+      "length": 40,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "1",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-ACCESSORY-TAPE-STRIPS"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/products/accessory-tape-strips/hero.jpg",
+      "alt": {
+        "ru": "Расходные ленты для коррекции Tape-In",
+        "en": "Tape-In correction strips",
+        "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Расходные ленты для коррекции Tape-In | Da Vinchi Hair",
+      "en": "Tape-In correction strips | Da Vinchi Hair",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    },
+    "description": {
+      "ru": "TODO_CLIENT: описание аксессуара не предоставлено. Сама категория «расходники к системе» и «цветовой круг» — из разбора референсов в брифе (раздел 4, hairtalk.com). Нужны реальный состав, материалы, назначение и фото от клиента (бриф, раздел 11, блок «Блокирует каталог»).",
+      "en": "TODO_CLIENT: accessory description not provided yet. The category itself (consumables per system, colour ring) comes from the reference review in the brief (section 4, hairtalk.com). Real contents, materials, purpose and photos are needed from the client.",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    }
+  },
+  "relatedSlugs": [
+    "tape-classic-slavic",
+    "tape-classic-european"
+  ]
+}

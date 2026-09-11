@@ -1,0 +1,140 @@
+{
+  "_todoClient": [
+    "price / oldPrice — прайс не предоставлен, проставлен 0 как явный placeholder.",
+    "weight, tapesCount — не предоставлены, проставлены 0.",
+    "inStock — проставлено false для всех вариантов.",
+    "sku — содержит явный маркер TODO_CLIENT, формат артикула не согласован.",
+    "hairOrigin — placeholder-дифференциатор по примеру из брифа, требует подтверждения.",
+    "images — путь placeholder, ждём фотосессию.",
+    "tapeWidth, hairStructure — не заполнены."
+  ],
+  "slug": "tape-imitation-1-european",
+  "category": "tape-imitation-1",
+  "title": {
+    "ru": "Tape-In с имитацией роста 1.0, европейские волосы",
+    "en": "Tape-In with root imitation 1.0, european hair",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "shortDescription": {
+    "ru": "Tape-In с имитацией роста 1.0: лента менее заметна, у корней — естественный вид, при близком рассмотрении видна полоска ленты около 2 мм. Доступное сочетание цены и естественности.",
+    "en": "Tape-In with root imitation 1.0: a less noticeable tape and a natural look at the roots; up close, a roughly 2 mm strip may show. An affordable balance of price and realism.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "description": {
+    "ru": "Tape-In с имитацией роста волос — это усовершенствованная версия классического ленточного наращивания. В основе остаётся та же технология: волосы фиксируются широкой лентой, которая равномерно распределяет нагрузку на собственные волосы. Но дополнительно используется специальная имитация роста, благодаря которой место крепления становится ещё менее заметным.\n\nГлавное преимущество этой техники — максимально естественный вид волос у корней. Имитация помогает скрыть ленту и создать впечатление, будто дополнительные волосы растут непосредственно из кожи головы. Это особенно важно для тех, кто хочет носить наращивание с распущенными волосами, делать проборы и собирать волосы в причёски.\n\nИмитация 1.0\n\nЭто классическая лента с дополнительной имитацией роста. Она помогает сделать крепление менее заметным, но при близком рассмотрении может быть видна небольшая полоска ленты — около 2 мм.\n\nЭто отличный вариант для тех, кто хочет получить более естественный вид у корней, добавить объём и длину, но при этом сохранить доступную стоимость и удобство классического Tape-In.\n\nБережно к собственным волосам, быстро в установке — как и классический Tape-In. При правильной установке и уходе система сохраняет собственную длину волос и служит от года и дольше.",
+    "en": "Tape-In with root imitation is an enhanced version of classic tape-in extensions. The underlying technology stays the same: hair is attached with a wide tape that spreads the load evenly across your natural hair. In addition, a special root imitation is used, which makes the attachment point even less noticeable.\n\nThe main advantage of this technique is the most natural possible look at the roots. The imitation helps hide the tape and creates the impression that the extra hair grows directly from the scalp. This matters most for those who want to wear their hair down, part it, and style it up.\n\nImitation 1.0\n\nThis is a classic tape with an added root imitation. It makes the attachment less noticeable, though on close inspection a small strip of tape — about 2 mm — may be visible.\n\nIt's a great option for those who want a more natural look at the roots, plus extra volume and length, while keeping the affordable price and convenience of classic Tape-In.\n\nGentle on your natural hair and fast to install — just like classic Tape-In. With correct installation and care, the system preserves your natural length and lasts a year or longer.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "hairOrigin": {
+    "ru": "Европейские волосы",
+    "en": "European hair",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "variants": [
+    {
+      "id": "tape-imitation-1-european-40-16",
+      "length": 40,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "16",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-40-16"
+    },
+    {
+      "id": "tape-imitation-1-european-40-24",
+      "length": 40,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "24",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-40-24"
+    },
+    {
+      "id": "tape-imitation-1-european-50-16",
+      "length": 50,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "16",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-50-16"
+    },
+    {
+      "id": "tape-imitation-1-european-50-24",
+      "length": 50,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "24",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-50-24"
+    },
+    {
+      "id": "tape-imitation-1-european-60-16",
+      "length": 60,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "16",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-60-16"
+    },
+    {
+      "id": "tape-imitation-1-european-60-24",
+      "length": 60,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "24",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-60-24"
+    },
+    {
+      "id": "tape-imitation-1-european-70-16",
+      "length": 70,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "16",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-70-16"
+    },
+    {
+      "id": "tape-imitation-1-european-70-24",
+      "length": 70,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "24",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-IMITATION-1-EUROPEAN-70-24"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/products/tape-imitation-1-european/hero.jpg",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 1.0, европейские волосы — комплект прядей",
+        "en": "Tape-In with root imitation 1.0, european hair — hair set",
+        "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Tape-In с имитацией роста 1.0, европейские волосы | Da Vinchi Hair",
+      "en": "Tape-In with root imitation 1.0, european hair | Da Vinchi Hair",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    },
+    "description": {
+      "ru": "Tape-In с имитацией роста 1.0: лента менее заметна, у корней — естественный вид, при близком рассмотрении видна полоска ленты около 2 мм. Доступное сочетание цены и естественности.",
+      "en": "Tape-In with root imitation 1.0: a less noticeable tape and a natural look at the roots; up close, a roughly 2 mm strip may show. An affordable balance of price and realism.",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    }
+  },
+  "relatedSlugs": [
+    "tape-imitation-2-european"
+  ]
+}

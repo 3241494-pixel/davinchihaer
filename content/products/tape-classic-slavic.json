@@ -1,0 +1,137 @@
+{
+  "_todoClient": [
+    "price / oldPrice — прайс не предоставлен, проставлен 0 как явный placeholder.",
+    "weight, tapesCount — вес комплекта и количество лент не предоставлены, проставлены 0.",
+    "inStock — реальные остатки неизвестны, проставлено false для всех вариантов.",
+    "sku — формат артикула не согласован с клиентом, содержит явный маркер TODO_CLIENT.",
+    "hairOrigin — использован пример из брифа (раздел 6) как placeholder-дифференциатор двух товаров категории, требует подтверждения клиентом.",
+    "images — реального фото нет, путь placeholder, ждём фотосессию (бриф, раздел 11).",
+    "tapeWidth, hairStructure — не заполнены, ширина ленты и структура волос не предоставлены клиентом."
+  ],
+  "slug": "tape-classic-slavic",
+  "category": "tape-classic",
+  "title": {
+    "ru": "Классическое Tape-In, славянские волосы",
+    "en": "Classic Tape-In, slavic hair",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "shortDescription": {
+    "ru": "Классическое ленточное наращивание Tape-In: равномерная нагрузка на собственные волосы, быстрая установка, сохранение длины и возможность самостоятельной коррекции.",
+    "en": "Classic Tape-In extensions: even load on your natural hair, fast application, length preservation, and self-correction at home.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "description": {
+    "ru": "Tape-In Hair Extensions, также известное как ленточное наращивание, — популярная технология наращивания волос, широко используемая в США и Европе.\n\nГлавное преимущество этой техники — равномерное распределение нагрузки на собственные волосы. В отличие от капсульного наращивания, где дополнительный вес приходится на отдельные небольшие пряди, при ленточном наращивании волосы фиксируются широкой лентой. Благодаря этому нагрузка распределяется более равномерно, что позволяет бережно относиться к собственным волосам и комфортно носить наращивание.\n\nПочему выбирают Tape-In?\n\nБыстро. Ленточное наращивание позволяет значительно сократить время процедуры по сравнению со многими другими технологиями.\n\nНезаметно. Тонкие ленты аккуратно располагаются в волосах и при правильном подборе цвета и густоты выглядят естественно.\n\nС сохранением собственной длины. Вам не нужно жертвовать длиной своих волос. Наоборот, при правильной установке и уходе ленточное наращивание позволяет спокойно отращивать собственные волосы.\n\nЭкономично. Качественные ленты рассчитаны на многократное использование и могут служить от года и дольше при правильном уходе. Поэтому в долгосрочной перспективе Tape-In может быть более выгодным вариантом по сравнению с регулярным капсульным наращиванием.\n\nВозможность самостоятельной коррекции. После того как вы освоите технику, ленты можно переставлять самостоятельно в домашних условиях. Вам не обязательно каждый раз обращаться к мастеру для коррекции — достаточно иметь необходимые материалы и соблюдать технологию.\n\nОдин раз выбираете качественные волосы и материалы — и получаете систему наращивания, которой можно пользоваться снова и снова.",
+    "en": "Tape-In Hair Extensions, also known as tape hair extensions, is a popular hair extension technology widely used in the US and Europe.\n\nThe main advantage of this technique is an even distribution of load on your natural hair. Unlike bonded (capsule) extensions, where the extra weight rests on small individual strands, tape-in extensions attach the hair using a wide tape. This spreads the load more evenly, which is gentler on your natural hair and more comfortable to wear.\n\nWhy choose Tape-In?\n\nFast. Tape-in extensions significantly cut down the procedure time compared to many other techniques.\n\nDiscreet. The thin tapes sit neatly within the hair and, with the right colour and density match, look natural.\n\nKeeps your own length. You don't need to sacrifice the length of your natural hair — with correct installation and care, tape-in extensions let it grow out undisturbed.\n\nEconomical. Quality tapes are designed for repeated use and, with correct care, can last a year or longer. Over time, Tape-In can be more cost-effective than regular bonded extensions.\n\nSelf-correction is possible. Once you've learned the technique, the tapes can be repositioned at home. You don't have to visit a stylist for every correction — you just need the right materials and to follow the method.\n\nChoose quality hair and materials once — and get an extension system you can use again and again.",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "hairOrigin": {
+    "ru": "Славянские волосы",
+    "en": "Slavic hair",
+    "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+  },
+  "variants": [
+    {
+      "id": "tape-classic-slavic-40-18",
+      "length": 40,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "18",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-40-18"
+    },
+    {
+      "id": "tape-classic-slavic-40-6",
+      "length": 40,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "6",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-40-6"
+    },
+    {
+      "id": "tape-classic-slavic-50-18",
+      "length": 50,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "18",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-50-18"
+    },
+    {
+      "id": "tape-classic-slavic-50-6",
+      "length": 50,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "6",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-50-6"
+    },
+    {
+      "id": "tape-classic-slavic-60-18",
+      "length": 60,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "18",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-60-18"
+    },
+    {
+      "id": "tape-classic-slavic-60-6",
+      "length": 60,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "6",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-60-6"
+    },
+    {
+      "id": "tape-classic-slavic-70-18",
+      "length": 70,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "18",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-70-18"
+    },
+    {
+      "id": "tape-classic-slavic-70-6",
+      "length": 70,
+      "weight": 0,
+      "tapesCount": 0,
+      "color": "6",
+      "price": 0,
+      "inStock": false,
+      "sku": "TODO_CLIENT-TAPE-CLASSIC-SLAVIC-70-6"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/products/tape-classic-slavic/hero.jpg",
+      "alt": {
+        "ru": "Классическое Tape-In, славянские волосы — комплект прядей",
+        "en": "Classic Tape-In, slavic hair — hair set",
+        "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Классическое Tape-In, славянские волосы | Da Vinchi Hair",
+      "en": "Classic Tape-In, slavic hair | Da Vinchi Hair",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    },
+    "description": {
+      "ru": "Классическое ленточное наращивание Tape-In: равномерная нагрузка на собственные волосы, быстрая установка, сохранение длины и возможность самостоятельной коррекции.",
+      "en": "Classic Tape-In extensions: even load on your natural hair, fast application, length preservation, and self-correction at home.",
+      "ka": "TODO_CLIENT: перевод на грузинский — нужна вычитка носителем (см. CLAUDE.md, раздел «Рынок»)."
+    }
+  }
+}
