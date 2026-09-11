@@ -101,6 +101,8 @@ export interface SubmitStatusPanelProps {
   telegramHref: string;
   onRetry: () => void;
   submitLabel: string;
+  /** По умолчанию primary — форма обычно единственный CTA на странице. */
+  submitVariant?: "primary" | "secondary";
 }
 
 export function SubmitStatusPanel({
@@ -109,6 +111,7 @@ export function SubmitStatusPanel({
   telegramHref,
   onRetry,
   submitLabel,
+  submitVariant = "primary",
 }: SubmitStatusPanelProps) {
   if (status === "success") {
     return (
@@ -135,7 +138,7 @@ export function SubmitStatusPanel({
           </Button>
         </div>
       )}
-      <Button type="submit" loading={status === "submitting"} size="lg">
+      <Button type="submit" variant={submitVariant} loading={status === "submitting"} size="lg">
         {submitLabel}
       </Button>
     </div>

@@ -13,6 +13,8 @@ export interface RetailLeadFormProps {
   productTitle?: string;
   length?: number;
   colorName?: string;
+  /** secondary — если на странице уже есть свой primary CTA (например, главная). */
+  submitVariant?: "primary" | "secondary";
 }
 
 export function RetailLeadForm({
@@ -21,6 +23,7 @@ export function RetailLeadForm({
   productTitle,
   length,
   colorName,
+  submitVariant,
 }: RetailLeadFormProps) {
   const defaultValues: RetailLead = {
     type: "retail",
@@ -57,6 +60,7 @@ export function RetailLeadForm({
           telegramHref={telegramHref}
           onRetry={resetStatus}
           submitLabel={ru.forms.retail.submit}
+          submitVariant={submitVariant}
         />
       </form>
     </FormProvider>

@@ -73,11 +73,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     if (asChild && isValidElement(children)) {
       const child = children as ReactElement<Record<string, unknown>>;
       const existingRef = (child as unknown as { ref?: React.Ref<unknown> }).ref;
+      // ref добавляем, только если он реально нужен: React Server Components
+      // не допускают непустой ref у элемента даже без фактического DOM-узла,
+      // а asChild активно используется и из серверных секций (например, Hero).
+      const mergedRef = ref || existingRef ? mergeRefs(ref, existingRef) : undefined;
       return cloneElement(child, {
         ...props,
         className: cn(classes, child.props.className as string | undefined),
         "aria-disabled": isDisabled || undefined,
-        ref: mergeRefs(ref, existingRef),
+        ...(mergedRef ? { ref: mergedRef } : {}),
       });
     }
 
