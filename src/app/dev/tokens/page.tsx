@@ -1,3 +1,5 @@
+import { Container } from "@/components/ui";
+
 const COLORS = [
   { name: "--color-bg", label: "bg", className: "bg-bg" },
   { name: "--color-surface", label: "surface", className: "bg-surface" },
@@ -27,7 +29,7 @@ const COLORS = [
 
 export default function TokensPage() {
   return (
-    <main className="space-y-16 py-16">
+    <Container as="div" className="space-y-16 py-16">
       <header>
         <h1 className="font-heading text-4xl text-ink-strong">
           Дизайн-токены
@@ -86,6 +88,6 @@ export default function TokensPage() {
           и уходе.
         </p>
       </section>
-    </main>
+    </Container>
   );
 }

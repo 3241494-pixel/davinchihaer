@@ -1,1 +1,66 @@
-{}
+{
+  "common": {
+    "skipToContent": "Перейти к содержимому"
+  },
+  "nav": {
+    "catalog": "Каталог",
+    "technology": "Технологии",
+    "guides": "Гайды",
+    "academy": "Обучение",
+    "wholesale": "Мастерам",
+    "about": "О нас",
+    "contacts": "Контакты"
+  },
+  "categories": {
+    "tape-classic": "Классическое Tape-In",
+    "tape-imitation-1": "Имитация роста 1.0",
+    "tape-imitation-2": "Имитация роста 2.0",
+    "accessories": "Аксессуары",
+    "care": "Уход"
+  },
+  "header": {
+    "logoAlt": "Da Vinchi Hair — на главную",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "mobileMenuLabel": "Мобильное меню",
+    "catalogMenuLabel": "Открыть список категорий каталога",
+    "telegramLink": "Написать в Telegram",
+    "allCatalogLink": "Весь каталог"
+  },
+  "languageSwitcher": {
+    "label": "Язык",
+    "unavailable": "Скоро будет доступно"
+  },
+  "footer": {
+    "catalogTitle": "Каталог",
+    "infoTitle": "Информация",
+    "businessTitle": "Мастерам и обучение",
+    "contactsTitle": "Контакты",
+    "info": {
+      "about": "О нас",
+      "delivery": "Доставка и оплата",
+      "faq": "Вопросы и ответы",
+      "gallery": "Галерея работ"
+    },
+    "business": {
+      "wholesale": "Мастерам — опт",
+      "academy": "Обучение",
+      "academyOnline": "Онлайн-курс",
+      "academyOffline": "Обучение в Тбилиси"
+    },
+    "addressLabel": "Адрес",
+    "socialLabel": "Мы в соцсетях",
+    "legal": {
+      "privacy": "Политика конфиденциальности",
+      "terms": "Условия использования"
+    },
+    "copyright": "© {year} Da Vinchi Hair. Все права защищены."
+  },
+  "telegramFloating": {
+    "label": "Написать в Telegram"
+  },
+  "breadcrumbs": {
+    "home": "Главная",
+    "ariaLabel": "Хлебные крошки"
+  }
+}

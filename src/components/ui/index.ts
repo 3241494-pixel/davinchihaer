@@ -6,6 +6,7 @@ export * from "./Select";
 export * from "./Checkbox";
 export * from "./RadioGroup";
 export * from "./Badge";
+export * from "./Breadcrumbs";
 export * from "./Card";
 export * from "./Accordion";
 export * from "./Modal";

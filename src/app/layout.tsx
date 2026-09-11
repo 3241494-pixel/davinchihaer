@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { TelegramFloatingButton } from "@/components/layout/TelegramFloatingButton";
+import { ru } from "@/i18n/messages";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -26,7 +30,16 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${cormorant.variable} ${inter.variable} antialiased`}>
-        <div className="mx-auto max-w-[1280px] px-4 md:px-8">{children}</div>
+        <a
+          href="#main-content"
+          className="fixed top-2 left-2 z-50 -translate-y-16 rounded-base bg-ink px-4 py-2 text-sm font-medium text-bg transition-transform duration-200 focus:translate-y-0"
+        >
+          {ru.common.skipToContent}
+        </a>
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <TelegramFloatingButton />
       </body>
     </html>
   );

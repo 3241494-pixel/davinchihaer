@@ -66,7 +66,7 @@ export default function DevUiPage() {
   const [selectedColor, setSelectedColor] = useState("18");
 
   return (
-    <Container as="main" className="py-16">
+    <Container as="div" className="py-16">
       <header className="mb-12 flex flex-col gap-2">
         <Heading level={1}>UI-примитивы</Heading>
         <Text muted>
