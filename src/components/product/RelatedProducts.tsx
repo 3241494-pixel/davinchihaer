@@ -1,0 +1,20 @@
+import { ProductGrid } from "@/components/catalog/ProductGrid";
+import { ru } from "@/i18n/messages";
+import type { HairColor, Product } from "@/lib/content/types";
+
+export function RelatedProducts({
+  products,
+  colorsByCode,
+}: {
+  products: Product[];
+  colorsByCode: Map<string, HairColor>;
+}) {
+  if (products.length === 0) return null;
+
+  return (
+    <section className="flex flex-col gap-4 border-t border-border pt-10">
+      <h2 className="font-heading text-2xl text-ink-strong">{ru.product.related}</h2>
+      <ProductGrid products={products} colorsByCode={colorsByCode} />
+    </section>
+  );
+}

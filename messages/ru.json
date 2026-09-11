@@ -138,5 +138,66 @@
       "description": "Попробуйте изменить условия фильтрации или сбросить их.",
       "reset": "Сбросить фильтры"
     }
+  },
+  "product": {
+    "notFoundTitle": "Товар не найден",
+    "gallery": {
+      "thumbnailAlt": "Миниатюра {index}",
+      "zoomLabel": "Увеличить фото",
+      "closeZoom": "Закрыть увеличенное фото",
+      "prev": "Предыдущее фото",
+      "next": "Следующее фото",
+      "placeholder": "Фото появится после фотосессии"
+    },
+    "selectLength": "Длина",
+    "selectColor": "Оттенок",
+    "unavailableCombination": "Такой комбинации нет",
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "weightUnit": "г",
+    "cta": {
+      "leadForm": "Оставить заявку",
+      "telegram": "Написать в Telegram"
+    },
+    "telegramMessageTemplate": "Здравствуйте! Интересует «{title}», длина {length} см, оттенок {color}.",
+    "trust": {
+      "gentleTitle": "Бережно к собственным волосам",
+      "gentleDescription": "Нагрузка распределяется по широкой ленте, а не на отдельные пряди.",
+      "durableTitle": "Служит от года и дольше",
+      "durableDescription": "При правильной установке и уходе система пригодна для многократного использования.",
+      "selfCorrectionTitle": "Возможна самостоятельная коррекция",
+      "selfCorrectionDescription": "После обучения ленты можно переставлять самостоятельно.",
+      "colorMatchTitle": "Подбор цвета с мастером",
+      "colorMatchDescription": "Приезжайте в Тбилиси — подберём оттенок лично, приложив прядь к волосам."
+    },
+    "tabs": {
+      "description": "Описание",
+      "specs": "Характеристики",
+      "care": "Уход",
+      "delivery": "Доставка и оплата"
+    },
+    "specsLabels": {
+      "length": "Длина",
+      "weight": "Вес",
+      "tapesCount": "Количество лент",
+      "color": "Оттенок",
+      "sku": "Артикул",
+      "hairOrigin": "Происхождение волос",
+      "hairStructure": "Структура волос",
+      "tapeWidth": "Ширина ленты"
+    },
+    "hairStructureLabels": {
+      "straight": "Прямые",
+      "wavy": "Волнистые",
+      "curly": "Кудрявые"
+    },
+    "careTodo": "TODO_CLIENT: инструкции по уходу не предоставлены клиентом.",
+    "deliveryTodo": "TODO_CLIENT: условия доставки и оплаты не предоставлены клиентом (бриф, раздел 11, блок «Блокирует запуск»).",
+    "related": "Похожие товары",
+    "leadFormPlaceholder": {
+      "title": "Заявка на подбор",
+      "note": "Форма заявки появится на этапе 6. Сейчас передан выбор: {summary}.",
+      "noteEmpty": "Форма заявки появится на этапе 6."
+    }
   }
 }
