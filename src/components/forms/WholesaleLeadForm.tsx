@@ -23,7 +23,12 @@ const defaultValues: WholesaleLead = {
   estimatedVolume: "",
 };
 
-export function WholesaleLeadForm() {
+export interface WholesaleLeadFormProps {
+  /** secondary — если на странице уже есть свой primary CTA (например, hero). */
+  submitVariant?: "primary" | "secondary";
+}
+
+export function WholesaleLeadForm({ submitVariant }: WholesaleLeadFormProps = {}) {
   const form = useForm<WholesaleLead>({
     resolver: zodResolver(wholesaleLeadSchema),
     defaultValues,
@@ -74,6 +79,7 @@ export function WholesaleLeadForm() {
           telegramHref={telegramHref}
           onRetry={resetStatus}
           submitLabel={ru.forms.wholesale.submit}
+          submitVariant={submitVariant}
         />
       </form>
     </FormProvider>

@@ -30,6 +30,18 @@ export function IconEyeOff(props: IconProps) {
   );
 }
 
+export function IconTruck(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3 16V6a1 1 0 0 1 1-1h9v11" />
+      <path d="M13 9h4l4 4v3h-2" />
+      <path d="M13 16H8" />
+      <circle cx="7.5" cy="17.5" r="1.5" />
+      <circle cx="17.5" cy="17.5" r="1.5" />
+    </svg>
+  );
+}
+
 export function IconShield(props: IconProps) {
   return (
     <svg {...base} {...props}>
