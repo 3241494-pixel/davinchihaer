@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/components/ui/cn";
 import { Button } from "@/components/ui/Button";
 import { filterProducts } from "@/lib/content/filter-logic";
 import { buildCatalogHref, emptyEditableFilters, type EditableFilters } from "@/lib/catalog/search-params";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { formatMessage } from "@/lib/format-message";
 import { FilterControls } from "./FilterControls";
 import type { HairColor, Product } from "@/lib/content/types";
@@ -22,6 +22,7 @@ export interface FiltersMobileProps {
 }
 
 export function FiltersMobile({ pathname, filters, colors, products }: FiltersMobileProps) {
+  const ru = useTypedMessages();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [pending, setPending] = useState<EditableFilters>(filters);

@@ -1,6 +1,8 @@
 "use client";
 
-import { ru } from "@/i18n/messages";
+import { useLocale } from "next-intl";
+import { useTypedMessages } from "@/i18n/use-messages";
+import { pickLocale } from "@/lib/content/locale";
 import { useVariantSelection } from "./variant-context";
 
 function Row({ label, value }: { label: string; value: string }) {
@@ -15,11 +17,14 @@ function Row({ label, value }: { label: string; value: string }) {
 }
 
 export function SpecsTable() {
+  const ru = useTypedMessages();
+  const locale = useLocale();
   const { product, colorsByCode, selectedVariant } = useVariantSelection();
 
   if (!selectedVariant) return null;
 
-  const colorName = colorsByCode.get(selectedVariant.color)?.name.ru ?? selectedVariant.color;
+  const colorNameSource = colorsByCode.get(selectedVariant.color)?.name;
+  const colorName = colorNameSource ? pickLocale(colorNameSource, locale) : selectedVariant.color;
 
   return (
     <table className="w-full border-collapse">
@@ -42,7 +47,7 @@ export function SpecsTable() {
           />
         )}
         {product.hairOrigin && (
-          <Row label={ru.product.specsLabels.hairOrigin} value={product.hairOrigin.ru} />
+          <Row label={ru.product.specsLabels.hairOrigin} value={pickLocale(product.hairOrigin, locale)} />
         )}
       </tbody>
     </table>

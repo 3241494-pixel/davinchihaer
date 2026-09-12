@@ -1,9 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Select } from "@/components/ui/Select";
 import { buildCatalogHref, type EditableFilters } from "@/lib/catalog/search-params";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import type { ProductSort } from "@/lib/content/types";
 
 export interface SortSelectProps {
@@ -11,15 +11,16 @@ export interface SortSelectProps {
   filters: EditableFilters;
 }
 
-const SORT_LABELS: Record<ProductSort, string> = {
-  popularity: ru.catalog.sort.popularity,
-  "price-asc": ru.catalog.sort.priceAsc,
-  "price-desc": ru.catalog.sort.priceDesc,
-  newest: ru.catalog.sort.newest,
-};
-
 export function SortSelect({ pathname, filters }: SortSelectProps) {
+  const ru = useTypedMessages();
   const router = useRouter();
+
+  const SORT_LABELS: Record<ProductSort, string> = {
+    popularity: ru.catalog.sort.popularity,
+    "price-asc": ru.catalog.sort.priceAsc,
+    "price-desc": ru.catalog.sort.priceDesc,
+    newest: ru.catalog.sort.newest,
+  };
 
   return (
     <Select

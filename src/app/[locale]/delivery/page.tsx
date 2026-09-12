@@ -1,0 +1,30 @@
+import type { Metadata } from "next";
+import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { getPageContent } from "@/lib/content/pages";
+import { getLocale } from "next-intl/server";
+import { getTypedMessages } from "@/i18n/get-messages";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const ru = await getTypedMessages();
+  return {
+  title: `${ru.pages.delivery.title} | Da Vinchi Hair`,
+};
+}
+
+export default async function DeliveryPage() {
+  const ru = await getTypedMessages();
+  const locale = await getLocale();
+  const page = await getPageContent("delivery", locale);
+  const Content = page?.default;
+  const copy = ru.pages.delivery;
+
+  return (
+    <ContentPageLayout
+      title={copy.title}
+      breadcrumbs={[{ label: copy.title }]}
+      after={<p className="text-sm text-ink-muted">{copy.todo}</p>}
+    >
+      {Content && <Content />}
+    </ContentPageLayout>
+  );
+}

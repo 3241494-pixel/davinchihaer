@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/Card";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Reviews() {
+export async function Reviews() {
+  const ru = await getTypedMessages();
   const { reviewsHeading, reviewsTodo, reviews } = ru.academy.hub;
 
   return (

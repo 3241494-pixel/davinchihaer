@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/Card";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Reviews() {
+export async function Reviews() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.home.reviews.heading}</h2>

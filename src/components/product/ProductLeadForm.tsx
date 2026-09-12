@@ -1,13 +1,18 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { RetailLeadForm } from "@/components/forms/RetailLeadForm";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
+import { pickLocale } from "@/lib/content/locale";
 import { useVariantSelection } from "./variant-context";
 
 export function ProductLeadForm() {
+  const ru = useTypedMessages();
+  const locale = useLocale();
   const { product, colorsByCode, selectedVariant } = useVariantSelection();
+  const colorNameSource = selectedVariant ? colorsByCode.get(selectedVariant.color)?.name : undefined;
   const colorName = selectedVariant
-    ? (colorsByCode.get(selectedVariant.color)?.name.ru ?? selectedVariant.color)
+    ? (colorNameSource ? pickLocale(colorNameSource, locale) : selectedVariant.color)
     : undefined;
 
   return (
@@ -21,7 +26,7 @@ export function ProductLeadForm() {
       <RetailLeadForm
         productSlug={product.slug}
         variantId={selectedVariant?.id}
-        productTitle={product.title.ru}
+        productTitle={pickLocale(product.title, locale)}
         length={selectedVariant?.length}
         colorName={colorName}
       />

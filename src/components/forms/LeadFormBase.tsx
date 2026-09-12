@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useFormContext, type FieldError } from "react-hook-form";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { Button } from "@/components/ui/Button";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import type { LeadFormStatus } from "./use-lead-form";
 
 interface CoreFormValues {
@@ -24,6 +24,7 @@ function messageOf(error: FieldError | undefined): string | undefined {
 
 /** Общие поля ядра заявки — используются внутри всех трёх форм. */
 export function CoreFields() {
+  const ru = useTypedMessages();
   const {
     register,
     formState: { errors },
@@ -113,6 +114,7 @@ export function SubmitStatusPanel({
   submitLabel,
   submitVariant = "primary",
 }: SubmitStatusPanelProps) {
+  const ru = useTypedMessages();
   if (status === "success") {
     return (
       <div className="flex flex-col gap-3 rounded-base border border-border bg-surface p-4">

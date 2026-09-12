@@ -24,6 +24,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+ * Латинские шрифты не содержат грузинских глифов — для ka переключаем
+ * семейство через переопределение тех же CSS-переменных на <html>.
+ */
+html[data-locale="ka"] {
+  --font-heading: var(--font-noto-serif-ka), serif;
+  --font-sans: var(--font-noto-sans-ka), sans-serif;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

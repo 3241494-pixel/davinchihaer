@@ -1,16 +1,16 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@/components/ui/cn";
 import { IconMenu, IconTelegram } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { siteConfig } from "@/config/site";
 import { Logo } from "./Logo";
 import { CatalogMenu, type CategoryLink } from "./CatalogMenu";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
-import { NAV_ITEMS } from "./nav-items";
+import { getNavItems } from "./nav-items";
 
 const SCROLL_THRESHOLD = 8;
 
@@ -19,6 +19,8 @@ export interface HeaderClientProps {
 }
 
 export function HeaderClient({ categories }: HeaderClientProps) {
+  const ru = useTypedMessages();
+  const navItems = getNavItems(ru);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -52,7 +54,7 @@ export function HeaderClient({ categories }: HeaderClientProps) {
 
           <nav className="hidden items-center gap-6 md:flex">
             <CatalogMenu categories={categories} />
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

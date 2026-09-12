@@ -1,9 +1,10 @@
 import { IconHand, IconPalette, IconRefresh, IconShield, IconTruck } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
 const ICONS = [IconPalette, IconRefresh, IconTruck, IconHand, IconShield];
 
-export function WhyUs() {
+export async function WhyUs() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.whyUs.heading}</h2>

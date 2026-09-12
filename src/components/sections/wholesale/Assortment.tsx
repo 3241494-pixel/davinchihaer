@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/Card";
 import { getCategories } from "@/lib/content/products";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Assortment() {
+export async function Assortment() {
+  const ru = await getTypedMessages();
   const categories = getCategories();
 
   return (

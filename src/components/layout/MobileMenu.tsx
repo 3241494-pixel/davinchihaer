@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/components/ui/cn";
 import { IconChevronDown, IconClose, IconTelegram } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
-import { NAV_ITEMS } from "./nav-items";
+import { useTypedMessages } from "@/i18n/use-messages";
+import { getNavItems } from "./nav-items";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import type { CategoryLink } from "./CatalogMenu";
 
@@ -20,6 +20,8 @@ export interface MobileMenuProps {
 }
 
 export function MobileMenu({ open, onClose, categories, telegramHref }: MobileMenuProps) {
+  const ru = useTypedMessages();
+  const navItems = getNavItems(ru);
   const panelRef = useRef<HTMLDivElement>(null);
   const [catalogOpen, setCatalogOpen] = useState(false);
 
@@ -130,7 +132,7 @@ export function MobileMenu({ open, onClose, categories, telegramHref }: MobileMe
             </ul>
           )}
         </div>
-        {NAV_ITEMS.map((item) => (
+        {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}

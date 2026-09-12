@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Transitions() {
+export async function Transitions() {
+  const ru = await getTypedMessages();
   const { online, offline } = ru.academy.hub.transitions;
   const cards = [online, offline];
 

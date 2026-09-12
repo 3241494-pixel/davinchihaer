@@ -1,11 +1,12 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { publicImageExists } from "@/lib/image-exists";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { BeforeAfterLightbox } from "./BeforeAfterLightbox";
 
 const SLOTS = 6;
 
-export function BeforeAfterGallery() {
+export async function BeforeAfterGallery() {
+  const ru = await getTypedMessages();
   const images = Array.from({ length: SLOTS }, (_, index) => {
     const src = `/images/gallery/before-after-${index + 1}.jpg`;
     return { src, alt: ru.home.gallery.heading, exists: publicImageExists(src) };

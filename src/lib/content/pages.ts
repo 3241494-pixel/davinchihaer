@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { Locale } from "@/i18n/routing";
 
 export interface PageMeta {
   title: string;
@@ -27,8 +28,18 @@ const loaders: Record<string, () => Promise<PageMdxModule>> = {
   terms: () => import("../../../content/pages/terms.mdx"),
 };
 
-export async function getPageContent(slug: string): Promise<PageMdxModule | undefined> {
-  const loader = loaders[slug];
+/**
+ * Переведённых MDX для en/ka пока нет — все ключи в loaders фактически
+ * ru-контент. Когда появится перевод конкретной страницы, зарегистрируйте
+ * его под ключом `${locale}/${slug}`; до тех пор всегда используется
+ * фолбэк на ru (см. CLAUDE.md, «Деньги»/«TODO_CLIENT»).
+ */
+export async function getPageContent(
+  slug: string,
+  locale: Locale = "ru",
+): Promise<PageMdxModule | undefined> {
+  const localizedLoader = locale !== "ru" ? loaders[`${locale}/${slug}`] : undefined;
+  const loader = localizedLoader ?? loaders[slug];
   if (!loader) return undefined;
   return loader();
 }

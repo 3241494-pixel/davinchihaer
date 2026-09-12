@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { FilterControls } from "./FilterControls";
 import { buildCatalogHref, type EditableFilters } from "@/lib/catalog/search-params";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import type { HairColor } from "@/lib/content/types";
 
 export interface FiltersDesktopProps {
@@ -14,6 +13,7 @@ export interface FiltersDesktopProps {
 }
 
 export function FiltersDesktop({ pathname, filters, colors }: FiltersDesktopProps) {
+  const ru = useTypedMessages();
   const router = useRouter();
 
   function handleChange(next: EditableFilters) {

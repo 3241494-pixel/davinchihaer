@@ -1,8 +1,9 @@
 import { RetailLeadForm } from "@/components/forms/RetailLeadForm";
 import { siteConfig } from "@/config/site";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function ContactLeadSection() {
+export async function ContactLeadSection() {
+  const ru = await getTypedMessages();
   return (
     <div id="lead-form" className="grid scroll-mt-24 gap-10 lg:grid-cols-2 lg:gap-16">
       <div className="flex flex-col gap-4">

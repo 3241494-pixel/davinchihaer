@@ -1,9 +1,10 @@
 import { siteConfig } from "@/config/site";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { IconTelegram } from "@/components/ui/icons";
 import { cn } from "@/components/ui/cn";
 
-export function TelegramFloatingButton() {
+export async function TelegramFloatingButton() {
+  const ru = await getTypedMessages();
   return (
     <a
       href={siteConfig.telegramBotUrl}

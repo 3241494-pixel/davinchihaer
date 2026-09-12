@@ -4,11 +4,12 @@ import { Container } from "@/components/ui/Container";
 import { IconTelegram } from "@/components/ui/icons";
 import { publicImageExists } from "@/lib/image-exists";
 import { buildTelegramLink } from "@/lib/messenger";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
 const HERO_IMAGE_SRC = "/images/home/hero.jpg";
 
-export function Hero() {
+export async function Hero() {
+  const ru = await getTypedMessages();
   const imageExists = publicImageExists(HERO_IMAGE_SRC);
   const telegramHref = buildTelegramLink();
 

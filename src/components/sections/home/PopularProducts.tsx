@@ -1,12 +1,13 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { getAllProducts, getColors } from "@/lib/content/products";
 import { filterProducts } from "@/lib/content/filter-logic";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
 const POPULAR_LIMIT = 8;
 
-export function PopularProducts() {
+export async function PopularProducts() {
+  const ru = await getTypedMessages();
   const colors = getColors();
   const colorsByCode = new Map(colors.map((color) => [color.code, color] as const));
   const products = filterProducts(getAllProducts(), colors, { sort: "popularity" }).slice(

@@ -17,6 +17,7 @@
     "@next/mdx": "^15.5.25",
     "@types/mdx": "^2.0.14",
     "next": "15.5.25",
+    "next-intl": "^4.14.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.87.0",

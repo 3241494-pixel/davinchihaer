@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IconTelegram } from "@/components/ui/icons";
 import { buildTelegramLink } from "@/lib/messenger";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Hero() {
+export async function Hero() {
+  const ru = await getTypedMessages();
   const telegramHref = buildTelegramLink();
 
   return (

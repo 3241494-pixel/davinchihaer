@@ -1,15 +1,19 @@
+import { getLocale } from "next-intl/server";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/Accordion";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
+import { pickLocale } from "@/lib/content/locale";
 import { SpecsTable } from "./SpecsTable";
 import type { Product } from "@/lib/content/types";
 
-export function ProductTabs({ product }: { product: Product }) {
-  const description = product.description.ru.split("\n\n");
+export async function ProductTabs({ product }: { product: Product }) {
+  const ru = await getTypedMessages();
+  const locale = await getLocale();
+  const description = pickLocale(product.description, locale).split("\n\n");
 
   return (
     <Accordion type="single" defaultValue="description">

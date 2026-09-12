@@ -1,8 +1,9 @@
 import { getCategories } from "@/lib/content/products";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { HeaderClient } from "./HeaderClient";
 
-export function Header() {
+export async function Header() {
+  const ru = await getTypedMessages();
   const categories = getCategories().map((category) => ({
     value: category,
     label: ru.categories[category],

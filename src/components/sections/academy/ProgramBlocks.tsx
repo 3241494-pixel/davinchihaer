@@ -1,6 +1,7 @@
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function ProgramBlocks() {
+export async function ProgramBlocks() {
+  const ru = await getTypedMessages();
   const { programHeading, programBlocks } = ru.academy.hub;
 
   return (

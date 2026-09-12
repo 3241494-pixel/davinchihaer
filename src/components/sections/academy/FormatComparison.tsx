@@ -1,6 +1,7 @@
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function FormatComparison() {
+export async function FormatComparison() {
+  const ru = await getTypedMessages();
   const { comparisonHeading, comparisonTable } = ru.academy.hub;
 
   return (

@@ -4,9 +4,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/Accordion";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function FaqSection() {
+export async function FaqSection() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.faq.heading}</h2>

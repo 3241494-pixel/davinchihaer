@@ -3,7 +3,7 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { retailLeadSchema, type RetailLead } from "@/lib/leads/schema";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { CoreFields, HoneypotField, SubmitStatusPanel } from "./LeadFormBase";
 import { useLeadSubmission } from "./use-lead-form";
 
@@ -25,6 +25,7 @@ export function RetailLeadForm({
   colorName,
   submitVariant,
 }: RetailLeadFormProps) {
+  const ru = useTypedMessages();
   const defaultValues: RetailLead = {
     type: "retail",
     name: "",

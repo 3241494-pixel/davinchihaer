@@ -1,8 +1,8 @@
 import { ProductGrid } from "@/components/catalog/ProductGrid";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import type { HairColor, Product } from "@/lib/content/types";
 
-export function RelatedProducts({
+export async function RelatedProducts({
   products,
   colorsByCode,
 }: {
@@ -10,6 +10,7 @@ export function RelatedProducts({
   colorsByCode: Map<string, HairColor>;
 }) {
   if (products.length === 0) return null;
+  const ru = await getTypedMessages();
 
   return (
     <section className="flex flex-col gap-4 border-t border-border pt-10">

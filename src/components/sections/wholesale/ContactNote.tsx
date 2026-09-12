@@ -1,8 +1,9 @@
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
 import { siteConfig } from "@/config/site";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function ContactNote() {
+export async function ContactNote() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-4 rounded-base border border-border bg-surface p-6">
       <h2 className="font-heading text-xl text-ink-strong">{ru.wholesale.contact.heading}</h2>

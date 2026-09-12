@@ -1,10 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { getPriceRange } from "@/lib/content/filter-logic";
+import { pickLocale } from "@/lib/content/locale";
 import { formatPrice } from "@/lib/format-price";
 import { formatMessage } from "@/lib/format-message";
 import { publicImageExists } from "@/lib/image-exists";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { Badge } from "@/components/ui/Badge";
 import type { HairColor, Product } from "@/lib/content/types";
 
@@ -15,10 +17,14 @@ export interface ProductCardProps {
   colorsByCode: Map<string, HairColor>;
 }
 
-export function ProductCard({ product, colorsByCode }: ProductCardProps) {
+export async function ProductCard({ product, colorsByCode }: ProductCardProps) {
+  const ru = await getTypedMessages();
+  const locale = await getLocale();
   const { min, max } = getPriceRange(product);
   const priceLabel =
-    min === max ? formatPrice(min) : formatMessage(ru.catalog.priceFrom, { price: formatPrice(min) });
+    min === max
+      ? formatPrice(min, locale)
+      : formatMessage(ru.catalog.priceFrom, { price: formatPrice(min, locale) });
 
   const lengths = Array.from(new Set(product.variants.map((variant) => variant.length))).sort(
     (a, b) => a - b,
@@ -44,7 +50,7 @@ export function ProductCard({ product, colorsByCode }: ProductCardProps) {
         {imageExists && image ? (
           <Image
             src={image.src}
-            alt={image.alt.ru}
+            alt={pickLocale(image.alt, locale)}
             fill
             sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 90vw"
             className="object-cover transition-transform duration-200 group-hover:scale-105"
@@ -73,7 +79,7 @@ export function ProductCard({ product, colorsByCode }: ProductCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <h3 className="font-heading text-lg text-ink-strong">{product.title.ru}</h3>
+        <h3 className="font-heading text-lg text-ink-strong">{pickLocale(product.title, locale)}</h3>
         <p className="text-base font-medium text-ink">{priceLabel}</p>
         <p className="text-sm text-ink-muted">
           {formatMessage(ru.catalog.availableLengths, { lengths: lengths.join(", ") })}

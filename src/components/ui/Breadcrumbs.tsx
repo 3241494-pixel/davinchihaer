@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { cn } from "./cn";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
 export interface BreadcrumbItem {
   label: string;
@@ -14,13 +14,17 @@ export interface BreadcrumbsProps {
   homeHref?: string;
 }
 
-export function Breadcrumbs({
+export async function Breadcrumbs({
   items,
   className,
-  homeLabel = ru.breadcrumbs.home,
+  homeLabel,
   homeHref = "/",
 }: BreadcrumbsProps) {
-  const allItems: BreadcrumbItem[] = [{ label: homeLabel, href: homeHref }, ...items];
+  const ru = await getTypedMessages();
+  const allItems: BreadcrumbItem[] = [
+    { label: homeLabel ?? ru.breadcrumbs.home, href: homeHref },
+    ...items,
+  ];
 
   return (
     <nav aria-label={ru.breadcrumbs.ariaLabel} className={cn("text-sm", className)}>

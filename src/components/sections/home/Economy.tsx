@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/Badge";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Economy() {
+export async function Economy() {
+  const ru = await getTypedMessages();
   const { tapeIn, capsule } = ru.home.economy;
 
   return (

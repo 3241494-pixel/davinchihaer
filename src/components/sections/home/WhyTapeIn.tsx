@@ -1,9 +1,10 @@
 import { IconBolt, IconEyeOff, IconHand, IconRefresh, IconShield } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
 const ICONS = [IconBolt, IconEyeOff, IconShield, IconRefresh, IconHand];
 
-export function WhyTapeIn() {
+export async function WhyTapeIn() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.home.why.heading}</h2>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
 import { IconZoomIn } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export interface BeforeAfterImage {
   src: string;
@@ -13,6 +13,7 @@ export interface BeforeAfterImage {
 }
 
 export function BeforeAfterLightbox({ images }: { images: BeforeAfterImage[] }) {
+  const ru = useTypedMessages();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (

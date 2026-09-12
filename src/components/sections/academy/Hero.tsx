@@ -1,8 +1,9 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Hero() {
+export async function Hero() {
+  const ru = await getTypedMessages();
   const { title, subtitle, audiences } = ru.academy.hub;
 
   return (

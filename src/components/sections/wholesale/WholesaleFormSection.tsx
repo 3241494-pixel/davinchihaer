@@ -1,7 +1,8 @@
 import { WholesaleLeadForm } from "@/components/forms/WholesaleLeadForm";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function WholesaleFormSection() {
+export async function WholesaleFormSection() {
+  const ru = await getTypedMessages();
   return (
     <div id="lead-form" className="flex scroll-mt-24 flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.contact.formHeading}</h2>

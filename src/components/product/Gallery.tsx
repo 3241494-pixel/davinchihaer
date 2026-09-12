@@ -10,7 +10,7 @@ import {
   IconZoomIn,
 } from "@/components/ui/icons";
 import { formatMessage } from "@/lib/format-message";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export interface GalleryImage {
   src: string;
@@ -32,6 +32,7 @@ function ImagePlaceholder({ label }: { label: string }) {
 }
 
 export function Gallery({ images, placeholderLabel }: GalleryProps) {
+  const ru = useTypedMessages();
   const [activeIndex, setActiveIndex] = useState(0);
   const [zoomIndex, setZoomIndex] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);

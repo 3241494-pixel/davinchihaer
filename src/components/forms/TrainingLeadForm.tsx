@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { trainingLeadSchema, type TrainingLead } from "@/lib/leads/schema";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { CoreFields, HoneypotField, SubmitStatusPanel } from "./LeadFormBase";
 import { useLeadSubmission } from "./use-lead-form";
 
@@ -17,6 +17,7 @@ export interface TrainingLeadFormProps {
 }
 
 export function TrainingLeadForm({ defaultFormat = "online", submitVariant }: TrainingLeadFormProps = {}) {
+  const ru = useTypedMessages();
   const defaultValues: TrainingLead = {
     type: "training",
     name: "",

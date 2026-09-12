@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
-import { ru } from "@/i18n/messages";
+import { Link } from "@/i18n/navigation";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export function Logo() {
+  const ru = useTypedMessages();
   return (
     <Link
       href="/"

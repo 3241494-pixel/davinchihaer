@@ -1,13 +1,16 @@
+"use client";
+
 import { cn } from "@/components/ui/cn";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
+import { LOCALES } from "@/i18n/routing";
 
-const LOCALES = ["ru", "en", "ka"] as const;
-
-/**
- * Заглушка переключателя языка — заработает на этапе 9 (next-intl + [locale]).
- * Сейчас активна только ru, остальные визуально отключены.
- */
 export function LanguageSwitcher() {
+  const ru = useTypedMessages();
+  const activeLocale = useLocale();
+  const pathname = usePathname();
+
   return (
     <div
       role="group"
@@ -15,24 +18,21 @@ export function LanguageSwitcher() {
       className="inline-flex items-center gap-1 rounded-base border border-border p-0.5"
     >
       {LOCALES.map((locale) => {
-        const isActive = locale === "ru";
+        const isActive = locale === activeLocale;
         return (
-          <button
+          <Link
             key={locale}
-            type="button"
-            disabled={!isActive}
+            href={pathname}
+            locale={locale}
             aria-current={isActive || undefined}
-            title={isActive ? undefined : ru.languageSwitcher.unavailable}
             className={cn(
               "rounded-base px-2 py-1 text-xs font-medium uppercase transition-colors duration-200",
               "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
-              isActive
-                ? "bg-ink text-bg"
-                : "text-ink-muted disabled:cursor-not-allowed disabled:opacity-50",
+              isActive ? "bg-ink text-bg" : "text-ink-muted hover:text-ink-strong",
             )}
           >
             {locale}
-          </button>
+          </Link>
         );
       })}
     </div>

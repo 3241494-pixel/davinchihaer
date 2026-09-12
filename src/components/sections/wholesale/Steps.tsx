@@ -1,6 +1,7 @@
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function Steps() {
+export async function Steps() {
+  const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.steps.heading}</h2>

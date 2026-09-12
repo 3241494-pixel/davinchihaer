@@ -1,15 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { publicImageExists } from "@/lib/image-exists";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-const BANNERS = [
-  { ...ru.home.banners.wholesale, href: "/wholesale", image: "/images/home/wholesale.jpg" },
-  { ...ru.home.banners.academy, href: "/academy", image: "/images/home/academy.jpg" },
-];
+export async function FunnelBanners() {
+  const ru = await getTypedMessages();
+  const BANNERS = [
+    { ...ru.home.banners.wholesale, href: "/wholesale", image: "/images/home/wholesale.jpg" },
+    { ...ru.home.banners.academy, href: "/academy", image: "/images/home/academy.jpg" },
+  ];
 
-export function FunnelBanners() {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {BANNERS.map((banner) => {

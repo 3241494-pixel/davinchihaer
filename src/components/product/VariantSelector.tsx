@@ -1,8 +1,10 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { cn } from "@/components/ui/cn";
 import { ColorSwatch } from "@/components/ui/ColorSwatch";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages, type Messages } from "@/i18n/use-messages";
+import { pickLocale } from "@/lib/content/locale";
 import { useVariantSelection } from "./variant-context";
 import type { HairLength } from "@/lib/content/types";
 
@@ -11,11 +13,13 @@ function LengthChip({
   active,
   disabled,
   onClick,
+  ru,
 }: {
   length: HairLength;
   active: boolean;
   disabled: boolean;
   onClick: () => void;
+  ru: Messages;
 }) {
   return (
     <button
@@ -42,6 +46,8 @@ function LengthChip({
 }
 
 export function VariantSelector() {
+  const ru = useTypedMessages();
+  const locale = useLocale();
   const {
     colorsByCode,
     selectedLength,
@@ -74,7 +80,7 @@ export function VariantSelector() {
                   code={color.code}
                   hex={color.hex}
                   swatchImage={color.swatchImage}
-                  label={color.name.ru}
+                  label={pickLocale(color.name, locale)}
                   selected={selectedColor === code}
                   disabled={disabled}
                   onClick={() => {
@@ -97,6 +103,7 @@ export function VariantSelector() {
               active={selectedLength === length}
               disabled={!isLengthAvailable(length)}
               onClick={() => setSelectedLength(length)}
+              ru={ru}
             />
           ))}
         </div>

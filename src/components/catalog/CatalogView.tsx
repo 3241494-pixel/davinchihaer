@@ -8,7 +8,7 @@ import {
   type RawSearchParams,
 } from "@/lib/catalog/search-params";
 import { formatMessage } from "@/lib/format-message";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { CategoryIntro } from "./CategoryIntro";
 import { FiltersDesktop } from "./FiltersDesktop";
 import { FiltersMobile } from "./FiltersMobile";
@@ -24,7 +24,8 @@ export interface CatalogViewProps {
   searchParams: RawSearchParams;
 }
 
-export function CatalogView({ pathname, lockedCategory, searchParams }: CatalogViewProps) {
+export async function CatalogView({ pathname, lockedCategory, searchParams }: CatalogViewProps) {
+  const ru = await getTypedMessages();
   const { filters, limit } = parseCatalogSearchParams(searchParams, { lockedCategory });
   const editableFilters: EditableFilters = {
     lengths: filters.lengths,

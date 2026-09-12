@@ -1,0 +1,1037 @@
+{
+  "common": {
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "technology": "Technology",
+    "guides": "Guides",
+    "academy": "Academy",
+    "wholesale": "Wholesale",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "categories": {
+    "tape-classic": "Classic Tape-In",
+    "tape-imitation-1": "Root Imitation 1.0",
+    "tape-imitation-2": "Root Imitation 2.0",
+    "accessories": "Accessories",
+    "care": "Care"
+  },
+  "header": {
+    "logoAlt": "Da Vinchi Hair — home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenuLabel": "Mobile menu",
+    "catalogMenuLabel": "Open catalog categories",
+    "telegramLink": "Message us on Telegram",
+    "allCatalogLink": "Whole catalog"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "unavailable": "Coming soon"
+  },
+  "footer": {
+    "catalogTitle": "Catalog",
+    "infoTitle": "Information",
+    "businessTitle": "Wholesale & academy",
+    "contactsTitle": "Contacts",
+    "info": {
+      "about": "About",
+      "delivery": "Delivery & payment",
+      "faq": "FAQ",
+      "gallery": "Gallery"
+    },
+    "business": {
+      "wholesale": "Wholesale",
+      "academy": "Academy",
+      "academyOnline": "Online course",
+      "academyOffline": "Tbilisi course"
+    },
+    "addressLabel": "Address",
+    "socialLabel": "Follow us",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "copyright": "© {year} Da Vinchi Hair. All rights reserved."
+  },
+  "telegramFloating": {
+    "label": "Message us on Telegram"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "ariaLabel": "Breadcrumbs"
+  },
+  "catalog": {
+    "heading": "Catalog",
+    "categoryIntro": {
+      "tape-classic": [
+        "Tape-In Hair Extensions, also known as tape hair extensions, is a popular hair extension technology widely used in the US and Europe. The main advantage of this technique is an even distribution of load on your natural hair: hair is attached with a wide tape rather than small individual strands, as with bonded extensions.",
+        "Tape-in extensions significantly cut down the procedure time, and with the right colour and density match the thin tapes look natural. You don't need to sacrifice your own length — with correct installation and care, Tape-In lets your natural hair grow out undisturbed.",
+        "Quality tapes are designed for repeated use and, with correct care, can last a year or longer. Choose quality hair and materials once — and get an extension system you can use again and again."
+      ],
+      "tape-imitation-1": [
+        "Tape-In with root imitation is an enhanced version of classic tape-in extensions. The underlying technology stays the same: hair is attached with a wide tape that spreads the load evenly across your natural hair. In addition, a root imitation is used, which makes the attachment point less noticeable.",
+        "Imitation 1.0 is a classic tape with an added root imitation. It makes the attachment less noticeable, though on close inspection a small strip of tape — about 2 mm — may be visible.",
+        "It's a great option for those who want a more natural look at the roots, plus extra volume and length, while keeping the affordable price and convenience of classic Tape-In."
+      ],
+      "tape-imitation-2": [
+        "Tape-In with root imitation is an enhanced version of classic tape-in extensions. The underlying technology stays the same: hair is attached with a wide tape that spreads the load evenly across your natural hair. In addition, a root imitation is used, which makes the attachment point less noticeable.",
+        "Imitation 2.0 is a more advanced version: the hair is hand-stitched strand by strand, creating the most natural possible attachment. In Imitation 2.0, the tape itself is not visible at all.",
+        "This option is especially valued by those for whom maximum discretion, a natural parting, and the feeling that the hair grows directly from the scalp matter most."
+      ],
+      "accessories": [
+        "TODO_CLIENT: accessories category description not provided. The idea for this section — consumables for each Tape-In system and a professional colour ring — comes from the reference review in the brief (section 4)."
+      ],
+      "care": [
+        "TODO_CLIENT: \"Care\" category description not provided by the client."
+      ]
+    },
+    "filters": {
+      "title": "Filters",
+      "categoryTitle": "Category",
+      "length": "Length",
+      "colorGroup": "Colour group",
+      "color": "Colour",
+      "tapeWidth": "Tape width",
+      "inStockOnly": "In stock only",
+      "priceMin": "Price from, €",
+      "priceMax": "Price to, €",
+      "apply": "Apply",
+      "reset": "Reset",
+      "openMobile": "Filters",
+      "closeMobile": "Close filters",
+      "showResults": "Show {count}",
+      "noResultsButton": "Nothing found"
+    },
+    "sort": {
+      "label": "Sort",
+      "popularity": "Most popular",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "newest": "New arrivals"
+    },
+    "colorGroups": {
+      "blonde": "Blonde",
+      "brown": "Brown",
+      "dark": "Dark",
+      "red": "Red",
+      "ombre": "Ombre",
+      "grey": "Grey"
+    },
+    "badges": {
+      "new": "New",
+      "bestseller": "Bestseller",
+      "sale": "Sale",
+      "limited": "Limited edition"
+    },
+    "lengthUnit": "cm",
+    "priceFrom": "from {price}",
+    "availableLengths": "Lengths: {lengths} cm",
+    "moreColors": "+{count}",
+    "loadMore": "Show more",
+    "outOfStock": "Out of stock",
+    "resultsCount": "Products found: {count}",
+    "emptyState": {
+      "title": "Nothing found",
+      "description": "Try changing the filters or resetting them.",
+      "reset": "Reset filters"
+    }
+  },
+  "product": {
+    "notFoundTitle": "Product not found",
+    "gallery": {
+      "thumbnailAlt": "Thumbnail {index}",
+      "zoomLabel": "Zoom photo",
+      "closeZoom": "Close zoomed photo",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "placeholder": "Photo coming after the photoshoot"
+    },
+    "selectLength": "Length",
+    "selectColor": "Colour",
+    "unavailableCombination": "This combination isn't available",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "weightUnit": "g",
+    "cta": {
+      "leadForm": "Send an inquiry",
+      "telegram": "Message us on Telegram"
+    },
+    "telegramMessageTemplate": "Hello! I'm interested in \"{title}\", length {length} cm, colour {color}.",
+    "trust": {
+      "gentleTitle": "Gentle on your natural hair",
+      "gentleDescription": "The load is spread across a wide tape rather than individual strands.",
+      "durableTitle": "Lasts a year or longer",
+      "durableDescription": "With correct installation and care, the system can be reused multiple times.",
+      "selfCorrectionTitle": "Self-correction is possible",
+      "selfCorrectionDescription": "After training, the tapes can be repositioned yourself.",
+      "colorMatchTitle": "Colour matching with a stylist",
+      "colorMatchDescription": "Visit us in Tbilisi — we'll match the shade in person, against your own hair."
+    },
+    "tabs": {
+      "description": "Description",
+      "specs": "Specifications",
+      "care": "Care",
+      "delivery": "Delivery & payment"
+    },
+    "specsLabels": {
+      "length": "Length",
+      "weight": "Weight",
+      "tapesCount": "Number of tapes",
+      "color": "Colour",
+      "sku": "SKU",
+      "hairOrigin": "Hair origin",
+      "hairStructure": "Hair structure",
+      "tapeWidth": "Tape width"
+    },
+    "hairStructureLabels": {
+      "straight": "Straight",
+      "wavy": "Wavy",
+      "curly": "Curly"
+    },
+    "careTodo": "TODO_CLIENT: care instructions not provided by the client.",
+    "deliveryTodo": "TODO_CLIENT: delivery and payment terms not provided by the client (brief, section 11, \"Blocks launch\").",
+    "related": "Related products",
+    "leadFormPlaceholder": {
+      "title": "Request a colour/length match"
+    }
+  },
+  "forms": {
+    "core": {
+      "name": "Name",
+      "contact": "Phone or Telegram",
+      "contactPlaceholder": "+995 555 123456 or @username",
+      "contactHint": "Default country code is Georgia (+995); any other is fine too.",
+      "channel": "Preferred contact channel",
+      "channelTelegram": "Telegram",
+      "channelWhatsapp": "WhatsApp",
+      "channelPhone": "Phone call",
+      "comment": "Comment",
+      "consentLabel": "I agree to the processing of personal data",
+      "consentLinkPrefix": "Details:",
+      "consentLinkText": "Privacy Policy",
+      "submit": "Send inquiry"
+    },
+    "retail": {
+      "title": "Request a colour/length match",
+      "submit": "Send an inquiry"
+    },
+    "wholesale": {
+      "title": "Wholesale inquiry",
+      "salonName": "Salon name (if any)",
+      "city": "City",
+      "experience": "Work experience",
+      "estimatedVolume": "Estimated order volume",
+      "submit": "Send wholesale inquiry"
+    },
+    "training": {
+      "title": "Training inquiry",
+      "format": "Training format",
+      "formatOnline": "Online",
+      "formatOffline": "Tbilisi (in person)",
+      "experience": "Your experience",
+      "preferredDates": "Preferred dates",
+      "submit": "Sign up for training"
+    },
+    "status": {
+      "successTitle": "Inquiry sent",
+      "successDescription": "We reply within a few hours during business hours (Tbilisi, GMT+4).",
+      "successTelegramCta": "Message us now on Telegram",
+      "errorTitle": "Couldn't send it",
+      "retry": "Try again"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Tape-In Hair Extensions",
+      "subtitle": "A natural result, speed, comfort and cost-efficiency — in one system. With correct installation and care, gentle on your natural hair and keeping its length.",
+      "ctaPrimary": "Find your match",
+      "ctaSecondary": "Message us on Telegram",
+      "imageAlt": "Tape-In hair extensions"
+    },
+    "techniques": {
+      "heading": "Three Tape-In techniques",
+      "linkLabel": "Learn more",
+      "classic": {
+        "title": "Classic Tape-In",
+        "description": "Hair is attached with a wide tape — the load is spread evenly, not carried by individual strands as with bonded extensions.",
+        "href": "/technology/tape-in"
+      },
+      "imitation1": {
+        "title": "Root Imitation 1.0",
+        "description": "The same tape with an added root imitation. Up close, a small strip of tape — about 2 mm — may be visible.",
+        "href": "/technology/imitation#1-0"
+      },
+      "imitation2": {
+        "title": "Root Imitation 2.0",
+        "description": "Hair is hand-stitched strand by strand — the tape itself is completely invisible, for the most natural parting.",
+        "href": "/technology/imitation#2-0"
+      }
+    },
+    "why": {
+      "heading": "Why Tape-In",
+      "items": [
+        {
+          "title": "Fast",
+          "description": "The procedure takes significantly less time than many other extension techniques."
+        },
+        {
+          "title": "Discreet",
+          "description": "With the right colour and density match, the tape looks natural."
+        },
+        {
+          "title": "Gentle on your hair",
+          "description": "The load is spread across a wide tape rather than small individual strands."
+        },
+        {
+          "title": "Cost-efficient",
+          "description": "With correct care, the system lasts a year or longer and can be reused."
+        },
+        {
+          "title": "Self-correction",
+          "description": "After training, the tapes can be repositioned yourself, without visiting a stylist every time."
+        }
+      ]
+    },
+    "popular": {
+      "heading": "Popular products",
+      "cta": "Whole catalog"
+    },
+    "economy": {
+      "heading": "Choose quality hair and materials once — and get a system you use again and again.",
+      "description": "Quality tapes and hair are designed for repeated use and, with correct care, last a year or longer — no need to visit a stylist every few weeks, as with bonded extensions.",
+      "comparisonTitle": "Cost of ownership per year",
+      "tapeIn": {
+        "label": "Tape-In",
+        "note": "One set + periodic touch-up",
+        "price": "TODO_CLIENT"
+      },
+      "capsule": {
+        "label": "Bonded extensions",
+        "note": "Touch-up every 2–3 months",
+        "price": "TODO_CLIENT"
+      },
+      "disclaimer": "TODO_CLIENT: exact figures for the cost comparison have not been provided by the client — the block's structure is ready, prices will be added once the client provides them."
+    },
+    "colorGuide": {
+      "heading": "Colour matching",
+      "description": "Tapes are matched to the natural colour and texture of your hair. The most accurate way is an in-person match — holding a strand against your hair at a consultation in Tbilisi.",
+      "cta": "How to match your colour"
+    },
+    "gallery": {
+      "heading": "Before & after",
+      "note": "TODO_CLIENT: real before/after photos will be added after the photoshoot (see brief, section 11).",
+      "cta": "View gallery"
+    },
+    "banners": {
+      "wholesale": {
+        "title": "Wholesale terms for salons",
+        "description": "Minimum order, volume discount tiers, and stylist support. Wholesale pricing is sent in response to your inquiry.",
+        "cta": "Wholesale terms"
+      },
+      "academy": {
+        "title": "Tape-In training",
+        "description": "Online video course and in-person training in Tbilisi — learn to install and correct the system yourself.",
+        "cta": "Training program"
+      }
+    },
+    "reviews": {
+      "heading": "Reviews",
+      "todoNote": "TODO_CLIENT: real reviews (5–10, with names and publication consent) will be provided by the client — placeholders shown below.",
+      "items": [
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        },
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        },
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "cta": "All questions and answers",
+      "items": [
+        {
+          "question": "How long does a Tape-In system last?",
+          "answer": "With correct installation and care — a year or longer; the tape is suitable for repeated use."
+        },
+        {
+          "question": "Can I correct the tapes myself?",
+          "answer": "Yes, once you've learned the technique — the tapes can be repositioned yourself at home, without visiting a stylist every time."
+        },
+        {
+          "question": "What's the difference between Imitation 2.0 and 1.0?",
+          "answer": "With Imitation 1.0, a small strip of tape — about 2 mm — may be visible up close. With Imitation 2.0, hair is hand-stitched strand by strand, and the tape itself is completely invisible."
+        },
+        {
+          "question": "How do I choose a colour?",
+          "answer": "The most accurate way is to visit us in Tbilisi and hold a strand against your hair at a consultation. You can also use the colour palette on the site as a guide."
+        },
+        {
+          "question": "How much does a system cost?",
+          "answer": "TODO_CLIENT: pricing isn't published — we'll send it in response to your inquiry based on length and colour."
+        }
+      ]
+    },
+    "contact": {
+      "heading": "Send an inquiry",
+      "description": "Tell us what you're interested in — we'll help you match the length and colour.",
+      "addressHeading": "Find us"
+    }
+  },
+  "pages": {
+    "technology": {
+      "hub": {
+        "title": "Technology",
+        "description": "Three variants of Tape-In hair extensions — from the classic technique to the most discreet root imitation."
+      },
+      "tapeIn": {
+        "title": "Classic Tape-In",
+        "description": "Even load on your natural hair, fast installation, and the option of self-correction.",
+        "benefitsHeading": "Benefits"
+      },
+      "imitation": {
+        "title": "Root Imitation: 1.0 vs 2.0",
+        "description": "The same Tape-In technology, enhanced with root imitation — with varying degrees of discretion.",
+        "comparisonHeading": "1.0 or 2.0",
+        "comparisonTable": {
+          "featureHeader": "Feature",
+          "rows": [
+            {
+              "feature": "Tape visibility",
+              "v1": "Up close, a strip of tape — about 2 mm — may be visible",
+              "v2": "Not visible at all"
+            },
+            {
+              "feature": "Manufacturing method",
+              "v1": "Classic tape with a root imitation",
+              "v2": "Hair hand-stitched strand by strand"
+            },
+            {
+              "feature": "Parting naturalness",
+              "v1": "More natural than classic Tape-In",
+              "v2": "Maximally natural — suitable for any parting"
+            },
+            {
+              "feature": "Price",
+              "v1": "TODO_CLIENT",
+              "v2": "TODO_CLIENT"
+            }
+          ],
+          "v1Header": "Imitation 1.0",
+          "v2Header": "Imitation 2.0"
+        },
+        "whoFitsHeading": "Who it's for",
+        "whoFits": [
+          "wants to add length and volume while keeping their natural hair",
+          "prefers the most natural possible look at the roots",
+          "wants to wear their hair down and style partings",
+          "values comfort and an even distribution of load",
+          "wants a system they can use again and again",
+          "prefers a less noticeable attachment than classic tapes"
+        ]
+      }
+    },
+    "guides": {
+      "hub": {
+        "title": "Guides",
+        "description": "Practical material: how to match your colour and length, and how to care for and correct the system yourself.",
+        "items": [
+          {
+            "title": "Colour matching",
+            "description": "Colour-matching method and palette.",
+            "href": "/guides/color-match"
+          },
+          {
+            "title": "Choosing a length",
+            "description": "Length and number of tapes for your desired volume.",
+            "href": "/guides/choose-length"
+          },
+          {
+            "title": "Self-correction",
+            "description": "How to reposition the tapes at home after training.",
+            "href": "/guides/self-correction"
+          }
+        ]
+      },
+      "colorMatch": {
+        "title": "Colour matching",
+        "description": "The most accurate colour match is done in person — holding a strand against your hair at a consultation in Tbilisi. If you can't make it in yet, we can help match a colour from a photo.",
+        "photoCalloutTitle": "Send a photo in daylight",
+        "photoCalloutText": "Photograph your hair at the roots and along its length in natural daylight, without flash or filters — artificial light and phone cameras distort colour. Send the photo on Telegram, and we'll help match the closest option from the palette.",
+        "photoCalloutCta": "Send a photo on Telegram",
+        "paletteHeading": "Colour palette"
+      },
+      "chooseLength": {
+        "title": "Choosing a length",
+        "description": "Length affects the visual effect, and the number of tapes affects density and volume. Base your choice on your own hair length and the result you want.",
+        "tableHeading": "Desired volume → number of tapes",
+        "table": {
+          "volumeHeader": "Desired volume",
+          "tapesHeader": "Number of tapes",
+          "rows": [
+            {
+              "volume": "Light, natural volume",
+              "tapes": "TODO_CLIENT"
+            },
+            {
+              "volume": "Medium volume",
+              "tapes": "TODO_CLIENT"
+            },
+            {
+              "volume": "Maximum volume",
+              "tapes": "TODO_CLIENT"
+            }
+          ]
+        },
+        "disclaimer": "TODO_CLIENT: exact tape-count figures depend on the product line and will be provided by the client."
+      },
+      "selfCorrection": {
+        "title": "Self-correction",
+        "description": "Once you've learned the technique in a course, the tapes can be repositioned yourself at home. You don't have to visit a stylist every time — you just need the right materials and to follow the method strictly.",
+        "warningTitle": "Important note",
+        "warningText": "Below is a general sequence of correction steps, not a complete protocol. The exact list of materials and step-by-step method is taught in the training course — self-correction without training, or with the method not followed, can damage your natural hair.",
+        "stepsHeading": "General sequence",
+        "steps": [
+          {
+            "title": "Preparation",
+            "description": "Gather the materials for removing and reinstalling the tape, and wash and dry your hair without oils or conditioners near the roots."
+          },
+          {
+            "title": "Removing the old tape",
+            "description": "Carefully dissolve the adhesive with a tape remover, without pulling or forcefully combing the strands."
+          },
+          {
+            "title": "Preparing the strand",
+            "description": "Section off a strand the same width as the tape, and clean any adhesive residue from the roots."
+          },
+          {
+            "title": "Installing the new tape",
+            "description": "Firmly and evenly attach the tape at the root, following the technique learned in training."
+          },
+          {
+            "title": "Check",
+            "description": "Make sure the tape sits evenly and doesn't pinch your natural hair, adjusting if needed."
+          }
+        ],
+        "disclaimer": "TODO_CLIENT: the exact protocol, list of materials, and recommended correction frequency will be provided by the course instructor."
+      }
+    },
+    "care": {
+      "title": "Care & lifespan",
+      "description": "Quality tapes and hair are designed for repeated use and, with correct care, last a year or longer.",
+      "lifespanHeading": "What shortens the lifespan",
+      "lifespanItems": [
+        "Using oils and heavy conditioners near the tape attachment area",
+        "Rough brushing and sleeping with hair down and unsecured",
+        "Self-correction without training or with the method not followed",
+        "Using products and tools not recommended by your stylist"
+      ],
+      "disclaimer": "TODO_CLIENT: a detailed step-by-step care routine (products, washing frequency, styling) will be provided by the client."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "description": "Examples of installations and results — before and after.",
+      "filterLabel": "Filter by technique",
+      "filterAll": "All techniques",
+      "note": "TODO_CLIENT: real photos of completed work will be added after the photoshoot (see brief, section 11)."
+    },
+    "about": {
+      "title": "About us",
+      "intro": "Da Vinchi Hair is a Tbilisi-based brand: selling hair and Tape-In extension systems, wholesale supply for stylists and salons, and training in the technique online and in person in Tbilisi.",
+      "historyHeading": "Our story",
+      "historyTodo": "TODO_CLIENT: the brand's story and the founder's story have not been provided by the client.",
+      "photoTodo": "TODO_CLIENT: a photo of the founder/team has not been provided by the client."
+    },
+    "delivery": {
+      "title": "Delivery & payment",
+      "todo": "TODO_CLIENT: delivery terms (Tbilisi, regions of Georgia, international) and payment methods have not been provided by the client — this blocks the launch (brief, section 11, \"Blocks launch\")."
+    },
+    "faqPage": {
+      "title": "FAQ",
+      "jsonLdNote": "The FAQPage markup is generated from this same list of questions.",
+      "categories": [
+        {
+          "title": "Retail",
+          "items": [
+            {
+              "question": "How long does a Tape-In system last?",
+              "answer": "With correct installation and care — a year or longer; the tape is suitable for repeated use."
+            },
+            {
+              "question": "Can I correct the tapes myself?",
+              "answer": "Yes, once you've learned the technique — the tapes can be repositioned yourself at home, without visiting a stylist every time."
+            },
+            {
+              "question": "What's the difference between Imitation 2.0 and 1.0?",
+              "answer": "With Imitation 1.0, a small strip of tape — about 2 mm — may be visible up close. With Imitation 2.0, hair is hand-stitched strand by strand, and the tape itself is completely invisible."
+            },
+            {
+              "question": "How do I choose a colour?",
+              "answer": "The most accurate way is to visit us in Tbilisi and hold a strand against your hair at a consultation. You can also send a photo of your hair in daylight on Telegram."
+            },
+            {
+              "question": "How much does a system cost?",
+              "answer": "TODO_CLIENT: pricing isn't published — we'll send it in response to your inquiry based on length and colour."
+            },
+            {
+              "question": "What tape width do you use?",
+              "answer": "TODO_CLIENT: tape width (3 cm, 4 cm, or other) has not been provided by the client."
+            }
+          ]
+        },
+        {
+          "title": "Wholesale",
+          "items": [
+            {
+              "question": "How can I find out wholesale prices?",
+              "answer": "Wholesale pricing isn't published on the site — leave an inquiry on the Wholesale page, and we'll send you the terms and prices."
+            },
+            {
+              "question": "What's the minimum wholesale order?",
+              "answer": "TODO_CLIENT: minimum order and discount tiers have not been provided by the client."
+            },
+            {
+              "question": "Do you need a contract to work together?",
+              "answer": "TODO_CLIENT: documentation requirements for working with stylists and salons have not been provided by the client."
+            }
+          ]
+        },
+        {
+          "title": "Academy",
+          "items": [
+            {
+              "question": "What training formats are available?",
+              "answer": "An online video course and in-person training in Tbilisi."
+            },
+            {
+              "question": "Is a certificate issued?",
+              "answer": "TODO_CLIENT: certificate terms have not been provided by the client."
+            },
+            {
+              "question": "How much does the training cost?",
+              "answer": "TODO_CLIENT: online and in-person pricing has not been provided by the client."
+            },
+            {
+              "question": "How do I sign up for the in-person course?",
+              "answer": "Leave an inquiry with your preferred dates — we'll get in touch and arrange the schedule."
+            }
+          ]
+        },
+        {
+          "title": "Delivery & payment",
+          "items": [
+            {
+              "question": "Where do you deliver to?",
+              "answer": "TODO_CLIENT: delivery terms (Tbilisi, regions of Georgia, international) have not been provided by the client."
+            },
+            {
+              "question": "What payment methods are available?",
+              "answer": "TODO_CLIENT: payment methods (transfer, cash, bank) have not been provided by the client."
+            }
+          ]
+        }
+      ]
+    },
+    "contacts": {
+      "title": "Contacts",
+      "description": "Reach us on Telegram or send an inquiry — we reply within a few hours during business hours (Tbilisi, GMT+4).",
+      "addressHeading": "Address",
+      "mapHeading": "Find us",
+      "mapTodo": "TODO_CLIENT: the exact address and map pin will be added once confirmed by the client (currently showing central Tbilisi).",
+      "socialHeading": "Messengers & social media",
+      "formHeading": "Send an inquiry"
+    },
+    "legal": {
+      "disclaimer": "TODO_CLIENT: the legal text below is a draft structure and requires legal review before publication.",
+      "privacy": {
+        "title": "Privacy Policy"
+      },
+      "terms": {
+        "title": "Terms of Use"
+      }
+    }
+  },
+  "wholesale": {
+    "hero": {
+      "title": "Wholesale for stylists and salons",
+      "subtitle": "Reliable supply of hair and Tape-In systems for your practice. Wholesale pricing isn't published — we send it in response to your inquiry, based on volume.",
+      "ctaPrimary": "Send an inquiry",
+      "ctaSecondary": "Message us on Telegram"
+    },
+    "terms": {
+      "heading": "Terms of cooperation",
+      "items": [
+        {
+          "title": "Minimum order",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "title": "Volume discount tiers",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "title": "Delivery times",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "title": "Stylist support",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "title": "Training",
+          "value": "TODO_CLIENT"
+        }
+      ],
+      "disclaimer": "Wholesale prices aren't published on the site — specific terms and pricing are sent in response to your inquiry."
+    },
+    "whyUs": {
+      "heading": "Why work with us",
+      "items": [
+        {
+          "title": "Consistent shade availability",
+          "description": "The core palette is kept in stock, so you can plan orders for your clients."
+        },
+        {
+          "title": "Consistent colour across batches",
+          "description": "A shade from a new batch matches the previous one — no need to re-collect samples for a client."
+        },
+        {
+          "title": "We'll deliver a missing shade",
+          "description": "If a specific client needs a specific shade you're short on, we handle it individually, not only in large batches."
+        },
+        {
+          "title": "Technique training",
+          "description": "An online course and in-person training in Tbilisi — for you and for your salon's stylists."
+        },
+        {
+          "title": "Materials for re-taping",
+          "description": "Consumables for correction and reinstalling the system — from the same product line as the system itself."
+        }
+      ]
+    },
+    "assortment": {
+      "heading": "Wholesale assortment",
+      "description": "All catalog categories are available for wholesale order. Prices on request.",
+      "cta": "Open catalog"
+    },
+    "steps": {
+      "heading": "How to get started",
+      "items": [
+        {
+          "title": "Inquiry",
+          "description": "Leave an inquiry on this page — include your city, experience, and estimated volume."
+        },
+        {
+          "title": "Terms & pricing",
+          "description": "We send the wholesale price list and terms of cooperation matched to your volume."
+        },
+        {
+          "title": "First order",
+          "description": "We agree on the composition of the first shipment — lengths, shades, quantity."
+        },
+        {
+          "title": "Ongoing terms",
+          "description": "After the first order, we move to ongoing terms of cooperation."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Questions from stylists",
+      "items": [
+        {
+          "question": "What documents do you provide with a shipment?",
+          "answer": "TODO_CLIENT: the list of accompanying documents has not been provided by the client."
+        },
+        {
+          "question": "Can a batch be returned or exchanged?",
+          "answer": "TODO_CLIENT: return and exchange terms for wholesale orders have not been provided by the client."
+        },
+        {
+          "question": "What are the delivery times?",
+          "answer": "TODO_CLIENT: delivery times have not been provided by the client."
+        },
+        {
+          "question": "What's the minimum batch for a first order?",
+          "answer": "TODO_CLIENT: the minimum first-order volume has not been provided by the client."
+        },
+        {
+          "question": "Do you work with regions of Georgia outside Tbilisi?",
+          "answer": "TODO_CLIENT: delivery terms for regions of Georgia have not been provided by the client."
+        },
+        {
+          "question": "Can you deliver outside Georgia?",
+          "answer": "TODO_CLIENT: international delivery terms have not been provided by the client."
+        }
+      ]
+    },
+    "contact": {
+      "heading": "Wholesale contacts",
+      "description": "We reply to wholesale inquiries during business hours (Tbilisi, GMT+4) — inquiries left in the evening or on weekends are handled the next business day.",
+      "formHeading": "Wholesale inquiry"
+    }
+  },
+  "academy": {
+    "nav": {
+      "hub": "Academy",
+      "online": "Online course",
+      "offline": "Tbilisi course"
+    },
+    "hub": {
+      "title": "Tape-In technique training",
+      "subtitle": "An online video course and in-person training in Tbilisi — for those who want to learn the technique from scratch or reposition their own tapes themselves.",
+      "audiences": {
+        "heading": "Who it's for",
+        "beginners": {
+          "title": "Beginner stylists",
+          "description": "Learning the Tape-In technique from scratch to offer extensions to clients."
+        },
+        "selfCorrection": {
+          "title": "Those who want to reposition their own tapes",
+          "description": "You already wear a Tape-In system and want to correct it yourself, without visiting a stylist every time.",
+          "linkText": "What is self-correction",
+          "linkHref": "/guides/self-correction"
+        }
+      },
+      "comparisonHeading": "Online or in person",
+      "comparisonTable": {
+        "featureHeader": "Feature",
+        "onlineHeader": "Online video course",
+        "offlineHeader": "In person in Tbilisi",
+        "rows": [
+          {
+            "feature": "Price",
+            "online": "TODO_CLIENT",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Duration",
+            "online": "TODO_CLIENT",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Class format",
+            "online": "Video lessons at your own pace",
+            "offline": "In-person group classes"
+          },
+          {
+            "feature": "Feedback from the instructor",
+            "online": "TODO_CLIENT",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Hands-on practice on a model",
+            "online": "No",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Materials included",
+            "online": "TODO_CLIENT",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Certificate",
+            "online": "TODO_CLIENT",
+            "offline": "TODO_CLIENT"
+          },
+          {
+            "feature": "Where it takes place",
+            "online": "Online, access via link",
+            "offline": "Tbilisi, TODO_CLIENT (exact address)"
+          }
+        ]
+      },
+      "programHeading": "What you'll learn",
+      "programBlocks": [
+        {
+          "title": "Tape-In fundamentals",
+          "description": "How the system works, and matching length, shade and tape width to the client."
+        },
+        {
+          "title": "Installation",
+          "description": "Sectioning strands, tape direction, and evenly distributing the load."
+        },
+        {
+          "title": "Root imitation",
+          "description": "Working with Imitation 1.0 and 2.0 for a natural look at the roots."
+        },
+        {
+          "title": "Correction",
+          "description": "Removing and reinstalling the system on a new tape without harming natural hair."
+        }
+      ],
+      "reviewsHeading": "Student reviews",
+      "reviewsTodo": "TODO_CLIENT: real student reviews (with names and publication consent) will be provided by the client — placeholders shown below.",
+      "reviews": [
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        },
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        },
+        {
+          "name": "TODO_CLIENT",
+          "text": "TODO_CLIENT: review text not provided by the client."
+        }
+      ],
+      "transitions": {
+        "online": {
+          "title": "Online video course",
+          "description": "Go through the modules at your own pace, with access via link after payment.",
+          "cta": "Online course program",
+          "href": "/academy/online"
+        },
+        "offline": {
+          "title": "Training in Tbilisi",
+          "description": "In-person group classes, hands-on practice.",
+          "cta": "In-person course program",
+          "href": "/academy/offline"
+        }
+      },
+      "faqHeading": "Frequently asked questions about training",
+      "faq": [
+        {
+          "question": "Is a certificate issued?",
+          "answer": "TODO_CLIENT: certificate issuance terms have not been provided by the client."
+        },
+        {
+          "question": "Do I need experience to start training?",
+          "answer": "No, the program is suitable for complete beginners too."
+        },
+        {
+          "question": "How do I pay for the course?",
+          "answer": "There's no online payment on the site — after your inquiry, we issue an invoice manually, and payment and access are arranged outside the site."
+        },
+        {
+          "question": "Can I take the online course and then come to the in-person one?",
+          "answer": "TODO_CLIENT: terms for switching between formats have not been provided by the client."
+        },
+        {
+          "question": "What if I already wear extensions and just want to learn correction?",
+          "answer": "Either format works — correction material is included in the program; there's also a dedicated guide on self-correction."
+        }
+      ]
+    },
+    "online": {
+      "title": "Tape-In online video course",
+      "description": "Video lessons at your own pace: from the fundamentals of the technology to correction.",
+      "programHeading": "Program by module",
+      "program": [
+        {
+          "module": "Module 1. Fundamentals of the technology",
+          "duration": "TODO_CLIENT"
+        },
+        {
+          "module": "Module 2. Matching length and shade",
+          "duration": "TODO_CLIENT"
+        },
+        {
+          "module": "Module 3. Installing the system",
+          "duration": "TODO_CLIENT"
+        },
+        {
+          "module": "Module 4. Root imitation 1.0 and 2.0",
+          "duration": "TODO_CLIENT"
+        },
+        {
+          "module": "Module 5. Correction and reinstallation",
+          "duration": "TODO_CLIENT"
+        }
+      ],
+      "requirementsHeading": "What you need to complete it",
+      "requirements": [
+        "A stable internet connection to watch the videos",
+        "TODO_CLIENT: the exact list of practice materials (for a training strand) will be provided by the client"
+      ],
+      "processHeading": "How enrolment works",
+      "processSteps": [
+        {
+          "title": "Inquiry",
+          "description": "You leave an inquiry in the form below."
+        },
+        {
+          "title": "Invoice",
+          "description": "We issue an invoice manually, outside the site."
+        },
+        {
+          "title": "Payment",
+          "description": "You pay the invoice using a convenient method."
+        },
+        {
+          "title": "Access",
+          "description": "Once payment is confirmed, we send a link to access the lessons."
+        }
+      ],
+      "accessNote": "Access is granted manually after payment is confirmed — not automatically. TODO_CLIENT: how long access to the lessons lasts has not been provided by the client.",
+      "supportHeading": "Support after the course",
+      "supportText": "TODO_CLIENT: terms of support after completing the course (questions, feedback) have not been provided by the client.",
+      "priceHeading": "Price",
+      "priceValue": "TODO_CLIENT",
+      "formHeading": "Sign up for the online course"
+    },
+    "offline": {
+      "title": "In-person training in Tbilisi",
+      "description": "Live group classes — with hands-on practice and troubleshooting on the spot.",
+      "programHeading": "Program by day",
+      "program": [
+        {
+          "day": "Day 1",
+          "description": "TODO_CLIENT: the first day's program has not been provided by the client."
+        },
+        {
+          "day": "Day 2",
+          "description": "TODO_CLIENT: the second day's program has not been provided by the client."
+        },
+        {
+          "day": "Day 3",
+          "description": "TODO_CLIENT: the third day's program has not been provided by the client."
+        }
+      ],
+      "detailsHeading": "Format",
+      "details": [
+        {
+          "label": "Duration",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "label": "Group size",
+          "value": "TODO_CLIENT"
+        }
+      ],
+      "addressHeading": "Address & directions",
+      "addressTodo": "TODO_CLIENT: the exact address of the training space and directions will be provided by the client.",
+      "includedHeading": "What's included",
+      "included": [
+        {
+          "label": "Practice materials",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "label": "Hands-on practice on a model",
+          "value": "TODO_CLIENT"
+        },
+        {
+          "label": "Coffee break",
+          "value": "TODO_CLIENT"
+        }
+      ],
+      "scheduleHeading": "Upcoming dates",
+      "scheduleValue": "By appointment — check current dates when you send an inquiry.",
+      "priceHeading": "Price",
+      "priceValue": "TODO_CLIENT",
+      "photosHeading": "Photos from classes",
+      "photosNote": "TODO_CLIENT: photos from classes will be added after the photoshoot.",
+      "formHeading": "Sign up for in-person training"
+    }
+  }
+}

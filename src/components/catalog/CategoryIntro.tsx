@@ -1,11 +1,12 @@
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import type { ProductCategory } from "@/lib/content/types";
 
 export interface CategoryIntroProps {
   category?: ProductCategory;
 }
 
-export function CategoryIntro({ category }: CategoryIntroProps) {
+export async function CategoryIntro({ category }: CategoryIntroProps) {
+  const ru = await getTypedMessages();
   const heading = category ? ru.categories[category] : ru.catalog.heading;
   const paragraphs = category ? ru.catalog.categoryIntro[category] : undefined;
 

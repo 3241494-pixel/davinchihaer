@@ -1,9 +1,13 @@
-import Link from "next/link";
+import { getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ColorSwatch } from "@/components/ui/ColorSwatch";
 import { getColors } from "@/lib/content/products";
-import { ru } from "@/i18n/messages";
+import { pickLocale } from "@/lib/content/locale";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-export function ColorGuideTeaser() {
+export async function ColorGuideTeaser() {
+  const ru = await getTypedMessages();
+  const locale = await getLocale();
   const colors = getColors();
 
   return (
@@ -19,7 +23,7 @@ export function ColorGuideTeaser() {
             code={color.code}
             hex={color.hex}
             swatchImage={color.swatchImage}
-            label={color.name.ru}
+            label={pickLocale(color.name, locale)}
             showCode={false}
             tabIndex={-1}
             aria-hidden

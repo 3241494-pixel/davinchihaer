@@ -1,10 +1,11 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Card } from "@/components/ui/Card";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 
-const CARDS = [ru.home.techniques.classic, ru.home.techniques.imitation1, ru.home.techniques.imitation2];
+export async function Techniques() {
+  const ru = await getTypedMessages();
+  const CARDS = [ru.home.techniques.classic, ru.home.techniques.imitation1, ru.home.techniques.imitation2];
 
-export function Techniques() {
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.home.techniques.heading}</h2>

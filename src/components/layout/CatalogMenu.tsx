@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/components/ui/cn";
 import { IconChevronDown } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export interface CategoryLink {
   value: string;
@@ -16,6 +16,7 @@ export interface CatalogMenuProps {
 }
 
 export function CatalogMenu({ categories }: CatalogMenuProps) {
+  const ru = useTypedMessages();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 

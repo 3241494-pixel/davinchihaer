@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getCategories } from "@/lib/content/products";
 import { siteConfig } from "@/config/site";
-import { ru } from "@/i18n/messages";
+import { getTypedMessages } from "@/i18n/get-messages";
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
 import { cn } from "@/components/ui/cn";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const iconLinkClasses = cn(
   "inline-flex size-9 items-center justify-center rounded-base border border-border text-ink transition-colors duration-200 hover:bg-surface",
@@ -15,7 +16,8 @@ const footerLinkClasses = cn(
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
 );
 
-export function Footer() {
+export async function Footer() {
+  const ru = await getTypedMessages();
   const categories = getCategories().map((category) => ({
     value: category,
     label: ru.categories[category],
@@ -131,13 +133,14 @@ export function Footer() {
           <p className="text-xs text-ink-muted">
             {ru.footer.copyright.replace("{year}", String(year))}
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <Link href="/privacy" className={cn(footerLinkClasses, "text-xs")}>
               {ru.footer.legal.privacy}
             </Link>
             <Link href="/terms" className={cn(footerLinkClasses, "text-xs")}>
               {ru.footer.legal.terms}
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

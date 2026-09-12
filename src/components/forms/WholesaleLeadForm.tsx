@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { wholesaleLeadSchema, type WholesaleLead } from "@/lib/leads/schema";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { CoreFields, HoneypotField, SubmitStatusPanel } from "./LeadFormBase";
 import { useLeadSubmission } from "./use-lead-form";
 
@@ -29,6 +29,7 @@ export interface WholesaleLeadFormProps {
 }
 
 export function WholesaleLeadForm({ submitVariant }: WholesaleLeadFormProps = {}) {
+  const ru = useTypedMessages();
   const form = useForm<WholesaleLead>({
     resolver: zodResolver(wholesaleLeadSchema),
     defaultValues,

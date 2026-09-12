@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { cn } from "@/components/ui/cn";
 import { Modal } from "@/components/ui/Modal";
 import { IconZoomIn } from "@/components/ui/icons";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export interface GalleryTechnique {
   value: string;
@@ -25,6 +25,7 @@ export interface GalleryFilterProps {
 }
 
 export function GalleryFilter({ techniques, items }: GalleryFilterProps) {
+  const ru = useTypedMessages();
   const [activeTechnique, setActiveTechnique] = useState<string | null>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 

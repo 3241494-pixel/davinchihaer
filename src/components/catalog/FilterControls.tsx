@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent, type KeyboardEvent } from "react";
+import { useLocale } from "next-intl";
 import { cn } from "@/components/ui/cn";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { ColorSwatch } from "@/components/ui/ColorSwatch";
@@ -10,7 +11,8 @@ import {
   TAPE_WIDTHS,
   type EditableFilters,
 } from "@/lib/catalog/search-params";
-import { ru } from "@/i18n/messages";
+import { useTypedMessages } from "@/i18n/use-messages";
+import { pickLocale } from "@/lib/content/locale";
 import type { HairColor, HairColorGroup, HairLength, TapeWidth } from "@/lib/content/types";
 
 export interface FilterControlsProps {
@@ -63,6 +65,8 @@ function FilterSection({ title, children }: { title: string; children: React.Rea
 }
 
 export function FilterControls({ value, onChange, colors, idPrefix }: FilterControlsProps) {
+  const ru = useTypedMessages();
+  const locale = useLocale();
   const [priceMinInput, setPriceMinInput] = useState(
     value.priceMin !== undefined ? String(value.priceMin / 100) : "",
   );
@@ -154,7 +158,7 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
               code={color.code}
               hex={color.hex}
               swatchImage={color.swatchImage}
-              label={color.name.ru}
+              label={pickLocale(color.name, locale)}
               size="sm"
               selected={Boolean(value.colorCodes?.includes(color.code))}
               onClick={() =>

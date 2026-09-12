@@ -15,6 +15,7 @@ export * from "./Section";
 export * from "./Heading";
 export * from "./Text";
 export * from "./ColorSwatch";
+export * from "./Price";
 export * from "./Rating";
 export * from "./Skeleton";
 export * from "./icons";
