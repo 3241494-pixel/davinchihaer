@@ -10,20 +10,26 @@ import { ru } from "@/i18n/messages";
 import { CoreFields, HoneypotField, SubmitStatusPanel } from "./LeadFormBase";
 import { useLeadSubmission } from "./use-lead-form";
 
-const defaultValues: TrainingLead = {
-  type: "training",
-  name: "",
-  contact: "",
-  channel: "telegram",
-  comment: "",
-  // consent обязан быть z.literal(true) в схеме, но по умолчанию не отмечен.
-  consent: false as unknown as true,
-  format: "online",
-  experience: "",
-  preferredDates: "",
-};
+export interface TrainingLeadFormProps {
+  defaultFormat?: "online" | "offline";
+  /** secondary — если на странице уже есть свой primary CTA. */
+  submitVariant?: "primary" | "secondary";
+}
 
-export function TrainingLeadForm() {
+export function TrainingLeadForm({ defaultFormat = "online", submitVariant }: TrainingLeadFormProps = {}) {
+  const defaultValues: TrainingLead = {
+    type: "training",
+    name: "",
+    contact: "",
+    channel: "telegram",
+    comment: "",
+    // consent обязан быть z.literal(true) в схеме, но по умолчанию не отмечен.
+    consent: false as unknown as true,
+    format: defaultFormat,
+    experience: "",
+    preferredDates: "",
+  };
+
   const form = useForm<TrainingLead>({
     resolver: zodResolver(trainingLeadSchema),
     defaultValues,
@@ -49,7 +55,7 @@ export function TrainingLeadForm() {
         <Select
           label={ru.forms.training.format}
           required
-          defaultValue="online"
+          defaultValue={defaultFormat}
           error={errors.format?.message}
           {...register("format")}
         >
@@ -73,6 +79,7 @@ export function TrainingLeadForm() {
           telegramHref={telegramHref}
           onRetry={resetStatus}
           submitLabel={ru.forms.training.submit}
+          submitVariant={submitVariant}
         />
       </form>
     </FormProvider>
