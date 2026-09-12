@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ru } from "@/i18n/messages";
 
@@ -6,9 +7,12 @@ export function Logo() {
     <Link
       href="/"
       aria-label={ru.header.logoAlt}
-      className="font-heading text-2xl leading-none font-semibold text-ink-strong transition-opacity duration-200 hover:opacity-70"
+      className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-70"
     >
-      Da Vinchi Hair
+      <Image src="/logo.svg" alt="" width={36} height={36} priority className="size-9" />
+      <span className="font-heading text-2xl leading-none font-semibold text-ink-strong">
+        Da Vinchi Hair
+      </span>
     </Link>
   );
 }
