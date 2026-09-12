@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CatalogView } from "@/components/catalog/CatalogView";
 import { getCategories } from "@/lib/content/products";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 import type { ProductCategory } from "@/lib/content/types";
 import type { RawSearchParams } from "@/lib/catalog/search-params";
 
@@ -22,7 +23,10 @@ export async function generateMetadata({
   const { category } = await params;
   if (!isProductCategory(category)) return {};
   const ru = await getTypedMessages();
-  return { title: `${ru.categories[category]} | Da Vinchi Hair` };
+  return {
+    title: `${ru.categories[category]} | Da Vinchi Hair`,
+    alternates: buildLanguageAlternates(`/catalog/${category}`),
+  };
 }
 
 export default async function CatalogCategoryPage({

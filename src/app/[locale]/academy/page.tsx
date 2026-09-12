@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -8,6 +9,16 @@ import { Reviews } from "@/components/sections/academy/Reviews";
 import { Transitions } from "@/components/sections/academy/Transitions";
 import { FaqSection } from "@/components/sections/academy/FaqSection";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const ru = await getTypedMessages();
+  return {
+    title: `${ru.academy.hub.title} | Da Vinchi Hair`,
+    description: ru.academy.hub.subtitle,
+    alternates: buildLanguageAlternates("/academy"),
+  };
+}
 
 export default async function AcademyHubPage() {
   const ru = await getTypedMessages();

@@ -7,10 +7,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/Accordion";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/faq"),
   title: `${ru.pages.faqPage.title} | Da Vinchi Hair`,
 };
 }

@@ -3,10 +3,12 @@ import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Badge } from "@/components/ui/Badge";
 import { TrainingLeadForm } from "@/components/forms/TrainingLeadForm";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/academy/online"),
   title: `${ru.academy.online.title} | Da Vinchi Hair`,
   description: ru.academy.online.description,
 };

@@ -3,10 +3,12 @@ import { Link } from "@/i18n/navigation";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Card } from "@/components/ui/Card";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/guides"),
   title: `${ru.pages.guides.hub.title} | Da Vinchi Hair`,
   description: ru.pages.guides.hub.description,
 };

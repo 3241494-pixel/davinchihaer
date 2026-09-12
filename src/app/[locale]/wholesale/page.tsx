@@ -10,6 +10,17 @@ import { FaqSection } from "@/components/sections/wholesale/FaqSection";
 import { WholesaleFormSection } from "@/components/sections/wholesale/WholesaleFormSection";
 import { ContactNote } from "@/components/sections/wholesale/ContactNote";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const ru = await getTypedMessages();
+  return {
+    title: `${ru.wholesale.hero.title} | Da Vinchi Hair`,
+    description: ru.wholesale.hero.subtitle,
+    alternates: buildLanguageAlternates("/wholesale"),
+  };
+}
 
 export default async function WholesalePage() {
   const ru = await getTypedMessages();

@@ -6,10 +6,12 @@ import { BeforeAfterLightbox as PhotoLightbox } from "@/components/sections/home
 import { siteConfig } from "@/config/site";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/academy/offline"),
   title: `${ru.academy.offline.title} | Da Vinchi Hair`,
   description: ru.academy.offline.description,
 };

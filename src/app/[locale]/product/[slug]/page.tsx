@@ -12,6 +12,7 @@ import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { ProductLeadForm } from "@/components/product/ProductLeadForm";
 import { getAllProducts, getColors, getProductBySlug } from "@/lib/content/products";
 import { pickLocale } from "@/lib/content/locale";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 import type { Locale } from "@/i18n/routing";
@@ -34,6 +35,7 @@ export async function generateMetadata({
   return {
     title: pickLocale(product.seo.title, locale),
     description: pickLocale(product.seo.description, locale),
+    alternates: buildLanguageAlternates(`/product/${slug}`),
   };
 }
 

@@ -6,12 +6,14 @@ import { IconBolt, IconEyeOff, IconHand, IconRefresh, IconShield } from "@/compo
 import { getPageContent } from "@/lib/content/pages";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 const ICONS = [IconBolt, IconEyeOff, IconShield, IconRefresh, IconHand];
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/technology/tape-in"),
   title: `${ru.pages.technology.tapeIn.title} | Da Vinchi Hair`,
   description: ru.pages.technology.tapeIn.description,
 };

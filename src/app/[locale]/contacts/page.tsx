@@ -4,10 +4,12 @@ import { RetailLeadForm } from "@/components/forms/RetailLeadForm";
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
 import { siteConfig } from "@/config/site";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/contacts"),
   title: `${ru.pages.contacts.title} | Da Vinchi Hair`,
   description: ru.pages.contacts.description,
 };

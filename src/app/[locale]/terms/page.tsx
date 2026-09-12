@@ -4,10 +4,12 @@ import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { getPageContent } from "@/lib/content/pages";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { buildLanguageAlternates } from "@/i18n/alternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
   return {
+  alternates: buildLanguageAlternates("/terms"),
   title: `${ru.pages.legal.terms.title} | Da Vinchi Hair`,
 };
 }
