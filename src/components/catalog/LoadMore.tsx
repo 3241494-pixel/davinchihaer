@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { buildCatalogHref, type EditableFilters } from "@/lib/catalog/search-params";
-import { getTypedMessages } from "@/i18n/get-messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
 export interface LoadMoreProps {
   pathname: string;
@@ -9,8 +9,8 @@ export interface LoadMoreProps {
   nextLimit: number;
 }
 
-export async function LoadMore({ pathname, filters, nextLimit }: LoadMoreProps) {
-  const ru = await getTypedMessages();
+export function LoadMore({ pathname, filters, nextLimit }: LoadMoreProps) {
+  const ru = useTypedMessages();
   return (
     <div className="flex justify-center py-8">
       <Button asChild variant="secondary">

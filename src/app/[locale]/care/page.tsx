@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Media } from "@/components/ui/Media";
 import { getPageContent } from "@/lib/content/pages";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { IMAGES } from "@/content/images";
 import { pickLocale } from "@/lib/content/locale";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/care"),
@@ -17,9 +22,10 @@ export async function generateMetadata(): Promise<Metadata> {
 };
 }
 
-export default async function CarePage() {
+export default async function CarePage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const locale = await getLocale();
   const page = await getPageContent("care", locale);
   const Content = page?.default;
   const copy = ru.pages.care;

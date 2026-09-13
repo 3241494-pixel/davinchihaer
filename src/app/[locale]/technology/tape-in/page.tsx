@@ -5,15 +5,20 @@ import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 import { IconBolt, IconEyeOff, IconHand, IconRefresh, IconShield } from "@/components/ui/icons";
 import { getPageContent } from "@/lib/content/pages";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { IMAGES } from "@/content/images";
 import { pickLocale } from "@/lib/content/locale";
+import type { Locale } from "@/i18n/routing";
 
 const ICONS = [IconBolt, IconEyeOff, IconShield, IconRefresh, IconHand];
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/technology/tape-in"),
@@ -22,9 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
 };
 }
 
-export default async function TapeInPage() {
+export default async function TapeInPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const locale = await getLocale();
   const page = await getPageContent("technology/tape-in", locale);
   const Content = page?.default;
 

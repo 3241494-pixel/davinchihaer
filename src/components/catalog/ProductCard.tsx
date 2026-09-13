@@ -1,12 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import { getLocale } from "next-intl/server";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getPriceRange } from "@/lib/content/filter-logic";
 import { pickLocale } from "@/lib/content/locale";
 import { formatPrice } from "@/lib/format-price";
 import { formatMessage } from "@/lib/format-message";
-import { publicImageExists } from "@/lib/image-exists";
-import { getTypedMessages } from "@/i18n/get-messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 import { Badge } from "@/components/ui/Badge";
 import type { HairColor, Product } from "@/lib/content/types";
 
@@ -15,11 +16,13 @@ const MAX_VISIBLE_SWATCHES = 6;
 export interface ProductCardProps {
   product: Product;
   colorsByCode: Map<string, HairColor>;
+  /** Посчитано на сервере (fs недоступен клиентским компонентам), см. lib/image-exists. */
+  imageExists: boolean;
 }
 
-export async function ProductCard({ product, colorsByCode }: ProductCardProps) {
-  const ru = await getTypedMessages();
-  const locale = await getLocale();
+export function ProductCard({ product, colorsByCode, imageExists }: ProductCardProps) {
+  const ru = useTypedMessages();
+  const locale = useLocale();
   const { min, max } = getPriceRange(product);
   const priceLabel =
     min === max
@@ -39,7 +42,6 @@ export async function ProductCard({ product, colorsByCode }: ProductCardProps) {
 
   const inStock = product.variants.some((variant) => variant.inStock);
   const image = product.images[0];
-  const imageExists = image ? publicImageExists(image.src) : false;
 
   return (
     <Link

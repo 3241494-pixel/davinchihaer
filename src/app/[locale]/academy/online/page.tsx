@@ -3,9 +3,15 @@ import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Badge } from "@/components/ui/Badge";
 import { TrainingLeadForm } from "@/components/forms/TrainingLeadForm";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { setRequestLocale } from "next-intl/server";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/academy/online"),
@@ -14,7 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
 };
 }
 
-export default async function AcademyOnlinePage() {
+export default async function AcademyOnlinePage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   const copy = ru.academy.online;
 

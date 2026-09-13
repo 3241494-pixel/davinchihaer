@@ -1,21 +1,36 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { CatalogView } from "@/components/catalog/CatalogView";
+import { getAllProducts, getColors } from "@/lib/content/products";
+import { buildImageExistsMap } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
-import type { RawSearchParams } from "@/lib/catalog/search-params";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-  title: `${ru.catalog.heading} | Da Vinchi Hair`,
-};
+    title: `${ru.catalog.heading} | Da Vinchi Hair`,
+  };
 }
 
-export default async function CatalogPage({
-  searchParams,
-}: {
-  searchParams: Promise<RawSearchParams>;
-}) {
-  const resolvedSearchParams = await searchParams;
+export default async function CatalogPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-  return <CatalogView pathname="/catalog" searchParams={resolvedSearchParams} />;
+  const products = getAllProducts();
+  const colors = getColors();
+  const imageExistsBySlug = buildImageExistsMap(products);
+
+  return (
+    <CatalogView
+      pathname="/catalog"
+      products={products}
+      colors={colors}
+      imageExistsBySlug={imageExistsBySlug}
+    />
+  );
 }

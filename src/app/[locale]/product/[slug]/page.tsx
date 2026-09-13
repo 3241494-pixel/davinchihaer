@@ -16,6 +16,7 @@ import { buildLanguageAlternates } from "@/i18n/alternates";
 import { Reveal } from "@/components/ui/Reveal";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import type { Product } from "@/lib/content/types";
 
@@ -31,6 +32,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const product = getProductBySlug(slug);
   if (!product) return {};
   return {
@@ -58,6 +60,7 @@ export default async function ProductPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const product = getProductBySlug(slug);
 
   if (!product) {

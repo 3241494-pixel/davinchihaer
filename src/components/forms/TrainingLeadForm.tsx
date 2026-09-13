@@ -42,10 +42,9 @@ export function TrainingLeadForm({ defaultFormat = "online", submitVariant }: Tr
     formState: { errors },
   } = form;
 
-  const { status, error, onSubmit, honeypotRef, telegramHref, resetStatus } = useLeadSubmission({
+  const { status, error, onSubmit, honeypotRef, resultUrl, resultText, resetStatus } = useLeadSubmission({
     form,
     defaultValues,
-    telegramFallback: {},
   });
 
   return (
@@ -77,7 +76,8 @@ export function TrainingLeadForm({ defaultFormat = "online", submitVariant }: Tr
         <SubmitStatusPanel
           status={status}
           error={error}
-          telegramHref={telegramHref}
+          resultUrl={resultUrl}
+          resultText={resultText}
           onRetry={resetStatus}
           submitLabel={ru.forms.training.submit}
           submitVariant={submitVariant}

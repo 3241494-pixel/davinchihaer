@@ -1,8 +1,8 @@
 import { Link } from "@/i18n/navigation";
-import { getTypedMessages } from "@/i18n/get-messages";
+import { useTypedMessages } from "@/i18n/use-messages";
 
-export async function EmptyState({ resetHref }: { resetHref: string }) {
-  const ru = await getTypedMessages();
+export function EmptyState({ resetHref }: { resetHref: string }) {
+  const ru = useTypedMessages();
   return (
     <div className="flex flex-col items-center gap-3 rounded-base border border-border bg-surface px-6 py-16 text-center">
       <h2 className="font-heading text-xl text-ink-strong">{ru.catalog.emptyState.title}</h2>

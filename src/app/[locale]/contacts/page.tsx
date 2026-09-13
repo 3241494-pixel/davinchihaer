@@ -4,9 +4,15 @@ import { RetailLeadForm } from "@/components/forms/RetailLeadForm";
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
 import { siteConfig } from "@/config/site";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { setRequestLocale } from "next-intl/server";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/contacts"),
@@ -17,7 +23,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const MAP_EMBED_SRC = "https://www.google.com/maps?q=Tbilisi%2C+Georgia&output=embed";
 
-export default async function ContactsPage() {
+export default async function ContactsPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   const copy = ru.pages.contacts;
 

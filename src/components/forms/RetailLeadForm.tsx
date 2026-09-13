@@ -44,10 +44,14 @@ export function RetailLeadForm({
     mode: "onBlur",
   });
 
-  const { status, error, onSubmit, honeypotRef, telegramHref, resetStatus } = useLeadSubmission({
+  const productSummary = productTitle
+    ? [productTitle, length ? `${length} см` : undefined, colorName].filter(Boolean).join(", ")
+    : undefined;
+
+  const { status, error, onSubmit, honeypotRef, resultUrl, resultText, resetStatus } = useLeadSubmission({
     form,
     defaultValues,
-    telegramFallback: { productTitle, length, colorName },
+    messageExtras: { productSummary },
   });
 
   return (
@@ -58,7 +62,8 @@ export function RetailLeadForm({
         <SubmitStatusPanel
           status={status}
           error={error}
-          telegramHref={telegramHref}
+          resultUrl={resultUrl}
+          resultText={resultText}
           onRetry={resetStatus}
           submitLabel={ru.forms.retail.submit}
           submitVariant={submitVariant}

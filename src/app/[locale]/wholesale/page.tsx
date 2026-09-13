@@ -10,10 +10,16 @@ import { FaqSection } from "@/components/sections/wholesale/FaqSection";
 import { WholesaleFormSection } from "@/components/sections/wholesale/WholesaleFormSection";
 import { ContactNote } from "@/components/sections/wholesale/ContactNote";
 import { getTypedMessages } from "@/i18n/get-messages";
+import { setRequestLocale } from "next-intl/server";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import type { Metadata } from "next";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
     title: `${ru.wholesale.hero.title} | Da Vinchi Hair`,
@@ -22,7 +28,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function WholesalePage() {
+export default async function WholesalePage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return (
     <>

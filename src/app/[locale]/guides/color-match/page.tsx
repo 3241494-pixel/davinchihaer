@@ -6,13 +6,18 @@ import { getColors } from "@/lib/content/products";
 import { pickLocale } from "@/lib/content/locale";
 import { getPageContent } from "@/lib/content/pages";
 import { buildTelegramLink } from "@/lib/messenger";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { Media } from "@/components/ui/Media";
 import { IMAGES } from "@/content/images";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/guides/color-match"),
@@ -21,9 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
 };
 }
 
-export default async function ColorMatchPage() {
+export default async function ColorMatchPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const locale = await getLocale();
   const page = await getPageContent("guides/color-match", locale);
   const Content = page?.default;
   const colors = getColors();

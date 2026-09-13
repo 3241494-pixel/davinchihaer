@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { getAllProducts, getColors } from "@/lib/content/products";
 import { filterProducts } from "@/lib/content/filter-logic";
+import { buildImageExistsMap } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 
 const POPULAR_LIMIT = 8;
@@ -14,6 +15,7 @@ export async function PopularProducts() {
     0,
     POPULAR_LIMIT,
   );
+  const imageExistsBySlug = buildImageExistsMap(products);
 
   return (
     <div className="flex flex-col gap-6">
@@ -26,7 +28,11 @@ export async function PopularProducts() {
           {ru.home.popular.cta}
         </Link>
       </div>
-      <ProductGrid products={products} colorsByCode={colorsByCode} />
+      <ProductGrid
+        products={products}
+        colorsByCode={colorsByCode}
+        imageExistsBySlug={imageExistsBySlug}
+      />
     </div>
   );
 }

@@ -3,7 +3,11 @@ import createMDX from "@next/mdx";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 const withMDX = createMDX({});

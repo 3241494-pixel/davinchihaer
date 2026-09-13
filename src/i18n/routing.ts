@@ -7,8 +7,9 @@ export type Locale = (typeof LOCALES)[number];
 export const routing = defineRouting({
   locales: LOCALES,
   defaultLocale: DEFAULT_LOCALE,
-  // ru живёт на "/", без префикса — стабильные URL, без редиректа с корня.
-  localePrefix: "as-needed",
+  // Статический экспорт без middleware: каждая локаль живёт под своим префиксом,
+  // "/" отдельно редиректит на /ru (см. public/_redirects и app/page.tsx).
+  localePrefix: "always",
 });
 
 // Типизирует useLocale()/getLocale() как Locale вместо string по всему проекту.

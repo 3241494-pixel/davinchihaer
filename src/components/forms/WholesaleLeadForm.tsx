@@ -41,10 +41,9 @@ export function WholesaleLeadForm({ submitVariant }: WholesaleLeadFormProps = {}
     formState: { errors },
   } = form;
 
-  const { status, error, onSubmit, honeypotRef, telegramHref, resetStatus } = useLeadSubmission({
+  const { status, error, onSubmit, honeypotRef, resultUrl, resultText, resetStatus } = useLeadSubmission({
     form,
     defaultValues,
-    telegramFallback: {},
   });
 
   return (
@@ -77,7 +76,8 @@ export function WholesaleLeadForm({ submitVariant }: WholesaleLeadFormProps = {}
         <SubmitStatusPanel
           status={status}
           error={error}
-          telegramHref={telegramHref}
+          resultUrl={resultUrl}
+          resultText={resultText}
           onRetry={resetStatus}
           submitLabel={ru.forms.wholesale.submit}
           submitVariant={submitVariant}

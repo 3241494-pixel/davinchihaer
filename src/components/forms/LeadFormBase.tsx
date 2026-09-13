@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useFormContext, type FieldError } from "react-hook-form";
 import { Input } from "@/components/ui/Input";
@@ -99,7 +100,10 @@ export function HoneypotField({ inputRef }: { inputRef: React.RefObject<HTMLInpu
 export interface SubmitStatusPanelProps {
   status: LeadFormStatus;
   error?: string;
-  telegramHref: string;
+  /** Готовая ссылка в мессенджер с текстом заявки (см. lib/lead/transport). */
+  resultUrl?: string;
+  /** Тот же текст в чистом виде — для кнопки «скопировать». */
+  resultText?: string;
   onRetry: () => void;
   submitLabel: string;
   /** По умолчанию primary — форма обычно единственный CTA на странице. */
@@ -109,22 +113,46 @@ export interface SubmitStatusPanelProps {
 export function SubmitStatusPanel({
   status,
   error,
-  telegramHref,
+  resultUrl,
+  resultText,
   onRetry,
   submitLabel,
   submitVariant = "primary",
 }: SubmitStatusPanelProps) {
   const ru = useTypedMessages();
+  const [copied, setCopied] = useState(false);
+
+  async function copyText() {
+    if (!resultText) return;
+    try {
+      await navigator.clipboard.writeText(resultText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Буфер обмена недоступен (нет разрешения/небезопасный контекст) — тихо игнорируем,
+      // ссылка на мессенджер остаётся основным путём.
+    }
+  }
+
   if (status === "success") {
     return (
       <div className="flex flex-col gap-3 rounded-base border border-border bg-surface p-4">
         <p className="font-medium text-ink-strong">{ru.forms.status.successTitle}</p>
         <p className="text-sm text-ink-muted">{ru.forms.status.successDescription}</p>
-        <Button asChild variant="secondary" size="sm" className="self-start">
-          <a href={telegramHref} target="_blank" rel="noopener noreferrer">
-            {ru.forms.status.successTelegramCta}
-          </a>
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          {resultUrl && (
+            <Button asChild variant="secondary" size="sm" className="self-start">
+              <a href={resultUrl} target="_blank" rel="noopener noreferrer">
+                {ru.forms.status.successOpenCta}
+              </a>
+            </Button>
+          )}
+          {resultText && (
+            <Button variant="ghost" size="sm" className="self-start" onClick={copyText}>
+              {copied ? ru.forms.status.copied : ru.forms.status.copyText}
+            </Button>
+          )}
+        </div>
       </div>
     );
   }

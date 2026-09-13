@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { getPageContent } from "@/lib/content/pages";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/guides/choose-length"),
@@ -14,9 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
 };
 }
 
-export default async function ChooseLengthPage() {
+export default async function ChooseLengthPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const locale = await getLocale();
   const page = await getPageContent("guides/choose-length", locale);
   const Content = page?.default;
   const copy = ru.pages.guides.chooseLength;

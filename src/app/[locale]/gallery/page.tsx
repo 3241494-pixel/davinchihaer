@@ -3,13 +3,18 @@ import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { GalleryFilter } from "@/components/content/GalleryFilter";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import type { ProductCategory } from "@/lib/content/types";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { IMAGES } from "@/content/images";
 import { pickLocale } from "@/lib/content/locale";
+import type { Locale } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+type PageProps = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
   alternates: buildLanguageAlternates("/gallery"),
@@ -23,9 +28,10 @@ const ITEMS_PER_TECHNIQUE = 3;
 
 const FEATURED_KEYS = ["longHairBrunette", "weftClipsBrunette"] as const;
 
-export default async function GalleryPage() {
+export default async function GalleryPage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const locale = await getLocale();
   const techniques = TECHNIQUE_KEYS.map((value) => ({ value, label: ru.categories[value] }));
 
   // Реальные фото пока не разбиты по технике — только 2 штуки, оба «gallery-only»

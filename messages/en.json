@@ -236,11 +236,13 @@
       "submit": "Sign up for training"
     },
     "status": {
-      "successTitle": "Inquiry sent",
-      "successDescription": "We reply within a few hours during business hours (Tbilisi, GMT+4).",
-      "successTelegramCta": "Message us now on Telegram",
+      "successTitle": "Message is ready",
+      "successDescription": "Just send it — we opened the chat in your messenger with all the form details.",
       "errorTitle": "Couldn't send it",
-      "retry": "Try again"
+      "retry": "Try again",
+      "successOpenCta": "Open messenger again",
+      "copyText": "Copy text",
+      "copied": "Copied"
     }
   },
   "home": {
