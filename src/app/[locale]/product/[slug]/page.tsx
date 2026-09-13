@@ -13,6 +13,7 @@ import { ProductLeadForm } from "@/components/product/ProductLeadForm";
 import { getAllProducts, getColors, getProductBySlug } from "@/lib/content/products";
 import { pickLocale } from "@/lib/content/locale";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import { Reveal } from "@/components/ui/Reveal";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 import type { Locale } from "@/i18n/routing";
@@ -98,11 +99,15 @@ export default async function ProductPage({
           </div>
         </div>
 
-        <ProductTabs product={product} />
+        <Reveal>
+          <ProductTabs product={product} />
+        </Reveal>
 
         <RelatedProducts products={related} colorsByCode={colorsByCode} />
 
-        <ProductLeadForm />
+        <Reveal>
+          <ProductLeadForm />
+        </Reveal>
       </Container>
     </VariantProvider>
   );

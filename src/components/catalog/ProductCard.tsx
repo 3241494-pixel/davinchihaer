@@ -44,7 +44,7 @@ export async function ProductCard({ product, colorsByCode }: ProductCardProps) {
   return (
     <Link
       href={`/product/${product.slug}`}
-      className="group flex flex-col overflow-hidden rounded-base border border-border bg-bg transition-colors duration-200 hover:border-ink-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong"
+      className="group flex h-full flex-col overflow-hidden rounded-base border border-border bg-bg transition-colors duration-200 hover:border-ink-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong"
     >
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-surface-alt">
         {imageExists && image ? (

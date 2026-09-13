@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/ui/Reveal";
 import { ProductCard } from "./ProductCard";
 import type { HairColor, Product } from "@/lib/content/types";
 
@@ -6,11 +7,20 @@ export interface ProductGridProps {
   colorsByCode: Map<string, HairColor>;
 }
 
+const STAGGER_STEP_MS = 60;
+const STAGGER_CAP_MS = 240;
+
 export function ProductGrid({ products, colorsByCode }: ProductGridProps) {
   return (
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
-      {products.map((product) => (
-        <ProductCard key={product.slug} product={product} colorsByCode={colorsByCode} />
+      {products.map((product, index) => (
+        <Reveal
+          key={product.slug}
+          className="h-full"
+          delayMs={Math.min(index * STAGGER_STEP_MS, STAGGER_CAP_MS)}
+        >
+          <ProductCard product={product} colorsByCode={colorsByCode} />
+        </Reveal>
       ))}
     </div>
   );
