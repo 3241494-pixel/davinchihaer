@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Button } from "@/components/ui/Button";
+import { Media } from "@/components/ui/Media";
 import { IconBolt, IconEyeOff, IconHand, IconRefresh, IconShield } from "@/components/ui/icons";
 import { getPageContent } from "@/lib/content/pages";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import { IMAGES } from "@/content/images";
+import { pickLocale } from "@/lib/content/locale";
 
 const ICONS = [IconBolt, IconEyeOff, IconShield, IconRefresh, IconHand];
 
@@ -33,6 +36,15 @@ export default async function TapeInPage() {
         { label: ru.nav.technology, href: "/technology" },
         { label: ru.pages.technology.tapeIn.title },
       ]}
+      wide={
+        <Media
+          path="tapeClassicRolls"
+          alt={pickLocale(IMAGES.tapeClassicRolls.alt, locale)}
+          aspect="16/9"
+          sizes="(min-width: 1024px) 960px, 100vw"
+          className="rounded-base bg-surface-alt"
+        />
+      }
       after={
         <div className="flex flex-col gap-6 border-t border-border pt-10">
           <h2 className="font-heading text-2xl text-ink-strong">

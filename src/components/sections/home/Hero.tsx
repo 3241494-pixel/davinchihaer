@@ -1,16 +1,12 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { IconTelegram } from "@/components/ui/icons";
-import { publicImageExists } from "@/lib/image-exists";
 import { buildTelegramLink } from "@/lib/messenger";
 import { getTypedMessages } from "@/i18n/get-messages";
 
-const HERO_IMAGE_SRC = "/images/home/hero.jpg";
-
 export async function Hero() {
   const ru = await getTypedMessages();
-  const imageExists = publicImageExists(HERO_IMAGE_SRC);
   const telegramHref = buildTelegramLink();
 
   return (
@@ -31,22 +27,14 @@ export async function Hero() {
         </div>
       </div>
 
-      <div className="relative aspect-[4/5] overflow-hidden rounded-base bg-surface-alt lg:aspect-square">
-        {imageExists ? (
-          <Image
-            src={HERO_IMAGE_SRC}
-            alt={ru.home.hero.imageAlt}
-            fill
-            sizes="(min-width: 1024px) 45vw, 100vw"
-            priority
-            className="object-cover"
-          />
-        ) : (
-          <div className="flex size-full items-center justify-center px-6 text-center text-sm text-ink-muted">
-            {ru.home.hero.imageAlt}
-          </div>
-        )}
-      </div>
+      <Media
+        path="tapeClassicRolls"
+        alt={ru.home.hero.imageAlt}
+        aspect="4/5"
+        priority
+        sizes="(min-width: 1024px) 45vw, 100vw"
+        className="rounded-base bg-surface-alt lg:aspect-square"
+      />
     </Container>
   );
 }

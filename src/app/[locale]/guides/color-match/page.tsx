@@ -9,6 +9,8 @@ import { buildTelegramLink } from "@/lib/messenger";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import { Media } from "@/components/ui/Media";
+import { IMAGES } from "@/content/images";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
@@ -36,6 +38,15 @@ export default async function ColorMatchPage() {
         { label: ru.nav.guides, href: "/guides" },
         { label: copy.title },
       ]}
+      wide={
+        <Media
+          path="colorSwatchCard"
+          alt={pickLocale(IMAGES.colorSwatchCard.alt, locale)}
+          aspect="16/9"
+          sizes="(min-width: 1024px) 960px, 100vw"
+          className="rounded-base bg-surface-alt"
+        />
+      }
       after={
         <div className="flex flex-col gap-10 border-t border-border pt-10">
           <div className="flex flex-col gap-4">

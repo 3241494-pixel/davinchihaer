@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { Media } from "@/components/ui/Media";
 import { getPageContent } from "@/lib/content/pages";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import { IMAGES } from "@/content/images";
+import { pickLocale } from "@/lib/content/locale";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
@@ -29,6 +32,15 @@ export default async function SelfCorrectionPage() {
         { label: ru.nav.guides, href: "/guides" },
         { label: copy.title },
       ]}
+      wide={
+        <Media
+          path="tapeInHand"
+          alt={pickLocale(IMAGES.tapeInHand.alt, locale)}
+          aspect="4/5"
+          sizes="(min-width: 1024px) 480px, 100vw"
+          className="mx-auto max-w-sm rounded-base bg-surface-alt"
+        />
+      }
       after={
         <div className="flex flex-col gap-8 border-t border-border pt-10">
           <div className="rounded-base border border-danger px-4 py-3">

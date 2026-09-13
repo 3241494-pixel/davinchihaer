@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { Media } from "@/components/ui/Media";
 import { getPageContent } from "@/lib/content/pages";
 import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { buildLanguageAlternates } from "@/i18n/alternates";
+import { IMAGES } from "@/content/images";
+import { pickLocale } from "@/lib/content/locale";
 
 export async function generateMetadata(): Promise<Metadata> {
   const ru = await getTypedMessages();
@@ -30,6 +33,15 @@ export default async function ImitationPage() {
         { label: ru.nav.technology, href: "/technology" },
         { label: ru.pages.technology.imitation.title },
       ]}
+      wide={
+        <Media
+          path="tapeAttachmentCloseup"
+          alt={pickLocale(IMAGES.tapeAttachmentCloseup.alt, locale)}
+          aspect="16/9"
+          sizes="(min-width: 1024px) 960px, 100vw"
+          className="rounded-base bg-ink-strong"
+        />
+      }
       after={
         <div className="flex flex-col gap-10 border-t border-border pt-10">
           <div className="flex flex-col gap-4">
