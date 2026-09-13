@@ -1,0 +1,57 @@
+{
+  "/images/products/tape-ash-blonde.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQBACdASoLABQAPwFqrU8rJaQiMAgBYCAJZQCdACIcqZOqZRadCqhH5BgAAP62s85Eth62qB30RJ6mmBkype/umYDXnxkFRYVVy+QQE8h+indCqe4kvGdKQ2bsdYw1e+AAAA==",
+    "width": 941,
+    "height": 1672
+  },
+  "/images/gallery/weft-clips-brunette.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQAwCdASoNABQAPwFqrU8rJiQiMAgBYCAJZACdACLgzumwpzY/y4AA/qsU+k6qSIxI6TyWdwgGjAYXL/RtksZLyrTPyObUiH8vSarXgB3/Ox0NfEXAuRmO2nb5qBaaMXq5DdW/Lam0DuQ6ExEpc1f7Wt15laymX4QFEDfdMeU/ZM/1MTb6nPZtwAA=",
+    "width": 1023,
+    "height": 1537
+  },
+  "/images/brand/color-swatch-card.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoPABQAPwForE6rJaQiMAgBYCAJZACsABuZtyAAERslVAAA/u/GvvQkc7KJfEL/nZ1eYi7hjwEJtFY/4HrKGmb6Lvk6WTQp9PZvHdDNrWa7iw/7TU+8gaPoMGuU+8YuufgSGOF0fwrBHM73qusAAA==",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/products/care-kit.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoPABQAPwFqrE8rJaQiMAgBYCAJYwCw7Yuuts3TT2mxIO6XGefAAP7tXy67QPFZ0c3BSMiYPup3ryVMtnSIHGR5M7J1oLGoL/xN87Xb3ahziIJ9iuZBgLKCBeMtuaS8IGHDy+AGIYNr/6UZT+ySEGCe6O4EoPGPxPVgvnrW4RkDTmbIekp45p1DwAA=",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/guides/extension-types.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwAwCdASoQABQAPwFqrE8rJiQiMAgBYCAJZgCsAB9fXod0SZQMqxmgAP610H63Or6pHXogXmLlDWAiGgtEfCpxkJu1UCKPXncKQW05ftoRKlpwDz/ym+Wdd/y/V+oNWE4Y39yx+G2v38agvyMtL9R3F9zf3YqP6Zepo0HRJ8oFQAAA",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/technology/tape-classic-rolls.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoNABQAPwFqrU8rJiQiMAgBYCAJQBbdBL24AZ+2U56+5Xzm0akTQAD+79X0PMsZ+V+5HEEe6rY/v30i15wARh/VmAGlNA6qDNiEWKvS50YxXej6RNTdcMaDKuqxU4MHPS3CVqfyUpQ3FrkUeKOIgWB73Re9LBgA",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/tape-attachment-closeup.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwAwCdASoNABQAPwFqrE6rJiQiMAgBYCAJQBWAA9LpXkrozUsmAAD+MMw4Od0RFqA47fJZ14MAVkLCm2IoXxFcucRlLIEkHsb6K4jtPbTZf+xmcnKW09AkNS8Cn8CoJdgk9/4mOd6VRTeY26DL1EIT2+C3KFjGqFvgewAA",
+    "width": 1023,
+    "height": 1537
+  },
+  "/images/products/tape-golden-blonde.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoPABQAPwFqrE8rJiQiMAgBYCAJZgCdMoMlksADZ7P/833kZJEvXAD+53dGHkgXjvmW1Bfr5BEEJu+w8wgv1al4ieYRoarYoRLzgbS5c1+hRDvbpveOntRlUAQ8P0N73ESSnI3A9hvQQyAzZK7kVXetb1AAAA==",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/gallery/long-hair-brunette.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoNABQAPwFqrE8rJiQiMAgBYCAJYwAAP5llwffUtlk86gAA/rHt1qunVbesoNQ+mAb5CBTJ8Gkm6BYdgbVk+IL4dfFgeGvoIZBiX7tF8c0IfEXEuh3O4FuLWjzAolVAv38izT2cml2wEgI5WTR5YUvwpRHgAA==",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/products/invisible-tape-blonde.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoQABQAPwFqrU6rJiQiMAgBYCAJQBOgBA/+ZXi0iE+es1IAAP7v1znRGzBZROTH76Ipy1/8qs/50OGnRUhgLkMQH1kJAbSunmenAAAA",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/guides/tape-in-hand.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoLABQAPwForE6rJaQiMAgBYCAJYgCdACHPVO6U/LdlNnsAAP7te1cHje4bgZm5v7w46gWg7enSSWmUlgUF0Or459pDn3T1+HVUhcuTyQusNjhipwAAAA==",
+    "width": 941,
+    "height": 1672
+  }
+}
