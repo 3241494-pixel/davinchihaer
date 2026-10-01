@@ -2,7 +2,7 @@
   "_todoClient": [
     "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
     "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
-    "Фото этой техники ещё нет — показывается серый плейсхолдер.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
     "ka — машинный перевод, требует вычитки носителем."
   ],
   "kind": "hair",
@@ -228,7 +228,23 @@
   ],
   "images": [
     {
-      "src": "/images/products/ring-star-slavic-straight.webp",
+      "src": "/images/technology/ringstar-4.webp",
+      "alt": {
+        "ru": "Ring Star · славянка, прямые",
+        "en": "Ring Star · Slavic, straight",
+        "ka": "Ring Star · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/ringstar-5.webp",
+      "alt": {
+        "ru": "Ring Star · славянка, прямые",
+        "en": "Ring Star · Slavic, straight",
+        "ka": "Ring Star · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/ringstar-1.webp",
       "alt": {
         "ru": "Ring Star · славянка, прямые",
         "en": "Ring Star · Slavic, straight",

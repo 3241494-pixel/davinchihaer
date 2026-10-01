@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Media } from "@/components/ui/Media";
+import { VideoStrip } from "@/components/content/VideoStrip";
 import { getPageContent } from "@/lib/content/pages";
 import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
@@ -49,6 +50,7 @@ export default async function SelfCorrectionPage({ params }: PageProps) {
       }
       after={
         <div className="flex flex-col gap-8 border-t border-border pt-10">
+          <VideoStrip names={["installOnModel"]} locale={locale} />
           <div className="rounded-base border border-danger px-4 py-3">
             <p className="text-sm font-medium text-danger">{copy.warningTitle}</p>
             <p className="mt-1 text-sm text-ink-muted">{copy.warningText}</p>

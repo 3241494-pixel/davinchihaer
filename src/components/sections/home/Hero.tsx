@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Media } from "@/components/ui/Media";
+import { Video } from "@/components/ui/Video";
 import { IconTelegram } from "@/components/ui/icons";
 import { buildTelegramLink } from "@/lib/messenger";
 import { getTypedMessages } from "@/i18n/get-messages";
@@ -28,13 +28,12 @@ export async function Hero() {
         </div>
       </div>
 
-      <Media
-        path="hero"
-        alt={ru.home.hero.imageAlt}
-        aspect="4/5"
+      <Video
+        name="heroLoop1"
+        label={ru.home.hero.imageAlt}
         priority
-        sizes="(min-width: 1024px) 45vw, 100vw"
-        className="rounded-base bg-surface-alt lg:aspect-square"
+        aspectClass="aspect-[4/5] lg:aspect-square"
+        className="rounded-base"
       />
     </Container>
   );

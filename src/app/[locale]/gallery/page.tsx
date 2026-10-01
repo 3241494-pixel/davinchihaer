@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { GalleryFilter } from "@/components/content/GalleryFilter";
+import { VideoStrip } from "@/components/content/VideoStrip";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { setRequestLocale } from "next-intl/server";
@@ -30,7 +31,14 @@ const TECHNIQUE_KEYS: AttachmentType[] = [
   "bio-tape",
   "ring-star",
 ];
-const ITEMS_PER_TECHNIQUE = 3;
+/** Фото из комплекта клиента по каждой технике (public/images/technology). */
+const TECHNIQUE_PHOTOS: Record<AttachmentType, string[]> = {
+  "tape-classic": ["classic-1", "classic-2", "classic-3", "classic-4"],
+  "imitation-1": ["imitation-1-1", "imitation-1-2", "imitation-1-3", "imitation-1-4", "imitation-1-5"],
+  "imitation-2": ["imitation-2-1", "imitation-2-3"],
+  "bio-tape": ["bio-1", "bio-2"],
+  "ring-star": ["ringstar-1", "ringstar-2", "ringstar-3", "ringstar-4", "ringstar-5"],
+};
 
 const FEATURED_KEYS = ["longHairBrunette", "weftClipsBrunette"] as const;
 
@@ -50,9 +58,9 @@ export default async function GalleryPage({ params }: PageProps) {
     technique: "featured",
   }));
 
-  const placeholders = TECHNIQUE_KEYS.flatMap((technique) =>
-    Array.from({ length: ITEMS_PER_TECHNIQUE }, (_, index) => {
-      const src = `/images/gallery/${technique}-${index + 1}.jpg`;
+  const techniquePhotos = TECHNIQUE_KEYS.flatMap((technique) =>
+    TECHNIQUE_PHOTOS[technique].map((name) => {
+      const src = `/images/technology/${name}.webp`;
       return {
         src,
         alt: ru.attachments[technique],
@@ -62,7 +70,7 @@ export default async function GalleryPage({ params }: PageProps) {
     }),
   );
 
-  const items = [...featured, ...placeholders];
+  const items = [...techniquePhotos, ...featured];
 
   return (
     <ContentPageLayout
@@ -72,6 +80,7 @@ export default async function GalleryPage({ params }: PageProps) {
       wide={
         <div className="flex flex-col gap-4">
           <GalleryFilter techniques={techniques} items={items} />
+          <VideoStrip names={["darkPiece1", "darkPiece2", "bio2"]} locale={locale} />
           <p className="text-sm text-ink-muted">{ru.pages.gallery.note}</p>
         </div>
       }

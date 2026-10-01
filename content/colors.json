@@ -1,5 +1,5 @@
 {
-  "_todoClient": "Коды оттенков — из фото палитры клиента (Цвет 1.0 … 12.0). Hex подобраны по фото приблизительно, названия и группы требуют подтверждения. Когда будут фото прядей swatch-N.jpg — добавить swatchImage. ka — требует вычитки носителем.",
+  "_todoClient": "Коды и фото прядей — от клиента (swatch-N.jpg, обрезаны до 160×160). Hex — средний цвет фото, используется как запасной. Названия и группы требуют подтверждения; ka — вычитка носителем.",
   "colors": [
     {
       "code": "1.0",
@@ -8,8 +8,9 @@
         "en": "Black",
         "ka": "შავი"
       },
-      "hex": "#1A1612",
-      "group": "dark"
+      "hex": "#302E33",
+      "group": "dark",
+      "swatchImage": "/images/swatches/1.0.webp"
     },
     {
       "code": "3.0",
@@ -18,8 +19,9 @@
         "en": "Dark brown",
         "ka": "მუქი შატენი"
       },
-      "hex": "#33241A",
-      "group": "dark"
+      "hex": "#3E312D",
+      "group": "dark",
+      "swatchImage": "/images/swatches/3.0.webp"
     },
     {
       "code": "4.0",
@@ -28,8 +30,9 @@
         "en": "Medium brown",
         "ka": "შატენი"
       },
-      "hex": "#4B3324",
-      "group": "brown"
+      "hex": "#482F23",
+      "group": "brown",
+      "swatchImage": "/images/swatches/4.0.webp"
     },
     {
       "code": "7.0",
@@ -38,8 +41,9 @@
         "en": "Dark blonde",
         "ka": "ღია წაბლისფერი"
       },
-      "hex": "#8A6A4A",
-      "group": "brown"
+      "hex": "#B68F69",
+      "group": "brown",
+      "swatchImage": "/images/swatches/7.0.webp"
     },
     {
       "code": "9.0",
@@ -48,8 +52,9 @@
         "en": "Light blonde",
         "ka": "ღია ქერა"
       },
-      "hex": "#B8976C",
-      "group": "blonde"
+      "hex": "#BE945F",
+      "group": "blonde",
+      "swatchImage": "/images/swatches/9.0.webp"
     },
     {
       "code": "10.0",
@@ -58,8 +63,9 @@
         "en": "Very light blonde",
         "ka": "ძალიან ღია ქერა"
       },
-      "hex": "#D6BC92",
-      "group": "blonde"
+      "hex": "#C3A77F",
+      "group": "blonde",
+      "swatchImage": "/images/swatches/10.0.webp"
     },
     {
       "code": "12.0",
@@ -68,8 +74,9 @@
         "en": "Platinum blonde",
         "ka": "პლატინისფერი ქერა"
       },
-      "hex": "#E9DDC4",
-      "group": "ash"
+      "hex": "#DFD1C0",
+      "group": "ash",
+      "swatchImage": "/images/swatches/12.0.webp"
     }
   ]
 }

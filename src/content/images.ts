@@ -203,6 +203,176 @@ export const IMAGES = {
       ka: 'Da Vinchi-ს რიმუვერი, 100 მლ', // TODO_I18N
     },
   },
+
+  paletteWide2: {
+    path: '/images/brand/palette-wide-2.webp',
+    usage: ['brand', 'guide'],
+    alt: {
+      ru: 'Палитра оттенков Da Vinchi на стеллаже',
+      en: 'Da Vinchi shade palette on a shelf',
+      ka: 'Da Vinchi-ს ელფერების პალიტრა', // TODO_I18N
+    },
+  },
+
+  techClassic1: {
+    path: '/images/technology/classic-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Классические ленты Tape-In, светлый оттенок',
+      en: 'Classic Tape-In wefts, light shade',
+      ka: 'კლასიკური Tape-In ლენტები, ღია ელფერი', // TODO_I18N
+    },
+  },
+
+  techImitation1: {
+    path: '/images/technology/imitation-1-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Лента с имитацией роста 1.0',
+      en: 'Root imitation 1.0 tape',
+      ka: 'ზრდის იმიტაციის ლენტი 1.0', // TODO_I18N
+    },
+  },
+
+  techImitation2: {
+    path: '/images/technology/imitation-2-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Прядь с имитацией роста 2.0 на фирменной карточке',
+      en: 'Root imitation 2.0 strand on a branded card',
+      ka: 'ზრდის იმიტაცია 2.0 ფირმულ ბარათზე', // TODO_I18N
+    },
+  },
+
+  techBio1: {
+    path: '/images/technology/bio-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Биоленты в рулонах, тёмно-русый оттенок',
+      en: 'Rolled bio-tapes, dark blonde shade',
+      ka: 'ბიოლენტები რულონებში', // TODO_I18N
+    },
+  },
+
+  techBio2: {
+    path: '/images/technology/bio-2.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Биолента на светлых волосах крупным планом',
+      en: 'Close-up of a bio-tape on light hair',
+      ka: 'ბიოლენტი ღია თმაზე ახლო ხედით', // TODO_I18N
+    },
+  },
+
+  techRingstar4: {
+    path: '/images/technology/ringstar-4.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Волосы Ring Star, светлый блонд',
+      en: 'Ring Star hair, light blonde',
+      ka: 'Ring Star თმა, ღია ქერა', // TODO_I18N
+    },
+    note: 'Тёмно-бирюзовый фон: только страница Ring Star и её карточки, не на главной.',
+  },
+
+  posterHeroLoop1: {
+    path: '/images/video/hero-loop-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Волосы Da Vinchi трёх оттенков',
+      en: 'Da Vinchi hair in three shades',
+      ka: 'Da Vinchi-ს თმა სამ ელფერში', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterTapePeel: {
+    path: '/images/video/video-tape-peel-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Снятие защитной плёнки с ленты',
+      en: 'Peeling the protective film off a tape',
+      ka: 'ლენტიდან დამცავი აპკის მოხსნა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterTapeWidth: {
+    path: '/images/video/video-tape-width-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Ширина ленты, замер сантиметром',
+      en: 'Measuring the tape width',
+      ka: 'ლენტის სიგანის გაზომვა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterBio1: {
+    path: '/images/video/bio-video-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Биоленты на волнистых волосах',
+      en: 'Bio-tapes on wavy hair',
+      ka: 'ბიოლენტები ტალღოვან თმაზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterBio2: {
+    path: '/images/video/bio-video-2-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Биоленты, платиновый блонд',
+      en: 'Bio-tapes, platinum blonde',
+      ka: 'ბიოლენტები, პლატინისფერი ქერა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterRingstar1: {
+    path: '/images/video/ringstar-video-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Волосы Ring Star',
+      en: 'Ring Star hair',
+      ka: 'Ring Star თმა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterInstallOnModel: {
+    path: '/images/video/guide-install-on-model-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Установка лент на модели',
+      en: 'Installing tapes on a model',
+      ka: 'ლენტების დაყენება მოდელზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterDarkPiece1: {
+    path: '/images/video/video-dark-piece-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Тёмные волосы крупным планом',
+      en: 'Dark hair close-up',
+      ka: 'მუქი თმა ახლო ხედით', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterDarkPiece2: {
+    path: '/images/video/video-dark-piece-2-teal-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Тёмные волосы на бирюзовом фоне',
+      en: 'Dark hair on a teal background',
+      ka: 'მუქი თმა ფირუზისფერ ფონზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
 } as const satisfies Record<string, ImageEntry>;
 
 export type ImageKey = keyof typeof IMAGES;

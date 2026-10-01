@@ -83,5 +83,145 @@
     "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQAgCdASoLABAAAgA0JQBOgMWlyt8CcDY18nAAzjm/9Cd2OrOrM4p6tDf22ktAtPnZM47GrBV8rkcGkDbdMvVPHvUilOkvhGSSzMcB3ZKLdlrJzA3p9bCbhaFYUCxeJ4pBIPbjREsJNYCc56ZLxGAA",
     "width": 1024,
     "height": 1536
+  },
+  "/images/technology/imitation-1-4.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAQCdASoNABAAAgA0JQBOgCM/DibIm0AA/v2Yc63eX5yJNhV+NZP5PDbP9D7wz2uozvvyI/nvwevfs0/o2ONuSzNxI0aCUwq2AraHYlF1UZV5HgV36LeqEqv1ZGTPR6fShVW7td7lDu4iUbqWhyC154AAAA==",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/video/bio-video-1-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQAgCdASoJABAAAgA0JbACdLoAEI0SEnsxCZHrAADicZz3eZdHwyUlFEWIrzK2s27ckSwh3nrRvSrOm8/c5fVRDZXGTpf18LWX3bZa4iiJl79M/gqlYSWDGLA/9+Zgu+9pjUyLhNKb5yJTwKAAAA==",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/ringstar-3.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAQCdASoLABAAAgA0JZgCdADc+OnZgAD+9pXaHkGTfTzvZaf1zPxAdrnbv4kh5FGREvIam2aV4Oq9e/oBPN0MgBH9cxwA1Tg27MU6JrPKR+QLqitzP0b3+pOfu3HsATNAAA==",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/imitation-2-3.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoLABAAAgA0JaACdB2gDY5NZzSqO/UIAP7mVXeprn7lLNFB38/RVH53n+JexVreRu9zaMZ+LIByJRvvn/VLKxtPPwYikLWmBQ0o/22885fvI7M6lKGIr0zW6aa37EIDPf+hN8qAvvIzcK4OCvWIcCHKMcyY/1gm9505JC9ZGJLDAAAA",
+    "width": 1023,
+    "height": 1537
+  },
+  "/images/brand/palette-wide-2.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwAgCdASoLABAAAgA0JQBOgCBvw0754yJCwAD+/OmdwRa4/wiDpjXL73ly6rf2T9zeW3Zb+p8oZ+MZWK5/YFrB2RGitcAmktDDdSWoTclsrOut32DvepeaXGmeA5mxK4kLV0IR6it549QgqAAAAA==",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/classic-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQAgCdASoMABAAAgA0JbACdAYtzvs+442T58AA/vvCtbxLSpI9+Yfoo1Imx+fftvTxZoH/8Q6Qckb75cpQ1EvpgzfiFLzMDpNlecrh0u3REuZL2YRhCR+9iJpRuGUowvi/xB6EfEv30Dw2O1/lIhMKQPbj+xIAAAA=",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/video/video-tape-peel-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoJABAAAgA0JZQCdAYuvkzL9TwAQAD+/M374A+36tp95ncI1nDkW/5RhGlrW4UuvyfEAjFY4FyfFbJ36Tbb+hshfCihjd192/38K03wjaH9Oof2K9G5zdmwWpL82sFEHr+EQgAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/imitation-1-5.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQAgCdASoNABAAAgA0JaQAD2HTMx9tN6xPfIAA/v1QWChpmmzjIhF5DMfV5tDdlsoec/bPrSsYbTvHNBj/Cqjk5tW+5g9TbtwngiTntln9wgds5gZEnrgvMbfufm0j/RLbSSNy2JEAEAAA",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/technology/imitation-1-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoJABAAAgA0JaACdAE2WvZJox1PZsAA/v1BFnR8ypiF65x2ecNMSZgKHa+YQ4FamyNI1e6bY7j7kD5F3WMgJY6t4K3mm+D2TCXNvq+J8bV2DKgA",
+    "width": 900,
+    "height": 1600
+  },
+  "/images/video/video-tape-width-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoJABAAAgA0JZgCdADcY4QthgAA+UHonwP3rHOi+RH/2c4QnuT3MCxg/6lZzSMGbNn6a6IgKPWxQmO6WccMQgKPWfpUxEXR5vuKm8pg9+sKXn/dJegP8AAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/ringstar-4.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQAgCdASoLABAAAgA0JaACdAYvrbaH8sXL3MAA/vaV2h5Bk307rJT/32CTzKvTz6GTbdGQM/puJ9PtPyBaJpZPZrntqhrC3cg3+p1xY1Hjda/JQXDmQpgCzq9vVUrcOv5iyOfuIx9hjFM4D0gnbsxUQrkTMnTy6jk3ZEX9/9pt/yTn7xUqILeAAAA=",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/video/guide-install-on-model-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAQCdASoJABAAAgA0JYwCdADzMK5DkAD+ps5yfnLHSz1PEI0f4NKU8PZdUmhIh3Lcu91cVk8c2tjxK+RNkrAlNT5jwEB+sOXam8+VdSdMTP0d5jrGcPaNGyNgykAagFVxEjMG6gAAAA==",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/bio-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwAgCdASoLABAAAgA0JQBOgCMCp3Vw2CbiAAD+/jJeJh+yl3/792tmd8jefmpZtA8NKb4PzPCHfNCzdwmfX3lV5XmHCrrZKfkPpn4Wph7G+w0W0ipIP1b1tq5dA7BdPsa/SYe3DOMYYbuJFFMHecCrJcHmK6I6HIGuAAAA",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/ringstar-2.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoLABAAAgA0JaACdADdLtyhdmJAAP73hB26KH1ZU5ln2/fYJPqvWYDZEskcgJIBBYp9YaOSy/76vLYX74xdBSABVVnzRrFrsf331o0TD6UIP7Tb/k3Xnd/56AAAAA==",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/ringstar-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQAgCdASoLABAAAgA0JZgCdAEDfsRhdh9CEAAA/vV+Si5h9WVCKNtrSgusObuU42Bc0wHD7KAr8tawZNla0kWHYzKXvGIaYLdbMg2XhF8tOBz7HU9ic9meZtW39vpMNa4FDrPmjWNuPA8tCVL3FQUDE+RqEdCt/ybUCVYZZNcAAA==",
+    "width": 1023,
+    "height": 1537
+  },
+  "/images/video/video-dark-piece-1-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAQCdASoJABAAAgA0JQBOgCHfxSSEAP77MN9mCjQVZ91exDHnR/zLf6L9rGNiJ3F06zmR4Owp/fgJI3TUNxEtBnS1/+W2PYhBytFtnKxQAA==",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/imitation-2-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwAgCdASoMABAAAgA0JagCdH8EwADkbPqvaxewNsAA/v5h/3H33Q/0pMvlnD7/Ou+fpHeh2d9KarndA6c+rUCgYJeym8mCmPYTTn8Uj8NK6YUmZ82C2Bv5UdqTsGNcuXU89jpxMTtjzHDUjC3fGpGlN8n6jwxj4W+aWb+8K0G5oa4JoAA=",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/technology/ringstar-5.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwAgCdASoLABAAAgA0JagCdADdprqqwV4qAAD+94Qds34OjIRPyr+atpQ8Wege5oswgN+LzHnqaKk35D2ghvn1UNOrGaP3nn4TLVqiceGLIi7SHUh0A8zZ8EfoE7dmKiFcibqNh/IkPkwqKvZ/Jhf5Jz9249mpAgAAAA==",
+    "width": 1024,
+    "height": 1536
+  },
+  "/images/technology/classic-4.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAQCdASoMABAAAgA0JYgCdAEO+X42+AAA/vu4cOWZrVy50wKKYnFgTdRNnIPOlDiXXOCI7H7O7zx65Xnxg/ZoYkphhC1/KhTzUny2Gz2KXshzuJ9zage638QecPf8JRlI38oXsqHCiAAA",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/video/bio-video-2-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoJABAAAgA0JZQAAp10Hl0MoAD+9MWc9ouGQfmw/fKl5uFmiEVDL4Y/QP5KwCezjct02PM3UrOMdMMlXPtDQjOxLI3iaAAixcDzNhAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/bio-2.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACQAgCdASoLABAAAgA0JZgCdAaZXnI83R6U9gTSEAD+73zLPD4zJ5DPvCj3Ibe+HVLwUVdRRyYgw/pOZaOXibHtqH3fxOCV1ouO/zWRmUMsDOhIR30DTGaS5YxYQcJG5hOgVNDjb3XLNUzVBTGsWxiM5Ch/Uy4U5Gx4yuos/uOqIRFaWlgAAA==",
+    "width": 1023,
+    "height": 1537
+  },
+  "/images/technology/imitation-1-2.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoJABAAAgA0JQBOgCFq21L6CAD+9BJ+UG8CwTbC67ng3RCIx/+i8TOk6PRb69riSiPfvCEFSRRjq3EGxbQYprKp/D5pcwO3zLSj7E5wpMm+pEvtwAA=",
+    "width": 900,
+    "height": 1600
+  },
+  "/images/video/video-dark-piece-2-teal-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoJABAAAgA0JZgCdAYsZbXbde9IEAD+6FqCd9YLSiGJUwV8txfBzKoNQIHE+g/DJFK13l6T4BZtXi3VKpQjOFnJGT7joTmZWyjorisQonQiaTxxRTWdJXs+Ovb/gHf7a2NxhkAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/video/hero-loop-1-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoJABAAAgA0JZQC7AEfA4YTJSgAAP72+mLfRjt6RuR7H5maUNsRgImJbX8YzYXJ6Zgu2MyRwraB1MEe+YCNO8q6oXSKNU/arOfJR6hwsTGcAAAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/imitation-1-3.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwAgCdASoNABAAAgA0JQBOgMV47bP4rnj6AAD+/Zh4XPCMhJ0mX+jk95U1RC9sz+wZ444gxr7HKJTAmf6vli4P4obReGwKukzHZP5H8SGSPgpGf944JtUuD+w0wlY5mak0gAvxmdGlLeqN1eUPndzKwGoBTPNLAAA=",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/technology/classic-2.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwAgCdASoMABAAAgA0JYgCdAYtVuJClnNgVa+oAP7uXC4RFH7jIxYVLxq9M991VgQV82XHl2i9WhDna+wE+n4R7sIvczKNg+MXlrnQKF0XIosskep99XHnu8dZvN6eG2cyiJxsNoDctt5XP4F7D34Y9ar8g1m7b1aSSNS99kdAAAAA",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/video/ringstar-video-1-poster.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAQCdASoJABAAAgA0JYwCdADdRp+BhmAA/vZjWf+IdCWrZf/zyzzpi1PS7AXyZGALR4Jv7naInljXAoLaG3p/03hhLc72P3MbW53PKpzjN92YBlj3nH7+EI74P5cYrzgmVkVHS/UnclF0wQgeVHAA",
+    "width": 720,
+    "height": 1280
+  },
+  "/images/technology/classic-3.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACQAgCdASoMABAAAgA0JZwC7AYr7wUQwh7mduQDgADOM5/1dJ+VXjND5/fZFLz3EHl75hXiVQhvVL18PRuc1hN9LSg49/RxL2HJOLDEDuhuCnDnqLa+Zi/7XNYyBfrncIw+6R83mteD8PFJ80cAFV+Ei2Q+KLRuAAA=",
+    "width": 1086,
+    "height": 1448
   }
 }

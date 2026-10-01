@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
+import { VideoStrip } from "@/components/content/VideoStrip";
 import { IconBolt, IconEyeOff, IconHand, IconRefresh, IconShield } from "@/components/ui/icons";
 import { getPageContent } from "@/lib/content/pages";
 import { setRequestLocale } from "next-intl/server";
@@ -43,13 +44,16 @@ export default async function TapeInPage({ params }: PageProps) {
         { label: ru.pages.technology.tapeIn.title },
       ]}
       wide={
-        <Media
-          path="tapeClassicRolls"
-          alt={pickLocale(IMAGES.tapeClassicRolls.alt, locale)}
-          aspect="16/9"
-          sizes="(min-width: 1024px) 960px, 100vw"
-          className="rounded-base bg-surface-alt"
-        />
+        <div className="flex flex-col gap-6">
+          <Media
+            path="tapeClassicRolls"
+            alt={pickLocale(IMAGES.tapeClassicRolls.alt, locale)}
+            aspect="16/9"
+            sizes="(min-width: 1024px) 960px, 100vw"
+            className="rounded-base bg-surface-alt"
+          />
+          <VideoStrip names={["tapePeel", "tapeWidth"]} locale={locale} />
+        </div>
       }
       after={
         <div className="flex flex-col gap-6 border-t border-border pt-10">
