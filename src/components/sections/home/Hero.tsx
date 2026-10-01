@@ -13,7 +13,7 @@ export async function Hero() {
   return (
     <Container className="grid gap-8 py-10 md:py-16 lg:grid-cols-2 lg:items-center lg:gap-16">
       <div className="flex flex-col gap-6">
-        <h1 className="font-heading text-4xl text-ink-strong md:text-5xl">{ru.home.hero.title}</h1>
+        <h1 className="font-heading text-[40px] leading-[1.05] text-ink-strong md:text-[64px]">{ru.home.hero.title}</h1>
         <p className="max-w-lg text-lg text-ink-muted">{ru.home.hero.subtitle}</p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild variant="primary" size="lg">

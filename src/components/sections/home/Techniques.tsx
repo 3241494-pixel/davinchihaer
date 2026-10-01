@@ -14,7 +14,7 @@ export async function Techniques() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="font-heading text-3xl text-ink-strong">{ru.home.techniques.heading}</h2>
+      <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.home.techniques.heading}</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {CARDS.map((card) => (
           <Card key={card.href} className="flex flex-col gap-3">

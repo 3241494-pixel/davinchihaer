@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { SelfCorrectionBridge } from "@/components/content/SelfCorrectionBridge";
 import { Media } from "@/components/ui/Media";
 import { getPageContent } from "@/lib/content/pages";
 import { setRequestLocale } from "next-intl/server";
@@ -37,11 +38,11 @@ export default async function CarePage({ params }: PageProps) {
       breadcrumbs={[{ label: copy.title }]}
       wide={
         <Media
-          path="careKit"
-          alt={pickLocale(IMAGES.careKit.alt, locale)}
-          aspect="16/9"
-          sizes="(min-width: 1024px) 960px, 100vw"
-          className="rounded-base bg-surface-alt"
+          path="techClassic1"
+          alt={pickLocale(IMAGES.techClassic1.alt, locale)}
+          aspect="4/5"
+          sizes="(min-width: 1024px) 480px, 100vw"
+          className="mx-auto max-w-sm rounded-base bg-surface-alt"
         />
       }
       after={
@@ -54,6 +55,13 @@ export default async function CarePage({ params }: PageProps) {
               </li>
             ))}
           </ul>
+          <SelfCorrectionBridge
+            text={copy.selfCorrectionBridge.text}
+            links={[
+              { href: "/guides/self-correction", label: copy.selfCorrectionBridge.guideLink },
+              { href: "/academy", label: copy.selfCorrectionBridge.academyLink },
+            ]}
+          />
           <p className="text-xs text-ink-muted">{copy.disclaimer}</p>
         </div>
       }

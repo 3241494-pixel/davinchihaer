@@ -2,6 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Hero } from "@/components/sections/home/Hero";
+import { Marquee } from "@/components/sections/home/Marquee";
+import { FounderQuote } from "@/components/content/FounderQuote";
 import { Techniques } from "@/components/sections/home/Techniques";
 import { WhyTapeIn } from "@/components/sections/home/WhyTapeIn";
 import { PopularProducts } from "@/components/sections/home/PopularProducts";
@@ -21,6 +23,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
   return (
     <>
       <Hero />
+      <Marquee />
 
       <Section tone="surface">
         <Container>
@@ -61,6 +64,12 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
       <Section tone="bg">
         <Container>
           <FunnelBanners />
+        </Container>
+      </Section>
+
+      <Section tone="surface-alt">
+        <Container>
+          <FounderQuote />
         </Container>
       </Section>
 

@@ -18,7 +18,8 @@
     "mobileMenuLabel": "Mobile menu",
     "catalogMenuLabel": "Open catalog categories",
     "telegramLink": "Message us on Telegram",
-    "allCatalogLink": "Whole catalog"
+    "allCatalogLink": "Whole catalog",
+    "announcement": "Worldwide delivery · Tbilisi"
   },
   "languageSwitcher": {
     "label": "Language",
@@ -33,7 +34,9 @@
       "about": "About",
       "delivery": "Delivery & payment",
       "faq": "FAQ",
-      "gallery": "Gallery"
+      "gallery": "Gallery",
+      "beginners": "For beginners: guides",
+      "care": "Hair care"
     },
     "business": {
       "wholesale": "Wholesale",
@@ -120,7 +123,11 @@
     },
     "priceOnRequest": "Price on request",
     "demoBadge": "Demo",
-    "shadesCount": "{count} shades"
+    "shadesCount": "{count} shades",
+    "cardCta": {
+      "hair": "Choose a shade",
+      "material": "Send a request"
+    }
   },
   "product": {
     "notFoundTitle": "Product not found",
@@ -304,7 +311,8 @@
           "title": "Self-correction",
           "description": "After training, the tapes can be repositioned yourself, without visiting a stylist every time."
         }
-      ]
+      ],
+      "selfCorrectionLink": "How it works"
     },
     "popular": {
       "heading": "Popular products",
@@ -396,7 +404,8 @@
       "heading": "Send an inquiry",
       "description": "Tell us what you're interested in — we'll help you match the length and colour.",
       "addressHeading": "Find us"
-    }
+    },
+    "marquee": "LUXURY HAIR · TAPE-IN · BIO-TAPE · RING STAR"
   },
   "pages": {
     "technology": {
@@ -545,7 +554,11 @@
             "description": "Make sure the tape sits evenly and doesn't pinch your natural hair, adjusting if needed."
           }
         ],
-        "disclaimer": "TODO_CLIENT: the exact protocol, list of materials, and recommended correction frequency will be provided by the course instructor."
+        "disclaimer": "TODO_CLIENT: the exact protocol, list of materials, and recommended correction frequency will be provided by the course instructor.",
+        "academyBridge": {
+          "text": "Correction is a separate block of the Da Vinchi training programme: an online video course or in-person classes in Tbilisi.",
+          "link": "Go to training"
+        }
       }
     },
     "care": {
@@ -558,7 +571,12 @@
         "Self-correction without training or with the method not followed",
         "Using products and tools not recommended by your stylist"
       ],
-      "disclaimer": "TODO_CLIENT: a detailed step-by-step care routine (products, washing frequency, styling) will be provided by the client."
+      "disclaimer": "TODO_CLIENT: a detailed step-by-step care routine (products, washing frequency, styling) will be provided by the client.",
+      "selfCorrectionBridge": {
+        "text": "Repositioning tapes the wrong way shortens the system’s lifespan. It is safer to learn the technique first.",
+        "guideLink": "Self-correction guide",
+        "academyLink": "Correction training"
+      }
     },
     "gallery": {
       "title": "Gallery",
@@ -1084,5 +1102,9 @@
   "catalogSections": {
     "hair": "Hair",
     "materials": "Materials"
+  },
+  "founderQuote": {
+    "text": "TODO_CLIENT: founder quote not provided by the client yet.",
+    "author": "TODO_CLIENT: founder name"
   }
 }

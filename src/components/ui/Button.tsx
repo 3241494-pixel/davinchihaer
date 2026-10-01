@@ -41,9 +41,9 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonVariant, Record<ButtonSize, string>> = {
-  primary: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
-  secondary: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
-  ghost: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
+  primary: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
+  secondary: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
+  ghost: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
   link: { sm: "text-sm", md: "text-base", lg: "text-lg" },
 };
 

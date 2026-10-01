@@ -5,6 +5,7 @@ import { getTypedMessages } from "@/i18n/get-messages";
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
 import { cn } from "@/components/ui/cn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Logo } from "./Logo";
 
 const iconLinkClasses = cn(
   "inline-flex size-9 items-center justify-center rounded-base border border-border text-ink transition-colors duration-200 hover:bg-surface",
@@ -29,9 +30,12 @@ export async function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto w-full max-w-[1280px] px-4 py-12 md:px-8">
+        <div className="mb-10">
+          <Logo />
+        </div>
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="flex flex-col gap-3">
-            <h2 className="font-heading text-lg text-ink-strong">{ru.footer.catalogTitle}</h2>
+            <h2 className="caps font-medium text-ink-strong">{ru.footer.catalogTitle}</h2>
             <ul className="flex flex-col gap-2">
               {categories.map((category) => (
                 <li key={category.value}>
@@ -44,13 +48,8 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-heading text-lg text-ink-strong">{ru.footer.infoTitle}</h2>
+            <h2 className="caps font-medium text-ink-strong">{ru.footer.infoTitle}</h2>
             <ul className="flex flex-col gap-2">
-              <li>
-                <Link href="/about" className={footerLinkClasses}>
-                  {ru.footer.info.about}
-                </Link>
-              </li>
               <li>
                 <Link href="/delivery" className={footerLinkClasses}>
                   {ru.footer.info.delivery}
@@ -62,6 +61,21 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/guides" className={footerLinkClasses}>
+                  {ru.footer.info.beginners}
+                </Link>
+              </li>
+              <li>
+                <Link href="/care" className={footerLinkClasses}>
+                  {ru.footer.info.care}
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className={footerLinkClasses}>
+                  {ru.footer.info.about}
+                </Link>
+              </li>
+              <li>
                 <Link href="/gallery" className={footerLinkClasses}>
                   {ru.footer.info.gallery}
                 </Link>
@@ -70,7 +84,7 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-heading text-lg text-ink-strong">{ru.footer.businessTitle}</h2>
+            <h2 className="caps font-medium text-ink-strong">{ru.footer.businessTitle}</h2>
             <ul className="flex flex-col gap-2">
               <li>
                 <Link href="/wholesale" className={footerLinkClasses}>
@@ -96,7 +110,7 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-heading text-lg text-ink-strong">{ru.footer.contactsTitle}</h2>
+            <h2 className="caps font-medium text-ink-strong">{ru.footer.contactsTitle}</h2>
             <p className="text-sm text-ink-muted">
               <span className="sr-only">{ru.footer.addressLabel}: </span>
               {siteConfig.address.street && `${siteConfig.address.street}, `}

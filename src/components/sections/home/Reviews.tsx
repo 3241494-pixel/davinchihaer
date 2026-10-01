@@ -5,7 +5,7 @@ export async function Reviews() {
   const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="font-heading text-3xl text-ink-strong">{ru.home.reviews.heading}</h2>
+      <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.home.reviews.heading}</h2>
       <p className="text-sm text-ink-muted">{ru.home.reviews.todoNote}</p>
       <div className="grid gap-4 sm:grid-cols-3">
         {ru.home.reviews.items.map((review, index) => (

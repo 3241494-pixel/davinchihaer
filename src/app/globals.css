@@ -81,3 +81,39 @@ html[data-locale="ka"] {
     transition: none;
   }
 }
+
+/*
+ * Навигация, кнопки, метки, названия товаров: Inter заглавными 12–13px,
+ * трекинг 0.08em (референсы fenomen / belair). Для ka заглавные отключены:
+ * браузер превратил бы текст в Мтаврули, трекинг 0.
+ */
+@utility caps {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  &:lang(ka) {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { SelfCorrectionBridge } from "@/components/content/SelfCorrectionBridge";
 import { Media } from "@/components/ui/Media";
 import { VideoStrip } from "@/components/content/VideoStrip";
 import { getPageContent } from "@/lib/content/pages";
@@ -72,6 +73,11 @@ export default async function SelfCorrectionPage({ params }: PageProps) {
               ))}
             </ol>
           </div>
+
+          <SelfCorrectionBridge
+            text={copy.academyBridge.text}
+            links={[{ href: "/academy", label: copy.academyBridge.link }]}
+          />
 
           <p className="text-xs text-ink-muted">{copy.disclaimer}</p>
         </div>

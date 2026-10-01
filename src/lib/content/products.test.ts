@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { ContentSource } from "./source/content-source";
 import { createContentApi, getPriceRange } from "./products";
@@ -283,6 +285,16 @@ describe("validation", () => {
     for (const product of api.getHairProducts()) {
       for (const v of product.variants) {
         expect(palette.has(v.color), `${product.slug}: ${v.color}`).toBe(true);
+      }
+    }
+  });
+
+  it("every product image in content exists in public/", () => {
+    // Карточка показывает второе фото при наведении без отдельной проверки на сервере.
+    const api = createContentApi(fileContentSource);
+    for (const product of api.getAllProducts()) {
+      for (const image of product.images) {
+        expect(existsSync(join(process.cwd(), "public", image.src)), `${product.slug}: ${image.src}`).toBe(true);
       }
     }
   });

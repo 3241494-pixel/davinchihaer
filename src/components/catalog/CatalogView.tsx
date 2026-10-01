@@ -48,7 +48,7 @@ function CatalogViewFallback({ products }: CatalogViewProps) {
   return (
     <Container className="pb-16">
       <CategoryIntro section="hair" />
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 xl:grid-cols-4">
         {products.slice(0, 12).map((product) => (
           <div key={product.slug} className="aspect-[3/4] animate-pulse rounded-base bg-surface-alt" />
         ))}

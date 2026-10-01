@@ -10,7 +10,7 @@ export async function Assortment() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.assortment.heading}</h2>
+        <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.wholesale.assortment.heading}</h2>
         <p className="max-w-2xl text-base text-ink-muted">{ru.wholesale.assortment.description}</p>
       </div>
       <div className="grid gap-4 grid-cols-2 sm:grid-cols-3">

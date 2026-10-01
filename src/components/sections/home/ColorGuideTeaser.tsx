@@ -13,7 +13,7 @@ export async function ColorGuideTeaser() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h2 className="font-heading text-3xl text-ink-strong">{ru.home.colorGuide.heading}</h2>
+        <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.home.colorGuide.heading}</h2>
         <p className="max-w-2xl text-base text-ink-muted">{ru.home.colorGuide.description}</p>
       </div>
       <div className="flex flex-wrap gap-4">

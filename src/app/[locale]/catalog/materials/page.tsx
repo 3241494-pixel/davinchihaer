@@ -37,6 +37,7 @@ export default async function CatalogMaterialsPage({ params }: PageProps) {
         products={materials}
         colorsByCode={colorsByCode}
         imageExistsBySlug={buildImageExistsMap(materials)}
+        layout="materials"
       />
     </Container>
   );
