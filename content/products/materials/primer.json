@@ -1,0 +1,58 @@
+{
+  "_todoClient": [
+    "price не указана — на сайте «Цена по запросу».",
+    "inStock и sku — заглушки.",
+    "ka — требует вычитки носителем."
+  ],
+  "kind": "material",
+  "slug": "primer",
+  "title": {
+    "ru": "Праймер, 15 мл",
+    "en": "Primer, 15 ml",
+    "ka": "პრაიმერი, 15 მლ"
+  },
+  "shortDescription": {
+    "ru": "Подходит для всех видов скотча, усиливает его сцепление с волосами.",
+    "en": "Works with all types of tape and improves its grip on the hair.",
+    "ka": "შესაფერისია ყველა სახის სკოჩისთვის, აძლიერებს მის მიჭიდებას თმაზე."
+  },
+  "description": {
+    "ru": "Подходит для всех видов скотча, усиливает его сцепление с волосами.",
+    "en": "Works with all types of tape and improves its grip on the hair.",
+    "ka": "შესაფერისია ყველა სახის სკოჩისთვის, აძლიერებს მის მიჭიდებას თმაზე."
+  },
+  "materialType": "primer",
+  "compatibleWith": [],
+  "spec": {
+    "volumeMl": 15
+  },
+  "variants": [
+    {
+      "id": "primer-default",
+      "inStock": true,
+      "sku": "TODO_CLIENT-PRIMER"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/materials/primer.webp",
+      "alt": {
+        "ru": "Праймер Da Vinchi 15 мл",
+        "en": "Da Vinchi primer, 15 ml",
+        "ka": "Da Vinchi-ს პრაიმერი, 15 მლ"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Праймер, 15 мл | Da Vinchi Hair",
+      "en": "Primer, 15 ml | Da Vinchi Hair",
+      "ka": "პრაიმერი, 15 მლ | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Подходит для всех видов скотча, усиливает его сцепление с волосами.",
+      "en": "Works with all types of tape and improves its grip on the hair.",
+      "ka": "შესაფერისია ყველა სახის სკოჩისთვის, აძლიერებს მის მიჭიდებას თმაზე."
+    }
+  }
+}

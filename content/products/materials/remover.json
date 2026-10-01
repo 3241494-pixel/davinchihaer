@@ -1,0 +1,58 @@
+{
+  "_todoClient": [
+    "price не указана — на сайте «Цена по запросу».",
+    "inStock и sku — заглушки.",
+    "ka — требует вычитки носителем."
+  ],
+  "kind": "material",
+  "slug": "remover",
+  "title": {
+    "ru": "Ремувер, 100 мл",
+    "en": "Remover, 100 ml",
+    "ka": "რიმუვერი, 100 მლ"
+  },
+  "shortDescription": {
+    "ru": "Средство для снятия и коррекции лент.",
+    "en": "For removing and re-taping tape-in extensions.",
+    "ka": "ლენტების მოხსნისა და კორექციის საშუალება."
+  },
+  "description": {
+    "ru": "Средство для снятия и коррекции лент.",
+    "en": "For removing and re-taping tape-in extensions.",
+    "ka": "ლენტების მოხსნისა და კორექციის საშუალება."
+  },
+  "materialType": "remover",
+  "compatibleWith": [],
+  "spec": {
+    "volumeMl": 100
+  },
+  "variants": [
+    {
+      "id": "remover-default",
+      "inStock": true,
+      "sku": "TODO_CLIENT-REMOVER"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/materials/remover.webp",
+      "alt": {
+        "ru": "Ремувер Da Vinchi 100 мл",
+        "en": "Da Vinchi remover, 100 ml",
+        "ka": "Da Vinchi-ს რიმუვერი, 100 მლ"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Ремувер, 100 мл | Da Vinchi Hair",
+      "en": "Remover, 100 ml | Da Vinchi Hair",
+      "ka": "რიმუვერი, 100 მლ | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Средство для снятия и коррекции лент.",
+      "en": "For removing and re-taping tape-in extensions.",
+      "ka": "ლენტების მოხსნისა და კორექციის საშუალება."
+    }
+  }
+}

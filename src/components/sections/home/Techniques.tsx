@@ -4,12 +4,18 @@ import { getTypedMessages } from "@/i18n/get-messages";
 
 export async function Techniques() {
   const ru = await getTypedMessages();
-  const CARDS = [ru.home.techniques.classic, ru.home.techniques.imitation1, ru.home.techniques.imitation2];
+  const CARDS = [
+    ru.home.techniques.classic,
+    ru.home.techniques.imitation1,
+    ru.home.techniques.imitation2,
+    ru.home.techniques.bioTape,
+    ru.home.techniques.ringStar,
+  ];
 
   return (
     <div className="flex flex-col gap-6">
       <h2 className="font-heading text-3xl text-ink-strong">{ru.home.techniques.heading}</h2>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {CARDS.map((card) => (
           <Card key={card.href} className="flex flex-col gap-3">
             <h3 className="font-heading text-xl text-ink-strong">{card.title}</h3>

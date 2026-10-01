@@ -141,6 +141,68 @@ export const IMAGES = {
     },
     note: 'Зелёный фон — конфликтует с монохромом. Только /gallery.',
   },
+
+  hero: {
+    path: '/images/hero/hero.webp',
+    usage: ['hero'],
+    alt: {
+      ru: 'Волосы Da Vinchi: светлый блонд, золотистый и тёмный оттенки, ленты в рулонах',
+      en: 'Da Vinchi hair: light blonde, golden and dark shades with rolled tapes',
+      ka: 'Da Vinchi-ს თმა: ღია ქერა, ოქროსფერი და მუქი ელფერები', // TODO_I18N
+    },
+    note: 'Основной hero главной (общая.PNG). Предметное фото; кадр с моделью всё ещё нужен.',
+  },
+
+  paletteWide1: {
+    path: '/images/brand/palette-wide-1.webp',
+    usage: ['brand', 'guide'],
+    alt: {
+      ru: 'Палитра оттенков Da Vinchi: пряди от тёмного до платинового блонда',
+      en: 'Da Vinchi shade palette: strands from dark to platinum blonde',
+      ka: 'Da Vinchi-ს ელფერების პალიტრა: მუქიდან პლატინისფერ ქერამდე', // TODO_I18N
+    },
+  },
+
+  tapeRed: {
+    path: '/images/materials/tape-red.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Красный скотч Da Vinchi для ленточного наращивания',
+      en: 'Da Vinchi red tape for tape-in extensions',
+      ka: 'Da Vinchi-ს წითელი სკოჩი ლენტური დაგრძელებისთვის', // TODO_I18N
+    },
+    note: 'На упаковке хендлы @davinchi.hairshop / davinchi.hair — на сайте используем только da_vinchi.hair.',
+  },
+
+  tapeYellow: {
+    path: '/images/materials/tape-yellow.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Жёлтый скотч Da Vinchi для биолент',
+      en: 'Da Vinchi yellow tape for bio-tapes',
+      ka: 'Da Vinchi-ს ყვითელი სკოჩი ბიოლენტებისთვის', // TODO_I18N
+    },
+  },
+
+  primer: {
+    path: '/images/materials/primer.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Праймер Da Vinchi 15 мл',
+      en: 'Da Vinchi primer, 15 ml',
+      ka: 'Da Vinchi-ს პრაიმერი, 15 მლ', // TODO_I18N
+    },
+  },
+
+  remover: {
+    path: '/images/materials/remover.webp',
+    usage: ['product', 'catalog', 'guide'],
+    alt: {
+      ru: 'Ремувер Da Vinchi 100 мл',
+      en: 'Da Vinchi remover, 100 ml',
+      ka: 'Da Vinchi-ს რიმუვერი, 100 მლ', // TODO_I18N
+    },
+  },
 } as const satisfies Record<string, ImageEntry>;
 
 export type ImageKey = keyof typeof IMAGES;

@@ -4,7 +4,7 @@ import { GalleryFilter } from "@/components/content/GalleryFilter";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { setRequestLocale } from "next-intl/server";
-import type { ProductCategory } from "@/lib/content/types";
+import type { AttachmentType } from "@/lib/content/types";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { IMAGES } from "@/content/images";
 import { pickLocale } from "@/lib/content/locale";
@@ -23,7 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 };
 }
 
-const TECHNIQUE_KEYS: ProductCategory[] = ["tape-classic", "tape-imitation-1", "tape-imitation-2"];
+const TECHNIQUE_KEYS: AttachmentType[] = [
+  "tape-classic",
+  "imitation-1",
+  "imitation-2",
+  "bio-tape",
+  "ring-star",
+];
 const ITEMS_PER_TECHNIQUE = 3;
 
 const FEATURED_KEYS = ["longHairBrunette", "weftClipsBrunette"] as const;
@@ -32,7 +38,7 @@ export default async function GalleryPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   const ru = await getTypedMessages();
-  const techniques = TECHNIQUE_KEYS.map((value) => ({ value, label: ru.categories[value] }));
+  const techniques = TECHNIQUE_KEYS.map((value) => ({ value, label: ru.attachments[value] }));
 
   // Реальные фото пока не разбиты по технике — только 2 штуки, оба «gallery-only»
   // (см. CLAUDE.md, «Изображения»). Отдельная technique-метка "featured" держит
@@ -49,7 +55,7 @@ export default async function GalleryPage({ params }: PageProps) {
       const src = `/images/gallery/${technique}-${index + 1}.jpg`;
       return {
         src,
-        alt: ru.categories[technique],
+        alt: ru.attachments[technique],
         exists: publicImageExists(src),
         technique,
       };

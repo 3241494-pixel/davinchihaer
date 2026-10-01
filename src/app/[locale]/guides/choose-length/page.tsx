@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { getPageContent } from "@/lib/content/pages";
 import { setRequestLocale } from "next-intl/server";
@@ -59,6 +60,12 @@ export default async function ChooseLengthPage({ params }: PageProps) {
             </table>
           </div>
           <p className="text-xs text-ink-muted">{copy.disclaimer}</p>
+          <Link
+            href="/technology/bio-tape"
+            className="text-sm font-medium text-ink underline-offset-4 hover:underline"
+          >
+            {copy.bioTapeLink}
+          </Link>
         </div>
       }
     >

@@ -2,23 +2,27 @@ export type Locale = "ru" | "en" | "ka";
 
 export type I18nString = Record<Locale, string>;
 
-export type ProductCategory =
+/** Способ крепления — характеристика волос и фильтр, а не раздел каталога. */
+export type AttachmentType =
   | "tape-classic"
-  | "tape-imitation-1"
-  | "tape-imitation-2"
-  | "accessories"
-  | "care";
+  | "imitation-1"
+  | "imitation-2"
+  | "bio-tape"
+  | "ring-star";
 
-export type HairColorGroup =
-  | "blonde"
-  | "brown"
-  | "dark"
-  | "red"
-  | "ombre"
-  | "grey";
+/** В интерфейсе: Славянка · Индия · Вьетнам · Китай. */
+export type HairOrigin = "slavic" | "india" | "vietnam" | "china";
+
+export type HairStructure = "porous" | "straight" | "wavy" | "curly";
+
+export type MaterialType = "tape" | "primer" | "remover";
+
+export type CatalogSection = "hair" | "materials";
+
+export type HairColorGroup = "dark" | "brown" | "blonde" | "ash" | "ombre";
 
 export interface HairColor {
-  /** '6.0', '8.13', 'ombre-4-10' */
+  /** '1.0', '7.0', '12.0' */
   code: string;
   name: I18nString;
   hex: string;
@@ -29,25 +33,32 @@ export interface HairColor {
 
 export type HairLength = 40 | 50 | 60 | 70;
 
-export interface ProductVariant {
+export interface HairVariant {
   id: string;
   length: HairLength;
-  /** грамм */
-  weight: number;
-  tapesCount: number;
+  /** густота комплекта, грамм */
+  weightGrams: number;
+  tapesCount?: number;
   color: HairColor["code"];
-  /** целое число евроцентов. 19990 = € 199,90. Форматирование только на выводе. */
-  price: number;
+  /**
+   * Целое число евроцентов. 19990 = € 199,90. Форматирование только на выводе.
+   * Нет поля — «Цена по запросу».
+   */
+  price?: number;
   oldPrice?: number;
   inStock: boolean;
   sku: string;
 }
 
-export type HairStructure = "straight" | "wavy" | "curly";
+export interface MaterialVariant {
+  id: string;
+  /** Целое число евроцентов; нет поля — «Цена по запросу». */
+  price?: number;
+  inStock: boolean;
+  sku: string;
+}
 
-export type TapeWidth = 3 | 4;
-
-export type ProductBadge = "new" | "bestseller" | "sale" | "limited";
+export type ProductBadge = "new" | "bestseller";
 
 export interface ProductImage {
   src: string;
@@ -59,37 +70,60 @@ export interface ProductSeo {
   description: I18nString;
 }
 
-export interface Product {
+interface ProductBase {
   slug: string;
-  category: ProductCategory;
   title: I18nString;
   shortDescription: I18nString;
-  /** MDX */
+  /** Абзацы разделены пустой строкой. */
   description: I18nString;
-  /** славянские / европейские / южнорусские */
-  hairOrigin?: I18nString;
-  hairStructure?: HairStructure;
-  tapeWidth?: TapeWidth;
-  variants: ProductVariant[];
   images: ProductImage[];
   badges?: ProductBadge[];
-  relatedSlugs?: string[];
+  /** Демо-данные: характеристики и цены не от клиента (TODO_CLIENT). */
+  isPlaceholder?: boolean;
   seo: ProductSeo;
 }
 
-/**
- * popularity/newest используют badges (bestseller/new) как единственный
- * доступный сегодня сигнал — реальных данных о продажах или дате
- * публикации в домене нет (см. TODO_CLIENT в content/products).
- */
-export type ProductSort = "popularity" | "price-asc" | "price-desc" | "newest";
+export interface HairProduct extends ProductBase {
+  kind: "hair";
+  attachment: AttachmentType;
+  structure: HairStructure;
+  origin: HairOrigin;
+  variants: HairVariant[];
+}
 
-export interface ProductFilters {
-  category?: ProductCategory;
+export interface MaterialSpec {
+  lengthM?: number;
+  widthCm?: number;
+  volumeMl?: number;
+}
+
+export interface MaterialProduct extends ProductBase {
+  kind: "material";
+  materialType: MaterialType;
+  /** Пустой массив — подходит ко всем креплениям. */
+  compatibleWith: AttachmentType[];
+  spec: MaterialSpec;
+  variants: MaterialVariant[];
+}
+
+export type Product = HairProduct | MaterialProduct;
+
+export type ProductSort = "price-asc" | "price-desc" | "popularity";
+
+export interface WeightRange {
+  min: number;
+  max: number;
+}
+
+export interface HairFilters {
+  attachment?: AttachmentType[];
+  origin?: HairOrigin[];
+  structure?: HairStructure[];
   lengths?: HairLength[];
+  weightMin?: number;
+  weightMax?: number;
   colorCodes?: string[];
   colorGroups?: HairColorGroup[];
-  tapeWidth?: TapeWidth;
   inStockOnly?: boolean;
   priceMin?: number;
   priceMax?: number;

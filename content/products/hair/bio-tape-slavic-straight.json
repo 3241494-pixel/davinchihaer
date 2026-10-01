@@ -1,0 +1,254 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото этой техники ещё нет — показывается серый плейсхолдер.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "bio-tape-slavic-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Биоленты · славянка, прямые",
+    "en": "Bio-tapes · Slavic, straight",
+    "ka": "ბიოლენტები · სლავური, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Очень тонкая лента и плоское крепление. Минимальная нагрузка, подходят для тонких волос.",
+    "en": "A very thin tape and a flat attachment. Minimal load, suitable for fine hair.",
+    "ka": "ძალიან თხელი ლენტი და ბრტყელი მიმაგრება. მინიმალური დატვირთვა, შესაფერისია თხელი თმისთვის."
+  },
+  "description": {
+    "ru": "Разновидность ленточного наращивания, при котором прядь фиксируется между двумя слоями собственных волос лентой с клеевой основой с обеих сторон. Лента очень тонкая, поэтому крепление получается плоским и аккуратным. Ленты плотно прилегают к волосам и создают естественный переход.\n\nБиоленты особенно подходят для тонких волос. Лёгкое плоское крепление не перегружает собственные волосы, а при правильно подобранном объёме и соблюдении технологии они могут спокойно расти и восстанавливаться в процессе носки.",
+    "en": "A type of tape-in extension where the weft is fixed between two layers of your own hair with a tape that is adhesive on both sides. The tape is very thin, so the attachment is flat and neat. The tapes sit close to the hair and blend naturally.\n\nBio-tapes are especially suited to fine hair. The light, flat attachment does not overload your own hair, and with the right volume and proper technique it can keep growing and recovering while you wear them.",
+    "ka": "ლენტური დაგრძელების სახეობა, როცა კულული საკუთარი თმის ორ ფენას შორის ორმხრივად წებოვანი ლენტით მაგრდება. ლენტი ძალიან თხელია, ამიტომ მიმაგრება ბრტყელი და მოწესრიგებულია.\n\nბიოლენტები განსაკუთრებით შეეფერება თხელ თმას."
+  },
+  "attachment": "bio-tape",
+  "structure": "straight",
+  "origin": "slavic",
+  "variants": [
+    {
+      "id": "bio-tape-slavic-straight-40-90-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-90-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-40-90-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-90-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-90-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-90-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-90-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-90-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-90-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-90-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-90-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-90-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-70-90-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-70-90-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-70-90-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": false,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-70-90-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-40-100-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-100-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-40-100-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-100-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-100-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-100-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-100-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-100-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-100-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-100-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-100-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-100-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-70-100-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-70-100-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-70-100-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": false,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-70-100-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-40-120-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-120-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-40-120-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-40-120-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-120-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-120-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-50-120-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-50-120-100"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-120-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-120-50"
+    },
+    {
+      "id": "bio-tape-slavic-straight-60-120-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-SLAVIC-STRAIGHT-60-120-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/products/bio-tape-slavic-straight.webp",
+      "alt": {
+        "ru": "Биоленты · славянка, прямые",
+        "en": "Bio-tapes · Slavic, straight",
+        "ka": "ბიოლენტები · სლავური, სწორი"
+      }
+    }
+  ],
+  "badges": [
+    "new"
+  ],
+  "seo": {
+    "title": {
+      "ru": "Биоленты · славянка, прямые | Da Vinchi Hair",
+      "en": "Bio-tapes · Slavic, straight | Da Vinchi Hair",
+      "ka": "ბიოლენტები · სლავური, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Очень тонкая лента и плоское крепление. Минимальная нагрузка, подходят для тонких волос.",
+      "en": "A very thin tape and a flat attachment. Minimal load, suitable for fine hair.",
+      "ka": "ძალიან თხელი ლენტი და ბრტყელი მიმაგრება. მინიმალური დატვირთვა, შესაფერისია თხელი თმისთვის."
+    }
+  }
+}

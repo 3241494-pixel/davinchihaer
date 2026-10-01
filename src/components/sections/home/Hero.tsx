@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
@@ -16,7 +17,7 @@ export async function Hero() {
         <p className="max-w-lg text-lg text-ink-muted">{ru.home.hero.subtitle}</p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild variant="primary" size="lg">
-            <a href="#lead-form">{ru.home.hero.ctaPrimary}</a>
+            <Link href="/catalog/hair">{ru.home.hero.ctaPrimary}</Link>
           </Button>
           <Button asChild variant="secondary" size="lg">
             <a href={telegramHref} target="_blank" rel="noopener noreferrer">
@@ -28,7 +29,7 @@ export async function Hero() {
       </div>
 
       <Media
-        path="tapeClassicRolls"
+        path="hero"
         alt={ru.home.hero.imageAlt}
         aspect="4/5"
         priority

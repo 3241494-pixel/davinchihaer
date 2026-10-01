@@ -11,13 +11,6 @@
     "about": "About",
     "contacts": "Contacts"
   },
-  "categories": {
-    "tape-classic": "Classic Tape-In",
-    "tape-imitation-1": "Root Imitation 1.0",
-    "tape-imitation-2": "Root Imitation 2.0",
-    "accessories": "Accessories",
-    "care": "Care"
-  },
   "header": {
     "logoAlt": "Da Vinchi Hair — home",
     "openMenu": "Open menu",
@@ -65,36 +58,11 @@
   },
   "catalog": {
     "heading": "Catalog",
-    "categoryIntro": {
-      "tape-classic": [
-        "Tape-In Hair Extensions, also known as tape hair extensions, is a popular hair extension technology widely used in the US and Europe. The main advantage of this technique is an even distribution of load on your natural hair: hair is attached with a wide tape rather than small individual strands, as with bonded extensions.",
-        "Tape-in extensions significantly cut down the procedure time, and with the right colour and density match the thin tapes look natural. You don't need to sacrifice your own length — with correct installation and care, Tape-In lets your natural hair grow out undisturbed.",
-        "Quality tapes are designed for repeated use and, with correct care, can last a year or longer. Choose quality hair and materials once — and get an extension system you can use again and again."
-      ],
-      "tape-imitation-1": [
-        "Tape-In with root imitation is an enhanced version of classic tape-in extensions. The underlying technology stays the same: hair is attached with a wide tape that spreads the load evenly across your natural hair. In addition, a root imitation is used, which makes the attachment point less noticeable.",
-        "Imitation 1.0 is a classic tape with an added root imitation. It makes the attachment less noticeable, though on close inspection a small strip of tape — about 2 mm — may be visible.",
-        "It's a great option for those who want a more natural look at the roots, plus extra volume and length, while keeping the affordable price and convenience of classic Tape-In."
-      ],
-      "tape-imitation-2": [
-        "Tape-In with root imitation is an enhanced version of classic tape-in extensions. The underlying technology stays the same: hair is attached with a wide tape that spreads the load evenly across your natural hair. In addition, a root imitation is used, which makes the attachment point less noticeable.",
-        "Imitation 2.0 is a more advanced version: the hair is hand-stitched strand by strand, creating the most natural possible attachment. In Imitation 2.0, the tape itself is not visible at all.",
-        "This option is especially valued by those for whom maximum discretion, a natural parting, and the feeling that the hair grows directly from the scalp matter most."
-      ],
-      "accessories": [
-        "TODO_CLIENT: accessories category description not provided. The idea for this section — consumables for each Tape-In system and a professional colour ring — comes from the reference review in the brief (section 4)."
-      ],
-      "care": [
-        "TODO_CLIENT: \"Care\" category description not provided by the client."
-      ]
-    },
     "filters": {
       "title": "Filters",
-      "categoryTitle": "Category",
       "length": "Length",
       "colorGroup": "Colour group",
       "color": "Colour",
-      "tapeWidth": "Tape width",
       "inStockOnly": "In stock only",
       "priceMin": "Price from, €",
       "priceMax": "Price to, €",
@@ -103,28 +71,31 @@
       "openMobile": "Filters",
       "closeMobile": "Close filters",
       "showResults": "Show {count}",
-      "noResultsButton": "Nothing found"
+      "noResultsButton": "Nothing found",
+      "attachment": "Attachment",
+      "origin": "Origin",
+      "structure": "Structure",
+      "weight": "Density, g",
+      "weightMin": "from",
+      "weightMax": "to",
+      "bioTapeHint": "For fine hair"
     },
     "sort": {
       "label": "Sort",
-      "popularity": "Most popular",
       "priceAsc": "Price: low to high",
       "priceDesc": "Price: high to low",
-      "newest": "New arrivals"
+      "popularity": "Most popular"
     },
     "colorGroups": {
-      "blonde": "Blonde",
-      "brown": "Brown",
       "dark": "Dark",
-      "red": "Red",
-      "ombre": "Ombre",
-      "grey": "Grey"
+      "brown": "Brown",
+      "blonde": "Blonde",
+      "ash": "Ash",
+      "ombre": "Ombre"
     },
     "badges": {
       "new": "New",
-      "bestseller": "Bestseller",
-      "sale": "Sale",
-      "limited": "Limited edition"
+      "bestseller": "Bestseller"
     },
     "lengthUnit": "cm",
     "priceFrom": "from {price}",
@@ -137,7 +108,19 @@
       "title": "Nothing found",
       "description": "Try changing the filters or resetting them.",
       "reset": "Reset filters"
-    }
+    },
+    "hubDescription": "Hair for tape-in extensions and the materials that go with it. We confirm price and availability in reply to your request.",
+    "sectionIntro": {
+      "hair": [
+        "Hair for tape-in extensions: five attachment types, four origins, and a choice of length, density and shade. Start with the attachment and origin: they affect the result and the price the most."
+      ],
+      "materials": [
+        "Tape, primer and remover for installing and re-taping. Each hair product page shows which materials suit its attachment."
+      ]
+    },
+    "priceOnRequest": "Price on request",
+    "demoBadge": "Demo",
+    "shadesCount": "{count} shades"
   },
   "product": {
     "notFoundTitle": "Product not found",
@@ -159,7 +142,7 @@
       "leadForm": "Send an inquiry",
       "telegram": "Message us on Telegram"
     },
-    "telegramMessageTemplate": "Hello! I'm interested in \"{title}\", length {length} cm, colour {color}.",
+    "telegramMessageTemplate": "Hello! I'm interested in “{title}”, length {length} cm, shade {color}, {weight} g.",
     "trust": {
       "gentleTitle": "Gentle on your natural hair",
       "gentleDescription": "The load is spread across a wide tape rather than individual strands.",
@@ -178,24 +161,40 @@
     },
     "specsLabels": {
       "length": "Length",
-      "weight": "Weight",
+      "weight": "Density (set weight)",
       "tapesCount": "Number of tapes",
       "color": "Colour",
       "sku": "SKU",
-      "hairOrigin": "Hair origin",
-      "hairStructure": "Hair structure",
-      "tapeWidth": "Tape width"
-    },
-    "hairStructureLabels": {
-      "straight": "Straight",
-      "wavy": "Wavy",
-      "curly": "Curly"
+      "attachment": "Attachment",
+      "origin": "Origin",
+      "structure": "Structure",
+      "materialType": "Type",
+      "rollLength": "Roll length",
+      "width": "Width",
+      "volume": "Volume",
+      "compatibleWith": "Works with"
     },
     "careTodo": "TODO_CLIENT: care instructions not provided by the client.",
     "deliveryTodo": "TODO_CLIENT: delivery and payment terms not provided by the client (brief, section 11, \"Blocks launch\").",
     "related": "Related products",
     "leadFormPlaceholder": {
       "title": "Request a colour/length match"
+    },
+    "selectWeight": "Density",
+    "priceOnRequest": "Price on request",
+    "telegramMessageMaterial": "Hello! I'm interested in “{title}”.",
+    "units": {
+      "m": "m",
+      "cm": "cm",
+      "ml": "ml"
+    },
+    "allAttachments": "all attachment types",
+    "worksWith": {
+      "heading": "What you need to work with it",
+      "description": "Materials that suit this attachment."
+    },
+    "compatibleHair": {
+      "heading": "Suits these hair products"
     }
   },
   "forms": {
@@ -254,22 +253,32 @@
       "imageAlt": "Tape-In hair extensions"
     },
     "techniques": {
-      "heading": "Three Tape-In techniques",
+      "heading": "Five techniques",
       "linkLabel": "Learn more",
       "classic": {
-        "title": "Classic Tape-In",
+        "title": "Classic tapes",
         "description": "Hair is attached with a wide tape — the load is spread evenly, not carried by individual strands as with bonded extensions.",
         "href": "/technology/tape-in"
       },
       "imitation1": {
         "title": "Root Imitation 1.0",
-        "description": "The same tape with an added root imitation. Up close, a small strip of tape — about 2 mm — may be visible.",
+        "description": "The same tape with added root imitation. On close inspection a thin strip of tape, about 2 mm, may be visible.",
         "href": "/technology/imitation#1-0"
       },
       "imitation2": {
         "title": "Root Imitation 2.0",
-        "description": "Hair is hand-stitched strand by strand — the tape itself is completely invisible, for the most natural parting.",
+        "description": "Hand-stitched hair by hair; the tape itself is not visible.",
         "href": "/technology/imitation#2-0"
+      },
+      "bioTape": {
+        "title": "Bio-tapes",
+        "description": "A very thin tape and a flat attachment. Minimal load, suitable for fine hair.",
+        "href": "/technology/bio-tape"
+      },
+      "ringStar": {
+        "title": "Ring Star",
+        "description": "Attached with a ring using a special tool: no glue and no heat.",
+        "href": "/technology/ring-star"
       }
     },
     "why": {
@@ -393,7 +402,7 @@
     "technology": {
       "hub": {
         "title": "Technology",
-        "description": "Three variants of Tape-In hair extensions — from the classic technique to the most discreet root imitation."
+        "description": "Five attachment types: classic tapes, root imitation 1.0 and 2.0, bio-tapes and Ring Star."
       },
       "tapeIn": {
         "title": "Classic Tape-In",
@@ -440,6 +449,17 @@
           "wants a system they can use again and again",
           "prefers a less noticeable attachment than classic tapes"
         ]
+      },
+      "bioTape": {
+        "title": "Bio-tapes",
+        "description": "A very thin tape, adhesive on both sides: a flat attachment and minimal load on your own hair.",
+        "chooseLengthLink": "How to choose length and density for fine hair",
+        "catalogLink": "See bio-tapes in the catalogue"
+      },
+      "ringStar": {
+        "title": "Ring Star",
+        "description": "A ring-based system: the strand is fixed with a ring using a special tool, with no glue and no heat.",
+        "catalogLink": "See Ring Star in the catalogue"
       }
     },
     "guides": {
@@ -494,7 +514,8 @@
             }
           ]
         },
-        "disclaimer": "TODO_CLIENT: exact tape-count figures depend on the product line and will be provided by the client."
+        "disclaimer": "TODO_CLIENT: exact tape-count figures depend on the product line and will be provided by the client.",
+        "bioTapeLink": "Fine or thin hair? Have a look at bio-tapes: they have the lightest attachment."
       },
       "selfCorrection": {
         "title": "Self-correction",
@@ -1035,5 +1056,33 @@
       "photosNote": "TODO_CLIENT: photos from classes will be added after the photoshoot.",
       "formHeading": "Sign up for in-person training"
     }
+  },
+  "attachments": {
+    "tape-classic": "Classic tapes",
+    "imitation-1": "Root imitation 1.0",
+    "imitation-2": "Root imitation 2.0",
+    "bio-tape": "Bio-tapes",
+    "ring-star": "Ring Star"
+  },
+  "origins": {
+    "slavic": "Slavic",
+    "india": "India",
+    "vietnam": "Vietnam",
+    "china": "China"
+  },
+  "structures": {
+    "porous": "Porous",
+    "straight": "Straight",
+    "wavy": "Wavy",
+    "curly": "Curly"
+  },
+  "materialTypes": {
+    "tape": "Tape",
+    "primer": "Primer",
+    "remover": "Remover"
+  },
+  "catalogSections": {
+    "hair": "Hair",
+    "materials": "Materials"
   }
 }

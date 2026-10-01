@@ -1,0 +1,251 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — временное, из общего комплекта.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "imitation-1-india-wavy",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Tape-In с имитацией роста 1.0 · Индия, волнистые",
+    "en": "Tape-In with root imitation 1.0 · India, wavy",
+    "ka": "Tape-In ზრდის იმიტაციით 1.0 · ინდოეთი, ტალღოვანი"
+  },
+  "shortDescription": {
+    "ru": "Классическая лента с дополнительной имитацией роста: крепление менее заметно у корней.",
+    "en": "A classic tape with added root imitation: the attachment is less visible at the roots.",
+    "ka": "კლასიკური ლენტი ზრდის დამატებითი იმიტაციით: მიმაგრება ფესვებთან ნაკლებად შესამჩნევია."
+  },
+  "description": {
+    "ru": "Усовершенствованная версия классического Tape-In. Основа та же: волосы фиксируются широкой лентой, равномерно распределяющей нагрузку. Дополнительно используется специальная имитация роста, благодаря которой место крепления становится менее заметным.\n\nИмитация 1.0 — классическая лента с дополнительной имитацией роста. Делает крепление менее заметным, но при близком рассмотрении может быть видна небольшая полоска ленты — около 2 мм. Подходит тем, кто хочет более естественный вид у корней, объём и длину при доступной стоимости классического Tape-In.",
+    "en": "An improved version of classic Tape-In. The base is the same: the hair is attached with a wide tape that spreads the load evenly. A special root imitation is added, which makes the attachment less visible.\n\nImitation 1.0 is a classic tape with added root imitation. It makes the attachment less noticeable, but on close inspection a thin strip of tape, about 2 mm, may be visible. A fit for those who want a more natural look at the roots, volume and length at the cost of classic Tape-In.",
+    "ka": "კლასიკური Tape-In-ის გაუმჯობესებული ვერსია. დამატებით გამოიყენება ზრდის სპეციალური იმიტაცია, რის გამოც მიმაგრების ადგილი ნაკლებად შესამჩნევია.\n\nიმიტაცია 1.0 — კლასიკური ლენტი ზრდის დამატებითი იმიტაციით. ახლოდან შეიძლება ჩანდეს ლენტის ვიწრო ზოლი, დაახლოებით 2 მმ."
+  },
+  "attachment": "imitation-1",
+  "structure": "wavy",
+  "origin": "india",
+  "variants": [
+    {
+      "id": "imitation-1-india-wavy-40-10-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-10-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-40-10-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-10-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-10-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-10-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-10-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-10-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-10-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-10-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-10-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-10-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-70-10-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-70-10-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-70-10-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-70-10-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-30-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-30-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-30-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-30-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-30-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-30-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-70-30-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-70-30-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-40-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-40-40-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-40-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-50-40-100"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-40-50"
+    },
+    {
+      "id": "imitation-1-india-wavy-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-INDIA-WAVY-60-40-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/tape-classic-rolls.webp",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 1.0 · Индия, волнистые",
+        "en": "Tape-In with root imitation 1.0 · India, wavy",
+        "ka": "Tape-In ზრდის იმიტაციით 1.0 · ინდოეთი, ტალღოვანი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Tape-In с имитацией роста 1.0 · Индия, волнистые | Da Vinchi Hair",
+      "en": "Tape-In with root imitation 1.0 · India, wavy | Da Vinchi Hair",
+      "ka": "Tape-In ზრდის იმიტაციით 1.0 · ინდოეთი, ტალღოვანი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Классическая лента с дополнительной имитацией роста: крепление менее заметно у корней.",
+      "en": "A classic tape with added root imitation: the attachment is less visible at the roots.",
+      "ka": "კლასიკური ლენტი ზრდის დამატებითი იმიტაციით: მიმაგრება ფესვებთან ნაკლებად შესამჩნევია."
+    }
+  }
+}

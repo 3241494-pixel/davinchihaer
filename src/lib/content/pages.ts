@@ -18,6 +18,8 @@ export interface PageMdxModule {
 const loaders: Record<string, () => Promise<PageMdxModule>> = {
   "technology/tape-in": () => import("../../../content/pages/technology/tape-in.mdx"),
   "technology/imitation": () => import("../../../content/pages/technology/imitation.mdx"),
+  "technology/bio-tape": () => import("../../../content/pages/technology/bio-tape.mdx"),
+  "technology/ring-star": () => import("../../../content/pages/technology/ring-star.mdx"),
   "guides/color-match": () => import("../../../content/pages/guides/color-match.mdx"),
   "guides/choose-length": () => import("../../../content/pages/guides/choose-length.mdx"),
   "guides/self-correction": () => import("../../../content/pages/guides/self-correction.mdx"),

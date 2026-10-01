@@ -10,7 +10,14 @@ import { TrustBadges } from "@/components/product/TrustBadges";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { ProductLeadForm } from "@/components/product/ProductLeadForm";
-import { getAllProducts, getColors, getProductBySlug } from "@/lib/content/products";
+import {
+  getAllProducts,
+  getColors,
+  getHairFor,
+  getHairProducts,
+  getMaterialsFor,
+  getProductBySlug,
+} from "@/lib/content/products";
 import { pickLocale } from "@/lib/content/locale";
 import { buildLanguageAlternates } from "@/i18n/alternates";
 import { Reveal } from "@/components/ui/Reveal";
@@ -42,16 +49,15 @@ export async function generateMetadata({
   };
 }
 
-function getRelatedProducts(product: Product): Product[] {
-  const resolved = (product.relatedSlugs ?? [])
-    .map((relatedSlug) => getProductBySlug(relatedSlug))
-    .filter((related): related is Product => Boolean(related) && related!.slug !== product.slug);
-
-  if (resolved.length > 0) return resolved.slice(0, RELATED_LIMIT);
-
-  return getAllProducts()
-    .filter((p) => p.category === product.category && p.slug !== product.slug)
-    .slice(0, RELATED_LIMIT);
+/** Похожие волосы: то же крепление, затем то же происхождение. */
+function getRelatedHair(product: Product): Product[] {
+  if (product.kind !== "hair") return [];
+  const others = getHairProducts().filter((p) => p.slug !== product.slug);
+  const sameAttachment = others.filter((p) => p.attachment === product.attachment);
+  const sameOrigin = others.filter(
+    (p) => p.attachment !== product.attachment && p.origin === product.origin,
+  );
+  return [...sameAttachment, ...sameOrigin].slice(0, RELATED_LIMIT);
 }
 
 export default async function ProductPage({
@@ -70,7 +76,10 @@ export default async function ProductPage({
   const ru = await getTypedMessages();
   const colors = getColors();
   const colorsByCode = new Map(colors.map((color) => [color.code, color] as const));
-  const related = getRelatedProducts(product);
+  const related = getRelatedHair(product);
+  const worksWith = product.kind === "hair" ? getMaterialsFor(product.attachment) : [];
+  const compatibleHair = product.kind === "material" ? getHairFor(product).slice(0, RELATED_LIMIT) : [];
+  const section = product.kind === "hair" ? "hair" : "materials";
   const galleryImages = product.images.map((image) => ({
     src: image.src,
     alt: pickLocale(image.alt, locale),
@@ -83,7 +92,7 @@ export default async function ProductPage({
         <Breadcrumbs
           items={[
             { label: ru.nav.catalog, href: "/catalog" },
-            { label: ru.categories[product.category], href: `/catalog/${product.category}` },
+            { label: ru.catalogSections[section], href: `/catalog/${section}` },
             { label: pickLocale(product.title, locale) },
           ]}
         />
@@ -105,6 +114,19 @@ export default async function ProductPage({
         <Reveal>
           <ProductTabs product={product} />
         </Reveal>
+
+        <RelatedProducts
+          products={worksWith}
+          colorsByCode={colorsByCode}
+          heading={ru.product.worksWith.heading}
+          description={ru.product.worksWith.description}
+        />
+
+        <RelatedProducts
+          products={compatibleHair}
+          colorsByCode={colorsByCode}
+          heading={ru.product.compatibleHair.heading}
+        />
 
         <RelatedProducts products={related} colorsByCode={colorsByCode} />
 

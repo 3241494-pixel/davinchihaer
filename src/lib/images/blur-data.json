@@ -53,5 +53,35 @@
     "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoLABQAPwForE6rJaQiMAgBYCAJYgCdACHPVO6U/LdlNnsAAP7te1cHje4bgZm5v7w46gWg7enSSWmUlgUF0Or459pDn3T1+HVUhcuTyQusNjhipwAAAA==",
     "width": 941,
     "height": 1672
+  },
+  "/images/hero/hero.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwAgCdASoNABAAAgA0JbACdH8G6AFPQYqSs4CQp4+UAAD+92wHs9I79P0hm//6XKH24zFfH/6dkVPYtYkS5tQWCJKYab7YNjNDReykug0c3DDm18fZaCD0Aaf8RqqkQIg/brUe2xj/bz0cICWWUFBx6MCeWz9SQdV87E53CfkZDVAVGRjOr4kDnZ/brqGVPniw4ySkfcw98gFTOxpBpAAA",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/materials/tape-red.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwAgCdASoMABAAAgA0JYgCdDBLyIh/WYq8AbPu/MAA/vdwU9+H+iQs6p4v0Eidg1h96dwX7WldVkF+GNRuH/IcAT8b7io9ilRlUED1amWDZjjxZ/x/5hAKtygm7Pii/AM2P6D+z6r9JY7Iv8cCAiV/P8sAIv9vCTbqn8LhwjBF38g3mvSiFlnH/0NUSoByVpknjU9m16ra+cx2vsM7n5V2F+SaywHRFVfAAAAA",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/materials/tape-yellow.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAABwAwCdASoMABAAAgA0JQBOgnEq4ws3zx96hpoiYKgiR05MAWAA/uu/8LRb9nGoHkZZl13gaVFdz/8iJxP0R/AuhqyV5jAOg33yT6f5DLFre12bAa2Ix6M9AS84QRNyn/mAG+u8tWw05n5Jw79aOe6gifwuFQ3toxVr24/BeDY9UX1zlnIuUoZxyasABEH+mW05d+Pm3T9OL2bTterMShDKVGm17yJQBTpBVCe/EIrAW56DwJ5SU4AA",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/materials/primer.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQAgCdASoMABAAAgA0JQBOgMWbyZBCp1ggAPa7JEUnp4WxW36e1HPiT+sP6o0hXtVFNXTbL2yVMnflAjpQbp+3eII8YnzlvoRfkAL+oji+08f9/chwmQ85vdn3ZfF44BfrcDnllPdkXpzhfutoQNTzcLsEBbFXD1q/E+dZcrqAAA==",
+    "width": 1086,
+    "height": 1448
+  },
+  "/images/materials/remover.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAQCdASoNABAAAgA0JaQAAuYcnUidgAD+9wyPD0/g68xHikIGeQSTEAD/bIUa/xON8T02fP/ZDN7TiN/NCiz5rrKjdyK/kX1U+4hdqAfs5A0ND3+lXx7nR/qfvJZgIz/OiAdHGMzrVkXSEg3Avq4AAAA=",
+    "width": 1122,
+    "height": 1402
+  },
+  "/images/brand/palette-wide-1.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQAgCdASoLABAAAgA0JQBOgMWlyt8CcDY18nAAzjm/9Cd2OrOrM4p6tDf22ktAtPnZM47GrBV8rkcGkDbdMvVPHvUilOkvhGSSzMcB3ZKLdlrJzA3p9bCbhaFYUCxeJ4pBIPbjREsJNYCc56ZLxGAA",
+    "width": 1024,
+    "height": 1536
   }
 }

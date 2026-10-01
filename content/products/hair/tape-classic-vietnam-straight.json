@@ -1,0 +1,323 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — временное, из общего комплекта.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "tape-classic-vietnam-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Классические ленты Tape-In · Вьетнам, прямые",
+    "en": "Classic Tape-In · Vietnam, straight",
+    "ka": "კლასიკური Tape-In ლენტები · ვიეტნამი, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Широкая лента равномерно распределяет нагрузку на собственные волосы. Многократное использование при правильном уходе.",
+    "en": "A wide tape spreads the load evenly across your own hair. Reusable with proper care.",
+    "ka": "ფართო ლენტი დატვირთვას თანაბრად ანაწილებს საკუთარ თმაზე. სწორი მოვლისას მრავალჯერადი გამოყენება."
+  },
+  "description": {
+    "ru": "Tape-In Hair Extensions, также известное как ленточное наращивание, — популярная технология, широко используемая в США и Европе. Главное преимущество — равномерное распределение нагрузки на собственные волосы.\n\nВ отличие от капсульного наращивания, где дополнительный вес приходится на отдельные небольшие пряди, при ленточном волосы фиксируются широкой лентой. Благодаря этому нагрузка распределяется более равномерно, что позволяет бережно относиться к собственным волосам и комфортно носить наращивание.\n\nКачественные ленты рассчитаны на многократное использование и при правильном уходе могут служить от года и дольше.",
+    "en": "Tape-In hair extensions are a popular technique widely used in the US and Europe. The main advantage is that the load is spread evenly across your own hair.\n\nUnlike keratin bond extensions, where the extra weight sits on small individual strands, tape-ins are attached with a wide tape. The load is distributed more evenly, which is gentler on your own hair and comfortable to wear.\n\nQuality tapes are made for repeated use and, with proper care, can last a year or longer.",
+    "ka": "Tape-In თმის დაგრძელება, იგივე ლენტური დაგრძელება, პოპულარული ტექნოლოგიაა, რომელიც ფართოდ გამოიყენება აშშ-სა და ევროპაში. მთავარი უპირატესობა — დატვირთვის თანაბარი განაწილება საკუთარ თმაზე.\n\nხარისხიანი ლენტები მრავალჯერადი გამოყენებისთვისაა და სწორი მოვლისას შეიძლება ემსახურონ ერთი წელი და მეტი."
+  },
+  "attachment": "tape-classic",
+  "structure": "straight",
+  "origin": "vietnam",
+  "variants": [
+    {
+      "id": "tape-classic-vietnam-straight-40-10-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-10-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-10-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-10-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-10-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-10-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-10-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-10-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-10-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-10-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-10-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-10-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-10-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-10-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-10-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": false,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-10-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-30-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-30-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-30-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-30-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-30-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-30-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-30-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": false,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-30-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-40-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-40-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-40-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-40-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-40-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-40-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-40-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-40-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-40-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": false,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-40-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-70-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-70-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-70-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-70-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-70-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-70-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-70-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-70-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-70-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-70-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-70-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-70-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/products/tape-ash-blonde.webp",
+      "alt": {
+        "ru": "Классические ленты Tape-In · Вьетнам, прямые",
+        "en": "Classic Tape-In · Vietnam, straight",
+        "ka": "კლასიკური Tape-In ლენტები · ვიეტნამი, სწორი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Классические ленты Tape-In · Вьетнам, прямые | Da Vinchi Hair",
+      "en": "Classic Tape-In · Vietnam, straight | Da Vinchi Hair",
+      "ka": "კლასიკური Tape-In ლენტები · ვიეტნამი, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Широкая лента равномерно распределяет нагрузку на собственные волосы. Многократное использование при правильном уходе.",
+      "en": "A wide tape spreads the load evenly across your own hair. Reusable with proper care.",
+      "ka": "ფართო ლენტი დატვირთვას თანაბრად ანაწილებს საკუთარ თმაზე. სწორი მოვლისას მრავალჯერადი გამოყენება."
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { getCategories } from "@/lib/content/products";
+import type { CatalogSection } from "@/lib/content/types";
 import { siteConfig } from "@/config/site";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { IconInstagram, IconTelegram } from "@/components/ui/icons";
@@ -16,11 +16,13 @@ const footerLinkClasses = cn(
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
 );
 
+const CATALOG_SECTIONS: CatalogSection[] = ["hair", "materials"];
+
 export async function Footer() {
   const ru = await getTypedMessages();
-  const categories = getCategories().map((category) => ({
-    value: category,
-    label: ru.categories[category],
+  const categories = CATALOG_SECTIONS.map((section) => ({
+    value: section,
+    label: ru.catalogSections[section],
   }));
   const year = new Date().getFullYear();
 
