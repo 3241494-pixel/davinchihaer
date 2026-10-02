@@ -127,6 +127,18 @@
     "cardCta": {
       "hair": "Choose a shade",
       "material": "Send a request"
+    },
+    "videos": {
+      "eyebrow": "Video",
+      "heading": "See the hair in motion",
+      "text": "Da Vinchi tapes, shades and strands in short clips: how the hair falls and how the attachment looks."
+    },
+    "promo": {
+      "eyebrow": "Matching",
+      "heading": "Not sure which shade is yours?",
+      "text": "Send a daylight photo and we will suggest the closest shade and length.",
+      "cta": "Message us on Telegram",
+      "guide": "Shade matching guide"
     }
   },
   "product": {
@@ -202,6 +214,11 @@
     },
     "compatibleHair": {
       "heading": "Suits these hair products"
+    },
+    "videos": {
+      "eyebrow": "Video",
+      "heading": "How it looks in real life",
+      "text": "Short clips of Da Vinchi hair and tapes: shade, density and attachment up close."
     }
   },
   "forms": {
@@ -257,7 +274,8 @@
       "subtitle": "A natural result, speed, comfort and cost-efficiency — in one system. With correct installation and care, gentle on your natural hair and keeping its length.",
       "ctaPrimary": "Find your match",
       "ctaSecondary": "Message us on Telegram",
-      "imageAlt": "Tape-In hair extensions"
+      "imageAlt": "Tape-In hair extensions",
+      "eyebrow": "Da Vinchi Hair · Tbilisi"
     },
     "techniques": {
       "heading": "Five techniques",
@@ -286,7 +304,8 @@
         "title": "Ring Star",
         "description": "Attached with a ring using a special tool: no glue and no heat.",
         "href": "/technology/ring-star"
-      }
+      },
+      "eyebrow": "Technologies"
     },
     "why": {
       "heading": "Why Tape-In",
@@ -405,7 +424,12 @@
       "description": "Tell us what you're interested in — we'll help you match the length and colour.",
       "addressHeading": "Find us"
     },
-    "marquee": "LUXURY HAIR · TAPE-IN · BIO-TAPE · RING STAR"
+    "marquee": "LUXURY HAIR · TAPE-IN · BIO-TAPE · RING STAR",
+    "showcase": {
+      "eyebrow": "Da Vinchi in motion",
+      "heading": "Hair you want to touch",
+      "text": "Short clips of Da Vinchi hair and tapes: shade, shine and attachment up close."
+    }
   },
   "pages": {
     "technology": {
@@ -1106,5 +1130,12 @@
   "founderQuote": {
     "text": "TODO_CLIENT: founder quote not provided by the client yet.",
     "author": "TODO_CLIENT: founder name"
+  },
+  "ctaBand": {
+    "eyebrow": "Matching",
+    "heading": "We will match the shade, length and density to your hair",
+    "text": "Send a request or a daylight photo of your hair in Telegram, and we will help you choose from the palette.",
+    "primary": "Send a request",
+    "telegram": "Message us on Telegram"
   }
 }

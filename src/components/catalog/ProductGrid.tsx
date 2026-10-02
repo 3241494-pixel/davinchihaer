@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { cn } from "@/components/ui/cn";
 import { Reveal } from "@/components/ui/Reveal";
 import { ProductCard } from "./ProductCard";
@@ -9,6 +10,8 @@ export interface ProductGridProps {
   imageExistsBySlug: Map<string, boolean>;
   /** Материалов четыре: один ряд на десктопе, 2×2 на мобильном. */
   layout?: "hair" | "materials";
+  /** Дополнительная плитка внутри сетки (подсказка с подбором) и её позиция. */
+  insert?: { node: ReactNode; index: number };
 }
 
 const LAYOUT_CLASSES = {
@@ -24,22 +27,28 @@ export function ProductGrid({
   colorsByCode,
   imageExistsBySlug,
   layout = "hair",
+  insert,
 }: ProductGridProps) {
+  const cards = products.map((product, index) => (
+    <Reveal
+      key={product.slug}
+      className="h-full"
+      delayMs={Math.min(index * STAGGER_STEP_MS, STAGGER_CAP_MS)}
+    >
+      <ProductCard
+        product={product}
+        colorsByCode={colorsByCode}
+        imageExists={imageExistsBySlug.get(product.slug) ?? false}
+      />
+    </Reveal>
+  ));
+  if (insert) {
+    cards.splice(Math.min(insert.index, cards.length), 0, <div key="grid-insert">{insert.node}</div>);
+  }
+
   return (
     <div className={cn("grid gap-3 sm:gap-6", LAYOUT_CLASSES[layout])}>
-      {products.map((product, index) => (
-        <Reveal
-          key={product.slug}
-          className="h-full"
-          delayMs={Math.min(index * STAGGER_STEP_MS, STAGGER_CAP_MS)}
-        >
-          <ProductCard
-            product={product}
-            colorsByCode={colorsByCode}
-            imageExists={imageExistsBySlug.get(product.slug) ?? false}
-          />
-        </Reveal>
-      ))}
+      {cards}
     </div>
   );
 }

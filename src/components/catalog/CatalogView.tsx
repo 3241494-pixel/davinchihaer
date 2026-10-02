@@ -15,10 +15,14 @@ import { CategoryIntro } from "./CategoryIntro";
 import { FiltersDesktop } from "./FiltersDesktop";
 import { FiltersMobile } from "./FiltersMobile";
 import { SortSelect } from "./SortSelect";
+import { CatalogPromoTile } from "./CatalogPromoTile";
 import { ProductGrid } from "./ProductGrid";
 import { LoadMore } from "./LoadMore";
 import { EmptyState } from "./EmptyState";
 import type { HairColor, HairProduct, WeightRange } from "@/lib/content/types";
+
+/** Плитка с подбором встаёт после пятого товара: на десктопе во второй ряд, на мобильном в третий. */
+const PROMO_TILE_INDEX = 5;
 
 export interface CatalogViewProps {
   pathname: string;
@@ -114,6 +118,7 @@ function CatalogViewInner({
                 products={visible}
                 colorsByCode={colorsByCode}
                 imageExistsBySlug={imageExistsBySlug}
+                insert={{ node: <CatalogPromoTile />, index: PROMO_TILE_INDEX }}
               />
               {hasMore && (
                 <LoadMore

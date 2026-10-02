@@ -117,3 +117,11 @@ html[data-locale="ka"] {
     animation: none;
   }
 }
+
+/* На странице товара снизу выезжает панель с кнопкой заявки: поднимаем над ней кнопку Telegram. */
+.tg-float {
+  transition: bottom 300ms ease;
+}
+body:has([data-sticky-cta="visible"]) .tg-float {
+  bottom: 5.5rem;
+}
