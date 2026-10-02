@@ -5,12 +5,21 @@ import { BeforeAfterLightbox } from "./BeforeAfterLightbox";
 
 const SLOTS = 6;
 
+function slotPaths(): string[] {
+  return Array.from({ length: SLOTS }, (_, index) => `/images/gallery/before-after-${index + 1}.jpg`);
+}
+
+/**
+ * Пока фото «до/после» нет (TODO_CLIENT), секцию на главной не показываем:
+ * шесть серых заглушек выглядят как недоделка. Появится сама с первым фото.
+ */
+export function hasBeforeAfterPhotos(): boolean {
+  return slotPaths().some((src) => publicImageExists(src));
+}
+
 export async function BeforeAfterGallery() {
   const ru = await getTypedMessages();
-  const images = Array.from({ length: SLOTS }, (_, index) => {
-    const src = `/images/gallery/before-after-${index + 1}.jpg`;
-    return { src, alt: ru.home.gallery.heading, exists: publicImageExists(src) };
-  });
+  const images = slotPaths().map((src) => ({ src, alt: ru.home.gallery.heading, exists: publicImageExists(src) }));
 
   return (
     <div className="flex flex-col gap-6">
