@@ -8,7 +8,7 @@ export async function Economy() {
   return (
     <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
       <div className="flex flex-col gap-4">
-        <h2 className="font-heading text-3xl text-ink-strong">{ru.home.economy.heading}</h2>
+        <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.home.economy.heading}</h2>
         <p className="text-base text-ink-muted">{ru.home.economy.description}</p>
       </div>
 

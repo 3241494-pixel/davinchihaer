@@ -209,3 +209,11 @@ export function IconStarHalf(props: IconProps) {
     </svg>
   );
 }
+
+export function IconPlay(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M8 5.5v13l10.5-6.5L8 5.5Z" />
+    </svg>
+  );
+}

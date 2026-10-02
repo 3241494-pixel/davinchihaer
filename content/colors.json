@@ -1,19 +1,82 @@
 {
-  "_todoClient": "Временная палитра для разработки и тестирования каталога. Коды, названия и hex — не финальные. Клиент присылает реальную палитру фотографиями каждой пряди на белом фоне при нейтральном свете (см. CLAUDE.md / бриф, раздел 11, блок «Блокирует каталог»). После получения — заменить полностью, включая коды (система нумерации может отличаться от приведённой ниже).",
+  "_todoClient": "Коды и фото прядей — от клиента (swatch-N.jpg, обрезаны до 160×160). Hex — средний цвет фото, используется как запасной. Названия и группы требуют подтверждения; ka — вычитка носителем.",
   "colors": [
-    { "code": "1",   "name": { "ru": "Чёрный",              "en": "Natural Black",     "ka": "TODO_CLIENT" }, "hex": "#1B1710", "group": "dark" },
-    { "code": "1b",  "name": { "ru": "Черно-коричневый",     "en": "Off Black",         "ka": "TODO_CLIENT" }, "hex": "#2C2115", "group": "dark" },
-    { "code": "2",   "name": { "ru": "Тёмно-каштановый",     "en": "Dark Brown",        "ka": "TODO_CLIENT" }, "hex": "#3B2314", "group": "brown" },
-    { "code": "4",   "name": { "ru": "Шоколадный",           "en": "Chocolate Brown",   "ka": "TODO_CLIENT" }, "hex": "#4A2C1D", "group": "brown" },
-    { "code": "6",   "name": { "ru": "Каштановый",           "en": "Chestnut",          "ka": "TODO_CLIENT" }, "hex": "#6B4226", "group": "brown" },
-    { "code": "8",   "name": { "ru": "Светло-каштановый",    "en": "Light Chestnut",    "ka": "TODO_CLIENT" }, "hex": "#8A5A35", "group": "brown" },
-    { "code": "16",  "name": { "ru": "Тёмный блонд",         "en": "Dark Blonde",       "ka": "TODO_CLIENT" }, "hex": "#B98F5E", "group": "blonde" },
-    { "code": "18",  "name": { "ru": "Пепельный блонд",      "en": "Ash Blonde",        "ka": "TODO_CLIENT" }, "hex": "#C7A06A", "group": "blonde" },
-    { "code": "24",  "name": { "ru": "Золотистый блонд",     "en": "Golden Blonde",     "ka": "TODO_CLIENT" }, "hex": "#D9B26A", "group": "blonde" },
-    { "code": "60",  "name": { "ru": "Светлый блонд",        "en": "Light Blonde",      "ka": "TODO_CLIENT" }, "hex": "#E8CF9C", "group": "blonde" },
-    { "code": "613", "name": { "ru": "Блонд экстра светлый", "en": "Bleach Blonde",     "ka": "TODO_CLIENT" }, "hex": "#F2E2B8", "group": "blonde" },
-    { "code": "99j", "name": { "ru": "Бордовый",             "en": "Burgundy Red",      "ka": "TODO_CLIENT" }, "hex": "#6E2430", "group": "red" },
-    { "code": "ombre-4-24", "name": { "ru": "Омбре шоколад-золото", "en": "Ombre Chocolate to Golden", "ka": "TODO_CLIENT" }, "hex": "#4A2C1D", "group": "ombre" },
-    { "code": "grey-silver", "name": { "ru": "Серебристо-серый", "en": "Silver Grey", "ka": "TODO_CLIENT" }, "hex": "#B8B8B8", "group": "grey" }
+    {
+      "code": "1.0",
+      "name": {
+        "ru": "Чёрный",
+        "en": "Black",
+        "ka": "შავი"
+      },
+      "hex": "#302E33",
+      "group": "dark",
+      "swatchImage": "/images/swatches/1.0.webp"
+    },
+    {
+      "code": "3.0",
+      "name": {
+        "ru": "Тёмный шатен",
+        "en": "Dark brown",
+        "ka": "მუქი შატენი"
+      },
+      "hex": "#3E312D",
+      "group": "dark",
+      "swatchImage": "/images/swatches/3.0.webp"
+    },
+    {
+      "code": "4.0",
+      "name": {
+        "ru": "Шатен",
+        "en": "Medium brown",
+        "ka": "შატენი"
+      },
+      "hex": "#482F23",
+      "group": "brown",
+      "swatchImage": "/images/swatches/4.0.webp"
+    },
+    {
+      "code": "7.0",
+      "name": {
+        "ru": "Русый",
+        "en": "Dark blonde",
+        "ka": "ღია წაბლისფერი"
+      },
+      "hex": "#B68F69",
+      "group": "brown",
+      "swatchImage": "/images/swatches/7.0.webp"
+    },
+    {
+      "code": "9.0",
+      "name": {
+        "ru": "Светло-русый",
+        "en": "Light blonde",
+        "ka": "ღია ქერა"
+      },
+      "hex": "#BE945F",
+      "group": "blonde",
+      "swatchImage": "/images/swatches/9.0.webp"
+    },
+    {
+      "code": "10.0",
+      "name": {
+        "ru": "Светлый блонд",
+        "en": "Very light blonde",
+        "ka": "ძალიან ღია ქერა"
+      },
+      "hex": "#C3A77F",
+      "group": "blonde",
+      "swatchImage": "/images/swatches/10.0.webp"
+    },
+    {
+      "code": "12.0",
+      "name": {
+        "ru": "Платиновый блонд",
+        "en": "Platinum blonde",
+        "ka": "პლატინისფერი ქერა"
+      },
+      "hex": "#DFD1C0",
+      "group": "ash",
+      "swatchImage": "/images/swatches/12.0.webp"
+    }
   ]
 }

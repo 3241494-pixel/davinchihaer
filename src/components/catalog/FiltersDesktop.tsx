@@ -4,15 +4,17 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { FilterControls } from "./FilterControls";
 import { buildCatalogHref, type EditableFilters } from "@/lib/catalog/search-params";
 import { useTypedMessages } from "@/i18n/use-messages";
-import type { HairColor } from "@/lib/content/types";
+import type { HairColor, WeightRange } from "@/lib/content/types";
 
 export interface FiltersDesktopProps {
   pathname: string;
   filters: EditableFilters;
   colors: HairColor[];
+  weightRange: WeightRange | null;
+  hasPrices: boolean;
 }
 
-export function FiltersDesktop({ pathname, filters, colors }: FiltersDesktopProps) {
+export function FiltersDesktop({ pathname, filters, colors, weightRange, hasPrices }: FiltersDesktopProps) {
   const ru = useTypedMessages();
   const router = useRouter();
 
@@ -23,7 +25,14 @@ export function FiltersDesktop({ pathname, filters, colors }: FiltersDesktopProp
   return (
     <aside className="hidden w-64 shrink-0 flex-col gap-6 lg:flex">
       <h2 className="font-heading text-xl text-ink-strong">{ru.catalog.filters.title}</h2>
-      <FilterControls value={filters} onChange={handleChange} colors={colors} idPrefix="desktop" />
+      <FilterControls
+        value={filters}
+        onChange={handleChange}
+        colors={colors}
+        weightRange={weightRange}
+        hasPrices={hasPrices}
+        idPrefix="desktop"
+      />
       <Link
         href={pathname}
         className="text-sm text-ink-muted underline-offset-4 hover:text-ink hover:underline"

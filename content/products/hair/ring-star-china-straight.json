@@ -1,0 +1,259 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "ring-star-china-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Ring Star · Китай, прямые",
+    "en": "Ring Star · China, straight",
+    "ka": "Ring Star · ჩინეთი, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Крепление кольцом с помощью специального инструмента: без клея и без нагрева.",
+    "en": "Attached with a ring using a special tool: no glue and no heat.",
+    "ka": "მიმაგრება რგოლით სპეციალური ხელსაწყოს დახმარებით: წებოსა და გაცხელების გარეშე."
+  },
+  "description": {
+    "ru": "Система крепления на кольцах. Прядь фиксируется кольцом с помощью специального инструмента: без клея и без термического воздействия.\n\nКрепление формируется без клея и нагрева, аккуратно и надёжно фиксирует прядь, комфортно в носке и малозаметно в волосах, удобно при коррекции и повторном наращивании.",
+    "en": "A ring-based attachment system. The strand is fixed with a ring using a special tool: no glue and no heat.\n\nThe attachment is formed without glue or heat, holds the strand neatly and securely, is comfortable to wear and discreet, and is convenient for correction and re-installation.",
+    "ka": "რგოლებზე მიმაგრების სისტემა. კულული რგოლით მაგრდება სპეციალური ხელსაწყოს დახმარებით: წებოსა და თერმული ზემოქმედების გარეშე."
+  },
+  "attachment": "ring-star",
+  "structure": "straight",
+  "origin": "china",
+  "variants": [
+    {
+      "id": "ring-star-china-straight-40-10-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-10-50"
+    },
+    {
+      "id": "ring-star-china-straight-40-10-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-10-100"
+    },
+    {
+      "id": "ring-star-china-straight-50-10-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-10-50"
+    },
+    {
+      "id": "ring-star-china-straight-50-10-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-10-100"
+    },
+    {
+      "id": "ring-star-china-straight-60-10-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-10-50"
+    },
+    {
+      "id": "ring-star-china-straight-60-10-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-10-100"
+    },
+    {
+      "id": "ring-star-china-straight-70-10-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-70-10-50"
+    },
+    {
+      "id": "ring-star-china-straight-70-10-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": false,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-70-10-100"
+    },
+    {
+      "id": "ring-star-china-straight-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-30-50"
+    },
+    {
+      "id": "ring-star-china-straight-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-30-100"
+    },
+    {
+      "id": "ring-star-china-straight-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-30-50"
+    },
+    {
+      "id": "ring-star-china-straight-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-30-100"
+    },
+    {
+      "id": "ring-star-china-straight-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-30-50"
+    },
+    {
+      "id": "ring-star-china-straight-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-30-100"
+    },
+    {
+      "id": "ring-star-china-straight-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-70-30-50"
+    },
+    {
+      "id": "ring-star-china-straight-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": false,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-70-30-100"
+    },
+    {
+      "id": "ring-star-china-straight-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-40-50"
+    },
+    {
+      "id": "ring-star-china-straight-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-40-40-100"
+    },
+    {
+      "id": "ring-star-china-straight-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-40-50"
+    },
+    {
+      "id": "ring-star-china-straight-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-50-40-100"
+    },
+    {
+      "id": "ring-star-china-straight-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-40-50"
+    },
+    {
+      "id": "ring-star-china-straight-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-CHINA-STRAIGHT-60-40-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/ringstar-3.webp",
+      "alt": {
+        "ru": "Ring Star · Китай, прямые",
+        "en": "Ring Star · China, straight",
+        "ka": "Ring Star · ჩინეთი, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/ringstar-2.webp",
+      "alt": {
+        "ru": "Ring Star · Китай, прямые",
+        "en": "Ring Star · China, straight",
+        "ka": "Ring Star · ჩინეთი, სწორი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Ring Star · Китай, прямые | Da Vinchi Hair",
+      "en": "Ring Star · China, straight | Da Vinchi Hair",
+      "ka": "Ring Star · ჩინეთი, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Крепление кольцом с помощью специального инструмента: без клея и без нагрева.",
+      "en": "Attached with a ring using a special tool: no glue and no heat.",
+      "ka": "მიმაგრება რგოლით სპეციალური ხელსაწყოს დახმარებით: წებოსა და გაცხელების გარეშე."
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "imitation-2-india-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Tape-In с имитацией роста 2.0 · Индия, прямые",
+    "en": "Tape-In with root imitation 2.0 · India, straight",
+    "ka": "Tape-In ზრდის იმიტაციით 2.0 · ინდოეთი, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Волосы поволосково вышиты вручную: саму ленту не видно, пробор выглядит естественно.",
+    "en": "Hand-stitched hair by hair: the tape itself is not visible and the parting looks natural.",
+    "ka": "თმა ხელით, ღერ-ღერად არის ამოქარგული: თავად ლენტი არ ჩანს, გაყოფა ბუნებრივად გამოიყურება."
+  },
+  "description": {
+    "ru": "Усовершенствованная версия классического Tape-In. Основа та же: волосы фиксируются широкой лентой, равномерно распределяющей нагрузку. Дополнительно используется специальная имитация роста, благодаря которой место крепления становится менее заметным.\n\nИмитация 2.0 — волосы поволосково вышиты вручную, за счёт чего создаётся очень естественный вид прикрепления. Саму ленту в имитации 2.0 не видно. Выбирают те, кому важны незаметность и естественный пробор.",
+    "en": "An improved version of classic Tape-In. The base is the same: the hair is attached with a wide tape that spreads the load evenly. A special root imitation is added, which makes the attachment less visible.\n\nImitation 2.0 is hand-stitched hair by hair, which gives a very natural-looking attachment. The tape itself is not visible. Chosen by those who value discretion and a natural parting.",
+    "ka": "კლასიკური Tape-In-ის გაუმჯობესებული ვერსია.\n\nიმიტაცია 2.0 — თმა ხელით, ღერ-ღერად არის ამოქარგული, რაც მიმაგრებას ძალიან ბუნებრივ იერს აძლევს. თავად ლენტი არ ჩანს."
+  },
+  "attachment": "imitation-2",
+  "structure": "straight",
+  "origin": "india",
+  "variants": [
+    {
+      "id": "imitation-2-india-straight-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-30-50"
+    },
+    {
+      "id": "imitation-2-india-straight-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-30-100"
+    },
+    {
+      "id": "imitation-2-india-straight-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-30-50"
+    },
+    {
+      "id": "imitation-2-india-straight-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-30-100"
+    },
+    {
+      "id": "imitation-2-india-straight-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-30-50"
+    },
+    {
+      "id": "imitation-2-india-straight-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-30-100"
+    },
+    {
+      "id": "imitation-2-india-straight-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-70-30-50"
+    },
+    {
+      "id": "imitation-2-india-straight-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-70-30-100"
+    },
+    {
+      "id": "imitation-2-india-straight-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-40-50"
+    },
+    {
+      "id": "imitation-2-india-straight-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-40-100"
+    },
+    {
+      "id": "imitation-2-india-straight-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-40-50"
+    },
+    {
+      "id": "imitation-2-india-straight-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-40-100"
+    },
+    {
+      "id": "imitation-2-india-straight-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-40-50"
+    },
+    {
+      "id": "imitation-2-india-straight-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-40-100"
+    },
+    {
+      "id": "imitation-2-india-straight-70-40-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-70-40-50"
+    },
+    {
+      "id": "imitation-2-india-straight-70-40-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-70-40-100"
+    },
+    {
+      "id": "imitation-2-india-straight-40-70-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-70-50"
+    },
+    {
+      "id": "imitation-2-india-straight-40-70-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-40-70-100"
+    },
+    {
+      "id": "imitation-2-india-straight-50-70-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-70-50"
+    },
+    {
+      "id": "imitation-2-india-straight-50-70-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-50-70-100"
+    },
+    {
+      "id": "imitation-2-india-straight-60-70-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-70-50"
+    },
+    {
+      "id": "imitation-2-india-straight-60-70-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-2-INDIA-STRAIGHT-60-70-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/imitation-2-3.webp",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 2.0 · Индия, прямые",
+        "en": "Tape-In with root imitation 2.0 · India, straight",
+        "ka": "Tape-In ზრდის იმიტაციით 2.0 · ინდოეთი, სწორი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Tape-In с имитацией роста 2.0 · Индия, прямые | Da Vinchi Hair",
+      "en": "Tape-In with root imitation 2.0 · India, straight | Da Vinchi Hair",
+      "ka": "Tape-In ზრდის იმიტაციით 2.0 · ინდოეთი, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Волосы поволосково вышиты вручную: саму ленту не видно, пробор выглядит естественно.",
+      "en": "Hand-stitched hair by hair: the tape itself is not visible and the parting looks natural.",
+      "ka": "თმა ხელით, ღერ-ღერად არის ამოქარგული: თავად ლენტი არ ჩანს, გაყოფა ბუნებრივად გამოიყურება."
+    }
+  }
+}

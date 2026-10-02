@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { FounderQuote } from "@/components/content/FounderQuote";
 import { getPageContent } from "@/lib/content/pages";
 import { setRequestLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
@@ -33,6 +34,7 @@ export default async function AboutPage({ params }: PageProps) {
       breadcrumbs={[{ label: ru.nav.about }]}
       after={
         <div className="flex flex-col gap-6 border-t border-border pt-10">
+          <FounderQuote />
           <div className="flex flex-col gap-2">
             <h2 className="font-heading text-2xl text-ink-strong">{copy.historyHeading}</h2>
             <p className="text-sm text-ink-muted">{copy.historyTodo}</p>

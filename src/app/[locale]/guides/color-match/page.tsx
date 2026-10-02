@@ -46,8 +46,8 @@ export default async function ColorMatchPage({ params }: PageProps) {
       ]}
       wide={
         <Media
-          path="colorSwatchCard"
-          alt={pickLocale(IMAGES.colorSwatchCard.alt, locale)}
+          path="paletteWide1"
+          alt={pickLocale(IMAGES.paletteWide1.alt, locale)}
           aspect="16/9"
           sizes="(min-width: 1024px) 960px, 100vw"
           className="rounded-base bg-surface-alt"

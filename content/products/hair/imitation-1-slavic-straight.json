@@ -1,0 +1,270 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "imitation-1-slavic-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Tape-In с имитацией роста 1.0 · славянка, прямые",
+    "en": "Tape-In with root imitation 1.0 · Slavic, straight",
+    "ka": "Tape-In ზრდის იმიტაციით 1.0 · სლავური, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Классическая лента с дополнительной имитацией роста: крепление менее заметно у корней.",
+    "en": "A classic tape with added root imitation: the attachment is less visible at the roots.",
+    "ka": "კლასიკური ლენტი ზრდის დამატებითი იმიტაციით: მიმაგრება ფესვებთან ნაკლებად შესამჩნევია."
+  },
+  "description": {
+    "ru": "Усовершенствованная версия классического Tape-In. Основа та же: волосы фиксируются широкой лентой, равномерно распределяющей нагрузку. Дополнительно используется специальная имитация роста, благодаря которой место крепления становится менее заметным.\n\nИмитация 1.0 — классическая лента с дополнительной имитацией роста. Делает крепление менее заметным, но при близком рассмотрении может быть видна небольшая полоска ленты — около 2 мм. Подходит тем, кто хочет более естественный вид у корней, объём и длину при доступной стоимости классического Tape-In.",
+    "en": "An improved version of classic Tape-In. The base is the same: the hair is attached with a wide tape that spreads the load evenly. A special root imitation is added, which makes the attachment less visible.\n\nImitation 1.0 is a classic tape with added root imitation. It makes the attachment less noticeable, but on close inspection a thin strip of tape, about 2 mm, may be visible. A fit for those who want a more natural look at the roots, volume and length at the cost of classic Tape-In.",
+    "ka": "კლასიკური Tape-In-ის გაუმჯობესებული ვერსია. დამატებით გამოიყენება ზრდის სპეციალური იმიტაცია, რის გამოც მიმაგრების ადგილი ნაკლებად შესამჩნევია.\n\nიმიტაცია 1.0 — კლასიკური ლენტი ზრდის დამატებითი იმიტაციით. ახლოდან შეიძლება ჩანდეს ლენტის ვიწრო ზოლი, დაახლოებით 2 მმ."
+  },
+  "attachment": "imitation-1",
+  "structure": "straight",
+  "origin": "slavic",
+  "variants": [
+    {
+      "id": "imitation-1-slavic-straight-40-90-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-90-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-90-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-90-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-90-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-90-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-90-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-90-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-90-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-90-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-90-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-90-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-90-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-90-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-90-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-90-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-100-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-100-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-100-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-100-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-100-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-100-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-100-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-100-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-100-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-100-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-100-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-100-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-100-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-100-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-100-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": false,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-100-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-120-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-120-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-120-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-120-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-120-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-120-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-120-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-120-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-120-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-120-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-120-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-120-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/imitation-1-1.webp",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 1.0 · славянка, прямые",
+        "en": "Tape-In with root imitation 1.0 · Slavic, straight",
+        "ka": "Tape-In ზრდის იმიტაციით 1.0 · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/imitation-1-2.webp",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 1.0 · славянка, прямые",
+        "en": "Tape-In with root imitation 1.0 · Slavic, straight",
+        "ka": "Tape-In ზრდის იმიტაციით 1.0 · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/imitation-1-3.webp",
+      "alt": {
+        "ru": "Tape-In с имитацией роста 1.0 · славянка, прямые",
+        "en": "Tape-In with root imitation 1.0 · Slavic, straight",
+        "ka": "Tape-In ზრდის იმიტაციით 1.0 · სლავური, სწორი"
+      }
+    }
+  ],
+  "badges": [
+    "bestseller"
+  ],
+  "seo": {
+    "title": {
+      "ru": "Tape-In с имитацией роста 1.0 · славянка, прямые | Da Vinchi Hair",
+      "en": "Tape-In with root imitation 1.0 · Slavic, straight | Da Vinchi Hair",
+      "ka": "Tape-In ზრდის იმიტაციით 1.0 · სლავური, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Классическая лента с дополнительной имитацией роста: крепление менее заметно у корней.",
+      "en": "A classic tape with added root imitation: the attachment is less visible at the roots.",
+      "ka": "კლასიკური ლენტი ზრდის დამატებითი იმიტაციით: მიმაგრება ფესვებთან ნაკლებად შესამჩნევია."
+    }
+  }
+}
