@@ -19,7 +19,8 @@
     "catalogMenuLabel": "Открыть список категорий каталога",
     "telegramLink": "Написать в Telegram",
     "allCatalogLink": "Весь каталог",
-    "announcement": "Доставка по миру · Тбилиси"
+    "announcement": "Доставка по миру · Тбилиси",
+    "whatsappLink": "Написать в WhatsApp"
   },
   "languageSwitcher": {
     "label": "Язык",

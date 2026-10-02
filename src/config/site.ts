@@ -36,11 +36,16 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Da Vinchi Hair",
   url: "https://davinchihair.com",
-  telegramBotUrl: "https://t.me/TODO_CLIENT",
+  // Тестовый контакт по номеру телефона (Роман, 2026-10-02). TODO_CLIENT: заменить
+  // на https://t.me/<username> — ссылка по номеру открывает чат, только если в
+  // настройках приватности Telegram номер виден всем, и может не подставить текст.
+  telegramBotUrl: "https://t.me/+491603241494",
   instagramUrl: "https://www.instagram.com/da_vinchi.hair/",
   address: {
     city: "Тбилиси",
     country: "Грузия",
   },
+  // Тестовый номер (Роман, 2026-10-02), TODO_CLIENT: подтвердить рабочий номер.
+  whatsappNumber: "+49 160 3241494",
   showDemoBadge: true,
 };

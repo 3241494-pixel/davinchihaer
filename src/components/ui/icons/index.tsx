@@ -217,3 +217,13 @@ export function IconPlay(props: IconProps) {
     </svg>
   );
 }
+
+/** Линейная иконка WhatsApp: облачко чата с трубкой, без фирменного цвета. */
+export function IconWhatsApp(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3.5 20.5 5 16.3A8.5 8.5 0 1 1 8 19.1l-4.5 1.4Z" />
+      <path d="M9.2 8.6c.2-.4.6-.5.9-.4l.8 1.6-.6.8c.5 1 1.3 1.8 2.3 2.3l.8-.6 1.6.8c.1.3 0 .7-.4.9-1.1.6-2.6.2-4-1.2s-1.9-3-1.4-4.2Z" />
+    </svg>
+  );
+}

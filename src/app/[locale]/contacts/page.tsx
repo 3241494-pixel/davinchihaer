@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { RetailLeadForm } from "@/components/forms/RetailLeadForm";
-import { IconInstagram, IconTelegram } from "@/components/ui/icons";
+import { IconInstagram, IconTelegram, IconWhatsApp } from "@/components/ui/icons";
+import { buildWhatsAppLink } from "@/lib/messenger";
 import { siteConfig } from "@/config/site";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { setRequestLocale } from "next-intl/server";
@@ -28,6 +29,7 @@ export default async function ContactsPage({ params }: PageProps) {
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   const copy = ru.pages.contacts;
+  const whatsappHref = buildWhatsAppLink({ locale });
 
   return (
     <ContentPageLayout
@@ -70,6 +72,17 @@ export default async function ContactsPage({ params }: PageProps) {
                   <IconTelegram className="size-4" />
                   {ru.header.telegramLink}
                 </a>
+                {whatsappHref && (
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-ink underline-offset-4 hover:underline"
+                  >
+                    <IconWhatsApp className="size-4" />
+                    {ru.header.whatsappLink}
+                  </a>
+                )}
                 <a
                   href={siteConfig.instagramUrl}
                   target="_blank"

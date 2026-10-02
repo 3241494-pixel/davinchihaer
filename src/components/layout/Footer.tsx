@@ -1,8 +1,11 @@
 import { Link } from "@/i18n/navigation";
 import type { CatalogSection } from "@/lib/content/types";
 import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
 import { getTypedMessages } from "@/i18n/get-messages";
-import { IconInstagram, IconTelegram } from "@/components/ui/icons";
+import type { Locale } from "@/i18n/routing";
+import { IconInstagram, IconTelegram, IconWhatsApp } from "@/components/ui/icons";
+import { buildWhatsAppLink } from "@/lib/messenger";
 import { cn } from "@/components/ui/cn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Logo } from "./Logo";
@@ -26,6 +29,7 @@ export async function Footer() {
     label: ru.catalogSections[section],
   }));
   const year = new Date().getFullYear();
+  const whatsappHref = buildWhatsAppLink({ locale: (await getLocale()) as Locale });
 
   return (
     <footer className="border-t border-border bg-surface">
@@ -140,6 +144,17 @@ export async function Footer() {
                 >
                   <IconTelegram className="size-4" />
                 </a>
+                {whatsappHref && (
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={ru.header.whatsappLink}
+                    className={iconLinkClasses}
+                  >
+                    <IconWhatsApp className="size-4" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
