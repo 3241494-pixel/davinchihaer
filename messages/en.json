@@ -359,10 +359,18 @@
       "description": "Tapes are matched to the natural colour and texture of your hair. The most accurate way is an in-person match — holding a strand against your hair at a consultation in Tbilisi.",
       "cta": "How to match your colour"
     },
-    "gallery": {
-      "heading": "Before & after",
-      "note": "TODO_CLIENT: real before/after photos will be added after the photoshoot (see brief, section 11).",
-      "cta": "View gallery"
+    "beforeAfter": {
+      "eyebrow": "Our work",
+      "heading": "Before and after",
+      "text": "Drag the divider to compare the hair before and after the extensions. Every result depends on the natural hair, the chosen technique and aftercare.",
+      "before": "Before",
+      "after": "After",
+      "sliderLabel": "Before and after divider",
+      "pairLabel": "Work {index}",
+      "placeholderBefore": "“Before” photo",
+      "placeholderAfter": "“After” photo",
+      "placeholderNote": "TODO_CLIENT: real before and after photo pairs go here — same angle, same light, portrait framing.",
+      "galleryLink": "See all work"
     },
     "banners": {
       "wholesale": {

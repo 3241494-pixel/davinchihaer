@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
 import { GalleryFilter } from "@/components/content/GalleryFilter";
 import { VideoStrip } from "@/components/content/VideoStrip";
+import { BeforeAfterSection } from "@/components/content/BeforeAfterSection";
 import { publicImageExists } from "@/lib/image-exists";
 import { getTypedMessages } from "@/i18n/get-messages";
 import { setRequestLocale } from "next-intl/server";
@@ -79,6 +80,9 @@ export default async function GalleryPage({ params }: PageProps) {
       breadcrumbs={[{ label: ru.pages.gallery.title }]}
       wide={
         <div className="flex flex-col gap-4">
+          <div className="mb-10 border-b border-border pb-12">
+            <BeforeAfterSection locale={locale} tone="light" />
+          </div>
           <GalleryFilter techniques={techniques} items={items} />
           <VideoStrip names={["darkPiece1", "darkPiece2", "bio2"]} locale={locale} />
           <p className="text-sm text-ink-muted">{ru.pages.gallery.note}</p>

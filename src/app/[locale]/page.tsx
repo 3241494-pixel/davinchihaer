@@ -9,10 +9,7 @@ import { WhyTapeIn } from "@/components/sections/home/WhyTapeIn";
 import { PopularProducts } from "@/components/sections/home/PopularProducts";
 import { Economy } from "@/components/sections/home/Economy";
 import { ColorGuideTeaser } from "@/components/sections/home/ColorGuideTeaser";
-import {
-  BeforeAfterGallery,
-  hasBeforeAfterPhotos,
-} from "@/components/sections/home/BeforeAfterGallery";
+import { BeforeAfterSection } from "@/components/content/BeforeAfterSection";
 import { VideoShowcase } from "@/components/content/VideoShowcase";
 import { LeadActions } from "@/components/content/LeadActions";
 import { CtaBand } from "@/components/content/CtaBand";
@@ -84,13 +81,7 @@ export default async function Home({
         </Container>
       </Section>
 
-      {hasBeforeAfterPhotos() && (
-        <Section tone="surface">
-          <Container>
-            <BeforeAfterGallery />
-          </Container>
-        </Section>
-      )}
+      <BeforeAfterSection locale={locale} />
 
       <Section tone="bg">
         <Container>
