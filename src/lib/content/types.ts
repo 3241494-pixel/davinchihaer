@@ -134,3 +134,34 @@ export interface PriceRange {
   min: number;
   max: number;
 }
+
+/** Валюта суммы. Каталог только в евро; USD — для расчёта, присланного клиентом в долларах. */
+export type Currency = "EUR" | "USD";
+
+/** Строка расчёта: цена в центах и сколько раз в год она платится. */
+export interface CostItem {
+  label: I18nString;
+  price: number;
+  timesPerYear: number;
+}
+
+/** Способ обслуживания внутри варианта наращивания, например «у мастера» и «дома». */
+export interface CostVariant {
+  id: string;
+  title: I18nString;
+  items: CostItem[];
+}
+
+export interface CostOption {
+  id: string;
+  title: I18nString;
+  /** Общие строки для всех способов обслуживания. */
+  items: CostItem[];
+  /** Пусто — у варианта один итог. */
+  variants: CostVariant[];
+}
+
+export interface CostComparison {
+  currency: Currency;
+  options: CostOption[];
+}

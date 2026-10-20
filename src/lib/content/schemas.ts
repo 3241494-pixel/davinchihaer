@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES } from "./enums";
-import type { I18nString } from "./types";
+import type { CostComparison, I18nString } from "./types";
 
 export { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES };
 
@@ -93,3 +93,30 @@ export const productSchema = z.discriminatedUnion("kind", [
   hairProductSchema,
   materialProductSchema,
 ]);
+
+const costItemSchema = z.strictObject({
+  label: i18nStringSchema,
+  price: centsSchema,
+  timesPerYear: z.number().int().positive(),
+});
+
+export const costComparisonSchema = z.strictObject({
+  _source: z.string().optional(),
+  currency: z.enum(["EUR", "USD"]),
+  options: z
+    .array(
+      z.strictObject({
+        id: z.string().min(1),
+        title: i18nStringSchema,
+        items: z.array(costItemSchema).min(1),
+        variants: z.array(
+          z.strictObject({
+            id: z.string().min(1),
+            title: i18nStringSchema,
+            items: z.array(costItemSchema).min(1),
+          }),
+        ),
+      }),
+    )
+    .min(2),
+}) satisfies z.ZodType<CostComparison & { _source?: string }>;

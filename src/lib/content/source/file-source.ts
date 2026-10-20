@@ -33,6 +33,10 @@ export class FileContentSource implements ContentSource {
     }
     return (parsed as { colors: unknown[] }).colors;
   }
+
+  getCostComparisonRaw(): unknown {
+    return readJson(path.join(CONTENT_ROOT, "economy.json"));
+  }
 }
 
 export const fileContentSource = new FileContentSource();

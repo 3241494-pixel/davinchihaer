@@ -8,4 +8,6 @@ export interface ContentSource {
   getProductsRaw(): unknown[];
   /** Сырые, ещё не провалидированные записи оттенков. */
   getColorsRaw(): unknown[];
+  /** Сырой расчёт «стоимость владения за год» для блока на главной. */
+  getCostComparisonRaw(): unknown;
 }

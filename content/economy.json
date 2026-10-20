@@ -1,0 +1,108 @@
+{
+  "_source": "Расчёт Романа, сообщение в проекте 2026-10-20. Суммы в центах.",
+  "currency": "USD",
+  "options": [
+    {
+      "id": "tape",
+      "title": {
+        "ru": "Ленты (на примере биолент)",
+        "en": "Tapes (bio-tape example)",
+        "ka": "ლენტები (ბიოლენტების მაგალითზე)"
+      },
+      "items": [
+        {
+          "label": {
+            "ru": "Волосы 50 см, 100 г",
+            "en": "Hair 50 cm, 100 g",
+            "ka": "თმა 50 სმ, 100 გ"
+          },
+          "price": 23000,
+          "timesPerYear": 1
+        },
+        {
+          "label": {
+            "ru": "Изготовление биолент, 100 г",
+            "en": "Making the bio-tapes, 100 g",
+            "ka": "ბიოლენტების დამზადება, 100 გ"
+          },
+          "price": 9000,
+          "timesPerYear": 1
+        }
+      ],
+      "variants": [
+        {
+          "id": "master",
+          "title": {
+            "ru": "У мастера",
+            "en": "At a stylist",
+            "ka": "ოსტატთან"
+          },
+          "items": [
+            {
+              "label": {
+                "ru": "Коррекция у мастера раз в 3 месяца",
+                "en": "Touch-up at a stylist every 3 months",
+                "ka": "კორექცია ოსტატთან 3 თვეში ერთხელ"
+              },
+              "price": 6500,
+              "timesPerYear": 4
+            }
+          ]
+        },
+        {
+          "id": "home",
+          "title": { "ru": "Дома", "en": "At home", "ka": "სახლში" },
+          "items": [
+            {
+              "label": {
+                "ru": "Самостоятельно дома, только материалы",
+                "en": "By yourself at home, materials only",
+                "ka": "დამოუკიდებლად სახლში, მხოლოდ მასალები"
+              },
+              "price": 2000,
+              "timesPerYear": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capsule",
+      "title": {
+        "ru": "Капсулы",
+        "en": "Bonded extensions",
+        "ka": "კაფსულები"
+      },
+      "items": [
+        {
+          "label": {
+            "ru": "Волосы 50 см, 100 г",
+            "en": "Hair 50 cm, 100 g",
+            "ka": "თმა 50 სმ, 100 გ"
+          },
+          "price": 23000,
+          "timesPerYear": 1
+        },
+        {
+          "label": {
+            "ru": "Капсулирование при каждой коррекции, раз в 3 месяца",
+            "en": "Re-bonding at every touch-up, every 3 months",
+            "ka": "კაფსულირება ყოველ კორექციაზე, 3 თვეში ერთხელ"
+          },
+          "price": 5000,
+          "timesPerYear": 4
+        },
+        {
+          "label": {
+            "ru": "Наращивание раз в 3 месяца",
+            "en": "Extension every 3 months",
+            "ka": "დაგრძელება 3 თვეში ერთხელ"
+          },
+          "price": 20000,
+          "timesPerYear": 4
+        }
+      ],
+      "variants": []
+    }
+  ]
+}

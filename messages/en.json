@@ -340,19 +340,13 @@
     },
     "economy": {
       "heading": "Choose quality hair and materials once — and get a system you use again and again.",
-      "description": "Quality tapes and hair are designed for repeated use and, with correct care, last a year or longer — no need to visit a stylist every few weeks, as with bonded extensions.",
+      "description": "Quality tapes and hair are designed for repeated use and, with correct care, last a year or longer. You buy the hair once, and the tapes can be re-done by a stylist or by yourself at home.",
       "comparisonTitle": "Cost of ownership per year",
-      "tapeIn": {
-        "label": "Tape-In",
-        "note": "One set + periodic touch-up",
-        "price": "TODO_CLIENT"
-      },
-      "capsule": {
-        "label": "Bonded extensions",
-        "note": "Touch-up every 2–3 months",
-        "price": "TODO_CLIENT"
-      },
-      "disclaimer": "TODO_CLIENT: exact figures for the cost comparison have not been provided by the client — the block's structure is ready, prices will be added once the client provides them."
+      "or": "or",
+      "times": "{price} × {count}",
+      "totalLabel": "Total per year",
+      "verdict": "Tapes cost half as much as bonded extensions",
+      "disclaimer": "Calculated for 50 cm, 100 g hair with a touch-up every 3 months. Your stylist's prices may differ."
     },
     "colorGuide": {
       "heading": "Colour matching",
