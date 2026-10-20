@@ -19,6 +19,8 @@ export interface CompareSliderProps {
   afterLabel: string;
   /** Подпись для скринридеров: что двигает разделитель. */
   sliderLabel: string;
+  /** Один раз качнуть ручку при появлении на экране, подсказывая, что её можно двигать. */
+  hint?: boolean;
   className?: string;
 }
 
@@ -43,6 +45,7 @@ export function CompareSlider({
   beforeLabel,
   afterLabel,
   sliderLabel,
+  hint = true,
   className,
 }: CompareSliderProps) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -54,7 +57,7 @@ export function CompareSlider({
 
   useEffect(() => {
     const root = rootRef.current;
-    if (!root) return;
+    if (!root || !hint) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timers: number[] = [];
     const observer = new IntersectionObserver(
@@ -78,7 +81,7 @@ export function CompareSlider({
       observer.disconnect();
       timers.forEach((timer) => window.clearTimeout(timer));
     };
-  }, []);
+  }, [hint]);
 
   function positionFromPointer(clientX: number) {
     const rect = rootRef.current?.getBoundingClientRect();
@@ -143,7 +146,7 @@ export function CompareSlider({
       onPointerUp={stopDragging}
       onPointerCancel={stopDragging}
       className={cn(
-        "relative aspect-[4/5] w-full cursor-ew-resize touch-pan-y overflow-hidden bg-surface-alt select-none",
+        "relative aspect-[8/15] w-full cursor-ew-resize touch-pan-y overflow-hidden bg-surface-alt select-none",
         className,
       )}
     >

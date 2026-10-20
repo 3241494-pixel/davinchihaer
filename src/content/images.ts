@@ -16,6 +16,7 @@ export type ImageUsage =
   | 'catalog'
   | 'guide'
   | 'brand'
+  | 'before-after'
   | 'gallery-only';
 
 export interface ImageEntry {
@@ -372,6 +373,153 @@ export const IMAGES = {
       ka: 'მუქი თმა ფირუზისფერ ფონზე', // TODO_I18N
     },
     note: 'Постер видео.',
+  },
+
+  // Работы клиента «до/после» (Роман, 2026-10-20): каждое фото клиента разрезано
+  // по шву на две половины и приведено к 8:15. Только для слайдера до/после.
+  baPair01Before: {
+    path: '/images/before-after/pair-01-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд до наращивания, вид сзади',
+      en: 'Blonde hair before the extensions, back view',
+      ka: 'ქერა თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair01After: {
+    path: '/images/before-after/pair-01-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд после наращивания, вид сзади',
+      en: 'Blonde hair after the extensions, back view',
+      ka: 'ქერა თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair02Before: {
+    path: '/images/before-after/pair-02-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Чёрные волосы до наращивания, вид сзади',
+      en: 'Black hair before the extensions, back view',
+      ka: 'შავი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair02After: {
+    path: '/images/before-after/pair-02-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Чёрные волосы после наращивания, вид сзади',
+      en: 'Black hair after the extensions, back view',
+      ka: 'შავი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair03Before: {
+    path: '/images/before-after/pair-03-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд с тёмными корнями до наращивания, вид сзади',
+      en: 'Blonde with dark roots before the extensions, back view',
+      ka: 'ქერა მუქი ძირებით დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair03After: {
+    path: '/images/before-after/pair-03-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд с тёмными корнями после наращивания, вид сзади',
+      en: 'Blonde with dark roots after the extensions, back view',
+      ka: 'ქერა მუქი ძირებით დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair04Before: {
+    path: '/images/before-after/pair-04-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Медовый блонд до наращивания, вид сзади',
+      en: 'Honey blonde before the extensions, back view',
+      ka: 'თაფლისფერი ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair04After: {
+    path: '/images/before-after/pair-04-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Медовый блонд после наращивания, вид сзади',
+      en: 'Honey blonde after the extensions, back view',
+      ka: 'თაფლისფერი ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair05Before: {
+    path: '/images/before-after/pair-05-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмный блонд до наращивания, вид сзади',
+      en: 'Dark blonde before the extensions, back view',
+      ka: 'მუქი ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair05After: {
+    path: '/images/before-after/pair-05-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмный блонд после наращивания, вид сзади',
+      en: 'Dark blonde after the extensions, back view',
+      ka: 'მუქი ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair06Before: {
+    path: '/images/before-after/pair-06-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Светлый блонд до наращивания, вид сзади',
+      en: 'Light blonde before the extensions, back view',
+      ka: 'ღია ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair06After: {
+    path: '/images/before-after/pair-06-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Светлый блонд после наращивания, вид сзади',
+      en: 'Light blonde after the extensions, back view',
+      ka: 'ღია ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair07Before: {
+    path: '/images/before-after/pair-07-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмно-каштановые волосы до наращивания, вид сзади',
+      en: 'Dark brown hair before the extensions, back view',
+      ka: 'მუქი წაბლისფერი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair07After: {
+    path: '/images/before-after/pair-07-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмно-каштановые волосы после наращивания, вид сзади',
+      en: 'Dark brown hair after the extensions, back view',
+      ka: 'მუქი წაბლისფერი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair08Before: {
+    path: '/images/before-after/pair-08-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Каштановые волосы до наращивания, вид сзади',
+      en: 'Brown hair before the extensions, back view',
+      ka: 'წაბლისფერი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair08After: {
+    path: '/images/before-after/pair-08-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Каштановые волосы после наращивания, вид сзади',
+      en: 'Brown hair after the extensions, back view',
+      ka: 'წაბლისფერი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
   },
 } as const satisfies Record<string, ImageEntry>;
 

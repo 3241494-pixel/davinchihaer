@@ -31,6 +31,8 @@ export function BeforeAfterPairs({
   tone = "dark",
 }: BeforeAfterPairsProps) {
   const [active, setActive] = useState(0);
+  // Подсказка-покачивание только у первой пары: после выбора другой она уже не нужна.
+  const [switched, setSwitched] = useState(false);
   const pair = pairs[active];
   if (!pair) return null;
   const dark = tone === "dark";
@@ -44,24 +46,30 @@ export function BeforeAfterPairs({
         beforeLabel={beforeLabel}
         afterLabel={afterLabel}
         sliderLabel={sliderLabel}
+        hint={!switched}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <figcaption
-          className={cn("text-sm", dark ? "text-bg/70" : "text-ink-muted")}
-        >
-          {pair.caption}
-        </figcaption>
+        {pair.caption && (
+          <figcaption
+            className={cn("text-sm", dark ? "text-bg/70" : "text-ink-muted")}
+          >
+            {pair.caption}
+          </figcaption>
+        )}
         {pairs.length > 1 && (
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-1.5">
             {pairs.map((item, index) => (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => setActive(index)}
+                onClick={() => {
+                  setActive(index);
+                  setSwitched(true);
+                }}
                 aria-label={pairLabel.replace("{index}", String(index + 1))}
                 aria-pressed={index === active}
                 className={cn(
-                  "caps inline-flex size-9 items-center justify-center border text-[12px] transition-colors duration-200",
+                  "caps inline-flex size-9 shrink-0 items-center justify-center border text-[12px] transition-colors duration-200",
                   dark
                     ? index === active
                       ? "border-bg bg-bg text-ink"

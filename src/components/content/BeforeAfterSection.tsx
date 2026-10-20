@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { getTypedMessages } from "@/i18n/get-messages";
 import type { Locale } from "@/i18n/routing";
 import { BEFORE_AFTER_PAIRS } from "@/content/before-after";
+import { IMAGES } from "@/content/images";
 import { pickLocale } from "@/lib/content/locale";
 import { BeforeAfterPairs, type RenderedPair } from "./BeforeAfterPairs";
 import { LeadActions } from "./LeadActions";
@@ -15,7 +16,7 @@ export interface BeforeAfterSectionProps {
   tone?: "light" | "dark";
 }
 
-const SIZES = "(min-width: 1024px) 520px, 100vw";
+const SIZES = "(min-width: 1024px) 380px, 100vw";
 
 /**
  * Слайдер «до/после» с подвижным разделителем. Пока клиент не прислал пары фото
@@ -33,14 +34,13 @@ export async function BeforeAfterSection({
   const pairs: RenderedPair[] =
     BEFORE_AFTER_PAIRS.length > 0
       ? BEFORE_AFTER_PAIRS.map((pair) => {
-          const caption = pickLocale(pair.caption, locale);
           return {
             id: pair.id,
-            caption,
+            caption: pair.caption ? pickLocale(pair.caption, locale) : "",
             before: (
               <Media
                 path={pair.before}
-                alt={`${t.before}: ${caption}`}
+                alt={pickLocale(IMAGES[pair.before].alt, locale)}
                 sizes={SIZES}
                 className="absolute inset-0 size-full"
               />
@@ -48,7 +48,7 @@ export async function BeforeAfterSection({
             after: (
               <Media
                 path={pair.after}
-                alt={`${t.after}: ${caption}`}
+                alt={pickLocale(IMAGES[pair.after].alt, locale)}
                 sizes={SIZES}
                 className="absolute inset-0 size-full"
               />
@@ -117,7 +117,7 @@ export async function BeforeAfterSection({
         )}
       </div>
 
-      <div className="w-full lg:max-w-[520px] lg:justify-self-end">
+      <div className="w-full lg:max-w-[380px] lg:justify-self-end">
         <BeforeAfterPairs
           pairs={pairs}
           beforeLabel={t.before}
