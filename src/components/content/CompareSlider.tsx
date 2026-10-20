@@ -28,6 +28,8 @@ const START = 50;
 const KEY_STEP = 5;
 /** Сдвиг пальца в px, после которого понятно: тянут разделитель или листают страницу. */
 const TOUCH_SLOP = 6;
+/** Подсказка стартует после проявления блока (.reveal, 0.6 с). */
+const HINT_START = 700;
 
 function clamp(value: number) {
   return Math.min(100, Math.max(0, value));
@@ -67,14 +69,17 @@ export function CompareSlider({
         setAnimating(true);
         [38, 62, START].forEach((value, index) => {
           timers.push(
-            window.setTimeout(() => setPosition(value), 400 + index * 550),
+            window.setTimeout(
+              () => setPosition(value),
+              HINT_START + index * 550,
+            ),
           );
         });
         timers.push(
-          window.setTimeout(() => setAnimating(false), 400 + 3 * 550),
+          window.setTimeout(() => setAnimating(false), HINT_START + 3 * 550),
         );
       },
-      { threshold: 0.6 },
+      { threshold: 0.35 },
     );
     observer.observe(root);
     return () => {

@@ -14,6 +14,8 @@ export interface BeforeAfterSectionProps {
   locale: Locale;
   /** dark — отдельная чёрная секция на всю ширину (главная); light — блок внутри страницы (галерея). */
   tone?: "light" | "dark";
+  /** Грузить фото первой пары сразу, а не по мере прокрутки — когда слайдер виден при открытии. */
+  priority?: boolean;
 }
 
 const SIZES = "(min-width: 1024px) 380px, 100vw";
@@ -26,6 +28,7 @@ const SIZES = "(min-width: 1024px) 380px, 100vw";
 export async function BeforeAfterSection({
   locale,
   tone = "dark",
+  priority = false,
 }: BeforeAfterSectionProps) {
   const ru = await getTypedMessages();
   const t = ru.home.beforeAfter;
@@ -33,7 +36,7 @@ export async function BeforeAfterSection({
 
   const pairs: RenderedPair[] =
     BEFORE_AFTER_PAIRS.length > 0
-      ? BEFORE_AFTER_PAIRS.map((pair) => {
+      ? BEFORE_AFTER_PAIRS.map((pair, index) => {
           return {
             id: pair.id,
             caption: pair.caption ? pickLocale(pair.caption, locale) : "",
@@ -42,6 +45,7 @@ export async function BeforeAfterSection({
                 path={pair.before}
                 alt={pickLocale(IMAGES[pair.before].alt, locale)}
                 sizes={SIZES}
+                priority={priority && index === 0}
                 className="absolute inset-0 size-full"
               />
             ),
@@ -50,6 +54,7 @@ export async function BeforeAfterSection({
                 path={pair.after}
                 alt={pickLocale(IMAGES[pair.after].alt, locale)}
                 sizes={SIZES}
+                priority={priority && index === 0}
                 className="absolute inset-0 size-full"
               />
             ),
@@ -77,8 +82,16 @@ export async function BeforeAfterSection({
         ];
 
   const content = (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-16">
-      <div className="flex flex-col gap-5">
+    <div
+      className={cn(
+        "grid lg:gap-16",
+        dark
+          ? "gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center"
+          : "gap-6 lg:grid-cols-[380px_minmax(0,1fr)] lg:items-start",
+      )}
+    >
+      {/* В галерее (light) слайдер идёт первым, чтобы фото были видны сразу при открытии. */}
+      <div className={cn("flex flex-col gap-5", !dark && "order-2")}>
         <p className={cn("caps", dark ? "text-bg/60" : "text-ink-muted")}>
           {t.eyebrow}
         </p>
@@ -117,7 +130,12 @@ export async function BeforeAfterSection({
         )}
       </div>
 
-      <div className="w-full lg:max-w-[380px] lg:justify-self-end">
+      <div
+        className={cn(
+          "w-full",
+          dark ? "lg:max-w-[380px] lg:justify-self-end" : "order-1",
+        )}
+      >
         <BeforeAfterPairs
           pairs={pairs}
           beforeLabel={t.before}

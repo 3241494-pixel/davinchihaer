@@ -81,7 +81,7 @@ export default async function GalleryPage({ params }: PageProps) {
       wide={
         <div className="flex flex-col gap-4">
           <div className="mb-10 border-b border-border pb-12">
-            <BeforeAfterSection locale={locale} tone="light" />
+            <BeforeAfterSection locale={locale} tone="light" priority />
           </div>
           <GalleryFilter techniques={techniques} items={items} />
           <VideoStrip names={["darkPiece1", "darkPiece2", "bio2"]} locale={locale} />
