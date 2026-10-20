@@ -15,7 +15,6 @@ export interface SiteConfig {
   /**
    * Ссылка на аккаунт Telegram, куда уходят заявки: https://t.me/<username>.
    * Предзаполненный текст (?text=) работает для личного аккаунта, не для бота.
-   * TODO_CLIENT: username не предоставлен.
    */
   telegramBotUrl: string;
   instagramUrl: string;
@@ -24,7 +23,7 @@ export interface SiteConfig {
   email?: string;
   /** TODO_CLIENT: телефон не предоставлен. */
   phone?: string;
-  /** TODO_CLIENT: номер WhatsApp для wa.me-ссылок не предоставлен. */
+  /** Номер WhatsApp для wa.me-ссылок; в ссылку идут только цифры. */
   whatsappNumber?: string;
   /**
    * Метка «Демо» на карточках товаров с isPlaceholder. Выключить одной строкой,
@@ -36,16 +35,14 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Da Vinchi Hair",
   url: "https://davinchihair.com",
-  // Тестовый контакт по номеру телефона (Роман, 2026-10-02). TODO_CLIENT: заменить
-  // на https://t.me/<username> — ссылка по номеру открывает чат, только если в
-  // настройках приватности Telegram номер виден всем, и может не подставить текст.
-  telegramBotUrl: "https://t.me/+491603241494",
+  // Рабочий контакт для заявок (Роман, 2026-10-20).
+  telegramBotUrl: "https://t.me/svetlana_delyagina",
   instagramUrl: "https://www.instagram.com/da_vinchi.hair/",
   address: {
     city: "Тбилиси",
     country: "Грузия",
   },
-  // Тестовый номер (Роман, 2026-10-02), TODO_CLIENT: подтвердить рабочий номер.
-  whatsappNumber: "+49 160 3241494",
+  // Рабочий номер для заявок (Роман, 2026-10-20).
+  whatsappNumber: "+380 63 807 8186",
   showDemoBadge: true,
 };
