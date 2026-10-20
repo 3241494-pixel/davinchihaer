@@ -85,7 +85,6 @@ export default async function GalleryPage({ params }: PageProps) {
           </div>
           <GalleryFilter techniques={techniques} items={items} />
           <VideoStrip names={["darkPiece1", "darkPiece2", "bio2"]} locale={locale} />
-          <p className="text-sm text-ink-muted">{ru.pages.gallery.note}</p>
         </div>
       }
     />

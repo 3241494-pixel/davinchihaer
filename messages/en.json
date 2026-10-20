@@ -609,8 +609,7 @@
       "title": "Gallery",
       "description": "Examples of installations and results — before and after.",
       "filterLabel": "Filter by technique",
-      "filterAll": "All techniques",
-      "note": "TODO_CLIENT: before/after photos on a model will be added after the photo shoot."
+      "filterAll": "All techniques"
     },
     "about": {
       "title": "About us",
