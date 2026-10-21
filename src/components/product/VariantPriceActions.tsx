@@ -11,6 +11,7 @@ import { formatPrice } from "@/lib/format-price";
 import { siteConfig } from "@/config/site";
 import { useTypedMessages } from "@/i18n/use-messages";
 import { pickLocale } from "@/lib/content/locale";
+import { isPlaceholderSku } from "@/lib/content/sku";
 import { useVariantSelection } from "./variant-context";
 
 export function VariantPriceActions() {
@@ -63,9 +64,11 @@ export function VariantPriceActions() {
         </Badge>
       </div>
 
-      <p className="text-sm text-ink-muted">
-        {ru.product.specsLabels.sku}: {selectedVariant.sku}
-      </p>
+      {!isPlaceholderSku(selectedVariant.sku) && (
+        <p className="text-sm text-ink-muted">
+          {ru.product.specsLabels.sku}: {selectedVariant.sku}
+        </p>
+      )}
 
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild variant="primary" size="lg" className="sm:flex-1">
