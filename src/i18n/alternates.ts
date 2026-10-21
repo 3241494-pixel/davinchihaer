@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
 import { getPathname } from "./navigation";
-import { LOCALES, DEFAULT_LOCALE } from "./routing";
+import { LOCALES, DEFAULT_LOCALE, type Locale } from "./routing";
 
 /**
- * hreflang-альтернативы для конкретного пути (без локали), плюс x-default на ru.
- * Пока применяется на уровне layout (корректно для "/"): для остальных страниц —
- * см. заметку в ответе по этапу 9, доведение до каждой страницы — этап 10.
+ * canonical на саму страницу в текущей локали и hreflang-альтернативы для
+ * того же пути (без локали) во всех языках, плюс x-default на ru. Абсолютные
+ * адреса Next собирает из metadataBase (siteConfig.url).
  */
-export function buildLanguageAlternates(pathname: string): Metadata["alternates"] {
+export function buildLanguageAlternates(
+  pathname: string,
+  locale: Locale,
+): Metadata["alternates"] {
   const languages: Record<string, string> = {};
 
-  for (const locale of LOCALES) {
-    languages[locale] = getPathname({ locale, href: pathname });
+  for (const lang of LOCALES) {
+    languages[lang] = getPathname({ locale: lang, href: pathname });
   }
-  languages["x-default"] = getPathname({ locale: DEFAULT_LOCALE, href: pathname });
+  languages["x-default"] = getPathname({
+    locale: DEFAULT_LOCALE,
+    href: pathname,
+  });
 
-  return { languages };
+  return { canonical: getPathname({ locale, href: pathname }), languages };
 }

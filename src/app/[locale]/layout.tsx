@@ -61,7 +61,10 @@ export async function generateMetadata({
       template: "%s | Da Vinchi Hair",
     },
     description: "Волосы и системы для ленточного наращивания Tape-In",
-    alternates: buildLanguageAlternates("/"),
+    alternates: buildLanguageAlternates("/", locale),
+    robots: siteConfig.indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
     openGraph: {
       locale: OG_LOCALE[locale],
       alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]),

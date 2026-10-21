@@ -24,7 +24,7 @@ export async function generateMetadata({
   return {
     title: `${ru.catalogSections.hair} | Da Vinchi Hair`,
     description: ru.catalog.sectionIntro.hair[0],
-    alternates: buildLanguageAlternates("/catalog/hair"),
+    alternates: buildLanguageAlternates("/catalog/hair", locale),
   };
 }
 

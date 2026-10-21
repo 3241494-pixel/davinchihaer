@@ -54,7 +54,7 @@ export async function generateMetadata({
   return {
     title: pickLocale(product.seo.title, locale),
     description: pickLocale(product.seo.description, locale),
-    alternates: buildLanguageAlternates(`/product/${slug}`),
+    alternates: buildLanguageAlternates(`/product/${slug}`, locale),
   };
 }
 

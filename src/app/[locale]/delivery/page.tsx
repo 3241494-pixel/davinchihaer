@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-  alternates: buildLanguageAlternates("/delivery"),
+  alternates: buildLanguageAlternates("/delivery", locale),
   title: `${ru.pages.delivery.title} | Da Vinchi Hair`,
 };
 }

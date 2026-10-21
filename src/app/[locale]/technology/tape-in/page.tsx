@@ -31,7 +31,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-    alternates: buildLanguageAlternates("/technology/tape-in"),
+    alternates: buildLanguageAlternates("/technology/tape-in", locale),
     title: `${ru.pages.technology.tapeIn.title} | Da Vinchi Hair`,
     description: ru.pages.technology.tapeIn.description,
   };

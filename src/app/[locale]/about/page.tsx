@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-  alternates: buildLanguageAlternates("/about"),
+  alternates: buildLanguageAlternates("/about", locale),
   title: `${ru.pages.about.title} | Da Vinchi Hair`,
   description: ru.pages.about.intro,
 };
