@@ -27,23 +27,36 @@ export function VariantPriceActions() {
     return null;
   }
 
-  const colorNameSource = colorsByCode.get(selectedVariant.color)?.name;
-  const colorName = colorNameSource ? pickLocale(colorNameSource, locale) : selectedVariant.color;
-  const telegramMessage = formatMessage(ru.product.telegramMessageTemplate, {
-    title: pickLocale(product.title, locale),
-    length: selectedVariant.length,
-    color: colorName,
-  });
+  const title = pickLocale(product.title, locale);
+  let telegramMessage: string;
+  if (product.kind === "hair" && "color" in selectedVariant) {
+    const colorNameSource = colorsByCode.get(selectedVariant.color)?.name;
+    const colorName = colorNameSource ? pickLocale(colorNameSource, locale) : selectedVariant.color;
+    telegramMessage = formatMessage(ru.product.telegramMessageTemplate, {
+      title,
+      length: selectedVariant.length,
+      color: `${selectedVariant.color} ${colorName}`,
+      weight: selectedVariant.weightGrams,
+    });
+  } else {
+    telegramMessage = formatMessage(ru.product.telegramMessageMaterial, { title });
+  }
   const telegramHref = `${siteConfig.telegramBotUrl}?text=${encodeURIComponent(telegramMessage)}`;
+  const oldPrice = "oldPrice" in selectedVariant ? selectedVariant.oldPrice : undefined;
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-end gap-3">
-        <Price cents={selectedVariant.price} className="font-heading text-3xl text-ink-strong" />
-        {selectedVariant.oldPrice !== undefined && (
-          <span className="text-lg text-ink-muted line-through">
-            {formatPrice(selectedVariant.oldPrice, locale)}
-          </span>
+        {selectedVariant.price !== undefined ? (
+          <Price
+            cents={selectedVariant.price}
+            className="font-heading text-3xl tabular-nums text-ink-strong"
+          />
+        ) : (
+          <span className="font-heading text-3xl text-ink-strong">{ru.product.priceOnRequest}</span>
+        )}
+        {selectedVariant.price !== undefined && oldPrice !== undefined && (
+          <span className="text-lg text-ink-muted line-through">{formatPrice(oldPrice, locale)}</span>
         )}
         <Badge variant={selectedVariant.inStock ? "outline" : "solid"} tone={selectedVariant.inStock ? "default" : "danger"}>
           {selectedVariant.inStock ? ru.product.inStock : ru.product.outOfStock}

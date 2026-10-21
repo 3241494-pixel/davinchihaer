@@ -7,7 +7,7 @@ export async function ContactLeadSection() {
   return (
     <div id="lead-form" className="grid scroll-mt-24 gap-10 lg:grid-cols-2 lg:gap-16">
       <div className="flex flex-col gap-4">
-        <h2 className="font-heading text-3xl text-ink-strong">{ru.home.contact.heading}</h2>
+        <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.home.contact.heading}</h2>
         <p className="text-base text-ink-muted">{ru.home.contact.description}</p>
         <RetailLeadForm submitVariant="secondary" />
       </div>

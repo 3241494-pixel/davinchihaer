@@ -1,0 +1,62 @@
+{
+  "_todoClient": [
+    "price не указана — на сайте «Цена по запросу».",
+    "inStock и sku — заглушки.",
+    "ka — требует вычитки носителем.",
+    "Не решено, продаются ли у нас сами биоленты — от этого зависит, остаётся ли товар в каталоге."
+  ],
+  "kind": "material",
+  "slug": "tape-yellow",
+  "title": {
+    "ru": "Скотч жёлтый, 3 м × 1 см",
+    "en": "Yellow tape, 3 m × 1 cm",
+    "ka": "ყვითელი სკოჩი, 3 მ × 1 სმ"
+  },
+  "shortDescription": {
+    "ru": "Для коррекции и наращивания биолент.",
+    "en": "For re-taping and installing bio-tapes.",
+    "ka": "ბიოლენტების კორექციისა და დაგრძელებისთვის."
+  },
+  "description": {
+    "ru": "Для коррекции и наращивания биолент.",
+    "en": "For re-taping and installing bio-tapes.",
+    "ka": "ბიოლენტების კორექციისა და დაგრძელებისთვის."
+  },
+  "materialType": "tape",
+  "compatibleWith": [
+    "bio-tape"
+  ],
+  "spec": {
+    "lengthM": 3,
+    "widthCm": 1
+  },
+  "variants": [
+    {
+      "id": "tape-yellow-default",
+      "inStock": true,
+      "sku": "TODO_CLIENT-TAPE-YELLOW"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/materials/tape-yellow.webp",
+      "alt": {
+        "ru": "Жёлтый скотч Da Vinchi для биолент",
+        "en": "Da Vinchi yellow tape for bio-tapes",
+        "ka": "Da Vinchi-ს ყვითელი სკოჩი ბიოლენტებისთვის"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Скотч жёлтый, 3 м × 1 см | Da Vinchi Hair",
+      "en": "Yellow tape, 3 m × 1 cm | Da Vinchi Hair",
+      "ka": "ყვითელი სკოჩი, 3 მ × 1 სმ | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Для коррекции и наращивания биолент.",
+      "en": "For re-taping and installing bio-tapes.",
+      "ka": "ბიოლენტების კორექციისა და დაგრძელებისთვის."
+    }
+  }
+}

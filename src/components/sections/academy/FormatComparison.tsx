@@ -6,7 +6,7 @@ export async function FormatComparison() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-heading text-3xl text-ink-strong">{comparisonHeading}</h2>
+      <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{comparisonHeading}</h2>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[560px] border-collapse text-left text-sm">
           <thead className="border-b border-border">

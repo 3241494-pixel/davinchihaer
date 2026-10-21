@@ -59,7 +59,7 @@ export function HeaderClient({ categories }: HeaderClientProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium text-ink transition-colors duration-200 hover:text-ink-strong",
+                  "caps font-medium text-ink transition-colors duration-200 hover:text-ink-strong",
                   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
                 )}
               >

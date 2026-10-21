@@ -30,7 +30,10 @@ export function Reveal({ children, className, delayMs = 0 }: RevealProps) {
           observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      // threshold 0: блок проявляется, как только его верх входит в экран.
+      // Доля (раньше 0.12) у блоков выше экрана в несколько раз не достигалась
+      // до прокрутки, и галерея оставалась пустой при открытии.
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" },
     );
     observer.observe(node);
     return () => observer.disconnect();

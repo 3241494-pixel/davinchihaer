@@ -9,7 +9,8 @@ import { cn } from "./cn";
 import { mergeRefs } from "./merge-refs";
 import { IconSpinner } from "./icons";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "link";
+/** inverse и outline-inverse — для тёмных секций (bg-ink): белая заливка и белый контур. */
+export type ButtonVariant = "primary" | "secondary" | "ghost" | "link" | "inverse" | "outline-inverse";
 export type ButtonSize = "sm" | "md" | "lg";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -38,13 +39,17 @@ const variantClasses: Record<ButtonVariant, string> = {
   secondary: "border border-ink bg-transparent text-ink hover:bg-surface",
   ghost: "bg-transparent text-ink hover:bg-surface",
   link: "bg-transparent text-ink underline underline-offset-4 hover:text-ink-muted",
+  inverse: "bg-bg text-ink hover:bg-surface-alt focus-visible:outline-bg",
+  "outline-inverse": "border border-bg/70 bg-transparent text-bg hover:border-bg hover:bg-bg/10 focus-visible:outline-bg",
 };
 
 const sizeClasses: Record<ButtonVariant, Record<ButtonSize, string>> = {
-  primary: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
-  secondary: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
-  ghost: { sm: "h-9 rounded-base px-3 text-sm", md: "h-11 rounded-base px-5 text-base", lg: "h-14 rounded-base px-8 text-lg" },
+  primary: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
+  secondary: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
+  ghost: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
   link: { sm: "text-sm", md: "text-base", lg: "text-lg" },
+  inverse: { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
+  "outline-inverse": { sm: "caps h-9 rounded-base px-3", md: "caps h-11 rounded-base px-5", lg: "caps h-14 rounded-base px-8" },
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

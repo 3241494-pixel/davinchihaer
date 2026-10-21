@@ -12,6 +12,7 @@ export interface RetailLeadFormProps {
   variantId?: string;
   productTitle?: string;
   length?: number;
+  weightGrams?: number;
   colorName?: string;
   /** secondary — если на странице уже есть свой primary CTA (например, главная). */
   submitVariant?: "primary" | "secondary";
@@ -22,6 +23,7 @@ export function RetailLeadForm({
   variantId,
   productTitle,
   length,
+  weightGrams,
   colorName,
   submitVariant,
 }: RetailLeadFormProps) {
@@ -45,7 +47,14 @@ export function RetailLeadForm({
   });
 
   const productSummary = productTitle
-    ? [productTitle, length ? `${length} см` : undefined, colorName].filter(Boolean).join(", ")
+    ? [
+        productTitle,
+        length ? `${length} ${ru.catalog.lengthUnit}` : undefined,
+        colorName,
+        weightGrams ? `${weightGrams} ${ru.product.weightUnit}` : undefined,
+      ]
+        .filter(Boolean)
+        .join(", ")
     : undefined;
 
   const { status, error, onSubmit, honeypotRef, resultUrl, resultText, resetStatus } = useLeadSubmission({

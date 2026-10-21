@@ -6,19 +6,33 @@ import { cn } from "@/components/ui/cn";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { ColorSwatch } from "@/components/ui/ColorSwatch";
 import {
+  ATTACHMENTS,
   COLOR_GROUPS,
   LENGTHS,
-  TAPE_WIDTHS,
+  ORIGINS,
+  STRUCTURES,
   type EditableFilters,
 } from "@/lib/catalog/search-params";
+import { Link } from "@/i18n/navigation";
 import { useTypedMessages } from "@/i18n/use-messages";
 import { pickLocale } from "@/lib/content/locale";
-import type { HairColor, HairColorGroup, HairLength, TapeWidth } from "@/lib/content/types";
+import type {
+  AttachmentType,
+  HairColor,
+  HairColorGroup,
+  HairLength,
+  HairOrigin,
+  HairStructure,
+  WeightRange,
+} from "@/lib/content/types";
 
 export interface FilterControlsProps {
   value: EditableFilters;
   onChange: (next: EditableFilters) => void;
   colors: HairColor[];
+  weightRange: WeightRange | null;
+  /** Пока цен нет («по запросу»), фильтр по цене ничего бы не нашёл — прячем его. */
+  hasPrices: boolean;
   idPrefix: string;
 }
 
@@ -64,7 +78,7 @@ function FilterSection({ title, children }: { title: string; children: React.Rea
   );
 }
 
-export function FilterControls({ value, onChange, colors, idPrefix }: FilterControlsProps) {
+export function FilterControls({ value, onChange, colors, weightRange, hasPrices, idPrefix }: FilterControlsProps) {
   const ru = useTypedMessages();
   const locale = useLocale();
   const [priceMinInput, setPriceMinInput] = useState(
@@ -73,6 +87,30 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
   const [priceMaxInput, setPriceMaxInput] = useState(
     value.priceMax !== undefined ? String(value.priceMax / 100) : "",
   );
+
+  const [weightMinInput, setWeightMinInput] = useState(
+    value.weightMin !== undefined ? String(value.weightMin) : "",
+  );
+  const [weightMaxInput, setWeightMaxInput] = useState(
+    value.weightMax !== undefined ? String(value.weightMax) : "",
+  );
+
+  function commitWeight() {
+    const weightMin = weightMinInput === "" ? undefined : Math.round(Number(weightMinInput));
+    const weightMax = weightMaxInput === "" ? undefined : Math.round(Number(weightMaxInput));
+    onChange({
+      ...value,
+      weightMin: Number.isFinite(weightMin) ? weightMin : undefined,
+      weightMax: Number.isFinite(weightMax) ? weightMax : undefined,
+    });
+  }
+
+  function handleWeightKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      commitWeight();
+    }
+  }
 
   function commitPrice() {
     const priceMin = priceMinInput === "" ? undefined : Math.round(Number(priceMinInput) * 100);
@@ -93,6 +131,66 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
 
   return (
     <div className="flex flex-col gap-6">
+      <FilterSection title={ru.catalog.filters.attachment}>
+        <div className="flex flex-wrap gap-2">
+          {ATTACHMENTS.map((attachment) => (
+            <FilterChip
+              key={attachment}
+              active={Boolean(value.attachment?.includes(attachment))}
+              onClick={() =>
+                onChange({
+                  ...value,
+                  attachment: toggleInArray<AttachmentType>(value.attachment, attachment),
+                })
+              }
+            >
+              {ru.attachments[attachment]}
+            </FilterChip>
+          ))}
+        </div>
+        <Link
+          href="/technology/bio-tape"
+          className="text-xs text-ink-muted underline-offset-4 hover:text-ink hover:underline"
+        >
+          {ru.attachments["bio-tape"]}: {ru.catalog.filters.bioTapeHint.toLowerCase()}
+        </Link>
+      </FilterSection>
+
+      <FilterSection title={ru.catalog.filters.origin}>
+        <div className="flex flex-wrap gap-2">
+          {ORIGINS.map((origin) => (
+            <FilterChip
+              key={origin}
+              active={Boolean(value.origin?.includes(origin))}
+              onClick={() =>
+                onChange({ ...value, origin: toggleInArray<HairOrigin>(value.origin, origin) })
+              }
+            >
+              {ru.origins[origin]}
+            </FilterChip>
+          ))}
+        </div>
+      </FilterSection>
+
+      <FilterSection title={ru.catalog.filters.structure}>
+        <div className="flex flex-wrap gap-2">
+          {STRUCTURES.map((structure) => (
+            <FilterChip
+              key={structure}
+              active={Boolean(value.structure?.includes(structure))}
+              onClick={() =>
+                onChange({
+                  ...value,
+                  structure: toggleInArray<HairStructure>(value.structure, structure),
+                })
+              }
+            >
+              {ru.structures[structure]}
+            </FilterChip>
+          ))}
+        </div>
+      </FilterSection>
+
       <FilterSection title={ru.catalog.filters.length}>
         <div className="flex flex-wrap gap-2">
           {LENGTHS.map((length) => (
@@ -112,22 +210,37 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
         </div>
       </FilterSection>
 
-      <FilterSection title={ru.catalog.filters.tapeWidth}>
-        <div className="flex flex-wrap gap-2">
-          {TAPE_WIDTHS.map((width) => (
-            <FilterChip
-              key={width}
-              active={value.tapeWidth === width}
-              onClick={() =>
-                onChange({
-                  ...value,
-                  tapeWidth: value.tapeWidth === width ? undefined : (width as TapeWidth),
-                })
-              }
-            >
-              {width} {ru.catalog.lengthUnit}
-            </FilterChip>
-          ))}
+      <FilterSection title={ru.catalog.filters.weight}>
+        <div className="flex items-center gap-2">
+          <input
+            type="number"
+            inputMode="numeric"
+            min={0}
+            step={10}
+            placeholder={weightRange ? `${ru.catalog.filters.weightMin} ${weightRange.min}` : ru.catalog.filters.weightMin}
+            aria-label={`${ru.catalog.filters.weight}: ${ru.catalog.filters.weightMin}`}
+            value={weightMinInput}
+            onChange={(event: ChangeEvent<HTMLInputElement>) => setWeightMinInput(event.target.value)}
+            onBlur={commitWeight}
+            onKeyDown={handleWeightKeyDown}
+            className="w-full min-w-0 rounded-base border border-border bg-bg px-3 py-2 text-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong"
+          />
+          <span aria-hidden className="text-ink-muted">
+            –
+          </span>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={0}
+            step={10}
+            placeholder={weightRange ? `${ru.catalog.filters.weightMax} ${weightRange.max}` : ru.catalog.filters.weightMax}
+            aria-label={`${ru.catalog.filters.weight}: ${ru.catalog.filters.weightMax}`}
+            value={weightMaxInput}
+            onChange={(event: ChangeEvent<HTMLInputElement>) => setWeightMaxInput(event.target.value)}
+            onBlur={commitWeight}
+            onKeyDown={handleWeightKeyDown}
+            className="w-full min-w-0 rounded-base border border-border bg-bg px-3 py-2 text-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong"
+          />
         </div>
       </FilterSection>
 
@@ -172,6 +285,14 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
         </div>
       </FilterSection>
 
+      <Checkbox
+        id={`${idPrefix}-in-stock`}
+        label={ru.catalog.filters.inStockOnly}
+        checked={Boolean(value.inStockOnly)}
+        onChange={(event) => onChange({ ...value, inStockOnly: event.target.checked || undefined })}
+      />
+
+      {hasPrices && (
       <FilterSection title={ru.catalog.filters.priceMin}>
         <div className="flex items-center gap-2">
           <input
@@ -203,13 +324,8 @@ export function FilterControls({ value, onChange, colors, idPrefix }: FilterCont
           />
         </div>
       </FilterSection>
+      )}
 
-      <Checkbox
-        id={`${idPrefix}-in-stock`}
-        label={ru.catalog.filters.inStockOnly}
-        checked={Boolean(value.inStockOnly)}
-        onChange={(event) => onChange({ ...value, inStockOnly: event.target.checked || undefined })}
-      />
     </div>
   );
 }

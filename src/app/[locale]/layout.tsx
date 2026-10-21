@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Cormorant_Garamond, Inter, Noto_Sans_Georgian, Noto_Serif_Georgian } from "next/font/google";
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { TelegramFloatingButton } from "@/components/layout/TelegramFloatingButton";
@@ -83,10 +84,15 @@ export default async function LocaleLayout({
   const messages = await getTypedMessages();
 
   return (
-    <html lang={locale} data-locale={locale} className="scroll-smooth">
-      <body
-        className={`${cormorant.variable} ${inter.variable} ${notoSerifGeorgian.variable} ${notoSansGeorgian.variable} antialiased`}
-      >
+    // Переменные next/font висят на <html>: --font-heading и --font-sans из @theme
+    // объявлены на :root и ссылаются на них. Если повесить их на <body>, var() на
+    // :root не разрешится и заголовки с текстом уйдут в системный шрифт.
+    <html
+      lang={locale}
+      data-locale={locale}
+      className={`${cormorant.variable} ${inter.variable} ${notoSerifGeorgian.variable} ${notoSansGeorgian.variable} scroll-smooth`}
+    >
+      <body className="antialiased">
         <NextIntlClientProvider>
           <a
             href="#main-content"
@@ -94,6 +100,7 @@ export default async function LocaleLayout({
           >
             {messages.common.skipToContent}
           </a>
+          <AnnouncementBar />
           <Header />
           <main id="main-content">{children}</main>
           <Footer />

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ContentPageLayout } from "@/components/content/ContentPageLayout";
+import { CtaBand } from "@/components/content/CtaBand";
+import { VideoShowcase } from "@/components/content/VideoShowcase";
 import { Techniques } from "@/components/sections/home/Techniques";
 import { Media } from "@/components/ui/Media";
 import { getTypedMessages } from "@/i18n/get-messages";
@@ -11,15 +13,17 @@ import type { Locale } from "@/i18n/routing";
 
 type PageProps = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-  alternates: buildLanguageAlternates("/technology"),
-  title: `${ru.pages.technology.hub.title} | Da Vinchi Hair`,
-  description: ru.pages.technology.hub.description,
-};
+    alternates: buildLanguageAlternates("/technology"),
+    title: `${ru.pages.technology.hub.title} | Da Vinchi Hair`,
+    description: ru.pages.technology.hub.description,
+  };
 }
 
 export default async function TechnologyHubPage({ params }: PageProps) {
@@ -27,22 +31,32 @@ export default async function TechnologyHubPage({ params }: PageProps) {
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return (
-    <ContentPageLayout
-      title={ru.pages.technology.hub.title}
-      description={ru.pages.technology.hub.description}
-      breadcrumbs={[{ label: ru.nav.technology }]}
-      wide={
-        <div className="flex flex-col gap-10">
-          <Media
-            path="extensionTypes"
-            alt={pickLocale(IMAGES.extensionTypes.alt, locale)}
-            aspect="16/9"
-            sizes="(min-width: 1024px) 960px, 100vw"
-            className="rounded-base bg-surface-alt"
-          />
-          <Techniques />
-        </div>
-      }
-    />
+    <>
+      <ContentPageLayout
+        title={ru.pages.technology.hub.title}
+        description={ru.pages.technology.hub.description}
+        breadcrumbs={[{ label: ru.nav.technology }]}
+        wide={
+          <div className="flex flex-col gap-10">
+            <Media
+              path="extensionTypes"
+              alt={pickLocale(IMAGES.extensionTypes.alt, locale)}
+              aspect="16/9"
+              sizes="(min-width: 1024px) 960px, 100vw"
+              className="rounded-base bg-surface-alt"
+            />
+            <Techniques />
+          </div>
+        }
+      />
+      <VideoShowcase
+        names={["tapePeel", "bio2", "ringstar1"]}
+        locale={locale}
+        eyebrow={ru.catalog.videos.eyebrow}
+        heading={ru.catalog.videos.heading}
+        text={ru.catalog.videos.text}
+      />
+      <CtaBand leadPage="/contacts" />
+    </>
   );
 }

@@ -54,7 +54,7 @@ export function CatalogMenu({ categories }: CatalogMenuProps) {
         aria-label={ru.header.catalogMenuLabel}
         onClick={() => setOpen((value) => !value)}
         className={cn(
-          "flex items-center gap-1 text-sm font-medium text-ink transition-colors duration-200 hover:text-ink-strong",
+          "caps flex items-center gap-1 font-medium text-ink transition-colors duration-200 hover:text-ink-strong",
           "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
         )}
       >

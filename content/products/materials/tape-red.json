@@ -1,0 +1,63 @@
+{
+  "_todoClient": [
+    "price не указана — на сайте «Цена по запросу».",
+    "inStock и sku — заглушки.",
+    "ka — требует вычитки носителем."
+  ],
+  "kind": "material",
+  "slug": "tape-red",
+  "title": {
+    "ru": "Скотч красный, 3 м × 1 см",
+    "en": "Red tape, 3 m × 1 cm",
+    "ka": "წითელი სკოჩი, 3 მ × 1 სმ"
+  },
+  "shortDescription": {
+    "ru": "Для коррекции и наращивания классических лент и лент с имитацией роста.",
+    "en": "For re-taping and installing classic tapes and root-imitation tapes.",
+    "ka": "კლასიკური ლენტებისა და ზრდის იმიტაციის ლენტების კორექციისა და დაგრძელებისთვის."
+  },
+  "description": {
+    "ru": "Для коррекции и наращивания классических лент и лент с имитацией роста.",
+    "en": "For re-taping and installing classic tapes and root-imitation tapes.",
+    "ka": "კლასიკური ლენტებისა და ზრდის იმიტაციის ლენტების კორექციისა და დაგრძელებისთვის."
+  },
+  "materialType": "tape",
+  "compatibleWith": [
+    "tape-classic",
+    "imitation-1",
+    "imitation-2"
+  ],
+  "spec": {
+    "lengthM": 3,
+    "widthCm": 1
+  },
+  "variants": [
+    {
+      "id": "tape-red-default",
+      "inStock": true,
+      "sku": "TODO_CLIENT-TAPE-RED"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/materials/tape-red.webp",
+      "alt": {
+        "ru": "Красный скотч Da Vinchi для ленточного наращивания",
+        "en": "Da Vinchi red tape for tape-in extensions",
+        "ka": "Da Vinchi-ს წითელი სკოჩი ლენტური დაგრძელებისთვის"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Скотч красный, 3 м × 1 см | Da Vinchi Hair",
+      "en": "Red tape, 3 m × 1 cm | Da Vinchi Hair",
+      "ka": "წითელი სკოჩი, 3 მ × 1 სმ | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Для коррекции и наращивания классических лент и лент с имитацией роста.",
+      "en": "For re-taping and installing classic tapes and root-imitation tapes.",
+      "ka": "კლასიკური ლენტებისა და ზრდის იმიტაციის ლენტების კორექციისა და დაგრძელებისთვის."
+    }
+  }
+}

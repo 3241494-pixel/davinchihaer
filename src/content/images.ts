@@ -16,6 +16,7 @@ export type ImageUsage =
   | 'catalog'
   | 'guide'
   | 'brand'
+  | 'before-after'
   | 'gallery-only';
 
 export interface ImageEntry {
@@ -140,6 +141,396 @@ export const IMAGES = {
       ka: 'Тресс из тёмных волос на клипсах', // TODO_I18N
     },
     note: 'Зелёный фон — конфликтует с монохромом. Только /gallery.',
+  },
+
+  hero: {
+    path: '/images/hero/hero.webp',
+    usage: ['hero'],
+    alt: {
+      ru: 'Волосы Da Vinchi: светлый блонд, золотистый и тёмный оттенки, ленты в рулонах',
+      en: 'Da Vinchi hair: light blonde, golden and dark shades with rolled tapes',
+      ka: 'Da Vinchi-ს თმა: ღია ქერა, ოქროსფერი და მუქი ელფერები', // TODO_I18N
+    },
+    note: 'Основной hero главной (общая.PNG). Предметное фото; кадр с моделью всё ещё нужен.',
+  },
+
+  paletteWide1: {
+    path: '/images/brand/palette-wide-1.webp',
+    usage: ['brand', 'guide'],
+    alt: {
+      ru: 'Палитра оттенков Da Vinchi: пряди от тёмного до платинового блонда',
+      en: 'Da Vinchi shade palette: strands from dark to platinum blonde',
+      ka: 'Da Vinchi-ს ელფერების პალიტრა: მუქიდან პლატინისფერ ქერამდე', // TODO_I18N
+    },
+  },
+
+  tapeRed: {
+    path: '/images/materials/tape-red.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Красный скотч Da Vinchi для ленточного наращивания',
+      en: 'Da Vinchi red tape for tape-in extensions',
+      ka: 'Da Vinchi-ს წითელი სკოჩი ლენტური დაგრძელებისთვის', // TODO_I18N
+    },
+    note: 'На упаковке хендлы @davinchi.hairshop / davinchi.hair — на сайте используем только da_vinchi.hair.',
+  },
+
+  tapeYellow: {
+    path: '/images/materials/tape-yellow.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Жёлтый скотч Da Vinchi для биолент',
+      en: 'Da Vinchi yellow tape for bio-tapes',
+      ka: 'Da Vinchi-ს ყვითელი სკოჩი ბიოლენტებისთვის', // TODO_I18N
+    },
+  },
+
+  primer: {
+    path: '/images/materials/primer.webp',
+    usage: ['product', 'catalog'],
+    alt: {
+      ru: 'Праймер Da Vinchi 15 мл',
+      en: 'Da Vinchi primer, 15 ml',
+      ka: 'Da Vinchi-ს პრაიმერი, 15 მლ', // TODO_I18N
+    },
+  },
+
+  remover: {
+    path: '/images/materials/remover.webp',
+    usage: ['product', 'catalog', 'guide'],
+    alt: {
+      ru: 'Ремувер Da Vinchi 100 мл',
+      en: 'Da Vinchi remover, 100 ml',
+      ka: 'Da Vinchi-ს რიმუვერი, 100 მლ', // TODO_I18N
+    },
+  },
+
+  paletteWide2: {
+    path: '/images/brand/palette-wide-2.webp',
+    usage: ['brand', 'guide'],
+    alt: {
+      ru: 'Палитра оттенков Da Vinchi на стеллаже',
+      en: 'Da Vinchi shade palette on a shelf',
+      ka: 'Da Vinchi-ს ელფერების პალიტრა', // TODO_I18N
+    },
+  },
+
+  techClassic1: {
+    path: '/images/technology/classic-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Классические ленты Tape-In, светлый оттенок',
+      en: 'Classic Tape-In wefts, light shade',
+      ka: 'კლასიკური Tape-In ლენტები, ღია ელფერი', // TODO_I18N
+    },
+  },
+
+  techImitation1: {
+    path: '/images/technology/imitation-1-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Лента с имитацией роста 1.0',
+      en: 'Root imitation 1.0 tape',
+      ka: 'ზრდის იმიტაციის ლენტი 1.0', // TODO_I18N
+    },
+  },
+
+  techImitation2: {
+    path: '/images/technology/imitation-2-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Прядь с имитацией роста 2.0 на фирменной карточке',
+      en: 'Root imitation 2.0 strand on a branded card',
+      ka: 'ზრდის იმიტაცია 2.0 ფირმულ ბარათზე', // TODO_I18N
+    },
+  },
+
+  techBio1: {
+    path: '/images/technology/bio-1.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Биоленты в рулонах, тёмно-русый оттенок',
+      en: 'Rolled bio-tapes, dark blonde shade',
+      ka: 'ბიოლენტები რულონებში', // TODO_I18N
+    },
+  },
+
+  techBio2: {
+    path: '/images/technology/bio-2.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Биолента на светлых волосах крупным планом',
+      en: 'Close-up of a bio-tape on light hair',
+      ka: 'ბიოლენტი ღია თმაზე ახლო ხედით', // TODO_I18N
+    },
+  },
+
+  techRingstar4: {
+    path: '/images/technology/ringstar-4.webp',
+    usage: ['technology', 'product'],
+    alt: {
+      ru: 'Волосы Ring Star, светлый блонд',
+      en: 'Ring Star hair, light blonde',
+      ka: 'Ring Star თმა, ღია ქერა', // TODO_I18N
+    },
+    note: 'Тёмно-бирюзовый фон: только страница Ring Star и её карточки, не на главной.',
+  },
+
+  posterHeroLoop1: {
+    path: '/images/video/hero-loop-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Волосы Da Vinchi трёх оттенков',
+      en: 'Da Vinchi hair in three shades',
+      ka: 'Da Vinchi-ს თმა სამ ელფერში', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterTapePeel: {
+    path: '/images/video/video-tape-peel-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Снятие защитной плёнки с ленты',
+      en: 'Peeling the protective film off a tape',
+      ka: 'ლენტიდან დამცავი აპკის მოხსნა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterTapeWidth: {
+    path: '/images/video/video-tape-width-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Ширина ленты, замер сантиметром',
+      en: 'Measuring the tape width',
+      ka: 'ლენტის სიგანის გაზომვა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterBio1: {
+    path: '/images/video/bio-video-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Биоленты на волнистых волосах',
+      en: 'Bio-tapes on wavy hair',
+      ka: 'ბიოლენტები ტალღოვან თმაზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterBio2: {
+    path: '/images/video/bio-video-2-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Биоленты, платиновый блонд',
+      en: 'Bio-tapes, platinum blonde',
+      ka: 'ბიოლენტები, პლატინისფერი ქერა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterRingstar1: {
+    path: '/images/video/ringstar-video-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Волосы Ring Star',
+      en: 'Ring Star hair',
+      ka: 'Ring Star თმა', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterInstallOnModel: {
+    path: '/images/video/guide-install-on-model-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Установка лент на модели',
+      en: 'Installing tapes on a model',
+      ka: 'ლენტების დაყენება მოდელზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterDarkPiece1: {
+    path: '/images/video/video-dark-piece-1-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Тёмные волосы крупным планом',
+      en: 'Dark hair close-up',
+      ka: 'მუქი თმა ახლო ხედით', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  posterDarkPiece2: {
+    path: '/images/video/video-dark-piece-2-teal-poster.webp',
+    usage: ['technology'],
+    alt: {
+      ru: 'Тёмные волосы на бирюзовом фоне',
+      en: 'Dark hair on a teal background',
+      ka: 'მუქი თმა ფირუზისფერ ფონზე', // TODO_I18N
+    },
+    note: 'Постер видео.',
+  },
+
+  // Работы клиента «до/после» (Роман, 2026-10-20): каждое фото клиента разрезано
+  // по шву на две половины и приведено к 8:15. Только для слайдера до/после.
+  baPair01Before: {
+    path: '/images/before-after/pair-01-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд до наращивания, вид сзади',
+      en: 'Blonde hair before the extensions, back view',
+      ka: 'ქერა თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair01After: {
+    path: '/images/before-after/pair-01-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд после наращивания, вид сзади',
+      en: 'Blonde hair after the extensions, back view',
+      ka: 'ქერა თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair02Before: {
+    path: '/images/before-after/pair-02-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Чёрные волосы до наращивания, вид сзади',
+      en: 'Black hair before the extensions, back view',
+      ka: 'შავი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair02After: {
+    path: '/images/before-after/pair-02-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Чёрные волосы после наращивания, вид сзади',
+      en: 'Black hair after the extensions, back view',
+      ka: 'შავი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair03Before: {
+    path: '/images/before-after/pair-03-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд с тёмными корнями до наращивания, вид сзади',
+      en: 'Blonde with dark roots before the extensions, back view',
+      ka: 'ქერა მუქი ძირებით დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair03After: {
+    path: '/images/before-after/pair-03-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Блонд с тёмными корнями после наращивания, вид сзади',
+      en: 'Blonde with dark roots after the extensions, back view',
+      ka: 'ქერა მუქი ძირებით დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair04Before: {
+    path: '/images/before-after/pair-04-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Медовый блонд до наращивания, вид сзади',
+      en: 'Honey blonde before the extensions, back view',
+      ka: 'თაფლისფერი ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair04After: {
+    path: '/images/before-after/pair-04-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Медовый блонд после наращивания, вид сзади',
+      en: 'Honey blonde after the extensions, back view',
+      ka: 'თაფლისფერი ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair05Before: {
+    path: '/images/before-after/pair-05-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмный блонд до наращивания, вид сзади',
+      en: 'Dark blonde before the extensions, back view',
+      ka: 'მუქი ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair05After: {
+    path: '/images/before-after/pair-05-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмный блонд после наращивания, вид сзади',
+      en: 'Dark blonde after the extensions, back view',
+      ka: 'მუქი ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair06Before: {
+    path: '/images/before-after/pair-06-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Светлый блонд до наращивания, вид сзади',
+      en: 'Light blonde before the extensions, back view',
+      ka: 'ღია ქერა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair06After: {
+    path: '/images/before-after/pair-06-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Светлый блонд после наращивания, вид сзади',
+      en: 'Light blonde after the extensions, back view',
+      ka: 'ღია ქერა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair07Before: {
+    path: '/images/before-after/pair-07-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмно-каштановые волосы до наращивания, вид сзади',
+      en: 'Dark brown hair before the extensions, back view',
+      ka: 'მუქი წაბლისფერი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair07After: {
+    path: '/images/before-after/pair-07-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Тёмно-каштановые волосы после наращивания, вид сзади',
+      en: 'Dark brown hair after the extensions, back view',
+      ka: 'მუქი წაბლისფერი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair08Before: {
+    path: '/images/before-after/pair-08-before.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Каштановые волосы до наращивания, вид сзади',
+      en: 'Brown hair before the extensions, back view',
+      ka: 'წაბლისფერი თმა დაგრძელებამდე, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+  baPair08After: {
+    path: '/images/before-after/pair-08-after.webp',
+    usage: ['before-after'],
+    alt: {
+      ru: 'Каштановые волосы после наращивания, вид сзади',
+      en: 'Brown hair after the extensions, back view',
+      ka: 'წაბლისფერი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
+    },
+  },
+
+  founderPortrait: {
+    path: '/images/brand/founder-svetlana.webp',
+    usage: ['brand'],
+    alt: {
+      ru: 'Светлана Делягина, основатель Da Vinchi Hair',
+      en: 'Svetlana Delyagina, founder of Da Vinchi Hair',
+      ka: 'სვეტლანა დელიაგინა, Da Vinchi Hair-ის დამფუძნებელი', // TODO_I18N
+    },
+    note: 'Вырезано из сторис «Знакомство» (IMG_6516) без надписей. Заменить на исходник фотосессии, когда пришлют.',
   },
 } as const satisfies Record<string, ImageEntry>;
 

@@ -98,7 +98,7 @@ export function MobileMenu({ open, onClose, categories, telegramHref }: MobileMe
             aria-expanded={catalogOpen}
             onClick={() => setCatalogOpen((value) => !value)}
             className={cn(
-              "flex w-full items-center justify-between rounded-base px-2 py-3 text-left text-lg font-medium text-ink",
+              "flex w-full items-center justify-between rounded-base px-2 py-3 text-left caps font-medium text-ink",
               "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
             )}
           >
@@ -138,7 +138,7 @@ export function MobileMenu({ open, onClose, categories, telegramHref }: MobileMe
             href={item.href}
             onClick={onClose}
             className={cn(
-              "rounded-base px-2 py-3 text-lg font-medium text-ink transition-colors duration-200 hover:bg-surface",
+              "rounded-base px-2 py-3 caps font-medium text-ink transition-colors duration-200 hover:bg-surface",
               "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-strong",
             )}
           >

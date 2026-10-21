@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
-import { filterProducts } from "@/lib/content/filter-logic";
+import { filterHair } from "@/lib/content/filter-logic";
 import {
   LOAD_MORE_STEP,
   parseCatalogSearchParams,
@@ -15,24 +15,28 @@ import { CategoryIntro } from "./CategoryIntro";
 import { FiltersDesktop } from "./FiltersDesktop";
 import { FiltersMobile } from "./FiltersMobile";
 import { SortSelect } from "./SortSelect";
+import { CatalogPromoTile } from "./CatalogPromoTile";
 import { ProductGrid } from "./ProductGrid";
 import { LoadMore } from "./LoadMore";
 import { EmptyState } from "./EmptyState";
-import type { HairColor, Product, ProductCategory } from "@/lib/content/types";
+import type { HairColor, HairProduct, WeightRange } from "@/lib/content/types";
+
+/** Плитка с подбором встаёт после пятого товара: на десктопе во второй ряд, на мобильном в третий. */
+const PROMO_TILE_INDEX = 5;
 
 export interface CatalogViewProps {
   pathname: string;
-  lockedCategory?: ProductCategory;
-  /** Все товары категории (или всего каталога, если lockedCategory не задан) — фильтрация происходит в браузере. */
-  products: Product[];
+  /** Все волосы — фильтрация происходит в браузере. */
+  products: HairProduct[];
   colors: HairColor[];
+  weightRange: WeightRange | null;
   /** Посчитано на сервере (см. lib/image-exists) — клиентские компоненты не читают fs. */
   imageExistsBySlug: Map<string, boolean>;
 }
 
 /**
  * Фильтрация — на клиенте: сервер (static export, без API-роутов) отдаёт
- * весь список товаров категории один раз, а useSearchParams реактивно
+ * весь список волос один раз, а useSearchParams реактивно
  * пересчитывает выдачу без похода на сервер. useSearchParams требует
  * Suspense-границу, иначе next build ругается при static export.
  */
@@ -44,11 +48,11 @@ export function CatalogView(props: CatalogViewProps) {
   );
 }
 
-function CatalogViewFallback({ lockedCategory, products }: CatalogViewProps) {
+function CatalogViewFallback({ products }: CatalogViewProps) {
   return (
     <Container className="pb-16">
-      <CategoryIntro category={lockedCategory} />
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+      <CategoryIntro section="hair" />
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 xl:grid-cols-4">
         {products.slice(0, 12).map((product) => (
           <div key={product.slug} className="aspect-[3/4] animate-pulse rounded-base bg-surface-alt" />
         ))}
@@ -59,38 +63,36 @@ function CatalogViewFallback({ lockedCategory, products }: CatalogViewProps) {
 
 function CatalogViewInner({
   pathname,
-  lockedCategory,
   products,
   colors,
+  weightRange,
   imageExistsBySlug,
 }: CatalogViewProps) {
   const ru = useTypedMessages();
   const rawSearchParams = useSearchParams();
   const raw = Object.fromEntries(rawSearchParams.entries());
 
-  const { filters, limit } = parseCatalogSearchParams(raw, { lockedCategory });
-  const editableFilters: EditableFilters = {
-    lengths: filters.lengths,
-    colorCodes: filters.colorCodes,
-    colorGroups: filters.colorGroups,
-    tapeWidth: filters.tapeWidth,
-    inStockOnly: filters.inStockOnly,
-    priceMin: filters.priceMin,
-    priceMax: filters.priceMax,
-    sort: filters.sort,
-  };
+  const { filters, limit } = parseCatalogSearchParams(raw);
+  const editableFilters: EditableFilters = filters;
+  const hasPrices = products.some((p) => p.variants.some((v) => v.price !== undefined));
 
   const colorsByCode = new Map(colors.map((c) => [c.code, c] as const));
 
-  const filtered = filterProducts(products, colors, filters);
+  const filtered = filterHair(products, colors, filters);
   const visible = filtered.slice(0, limit);
   const hasMore = filtered.length > visible.length;
 
   return (
     <Container className="pb-16">
-      <CategoryIntro category={lockedCategory} />
+      <CategoryIntro section="hair" />
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
-        <FiltersDesktop pathname={pathname} filters={editableFilters} colors={colors} />
+        <FiltersDesktop
+          pathname={pathname}
+          filters={editableFilters}
+          colors={colors}
+          weightRange={weightRange}
+          hasPrices={hasPrices}
+        />
 
         <div className="min-w-0 flex-1">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -103,6 +105,8 @@ function CatalogViewInner({
                 filters={editableFilters}
                 colors={colors}
                 products={products}
+                weightRange={weightRange}
+                hasPrices={hasPrices}
               />
               <SortSelect pathname={pathname} filters={editableFilters} />
             </div>
@@ -114,6 +118,7 @@ function CatalogViewInner({
                 products={visible}
                 colorsByCode={colorsByCode}
                 imageExistsBySlug={imageExistsBySlug}
+                insert={{ node: <CatalogPromoTile />, index: PROMO_TILE_INDEX }}
               />
               {hasMore && (
                 <LoadMore

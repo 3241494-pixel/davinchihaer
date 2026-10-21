@@ -6,9 +6,14 @@ import type { HairColor, Product } from "@/lib/content/types";
 export async function RelatedProducts({
   products,
   colorsByCode,
+  heading,
+  description,
 }: {
   products: Product[];
   colorsByCode: Map<string, HairColor>;
+  /** По умолчанию — «Похожие товары». */
+  heading?: string;
+  description?: string;
 }) {
   if (products.length === 0) return null;
   const ru = await getTypedMessages();
@@ -16,7 +21,10 @@ export async function RelatedProducts({
 
   return (
     <section className="flex flex-col gap-4 border-t border-border pt-10">
-      <h2 className="font-heading text-2xl text-ink-strong">{ru.product.related}</h2>
+      <div className="flex flex-col gap-1">
+        <h2 className="font-heading text-2xl text-ink-strong">{heading ?? ru.product.related}</h2>
+        {description && <p className="text-sm text-ink-muted">{description}</p>}
+      </div>
       <ProductGrid products={products} colorsByCode={colorsByCode} imageExistsBySlug={imageExistsBySlug} />
     </section>
   );

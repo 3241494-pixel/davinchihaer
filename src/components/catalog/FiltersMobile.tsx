@@ -4,12 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/components/ui/cn";
 import { Button } from "@/components/ui/Button";
-import { filterProducts } from "@/lib/content/filter-logic";
+import { filterHair } from "@/lib/content/filter-logic";
 import { buildCatalogHref, emptyEditableFilters, type EditableFilters } from "@/lib/catalog/search-params";
 import { useTypedMessages } from "@/i18n/use-messages";
 import { formatMessage } from "@/lib/format-message";
 import { FilterControls } from "./FilterControls";
-import type { HairColor, Product } from "@/lib/content/types";
+import type { HairColor, HairProduct, WeightRange } from "@/lib/content/types";
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -18,10 +18,12 @@ export interface FiltersMobileProps {
   pathname: string;
   filters: EditableFilters;
   colors: HairColor[];
-  products: Product[];
+  products: HairProduct[];
+  weightRange: WeightRange | null;
+  hasPrices: boolean;
 }
 
-export function FiltersMobile({ pathname, filters, colors, products }: FiltersMobileProps) {
+export function FiltersMobile({ pathname, filters, colors, products, weightRange, hasPrices }: FiltersMobileProps) {
   const ru = useTypedMessages();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -71,7 +73,7 @@ export function FiltersMobile({ pathname, filters, colors, products }: FiltersMo
   }, [open]);
 
   const pendingCount = useMemo(
-    () => filterProducts(products, colors, pending).length,
+    () => filterHair(products, colors, pending).length,
     [products, colors, pending],
   );
 
@@ -81,7 +83,7 @@ export function FiltersMobile({ pathname, filters, colors, products }: FiltersMo
   }
 
   function reset() {
-    setPending(emptyEditableFilters());
+    setPending({ ...emptyEditableFilters(), sort: pending.sort });
   }
 
   return (
@@ -121,7 +123,14 @@ export function FiltersMobile({ pathname, filters, colors, products }: FiltersMo
             </div>
 
             <div className="flex-1 overflow-y-auto px-4 py-4">
-              <FilterControls value={pending} onChange={setPending} colors={colors} idPrefix="mobile" />
+              <FilterControls
+                value={pending}
+                onChange={setPending}
+                colors={colors}
+                weightRange={weightRange}
+                hasPrices={hasPrices}
+                idPrefix="mobile"
+              />
             </div>
 
             <div className="flex items-center gap-3 border-t border-border px-4 py-4">

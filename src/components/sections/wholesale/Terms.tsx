@@ -6,7 +6,7 @@ export async function Terms() {
   const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.terms.heading}</h2>
+      <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.wholesale.terms.heading}</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {ru.wholesale.terms.items.map((item) => (
           <Card key={item.title} className="flex flex-col gap-2">

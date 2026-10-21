@@ -44,7 +44,10 @@ export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
           observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      // threshold 0: блок проявляется, как только его верх входит в экран.
+      // Доля (раньше 0.12) у секций выше экрана в несколько раз не достигалась
+      // до прокрутки, и секция оставалась пустой.
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" },
     );
     observer.observe(node);
     return () => observer.disconnect();

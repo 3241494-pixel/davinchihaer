@@ -4,7 +4,7 @@ export async function Steps() {
   const ru = await getTypedMessages();
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="font-heading text-3xl text-ink-strong">{ru.wholesale.steps.heading}</h2>
+      <h2 className="font-heading text-[32px] leading-tight md:text-[44px] text-ink-strong">{ru.wholesale.steps.heading}</h2>
       <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {ru.wholesale.steps.items.map((step, index) => (
           <li key={step.title} className="flex flex-col gap-2">

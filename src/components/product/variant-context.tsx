@@ -1,27 +1,104 @@
 "use client";
 
 import { createContext, useContext, useMemo, useState } from "react";
-import type { HairColor, HairLength, Product, ProductVariant } from "@/lib/content/types";
+import type {
+  HairColor,
+  HairLength,
+  HairVariant,
+  MaterialVariant,
+  Product,
+} from "@/lib/content/types";
+
+export interface HairSelection {
+  selectedColor: string;
+  selectedLength: HairLength;
+  selectedWeight: number;
+  selectedVariant: HairVariant | undefined;
+  setSelectedColor: (color: string) => void;
+  setSelectedLength: (length: HairLength) => void;
+  setSelectedWeight: (weight: number) => void;
+  availableColorCodes: string[];
+  availableLengths: HairLength[];
+  availableWeights: number[];
+  isColorAvailable: (color: string) => boolean;
+  isLengthAvailable: (length: HairLength) => boolean;
+  isWeightAvailable: (weight: number) => boolean;
+}
 
 interface VariantContextValue {
   product: Product;
   colorsByCode: Map<string, HairColor>;
-  selectedLength: HairLength;
-  selectedColor: string;
-  selectedVariant: ProductVariant | undefined;
-  setSelectedLength: (length: HairLength) => void;
-  setSelectedColor: (color: string) => void;
-  availableLengths: HairLength[];
-  availableColorCodes: string[];
-  isLengthAvailable: (length: HairLength) => boolean;
-  isColorAvailable: (color: string) => boolean;
+  selectedVariant: HairVariant | MaterialVariant | undefined;
+  /** null для материалов: у них нет выбора оттенка, длины и густоты. */
+  hair: HairSelection | null;
 }
 
 const VariantContext = createContext<VariantContextValue | null>(null);
 
-function pickDefaultVariant(product: Product): ProductVariant {
-  return product.variants.find((variant) => variant.inStock) ?? product.variants[0];
+function unique<T>(values: T[]): T[] {
+  return Array.from(new Set(values));
 }
+
+/** Порядок выбора: оттенок → длина → густота. */
+function useHairSelection(variants: HairVariant[]): HairSelection {
+  const defaultVariant = variants.find((variant) => variant.inStock) ?? variants[0];
+  const [selectedColor, setColorState] = useState<string>(defaultVariant?.color ?? "");
+  const [selectedLength, setLengthState] = useState<HairLength>(defaultVariant?.length ?? 40);
+  const [selectedWeight, setWeightState] = useState<number>(defaultVariant?.weightGrams ?? 0);
+
+  const availableColorCodes = useMemo(() => unique(variants.map((v) => v.color)), [variants]);
+  const availableLengths = useMemo(
+    () => unique(variants.map((v) => v.length)).sort((a, b) => a - b),
+    [variants],
+  );
+  const availableWeights = useMemo(
+    () => unique(variants.map((v) => v.weightGrams)).sort((a, b) => a - b),
+    [variants],
+  );
+
+  function find(color: string, length: HairLength, weight: number) {
+    return variants.find(
+      (v) => v.color === color && v.length === length && v.weightGrams === weight,
+    );
+  }
+
+  /** После смены оттенка или длины подбирает ближайшую существующую комбинацию. */
+  function settle(color: string, length: HairLength, weight: number) {
+    const sameColor = variants.filter((v) => v.color === color);
+    const nextLength = sameColor.some((v) => v.length === length)
+      ? length
+      : (sameColor[0]?.length ?? length);
+    const sameColorLength = sameColor.filter((v) => v.length === nextLength);
+    const nextWeight = sameColorLength.some((v) => v.weightGrams === weight)
+      ? weight
+      : (sameColorLength[0]?.weightGrams ?? weight);
+    setColorState(color);
+    setLengthState(nextLength);
+    setWeightState(nextWeight);
+  }
+
+  return {
+    selectedColor,
+    selectedLength,
+    selectedWeight,
+    selectedVariant: find(selectedColor, selectedLength, selectedWeight),
+    setSelectedColor: (color) => settle(color, selectedLength, selectedWeight),
+    setSelectedLength: (length) => settle(selectedColor, length, selectedWeight),
+    setSelectedWeight: (weight) => setWeightState(weight),
+    availableColorCodes,
+    availableLengths,
+    availableWeights,
+    isColorAvailable: (color) => variants.some((v) => v.color === color),
+    isLengthAvailable: (length) =>
+      variants.some((v) => v.color === selectedColor && v.length === length),
+    isWeightAvailable: (weight) =>
+      variants.some(
+        (v) => v.color === selectedColor && v.length === selectedLength && v.weightGrams === weight,
+      ),
+  };
+}
+
+const NO_HAIR_VARIANTS: HairVariant[] = [];
 
 export interface VariantProviderProps {
   product: Product;
@@ -30,53 +107,28 @@ export interface VariantProviderProps {
 }
 
 export function VariantProvider({ product, colors, children }: VariantProviderProps) {
-  const defaultVariant = useMemo(() => pickDefaultVariant(product), [product]);
-  const [selectedLength, setSelectedLength] = useState<HairLength>(defaultVariant.length);
-  const [selectedColor, setSelectedColor] = useState<string>(defaultVariant.color);
-
   const colorsByCode = useMemo(
     () => new Map(colors.map((color) => [color.code, color] as const)),
     [colors],
   );
-
-  const availableLengths = useMemo(
-    () => Array.from(new Set(product.variants.map((v) => v.length))).sort((a, b) => a - b),
-    [product],
-  );
-  const availableColorCodes = useMemo(
-    () => Array.from(new Set(product.variants.map((v) => v.color))),
-    [product],
+  const hairSelection = useHairSelection(
+    product.kind === "hair" ? product.variants : NO_HAIR_VARIANTS,
   );
 
-  const selectedVariant = useMemo(
-    () =>
-      product.variants.find(
-        (variant) => variant.length === selectedLength && variant.color === selectedColor,
-      ),
-    [product, selectedLength, selectedColor],
-  );
-
-  function isLengthAvailable(length: HairLength): boolean {
-    return product.variants.some((variant) => variant.length === length && variant.color === selectedColor);
-  }
-
-  function isColorAvailable(color: string): boolean {
-    return product.variants.some((variant) => variant.color === color && variant.length === selectedLength);
-  }
-
-  const value: VariantContextValue = {
-    product,
-    colorsByCode,
-    selectedLength,
-    selectedColor,
-    selectedVariant,
-    setSelectedLength,
-    setSelectedColor,
-    availableLengths,
-    availableColorCodes,
-    isLengthAvailable,
-    isColorAvailable,
-  };
+  const value: VariantContextValue =
+    product.kind === "hair"
+      ? {
+          product,
+          colorsByCode,
+          selectedVariant: hairSelection.selectedVariant,
+          hair: hairSelection,
+        }
+      : {
+          product,
+          colorsByCode,
+          selectedVariant: product.variants.find((v) => v.inStock) ?? product.variants[0],
+          hair: null,
+        };
 
   return <VariantContext.Provider value={value}>{children}</VariantContext.Provider>;
 }

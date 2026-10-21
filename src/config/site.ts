@@ -12,7 +12,10 @@ export interface SiteConfig {
    * davinchihair.com, используется как временное значение.
    */
   url: string;
-  /** TODO_CLIENT: бот и супергруппа с темами ещё не созданы (бриф, раздел 11). */
+  /**
+   * Ссылка на аккаунт Telegram, куда уходят заявки: https://t.me/<username>.
+   * Предзаполненный текст (?text=) работает для личного аккаунта, не для бота.
+   */
   telegramBotUrl: string;
   instagramUrl: string;
   address: SiteAddress;
@@ -20,17 +23,26 @@ export interface SiteConfig {
   email?: string;
   /** TODO_CLIENT: телефон не предоставлен. */
   phone?: string;
-  /** TODO_CLIENT: номер WhatsApp для wa.me-ссылок не предоставлен. */
+  /** Номер WhatsApp для wa.me-ссылок; в ссылку идут только цифры. */
   whatsappNumber?: string;
+  /**
+   * Метка «Демо» на карточках товаров с isPlaceholder. Выключить одной строкой,
+   * когда каталог заполнится реальными данными.
+   */
+  showDemoBadge: boolean;
 }
 
 export const siteConfig: SiteConfig = {
   name: "Da Vinchi Hair",
   url: "https://davinchihair.com",
-  telegramBotUrl: "https://t.me/TODO_CLIENT_bot",
-  instagramUrl: "https://instagram.com/da_vinchi.hair",
+  // Рабочий контакт для заявок (Роман, 2026-10-20).
+  telegramBotUrl: "https://t.me/svetlana_delyagina",
+  instagramUrl: "https://www.instagram.com/da_vinchi.hair/",
   address: {
     city: "Тбилиси",
     country: "Грузия",
   },
+  // Рабочий номер для заявок (Роман, 2026-10-20).
+  whatsappNumber: "+380 63 807 8186",
+  showDemoBadge: true,
 };

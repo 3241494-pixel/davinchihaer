@@ -1,26 +1,28 @@
 import type { ContentSource } from "./source/content-source";
 import { fileContentSource } from "./source/file-source";
-import { productSchema, hairColorSchema } from "./schemas";
-import { filterProducts as filterProductsPure } from "./filter-logic";
+import { ATTACHMENTS } from "./enums";
+import { hairColorSchema, productSchema } from "./schemas";
+import {
+  filterHair as filterHairPure,
+  getProductWeightRange,
+  hairFor,
+  materialsFor,
+} from "./filter-logic";
 import type {
+  AttachmentType,
   HairColor,
+  HairFilters,
+  HairLength,
+  HairProduct,
+  MaterialProduct,
   Product,
-  ProductCategory,
-  ProductFilters,
+  WeightRange,
 } from "./types";
 
 export { getPriceRange } from "./filter-logic";
 
-export const PRODUCT_CATEGORIES: readonly ProductCategory[] = [
-  "tape-classic",
-  "tape-imitation-1",
-  "tape-imitation-2",
-  "accessories",
-  "care",
-];
-
 function parseProducts(raw: unknown[]): Product[] {
-  return raw.map((entry, index) => {
+  const products = raw.map((entry, index) => {
     const result = productSchema.safeParse(entry);
     if (!result.success) {
       const slug =
@@ -31,8 +33,17 @@ function parseProducts(raw: unknown[]): Product[] {
         `content/products: невалидные данные товара "${slug}": ${result.error.message}`,
       );
     }
-    return result.data;
+    return result.data as Product;
   });
+
+  const seen = new Set<string>();
+  for (const product of products) {
+    if (seen.has(product.slug)) {
+      throw new Error(`content/products: повторяется slug "${product.slug}"`);
+    }
+    seen.add(product.slug);
+  }
+  return products;
 }
 
 function parseColors(raw: unknown[]): HairColor[] {
@@ -63,6 +74,14 @@ export function createContentApi(source: ContentSource) {
     return productsCache;
   }
 
+  function getHairProducts(): HairProduct[] {
+    return getAllProducts().filter((p): p is HairProduct => p.kind === "hair");
+  }
+
+  function getMaterials(): MaterialProduct[] {
+    return getAllProducts().filter((p): p is MaterialProduct => p.kind === "material");
+  }
+
   function getColors(): HairColor[] {
     if (!colorsCache) {
       colorsCache = parseColors(source.getColorsRaw());
@@ -74,39 +93,63 @@ export function createContentApi(source: ContentSource) {
     return getAllProducts().find((product) => product.slug === slug);
   }
 
-  function getProductsByCategory(category: ProductCategory): Product[] {
-    return getAllProducts().filter((product) => product.category === category);
-  }
-
   function getColorByCode(code: string): HairColor | undefined {
     return getColors().find((color) => color.code === code);
   }
 
-  function getCategories(): ProductCategory[] {
-    return [...PRODUCT_CATEGORIES];
+  function filterHair(filters: HairFilters = {}): HairProduct[] {
+    return filterHairPure(getHairProducts(), getColors(), filters);
   }
 
-  function filterProducts(filters: ProductFilters = {}): Product[] {
-    return filterProductsPure(getAllProducts(), getColors(), filters);
+  function getMaterialsFor(attachment: AttachmentType): MaterialProduct[] {
+    return materialsFor(getMaterials(), attachment);
+  }
+
+  function getHairFor(material: MaterialProduct): HairProduct[] {
+    return hairFor(getHairProducts(), material);
+  }
+
+  function getWeightRange(): WeightRange | null {
+    return getProductWeightRange(getHairProducts());
+  }
+
+  function getLengths(): HairLength[] {
+    const lengths = new Set(getHairProducts().flatMap((p) => p.variants.map((v) => v.length)));
+    return Array.from(lengths).sort((a, b) => a - b);
+  }
+
+  /** Крепления в каноническом порядке, включая те, по которым товаров пока нет. */
+  function getAttachments(): AttachmentType[] {
+    return [...ATTACHMENTS];
   }
 
   return {
     getAllProducts,
+    getHairProducts,
+    getMaterials,
     getProductBySlug,
-    getProductsByCategory,
     getColors,
     getColorByCode,
-    getCategories,
-    filterProducts,
+    filterHair,
+    getMaterialsFor,
+    getHairFor,
+    getWeightRange,
+    getLengths,
+    getAttachments,
   };
 }
 
 const defaultApi = createContentApi(fileContentSource);
 
 export const getAllProducts = defaultApi.getAllProducts;
+export const getHairProducts = defaultApi.getHairProducts;
+export const getMaterials = defaultApi.getMaterials;
 export const getProductBySlug = defaultApi.getProductBySlug;
-export const getProductsByCategory = defaultApi.getProductsByCategory;
 export const getColors = defaultApi.getColors;
 export const getColorByCode = defaultApi.getColorByCode;
-export const getCategories = defaultApi.getCategories;
-export const filterProducts = defaultApi.filterProducts;
+export const filterHair = defaultApi.filterHair;
+export const getMaterialsFor = defaultApi.getMaterialsFor;
+export const getHairFor = defaultApi.getHairFor;
+export const getWeightRange = defaultApi.getWeightRange;
+export const getLengths = defaultApi.getLengths;
+export const getAttachments = defaultApi.getAttachments;

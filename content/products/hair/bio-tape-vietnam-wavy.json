@@ -1,0 +1,259 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "bio-tape-vietnam-wavy",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Биоленты · Вьетнам, волнистые",
+    "en": "Bio-tapes · Vietnam, wavy",
+    "ka": "ბიოლენტები · ვიეტნამი, ტალღოვანი"
+  },
+  "shortDescription": {
+    "ru": "Очень тонкая лента и плоское крепление. Минимальная нагрузка, подходят для тонких волос.",
+    "en": "A very thin tape and a flat attachment. Minimal load, suitable for fine hair.",
+    "ka": "ძალიან თხელი ლენტი და ბრტყელი მიმაგრება. მინიმალური დატვირთვა, შესაფერისია თხელი თმისთვის."
+  },
+  "description": {
+    "ru": "Разновидность ленточного наращивания, при котором прядь фиксируется между двумя слоями собственных волос лентой с клеевой основой с обеих сторон. Лента очень тонкая, поэтому крепление получается плоским и аккуратным. Ленты плотно прилегают к волосам и создают естественный переход.\n\nБиоленты особенно подходят для тонких волос. Лёгкое плоское крепление не перегружает собственные волосы, а при правильно подобранном объёме и соблюдении технологии они могут спокойно расти и восстанавливаться в процессе носки.",
+    "en": "A type of tape-in extension where the weft is fixed between two layers of your own hair with a tape that is adhesive on both sides. The tape is very thin, so the attachment is flat and neat. The tapes sit close to the hair and blend naturally.\n\nBio-tapes are especially suited to fine hair. The light, flat attachment does not overload your own hair, and with the right volume and proper technique it can keep growing and recovering while you wear them.",
+    "ka": "ლენტური დაგრძელების სახეობა, როცა კულული საკუთარი თმის ორ ფენას შორის ორმხრივად წებოვანი ლენტით მაგრდება. ლენტი ძალიან თხელია, ამიტომ მიმაგრება ბრტყელი და მოწესრიგებულია.\n\nბიოლენტები განსაკუთრებით შეეფერება თხელ თმას."
+  },
+  "attachment": "bio-tape",
+  "structure": "wavy",
+  "origin": "vietnam",
+  "variants": [
+    {
+      "id": "bio-tape-vietnam-wavy-40-10-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-10-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-10-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-10-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-10-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-10-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-10-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-10-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-10-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-10-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-10-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-10-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-10-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-10-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-10-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": false,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-10-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-30-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-30-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-30-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-30-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-30-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-30-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-30-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": false,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-30-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-40-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-40-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-40-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-40-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-40-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-40-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/bio-1.webp",
+      "alt": {
+        "ru": "Биоленты · Вьетнам, волнистые",
+        "en": "Bio-tapes · Vietnam, wavy",
+        "ka": "ბიოლენტები · ვიეტნამი, ტალღოვანი"
+      }
+    },
+    {
+      "src": "/images/technology/bio-2.webp",
+      "alt": {
+        "ru": "Биоленты · Вьетнам, волнистые",
+        "en": "Bio-tapes · Vietnam, wavy",
+        "ka": "ბიოლენტები · ვიეტნამი, ტალღოვანი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Биоленты · Вьетнам, волнистые | Da Vinchi Hair",
+      "en": "Bio-tapes · Vietnam, wavy | Da Vinchi Hair",
+      "ka": "ბიოლენტები · ვიეტნამი, ტალღოვანი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Очень тонкая лента и плоское крепление. Минимальная нагрузка, подходят для тонких волос.",
+      "en": "A very thin tape and a flat attachment. Minimal load, suitable for fine hair.",
+      "ka": "ძალიან თხელი ლენტი და ბრტყელი მიმაგრება. მინიმალური დატვირთვა, შესაფერისია თხელი თმისთვის."
+    }
+  }
+}

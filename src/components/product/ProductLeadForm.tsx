@@ -10,9 +10,10 @@ export function ProductLeadForm() {
   const ru = useTypedMessages();
   const locale = useLocale();
   const { product, colorsByCode, selectedVariant } = useVariantSelection();
-  const colorNameSource = selectedVariant ? colorsByCode.get(selectedVariant.color)?.name : undefined;
-  const colorName = selectedVariant
-    ? (colorNameSource ? pickLocale(colorNameSource, locale) : selectedVariant.color)
+  const hairVariant = selectedVariant && "color" in selectedVariant ? selectedVariant : undefined;
+  const colorNameSource = hairVariant ? colorsByCode.get(hairVariant.color)?.name : undefined;
+  const colorName = hairVariant
+    ? `${hairVariant.color} ${colorNameSource ? pickLocale(colorNameSource, locale) : ""}`.trim()
     : undefined;
 
   return (
@@ -27,7 +28,8 @@ export function ProductLeadForm() {
         productSlug={product.slug}
         variantId={selectedVariant?.id}
         productTitle={pickLocale(product.title, locale)}
-        length={selectedVariant?.length}
+        length={hairVariant?.length}
+        weightGrams={hairVariant?.weightGrams}
         colorName={colorName}
       />
     </section>

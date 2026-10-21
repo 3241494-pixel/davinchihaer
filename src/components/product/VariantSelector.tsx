@@ -6,16 +6,15 @@ import { ColorSwatch } from "@/components/ui/ColorSwatch";
 import { useTypedMessages, type Messages } from "@/i18n/use-messages";
 import { pickLocale } from "@/lib/content/locale";
 import { useVariantSelection } from "./variant-context";
-import type { HairLength } from "@/lib/content/types";
 
-function LengthChip({
-  length,
+function OptionChip({
+  label,
   active,
   disabled,
   onClick,
   ru,
 }: {
-  length: HairLength;
+  label: string;
   active: boolean;
   disabled: boolean;
   onClick: () => void;
@@ -40,7 +39,7 @@ function LengthChip({
             : "border-border bg-bg text-ink hover:border-ink-strong",
       )}
     >
-      {length} {ru.catalog.lengthUnit}
+      {label}
     </button>
   );
 }
@@ -48,17 +47,24 @@ function LengthChip({
 export function VariantSelector() {
   const ru = useTypedMessages();
   const locale = useLocale();
+  const { colorsByCode, hair } = useVariantSelection();
+
+  if (!hair) return null;
+
   const {
-    colorsByCode,
-    selectedLength,
     selectedColor,
-    setSelectedLength,
+    selectedLength,
+    selectedWeight,
     setSelectedColor,
-    availableLengths,
+    setSelectedLength,
+    setSelectedWeight,
     availableColorCodes,
-    isLengthAvailable,
+    availableLengths,
+    availableWeights,
     isColorAvailable,
-  } = useVariantSelection();
+    isLengthAvailable,
+    isWeightAvailable,
+  } = hair;
 
   return (
     <div className="flex flex-col gap-5">
@@ -97,12 +103,28 @@ export function VariantSelector() {
         <span className="text-sm font-medium text-ink-strong">{ru.product.selectLength}</span>
         <div className="flex flex-wrap gap-2">
           {availableLengths.map((length) => (
-            <LengthChip
+            <OptionChip
               key={length}
-              length={length}
+              label={`${length} ${ru.catalog.lengthUnit}`}
               active={selectedLength === length}
               disabled={!isLengthAvailable(length)}
               onClick={() => setSelectedLength(length)}
+              ru={ru}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <span className="text-sm font-medium text-ink-strong">{ru.product.selectWeight}</span>
+        <div className="flex flex-wrap gap-2">
+          {availableWeights.map((weight) => (
+            <OptionChip
+              key={weight}
+              label={`${weight} ${ru.product.weightUnit}`}
+              active={selectedWeight === weight}
+              disabled={!isWeightAvailable(weight)}
+              onClick={() => setSelectedWeight(weight)}
               ru={ru}
             />
           ))}

@@ -1,0 +1,267 @@
+{
+  "_todoClient": [
+    "Демо-товар: происхождение, структура, длины, густота, количество лент, наличие и артикулы — заглушки, ждём прайс клиента.",
+    "price не указана — на сайте «Цена по запросу». Цены не выдумывать.",
+    "Фото — из комплекта клиента по технике; оттенок на фото может не совпадать с вариантами-заглушками.",
+    "ka — машинный перевод, требует вычитки носителем."
+  ],
+  "kind": "hair",
+  "slug": "ring-star-slavic-straight",
+  "isPlaceholder": true,
+  "title": {
+    "ru": "Ring Star · славянка, прямые",
+    "en": "Ring Star · Slavic, straight",
+    "ka": "Ring Star · სლავური, სწორი"
+  },
+  "shortDescription": {
+    "ru": "Крепление кольцом с помощью специального инструмента: без клея и без нагрева.",
+    "en": "Attached with a ring using a special tool: no glue and no heat.",
+    "ka": "მიმაგრება რგოლით სპეციალური ხელსაწყოს დახმარებით: წებოსა და გაცხელების გარეშე."
+  },
+  "description": {
+    "ru": "Система крепления на кольцах. Прядь фиксируется кольцом с помощью специального инструмента: без клея и без термического воздействия.\n\nКрепление формируется без клея и нагрева, аккуратно и надёжно фиксирует прядь, комфортно в носке и малозаметно в волосах, удобно при коррекции и повторном наращивании.",
+    "en": "A ring-based attachment system. The strand is fixed with a ring using a special tool: no glue and no heat.\n\nThe attachment is formed without glue or heat, holds the strand neatly and securely, is comfortable to wear and discreet, and is convenient for correction and re-installation.",
+    "ka": "რგოლებზე მიმაგრების სისტემა. კულული რგოლით მაგრდება სპეციალური ხელსაწყოს დახმარებით: წებოსა და თერმული ზემოქმედების გარეშე."
+  },
+  "attachment": "ring-star",
+  "structure": "straight",
+  "origin": "slavic",
+  "variants": [
+    {
+      "id": "ring-star-slavic-straight-40-70-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-70-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-40-70-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-70-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-70-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-70-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-70-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-70-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-70-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-70-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-70-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-70-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-70-70-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-70-70-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-70-70-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": false,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-70-70-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-40-90-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-90-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-40-90-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-90-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-90-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-90-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-90-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-90-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-90-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-90-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-90-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-90-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-70-90-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-70-90-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-70-90-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": false,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-70-90-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-40-100-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-100-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-40-100-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-40-100-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-100-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-100-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-50-100-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-50-100-100"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-100-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-100-50"
+    },
+    {
+      "id": "ring-star-slavic-straight-60-100-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-RING-STAR-SLAVIC-STRAIGHT-60-100-100"
+    }
+  ],
+  "images": [
+    {
+      "src": "/images/technology/ringstar-4.webp",
+      "alt": {
+        "ru": "Ring Star · славянка, прямые",
+        "en": "Ring Star · Slavic, straight",
+        "ka": "Ring Star · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/ringstar-5.webp",
+      "alt": {
+        "ru": "Ring Star · славянка, прямые",
+        "en": "Ring Star · Slavic, straight",
+        "ka": "Ring Star · სლავური, სწორი"
+      }
+    },
+    {
+      "src": "/images/technology/ringstar-1.webp",
+      "alt": {
+        "ru": "Ring Star · славянка, прямые",
+        "en": "Ring Star · Slavic, straight",
+        "ka": "Ring Star · სლავური, სწორი"
+      }
+    }
+  ],
+  "seo": {
+    "title": {
+      "ru": "Ring Star · славянка, прямые | Da Vinchi Hair",
+      "en": "Ring Star · Slavic, straight | Da Vinchi Hair",
+      "ka": "Ring Star · სლავური, სწორი | Da Vinchi Hair"
+    },
+    "description": {
+      "ru": "Крепление кольцом с помощью специального инструмента: без клея и без нагрева.",
+      "en": "Attached with a ring using a special tool: no glue and no heat.",
+      "ka": "მიმაგრება რგოლით სპეციალური ხელსაწყოს დახმარებით: წებოსა და გაცხელების გარეშე."
+    }
+  }
+}
