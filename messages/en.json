@@ -124,6 +124,7 @@
     },
     "priceOnRequest": "Price on request",
     "demoBadge": "Demo",
+    "colorDisclaimer": "Colours in photos may look slightly different from the real hair because of screen settings and colour reproduction. If you're unsure about a shade, send us a photo of your hair in daylight and we'll help you choose.",
     "shadesCount": "{count} shades",
     "cardCta": {
       "hair": "Choose a shade",

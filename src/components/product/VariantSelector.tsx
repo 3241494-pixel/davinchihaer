@@ -69,7 +69,9 @@ export function VariantSelector() {
   return (
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-ink-strong">{ru.product.selectColor}</span>
+        <span className="text-sm font-medium text-ink-strong">
+          {ru.product.selectColor}
+        </span>
         <div className="flex flex-wrap gap-3">
           {availableColorCodes.map((code) => {
             const color = colorsByCode.get(code);
@@ -80,7 +82,11 @@ export function VariantSelector() {
                 key={code}
                 aria-disabled={disabled}
                 title={disabled ? ru.product.unavailableCombination : undefined}
-                className={disabled ? "cursor-not-allowed opacity-40 grayscale" : undefined}
+                className={
+                  disabled
+                    ? "cursor-not-allowed opacity-40 grayscale"
+                    : undefined
+                }
               >
                 <ColorSwatch
                   code={color.code}
@@ -97,10 +103,15 @@ export function VariantSelector() {
             );
           })}
         </div>
+        <p className="text-xs leading-relaxed text-ink-muted">
+          {ru.catalog.colorDisclaimer}
+        </p>
       </div>
 
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-ink-strong">{ru.product.selectLength}</span>
+        <span className="text-sm font-medium text-ink-strong">
+          {ru.product.selectLength}
+        </span>
         <div className="flex flex-wrap gap-2">
           {availableLengths.map((length) => (
             <OptionChip
@@ -116,7 +127,9 @@ export function VariantSelector() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-ink-strong">{ru.product.selectWeight}</span>
+        <span className="text-sm font-medium text-ink-strong">
+          {ru.product.selectWeight}
+        </span>
         <div className="flex flex-wrap gap-2">
           {availableWeights.map((weight) => (
             <OptionChip

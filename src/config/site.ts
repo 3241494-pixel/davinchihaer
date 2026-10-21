@@ -44,5 +44,5 @@ export const siteConfig: SiteConfig = {
   },
   // Рабочий номер для заявок (Роман, 2026-10-20).
   whatsappNumber: "+380 63 807 8186",
-  showDemoBadge: true,
+  showDemoBadge: false,
 };
