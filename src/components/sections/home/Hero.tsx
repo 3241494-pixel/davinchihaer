@@ -41,37 +41,28 @@ export async function Hero() {
 
   return (
     <section className="bg-ink text-bg">
-      {/* Мобильный и планшет */}
-      <div
-        className="relative flex min-h-[640px] flex-col justify-end lg:hidden"
-        style={{ height: "calc(100svh - 96px)" }}
-      >
-        <Video
-          name="heroLoop1"
-          label={copy.imageAlt}
-          aspectClass=""
-          className="absolute inset-0 size-full bg-ink"
-        />
-        <div aria-hidden className="absolute inset-0 bg-ink/50" />
-        <div className="relative flex flex-col gap-5 px-4 pt-24 pb-10 sm:px-8">
-          {text}
-        </div>
-      </div>
-
-      {/* Десктоп */}
-      <div className="mx-auto hidden w-full max-w-[1440px] grid-cols-[minmax(0,5fr)_minmax(0,6fr)] items-center gap-12 px-8 py-12 lg:grid xl:px-12">
-        <div className="flex flex-col gap-7">{text}</div>
-        <div className="grid grid-cols-2 gap-3">
+      {/*
+        Текст один на все ширины: раньше мобильная и десктопная версии были
+        отдельными блоками, и в HTML оказывалось два h1 с одинаковым текстом.
+        На мобильном ролик лежит фоном под затемнением, на десктопе — два
+        ролика в правой колонке.
+      */}
+      <div className="relative mx-auto flex h-[calc(100svh-96px)] min-h-[640px] w-full max-w-[1440px] flex-col justify-end lg:grid lg:h-auto lg:min-h-0 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-12 xl:px-12">
+        <div className="absolute inset-0 lg:hidden">
           <Video
             name="heroLoop1"
             label={copy.imageAlt}
-            className="bg-ink-strong"
+            aspectClass=""
+            className="absolute inset-0 size-full bg-ink"
           />
-          <Video
-            name="bio2"
-            label={copy.imageAlt}
-            className="mt-16 bg-ink-strong"
-          />
+          <div aria-hidden className="absolute inset-0 bg-ink/50" />
+        </div>
+        <div className="relative flex flex-col gap-5 px-4 pt-24 pb-10 sm:px-8 lg:gap-7 lg:p-0">
+          {text}
+        </div>
+        <div className="hidden grid-cols-2 gap-3 lg:grid">
+          <Video name="heroLoop1" label={copy.imageAlt} className="bg-ink-strong" />
+          <Video name="bio2" label={copy.imageAlt} className="mt-16 bg-ink-strong" />
         </div>
       </div>
     </section>

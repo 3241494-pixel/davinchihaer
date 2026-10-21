@@ -16,7 +16,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-    alternates: buildLanguageAlternates("/guides/choose-length"),
+    alternates: buildLanguageAlternates("/guides/choose-length", locale),
     title: `${ru.pages.guides.chooseLength.title} | Da Vinchi Hair`,
     description: ru.pages.guides.chooseLength.description,
   };

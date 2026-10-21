@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${ru.wholesale.hero.title} | Da Vinchi Hair`,
     description: ru.wholesale.hero.subtitle,
-    alternates: buildLanguageAlternates("/wholesale"),
+    alternates: buildLanguageAlternates("/wholesale", locale),
   };
 }
 

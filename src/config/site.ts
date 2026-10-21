@@ -8,10 +8,16 @@ export interface SiteAddress {
 export interface SiteConfig {
   name: string;
   /**
-   * TODO_CLIENT: домен ещё не куплен (бриф, раздел 8). Рекомендация клиента —
-   * davinchihair.com, используется как временное значение.
+   * Адрес, где сайт реально открывается: из него собираются canonical, hreflang,
+   * sitemap и robots.txt. TODO_CLIENT: домен ещё не куплен (бриф, раздел 8),
+   * пока это адрес Cloudflare Pages. После покупки домена — заменить здесь.
    */
   url: string;
+  /**
+   * Открыт ли сайт для поисковиков. false — на всех страницах noindex, в
+   * robots.txt нет sitemap. Включать, когда подключён домен и каталог заполнен.
+   */
+  indexable: boolean;
   /**
    * Ссылка на аккаунт Telegram, куда уходят заявки: https://t.me/<username>.
    * Предзаполненный текст (?text=) работает для личного аккаунта, не для бота.
@@ -34,7 +40,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Da Vinchi Hair",
-  url: "https://davinchihair.com",
+  url: "https://davinchihaer.pages.dev",
+  indexable: false,
   // Рабочий контакт для заявок (Роман, 2026-10-20).
   telegramBotUrl: "https://t.me/svetlana_delyagina",
   instagramUrl: "https://www.instagram.com/da_vinchi.hair/",

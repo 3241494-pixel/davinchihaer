@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
 /**
- * Отдельный root layout только для "/" (см. src/app/page.tsx). Все остальные
- * маршруты живут под src/app/[locale]/layout.tsx со своим html/body.
+ * Корневой layout только пропускает children. html/body рендерит
+ * src/app/[locale]/layout.tsx с lang текущей локали, а "/" и общая 404 —
+ * свои (src/app/page.tsx, src/app/not-found.tsx). Если рендерить html и здесь,
+ * на каждой странице окажется два <html>, и браузер с поисковиком возьмут
+ * lang="ru" от внешнего даже на en и ka.
  */
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ru">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }

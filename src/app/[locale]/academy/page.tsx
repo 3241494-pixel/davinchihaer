@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${ru.academy.hub.title} | Da Vinchi Hair`,
     description: ru.academy.hub.subtitle,
-    alternates: buildLanguageAlternates("/academy"),
+    alternates: buildLanguageAlternates("/academy", locale),
   };
 }
 

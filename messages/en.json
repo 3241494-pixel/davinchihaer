@@ -1,4 +1,8 @@
 {
+  "notFound": {
+    "title": "Page not found",
+    "link": "Go to the home page"
+  },
   "common": {
     "skipToContent": "Skip to content"
   },

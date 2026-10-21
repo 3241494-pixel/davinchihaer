@@ -19,7 +19,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-    alternates: buildLanguageAlternates("/care"),
+    alternates: buildLanguageAlternates("/care", locale),
     title: `${ru.pages.care.title} | Da Vinchi Hair`,
     description: ru.pages.care.description,
   };

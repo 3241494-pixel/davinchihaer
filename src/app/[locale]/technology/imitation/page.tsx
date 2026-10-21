@@ -20,7 +20,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-    alternates: buildLanguageAlternates("/technology/imitation"),
+    alternates: buildLanguageAlternates("/technology/imitation", locale),
     title: `${ru.pages.technology.imitation.title} | Da Vinchi Hair`,
     description: ru.pages.technology.imitation.description,
   };
