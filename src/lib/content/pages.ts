@@ -25,16 +25,17 @@ const loaders: Record<string, () => Promise<PageMdxModule>> = {
   "guides/self-correction": () => import("../../../content/pages/guides/self-correction.mdx"),
   care: () => import("../../../content/pages/care.mdx"),
   about: () => import("../../../content/pages/about.mdx"),
+  "en/about": () => import("../../../content/pages/en/about.mdx"),
+  "ka/about": () => import("../../../content/pages/ka/about.mdx"),
   delivery: () => import("../../../content/pages/delivery.mdx"),
   privacy: () => import("../../../content/pages/privacy.mdx"),
   terms: () => import("../../../content/pages/terms.mdx"),
 };
 
 /**
- * Переведённых MDX для en/ka пока нет — все ключи в loaders фактически
- * ru-контент. Когда появится перевод конкретной страницы, зарегистрируйте
- * его под ключом `${locale}/${slug}`; до тех пор всегда используется
- * фолбэк на ru (см. CLAUDE.md, «Деньги»/«TODO_CLIENT»).
+ * Ключи без префикса — ru-контент. Перевод страницы регистрируется под ключом
+ * `${locale}/${slug}` (сейчас переведена только about); для остальных страниц
+ * используется фолбэк на ru (см. CLAUDE.md, «Деньги»/«TODO_CLIENT»).
  */
 export async function getPageContent(
   slug: string,
