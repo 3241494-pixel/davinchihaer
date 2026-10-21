@@ -115,6 +115,7 @@ function fakeSource(products: unknown[] = fixtureProducts): ContentSource {
     getProductsRaw: () => products,
     getColorsRaw: () => colors,
     getCostComparisonRaw: () => ({}),
+    getReviewsRaw: () => ({}),
   };
 }
 

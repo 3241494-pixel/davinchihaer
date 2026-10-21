@@ -37,6 +37,10 @@ export class FileContentSource implements ContentSource {
   getCostComparisonRaw(): unknown {
     return readJson(path.join(CONTENT_ROOT, "economy.json"));
   }
+
+  getReviewsRaw(): unknown {
+    return readJson(path.join(CONTENT_ROOT, "reviews.json"));
+  }
 }
 
 export const fileContentSource = new FileContentSource();

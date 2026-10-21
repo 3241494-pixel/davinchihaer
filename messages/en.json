@@ -379,22 +379,9 @@
       }
     },
     "reviews": {
-      "heading": "Reviews",
-      "todoNote": "TODO_CLIENT: real reviews (5–10, with names and publication consent) will be provided by the client — placeholders shown below.",
-      "items": [
-        {
-          "name": "TODO_CLIENT",
-          "text": "TODO_CLIENT: review text not provided by the client."
-        },
-        {
-          "name": "TODO_CLIENT",
-          "text": "TODO_CLIENT: review text not provided by the client."
-        },
-        {
-          "name": "TODO_CLIENT",
-          "text": "TODO_CLIENT: review text not provided by the client."
-        }
-      ]
+      "eyebrow": "Reviews",
+      "heading": "What our clients write",
+      "note": "Messages from our clients, published without names and in the original Russian."
     },
     "faq": {
       "heading": "Frequently asked questions",

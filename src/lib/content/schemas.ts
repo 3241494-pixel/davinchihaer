@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES } from "./enums";
-import type { CostComparison, I18nString } from "./types";
+import type { CostComparison, I18nString, Review } from "./types";
 
 export { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES };
 
@@ -120,3 +120,15 @@ export const costComparisonSchema = z.strictObject({
     )
     .min(2),
 }) satisfies z.ZodType<CostComparison & { _source?: string }>;
+
+export const reviewsSchema = z.strictObject({
+  _source: z.string().optional(),
+  reviews: z
+    .array(
+      z.strictObject({
+        id: z.string().min(1),
+        text: z.string().min(1),
+      }) satisfies z.ZodType<Review>,
+    )
+    .min(1),
+});

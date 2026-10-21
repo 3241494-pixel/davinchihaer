@@ -165,3 +165,12 @@ export interface CostComparison {
   currency: Currency;
   options: CostOption[];
 }
+
+/**
+ * Отзыв клиента из переписки. Текст на языке оригинала (русский) для всех
+ * локалей: переводить чужие слова не будем. Переносы строк — как в сообщениях.
+ */
+export interface Review {
+  id: string;
+  text: string;
+}
