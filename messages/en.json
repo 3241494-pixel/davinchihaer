@@ -194,7 +194,7 @@
       "volume": "Volume",
       "compatibleWith": "Works with"
     },
-    "careTodo": "TODO_CLIENT: care instructions not provided by the client.",
+    "careLink": "More on hair care",
     "deliveryTodo": "TODO_CLIENT: delivery and payment terms not provided by the client (brief, section 11, \"Blocks launch\").",
     "related": "Related products",
     "leadFormPlaceholder": {
@@ -288,12 +288,12 @@
       },
       "imitation1": {
         "title": "Root Imitation 1.0",
-        "description": "The same tape with added root imitation. On close inspection a thin strip of tape, about 2 mm, may be visible.",
+        "description": "The same tape with added root imitation. A small visible edge, about 2–3 mm, remains along the border.",
         "href": "/technology/imitation#1-0"
       },
       "imitation2": {
         "title": "Root Imitation 2.0",
-        "description": "Hand-stitched hair by hair; the tape itself is not visible.",
+        "description": "The attachment is fully hand-stitched, hair by hair. No visible edge.",
         "href": "/technology/imitation#2-0"
       },
       "bioTape": {
@@ -389,15 +389,15 @@
       "items": [
         {
           "question": "How long does a Tape-In system last?",
-          "answer": "With correct installation and care — a year or longer; the tape is suitable for repeated use."
+          "answer": "With proper care, natural tape-in hair can last a year or longer, and several years if handled gently. The system can be reused many times."
         },
         {
           "question": "Can I correct the tapes myself?",
-          "answer": "Yes, once you've learned the technique — the tapes can be repositioned yourself at home, without visiting a stylist every time."
+          "answer": "Yes. You can re-tape at home without visiting a stylist every time. When you buy hair, we send recorded video lessons on working with tapes, and you can learn the technique in depth in our training."
         },
         {
           "question": "What's the difference between Imitation 2.0 and 1.0?",
-          "answer": "With Imitation 1.0, a small strip of tape — about 2 mm — may be visible up close. With Imitation 2.0, hair is hand-stitched strand by strand, and the tape itself is completely invisible."
+          "answer": "Imitation 1.0 leaves a small visible edge of about 2–3 mm and takes 5–7 days to make. Imitation 2.0 is fully hand-stitched, hair by hair, so there is no visible edge; it takes 3–4 weeks to make."
         },
         {
           "question": "How do I choose a colour?",
@@ -405,7 +405,7 @@
         },
         {
           "question": "How much does a system cost?",
-          "answer": "TODO_CLIENT: pricing isn't published — we'll send it in response to your inquiry based on length and colour."
+          "answer": "For example, 50 cm, 100 g of hair on Imitation 1.0 costs $390, and on Imitation 2.0 it costs $520. We calculate the exact price on request: it depends on length, weight, shade and technique."
         }
       ]
     },
@@ -440,14 +440,14 @@
           "featureHeader": "Feature",
           "rows": [
             {
-              "feature": "Tape visibility",
-              "v1": "Up close, a strip of tape — about 2 mm — may be visible",
-              "v2": "Not visible at all"
+              "feature": "Visible edge",
+              "v1": "Small, about 2–3 mm",
+              "v2": "None"
             },
             {
-              "feature": "Manufacturing method",
-              "v1": "Classic tape with a root imitation",
-              "v2": "Hair hand-stitched strand by strand"
+              "feature": "Construction",
+              "v1": "Most of the attachment is hidden inside the hair",
+              "v2": "Fully hand-stitched, hair by hair"
             },
             {
               "feature": "Parting naturalness",
@@ -455,9 +455,14 @@
               "v2": "Maximally natural — suitable for any parting"
             },
             {
-              "feature": "Price",
-              "v1": "TODO_CLIENT",
-              "v2": "TODO_CLIENT"
+              "feature": "Production time",
+              "v1": "5–7 days",
+              "v2": "3–4 weeks"
+            },
+            {
+              "feature": "Price: 50 cm, 100 g",
+              "v1": "$390",
+              "v2": "$520"
             }
           ],
           "v1Header": "Imitation 1.0",
@@ -475,7 +480,7 @@
       },
       "bioTape": {
         "title": "Bio-tapes",
-        "description": "A very thin tape, adhesive on both sides: a flat attachment and minimal load on your own hair.",
+        "description": "A single thin tape with adhesive on both sides: a light attachment and minimal load on your own hair.",
         "chooseLengthLink": "How to choose length and density for fine hair",
         "catalogLink": "See bio-tapes in the catalogue"
       },
@@ -496,8 +501,8 @@
             "href": "/guides/color-match"
           },
           {
-            "title": "Choosing a length",
-            "description": "Length and number of tapes for your desired volume.",
+            "title": "How to choose length and volume",
+            "description": "Length, and how many grams of hair you need.",
             "href": "/guides/choose-length"
           },
           {
@@ -516,35 +521,39 @@
         "paletteHeading": "Colour palette"
       },
       "chooseLength": {
-        "title": "Choosing a length",
-        "description": "Length affects the visual effect, and the number of tapes affects density and volume. Base your choice on your own hair length and the result you want.",
-        "tableHeading": "Desired volume → number of tapes",
+        "title": "How to choose length and volume",
+        "description": "Length shapes the look, and the amount of hair in grams sets the thickness. We choose the amount based on your hair, haircut and desired result.",
+        "tableHeading": "How many grams you need",
         "table": {
-          "volumeHeader": "Desired volume",
-          "tapesHeader": "Number of tapes",
+          "goalHeader": "Goal",
+          "amountHeader": "Approximate amount",
           "rows": [
             {
-              "volume": "Light, natural volume",
-              "tapes": "TODO_CLIENT"
+              "goal": "More thickness, fuller ends",
+              "amount": "50–60 g"
             },
             {
-              "volume": "Medium volume",
-              "tapes": "TODO_CLIENT"
+              "goal": "Length and thickness",
+              "amount": "100 g"
             },
             {
-              "volume": "Maximum volume",
-              "tapes": "TODO_CLIENT"
+              "goal": "Dense bob, blending a blunt cut",
+              "amount": "150–200 g"
+            },
+            {
+              "goal": "Temples and face-framing only",
+              "amount": "25–35 g"
             }
           ]
         },
-        "disclaimer": "TODO_CLIENT: exact tape-count figures depend on the product line and will be provided by the client.",
+        "disclaimer": "These figures are approximate. The exact amount is chosen individually.",
         "bioTapeLink": "Fine or thin hair? Have a look at bio-tapes: they have the lightest attachment."
       },
       "selfCorrection": {
         "title": "Self-correction",
         "description": "Once you've learned the technique in a course, the tapes can be repositioned yourself at home. You don't have to visit a stylist every time — you just need the right materials and to follow the method strictly.",
         "warningTitle": "Important note",
-        "warningText": "Below is a general sequence of correction steps, not a complete protocol. The exact list of materials and step-by-step method is taught in the training course — self-correction without training, or with the method not followed, can damage your natural hair.",
+        "warningText": "Below is a general sequence of correction steps, not a complete protocol. The step-by-step method is covered in the video lessons we send when you buy hair and in our training course. Correction without preparation, or with the technique not followed, can damage your own hair.",
         "stepsHeading": "General sequence",
         "steps": [
           {
@@ -568,7 +577,7 @@
             "description": "Make sure the tape sits evenly and doesn't pinch your natural hair, adjusting if needed."
           }
         ],
-        "disclaimer": "TODO_CLIENT: the exact protocol, list of materials, and recommended correction frequency will be provided by the course instructor.",
+        "disclaimer": "Doing it yourself takes care and following the technique. If you have no experience, study the instructions first and see a professional if needed.",
         "academyBridge": {
           "text": "Correction is a separate block of the Da Vinchi training programme: an online video course or in-person classes in Tbilisi.",
           "link": "Go to training"
@@ -577,15 +586,21 @@
     },
     "care": {
       "title": "Care & lifespan",
-      "description": "Quality tapes and hair are designed for repeated use and, with correct care, last a year or longer.",
-      "lifespanHeading": "What shortens the lifespan",
-      "lifespanItems": [
-        "Using oils and heavy conditioners near the tape attachment area",
-        "Rough brushing and sleeping with hair down and unsecured",
-        "Self-correction without training or with the method not followed",
-        "Using products and tools not recommended by your stylist"
+      "description": "How to wash, style and look after your extensions so they keep their length and thickness longer.",
+      "rulesHeading": "Home care essentials",
+      "rules": [
+        "Shampoo goes on the scalp and the attachment area.",
+        "Masks, conditioners, oils and leave-in products go on the lengths, away from the tapes.",
+        "Heat protection and moderate temperatures keep your hair in good condition.",
+        "A correction every 2–2.5 months on average keeps the extensions comfortable and neat.",
+        "Gentle care helps keep length and thickness for a long time.",
+        "Extend at home or with a stylist: choose the format that suits you."
       ],
-      "disclaimer": "TODO_CLIENT: a detailed step-by-step care routine (products, washing frequency, styling) will be provided by the client.",
+      "closing": [
+        "We select natural hair around your wishes so the extensions look harmonious and home care stays as familiar as possible.",
+        "Our goal is not just to add length and thickness, but to help you enjoy beautiful hair and create the looks you love again and again.",
+        "Natural hair. Individual selection. Beauty that stays with you."
+      ],
       "selfCorrectionBridge": {
         "text": "Repositioning tapes the wrong way shortens the system’s lifespan. It is safer to learn the technique first.",
         "guideLink": "Self-correction guide",
@@ -617,15 +632,15 @@
           "items": [
             {
               "question": "How long does a Tape-In system last?",
-              "answer": "With correct installation and care — a year or longer; the tape is suitable for repeated use."
+              "answer": "With proper care, natural tape-in hair can last a year or longer, and several years if handled gently. The system can be reused many times."
             },
             {
               "question": "Can I correct the tapes myself?",
-              "answer": "Yes, once you've learned the technique — the tapes can be repositioned yourself at home, without visiting a stylist every time."
+              "answer": "Yes. You can re-tape at home without visiting a stylist every time. When you buy hair, we send recorded video lessons on working with tapes, and you can learn the technique in depth in our training."
             },
             {
               "question": "What's the difference between Imitation 2.0 and 1.0?",
-              "answer": "With Imitation 1.0, a small strip of tape — about 2 mm — may be visible up close. With Imitation 2.0, hair is hand-stitched strand by strand, and the tape itself is completely invisible."
+              "answer": "Imitation 1.0 leaves a small visible edge of about 2–3 mm and takes 5–7 days to make. Imitation 2.0 is fully hand-stitched, hair by hair, so there is no visible edge; it takes 3–4 weeks to make."
             },
             {
               "question": "How do I choose a colour?",
@@ -633,11 +648,11 @@
             },
             {
               "question": "How much does a system cost?",
-              "answer": "TODO_CLIENT: pricing isn't published — we'll send it in response to your inquiry based on length and colour."
+              "answer": "For example, 50 cm, 100 g of hair on Imitation 1.0 costs $390, and on Imitation 2.0 it costs $520. We calculate the exact price on request: it depends on length, weight, shade and technique."
             },
             {
               "question": "What tape width do you use?",
-              "answer": "TODO_CLIENT: tape width (3 cm, 4 cm, or other) has not been provided by the client."
+              "answer": "A classic tape is about 4 cm wide and about 1 cm high. We can make tapes of any size on request."
             }
           ]
         },

@@ -12,15 +12,17 @@ import type { Locale } from "@/i18n/routing";
 
 type PageProps = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const ru = await getTypedMessages();
   return {
-  alternates: buildLanguageAlternates("/care"),
-  title: `${ru.pages.care.title} | Da Vinchi Hair`,
-  description: ru.pages.care.description,
-};
+    alternates: buildLanguageAlternates("/care"),
+    title: `${ru.pages.care.title} | Da Vinchi Hair`,
+    description: ru.pages.care.description,
+  };
 }
 
 export default async function CarePage({ params }: PageProps) {
@@ -46,23 +48,43 @@ export default async function CarePage({ params }: PageProps) {
         />
       }
       after={
-        <div className="flex flex-col gap-4 border-t border-border pt-10">
-          <h2 className="font-heading text-2xl text-ink-strong">{copy.lifespanHeading}</h2>
-          <ul className="flex flex-col gap-2 pl-5 text-ink">
-            {copy.lifespanItems.map((item) => (
-              <li key={item} className="list-disc pl-1 leading-relaxed">
-                {item}
-              </li>
+        <div className="flex flex-col gap-10 border-t border-border pt-10">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-heading text-2xl text-ink-strong">
+              {copy.rulesHeading}
+            </h2>
+            <ol className="flex flex-col gap-4">
+              {copy.rules.map((rule, index) => (
+                <li key={rule} className="flex gap-4">
+                  <span className="font-heading text-2xl leading-none text-ink-muted lining-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="leading-relaxed text-ink">{rule}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="flex max-w-2xl flex-col gap-3">
+            <p className="caps text-ink-muted">Da Vinchi Hair</p>
+            {copy.closing.map((paragraph) => (
+              <p key={paragraph} className="leading-relaxed text-ink">
+                {paragraph}
+              </p>
             ))}
-          </ul>
+          </div>
           <SelfCorrectionBridge
             text={copy.selfCorrectionBridge.text}
             links={[
-              { href: "/guides/self-correction", label: copy.selfCorrectionBridge.guideLink },
-              { href: "/academy", label: copy.selfCorrectionBridge.academyLink },
+              {
+                href: "/guides/self-correction",
+                label: copy.selfCorrectionBridge.guideLink,
+              },
+              {
+                href: "/academy",
+                label: copy.selfCorrectionBridge.academyLink,
+              },
             ]}
           />
-          <p className="text-xs text-ink-muted">{copy.disclaimer}</p>
         </div>
       }
     >
