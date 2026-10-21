@@ -127,7 +127,7 @@ export const reviewsSchema = z.strictObject({
     .array(
       z.strictObject({
         id: z.string().min(1),
-        text: z.string().min(1),
+        text: i18nStringSchema,
       }) satisfies z.ZodType<Review>,
     )
     .min(1),
