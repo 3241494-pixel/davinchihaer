@@ -303,5 +303,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoKABMAPu1iqk2ppaQiMAgBMB2JQBgdRAAEExDK3GHrKSPpAADiUQ7STlO+Gtw5PtbLU9pzqd6DAqF8EHubOCxP3VlYC7SInH3+UTNlFDkHSXKuMXDiWlAB5kN8/HIG3evmCia8Pez413500AAAAA==",
     "width": 600,
     "height": 1125
+  },
+  "/images/brand/founder-svetlana.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoKAA0ABABoJQBOgB9ix6En+OvAAP7KqxiwqsigXD04Ft3nqKVUXjVFoqLG2owjeX0yCXlxOijK/fLhQKkTt8JnZVJV3In9hUQvb7mQAAA=",
+    "width": 916,
+    "height": 1145
   }
 }

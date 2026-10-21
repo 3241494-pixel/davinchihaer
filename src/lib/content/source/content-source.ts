@@ -12,4 +12,6 @@ export interface ContentSource {
   getCostComparisonRaw(): unknown;
   /** Сырые отзывы клиентов для главной. */
   getReviewsRaw(): unknown;
+  /** Сырая история основателя и бренда для «О бренде» и цитаты на главной. */
+  getFounderRaw(): unknown;
 }

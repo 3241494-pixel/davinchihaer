@@ -521,6 +521,17 @@ export const IMAGES = {
       ka: 'წაბლისფერი თმა დაგრძელების შემდეგ, ხედი უკნიდან', // TODO_I18N
     },
   },
+
+  founderPortrait: {
+    path: '/images/brand/founder-svetlana.webp',
+    usage: ['brand'],
+    alt: {
+      ru: 'Светлана Делягина, основатель Da Vinchi Hair',
+      en: 'Svetlana Delyagina, founder of Da Vinchi Hair',
+      ka: 'სვეტლანა დელიაგინა, Da Vinchi Hair-ის დამფუძნებელი', // TODO_I18N
+    },
+    note: 'Вырезано из сторис «Знакомство» (IMG_6516) без надписей. Заменить на исходник фотосессии, когда пришлют.',
+  },
 } as const satisfies Record<string, ImageEntry>;
 
 export type ImageKey = keyof typeof IMAGES;

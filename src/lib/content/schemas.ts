@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES } from "./enums";
-import type { CostComparison, I18nString, Review } from "./types";
+import type { CostComparison, Founder, I18nString, Review } from "./types";
 
 export { ATTACHMENTS, COLOR_GROUPS, MATERIAL_TYPES, ORIGINS, STRUCTURES };
 
@@ -132,3 +132,19 @@ export const reviewsSchema = z.strictObject({
     )
     .min(1),
 });
+
+export const founderSchema = z.strictObject({
+  _source: z.string().optional(),
+  name: i18nStringSchema,
+  role: i18nStringSchema,
+  intro: i18nStringSchema,
+  timeline: z
+    .array(
+      z.strictObject({
+        year: z.number().int().min(1900).max(2100),
+        text: i18nStringSchema,
+      }),
+    )
+    .min(1),
+  quote: i18nStringSchema,
+}) satisfies z.ZodType<Founder & { _source?: string }>;

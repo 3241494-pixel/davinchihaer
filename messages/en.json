@@ -601,9 +601,8 @@
     "about": {
       "title": "About us",
       "intro": "Da Vinchi Hair is a Tbilisi-based brand: selling hair and Tape-In extension systems, wholesale supply for stylists and salons, and training in the technique online and in person in Tbilisi.",
-      "historyHeading": "Our story",
-      "historyTodo": "TODO_CLIENT: the brand's story and the founder's story have not been provided by the client.",
-      "photoTodo": "TODO_CLIENT: a photo of the founder/team has not been provided by the client."
+      "founderEyebrow": "Founder",
+      "historyHeading": "Our story"
     },
     "delivery": {
       "title": "Delivery & payment",
@@ -1117,8 +1116,7 @@
     "materials": "Materials"
   },
   "founderQuote": {
-    "text": "TODO_CLIENT: founder quote not provided by the client yet.",
-    "author": "TODO_CLIENT: founder name"
+    "storyLink": "Our story"
   },
   "ctaBand": {
     "eyebrow": "Matching",

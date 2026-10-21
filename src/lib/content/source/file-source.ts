@@ -41,6 +41,10 @@ export class FileContentSource implements ContentSource {
   getReviewsRaw(): unknown {
     return readJson(path.join(CONTENT_ROOT, "reviews.json"));
   }
+
+  getFounderRaw(): unknown {
+    return readJson(path.join(CONTENT_ROOT, "founder.json"));
+  }
 }
 
 export const fileContentSource = new FileContentSource();

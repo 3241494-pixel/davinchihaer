@@ -91,7 +91,7 @@ export default async function Home({
 
       <Section tone="surface-alt">
         <Container>
-          <FounderQuote />
+          <FounderQuote storyLink />
         </Container>
       </Section>
 

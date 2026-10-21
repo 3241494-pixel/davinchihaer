@@ -174,3 +174,21 @@ export interface Review {
   id: string;
   text: I18nString;
 }
+
+/** Год и событие в истории бренда, от первого лица основателя. */
+export interface FounderMilestone {
+  year: number;
+  text: I18nString;
+}
+
+/**
+ * Основатель и история бренда (страница «О бренде») плюс цитата для главной.
+ * ru — слова основателя, en и ka — перевод с русского.
+ */
+export interface Founder {
+  name: I18nString;
+  role: I18nString;
+  intro: I18nString;
+  timeline: FounderMilestone[];
+  quote: I18nString;
+}
