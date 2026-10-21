@@ -30,6 +30,8 @@ export function ProductCard({ product, colorsByCode, imageExists }: ProductCardP
       : formatMessage(ru.catalog.priceFrom, { price: formatPrice(range.min, locale) });
 
   let paramsLine: string;
+  // Оттенки товара в порядке палитры: colorsByCode собран из colors.json.
+  let shadeColors: HairColor[] = [];
   if (product.kind === "hair") {
     const lengths = Array.from(new Set(product.variants.map((variant) => variant.length))).sort(
       (a, b) => a - b,
@@ -37,12 +39,11 @@ export function ProductCard({ product, colorsByCode, imageExists }: ProductCardP
     const weights = Array.from(new Set(product.variants.map((variant) => variant.weightGrams))).sort(
       (a, b) => a - b,
     );
-    const shades = new Set(
-      product.variants.map((variant) => variant.color).filter((code) => colorsByCode.has(code)),
-    ).size;
+    const codes = new Set(product.variants.map((variant) => variant.color));
+    shadeColors = Array.from(colorsByCode.values()).filter((color) => codes.has(color.code));
     paramsLine = [
       formatRange(lengths, ru.catalog.lengthUnit),
-      formatMessage(ru.catalog.shadesCount, { count: shades }),
+      formatMessage(ru.catalog.shadesCount, { count: shadeColors.length }),
       formatRange(weights, ru.product.weightUnit),
     ].join(" · ");
   } else {
@@ -108,6 +109,22 @@ export function ProductCard({ product, colorsByCode, imageExists }: ProductCardP
       <div className="flex flex-1 flex-col gap-1.5 pt-3 pb-1">
         <h3 className="caps font-medium text-ink-strong">{pickLocale(product.title, locale)}</h3>
         <p className="text-sm text-ink-muted">{paramsLine}</p>
+        {shadeColors.length > 0 && (
+          <span aria-hidden className="flex flex-wrap gap-1 pt-0.5">
+            {shadeColors.map((color) => (
+              <span
+                key={color.code}
+                className="size-4 rounded-full border border-border bg-cover bg-center"
+                // Фото пряди или hex приходят из данных оттенка — инлайн-стиль, как в ColorSwatch.
+                style={
+                  color.swatchImage
+                    ? { backgroundImage: `url(${color.swatchImage})` }
+                    : { backgroundColor: color.hex }
+                }
+              />
+            ))}
+          </span>
+        )}
         <p className="text-[15px] font-medium tabular-nums text-ink">{priceLabel}</p>
         <span className="caps mt-auto pt-2 text-ink underline decoration-border underline-offset-4 transition-colors duration-200 group-hover:decoration-ink">
           {cta}

@@ -19,9 +19,9 @@
     "ka": "ძალიან თხელი ლენტი და ბრტყელი მიმაგრება. მინიმალური დატვირთვა, შესაფერისია თხელი თმისთვის."
   },
   "description": {
-    "ru": "Разновидность ленточного наращивания, при котором прядь фиксируется между двумя слоями собственных волос лентой с клеевой основой с обеих сторон. Лента очень тонкая, поэтому крепление получается плоским и аккуратным. Ленты плотно прилегают к волосам и создают естественный переход.\n\nБиоленты особенно подходят для тонких волос. Лёгкое плоское крепление не перегружает собственные волосы, а при правильно подобранном объёме и соблюдении технологии они могут спокойно расти и восстанавливаться в процессе носки.",
-    "en": "A type of tape-in extension where the weft is fixed between two layers of your own hair with a tape that is adhesive on both sides. The tape is very thin, so the attachment is flat and neat. The tapes sit close to the hair and blend naturally.\n\nBio-tapes are especially suited to fine hair. The light, flat attachment does not overload your own hair, and with the right volume and proper technique it can keep growing and recovering while you wear them.",
-    "ka": "ლენტური დაგრძელების სახეობა, როცა კულული საკუთარი თმის ორ ფენას შორის ორმხრივად წებოვანი ლენტით მაგრდება. ლენტი ძალიან თხელია, ამიტომ მიმაგრება ბრტყელი და მოწესრიგებულია.\n\nბიოლენტები განსაკუთრებით შეეფერება თხელ თმას."
+    "ru": "Биолента — единая монолитная клейкая лента с двусторонним клеевым слоем. Она устанавливается у основания волос и соединяет собственные волосы с наращиваемой прядью. Лента очень тонкая, поэтому крепление получается плоским и аккуратным. Ленты плотно прилегают к волосам и создают естественный переход.\n\nБиоленты особенно подходят для тонких волос. Лёгкое плоское крепление не перегружает собственные волосы, а при правильно подобранном объёме и соблюдении технологии они могут спокойно расти и восстанавливаться в процессе носки.",
+    "en": "A bio-tape is a single, solid adhesive tape with adhesive on both sides. It is placed close to the roots and joins your own hair to the extension strand. The tape is very thin, so the attachment is flat and neat. The tapes sit close to the hair and blend naturally.\n\nBio-tapes are especially suited to fine hair. The light, flat attachment does not overload your own hair, and with the right volume and proper technique it can keep growing and recovering while you wear them.",
+    "ka": "ბიოლენტა ერთიანი მონოლითური წებოვანი ლენტაა ორმხრივი წებოვანი ფენით. ის თმის ძირთან ახლოს მაგრდება და საკუთარ თმას დაგრძელების კულულთან აერთებს. ლენტი ძალიან თხელია, ამიტომ მიმაგრება ბრტყელი და მოწესრიგებულია.\n\nბიოლენტები განსაკუთრებით შეეფერება თხელ თმას."
   },
   "attachment": "bio-tape",
   "structure": "wavy",
@@ -96,7 +96,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "1.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-10-100"
     },
     {
@@ -168,7 +168,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "3.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-30-100"
     },
     {
@@ -224,6 +224,312 @@
       "color": "4.0",
       "inStock": true,
       "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-40-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-40-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-40-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-40-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-40-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-70-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-70-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-70-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-70-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-70-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-70-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-70-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-70-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-70-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-70-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-70-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-70-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-70-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-70-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-70-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-70-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-90-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-90-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-90-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-90-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-90-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-90-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-90-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-90-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-90-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-90-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-90-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-90-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-90-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-90-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-90-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-90-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-100-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-100-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-100-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-100-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-100-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-100-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-100-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-100-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-100-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-100-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-100-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-100-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-100-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-100-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-100-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-100-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-120-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-120-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-40-120-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-40-120-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-120-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-120-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-50-120-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-50-120-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-120-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-120-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-60-120-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-60-120-100"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-120-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-120-50"
+    },
+    {
+      "id": "bio-tape-vietnam-wavy-70-120-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-BIO-TAPE-VIETNAM-WAVY-70-120-100"
     }
   ],
   "images": [

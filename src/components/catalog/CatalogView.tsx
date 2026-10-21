@@ -54,7 +54,10 @@ function CatalogViewFallback({ products }: CatalogViewProps) {
       <CategoryIntro section="hair" />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 xl:grid-cols-4">
         {products.slice(0, 12).map((product) => (
-          <div key={product.slug} className="aspect-[3/4] animate-pulse rounded-base bg-surface-alt" />
+          <div
+            key={product.slug}
+            className="aspect-[3/4] animate-pulse rounded-base bg-surface-alt"
+          />
         ))}
       </div>
     </Container>
@@ -74,7 +77,9 @@ function CatalogViewInner({
 
   const { filters, limit } = parseCatalogSearchParams(raw);
   const editableFilters: EditableFilters = filters;
-  const hasPrices = products.some((p) => p.variants.some((v) => v.price !== undefined));
+  const hasPrices = products.some((p) =>
+    p.variants.some((v) => v.price !== undefined),
+  );
 
   const colorsByCode = new Map(colors.map((c) => [c.code, c] as const));
 
@@ -97,7 +102,9 @@ function CatalogViewInner({
         <div className="min-w-0 flex-1">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <p className="text-sm text-ink-muted">
-              {formatMessage(ru.catalog.resultsCount, { count: filtered.length })}
+              {formatMessage(ru.catalog.resultsCount, {
+                count: filtered.length,
+              })}
             </p>
             <div className="flex items-center gap-3">
               <FiltersMobile
@@ -131,6 +138,9 @@ function CatalogViewInner({
           ) : (
             <EmptyState resetHref={pathname} />
           )}
+          <p className="mt-8 max-w-prose text-xs leading-relaxed text-ink-muted">
+            {ru.catalog.colorDisclaimer}
+          </p>
         </div>
       </div>
     </Container>

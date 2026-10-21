@@ -39,14 +39,23 @@ function unique<T>(values: T[]): T[] {
   return Array.from(new Set(values));
 }
 
-/** Порядок выбора: оттенок → длина → густота. */
-function useHairSelection(variants: HairVariant[]): HairSelection {
+/**
+ * Порядок выбора: оттенок → длина → густота. Оттенки показываются в порядке
+ * палитры (colors.json), а не в порядке вариантов товара.
+ */
+function useHairSelection(variants: HairVariant[], paletteOrder: string[]): HairSelection {
   const defaultVariant = variants.find((variant) => variant.inStock) ?? variants[0];
   const [selectedColor, setColorState] = useState<string>(defaultVariant?.color ?? "");
   const [selectedLength, setLengthState] = useState<HairLength>(defaultVariant?.length ?? 40);
   const [selectedWeight, setWeightState] = useState<number>(defaultVariant?.weightGrams ?? 0);
 
-  const availableColorCodes = useMemo(() => unique(variants.map((v) => v.color)), [variants]);
+  const availableColorCodes = useMemo(() => {
+    const rank = (code: string) => {
+      const index = paletteOrder.indexOf(code);
+      return index === -1 ? paletteOrder.length : index;
+    };
+    return unique(variants.map((v) => v.color)).sort((a, b) => rank(a) - rank(b));
+  }, [variants, paletteOrder]);
   const availableLengths = useMemo(
     () => unique(variants.map((v) => v.length)).sort((a, b) => a - b),
     [variants],
@@ -111,8 +120,10 @@ export function VariantProvider({ product, colors, children }: VariantProviderPr
     () => new Map(colors.map((color) => [color.code, color] as const)),
     [colors],
   );
+  const paletteOrder = useMemo(() => colors.map((color) => color.code), [colors]);
   const hairSelection = useHairSelection(
     product.kind === "hair" ? product.variants : NO_HAIR_VARIANTS,
+    paletteOrder,
   );
 
   const value: VariantContextValue =

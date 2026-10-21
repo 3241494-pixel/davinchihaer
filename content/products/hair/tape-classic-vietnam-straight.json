@@ -96,7 +96,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "1.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-10-100"
     },
     {
@@ -168,7 +168,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "3.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-30-100"
     },
     {
@@ -240,7 +240,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "4.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-40-100"
     },
     {
@@ -296,6 +296,240 @@
       "color": "7.0",
       "inStock": true,
       "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-70-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-70-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-70-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-70-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-70-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-90-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-90-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-90-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-90-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-90-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-90-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-90-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-90-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-90-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-90-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-90-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-90-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-90-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-90-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-90-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "9.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-90-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-100-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-100-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-100-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-100-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-100-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-100-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-100-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-100-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-100-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-100-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-100-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-100-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-100-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-100-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-100-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "10.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-100-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-120-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-120-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-40-120-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-40-120-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-120-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-120-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-50-120-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-50-120-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-120-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-120-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-60-120-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-60-120-100"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-120-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-120-50"
+    },
+    {
+      "id": "tape-classic-vietnam-straight-70-120-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-TAPE-CLASSIC-VIETNAM-STRAIGHT-70-120-100"
     }
   ],
   "images": [

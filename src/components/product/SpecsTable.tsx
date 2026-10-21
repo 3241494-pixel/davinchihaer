@@ -3,6 +3,7 @@
 import { useLocale } from "next-intl";
 import { useTypedMessages } from "@/i18n/use-messages";
 import { pickLocale } from "@/lib/content/locale";
+import { isPlaceholderSku } from "@/lib/content/sku";
 import { useVariantSelection } from "./variant-context";
 
 function Row({ label, value }: { label: string; value: string }) {
@@ -44,7 +45,9 @@ export function SpecsTable() {
             <Row label={labels.volume} value={`${volumeMl} ${ru.product.units.ml}`} />
           )}
           <Row label={labels.compatibleWith} value={compatible} />
-          <Row label={labels.sku} value={selectedVariant.sku} />
+          {!isPlaceholderSku(selectedVariant.sku) && (
+            <Row label={labels.sku} value={selectedVariant.sku} />
+          )}
         </tbody>
       </table>
     );
@@ -66,7 +69,9 @@ export function SpecsTable() {
         {selectedVariant.tapesCount !== undefined && (
           <Row label={labels.tapesCount} value={String(selectedVariant.tapesCount)} />
         )}
-        <Row label={labels.sku} value={selectedVariant.sku} />
+        {!isPlaceholderSku(selectedVariant.sku) && (
+          <Row label={labels.sku} value={selectedVariant.sku} />
+        )}
       </tbody>
     </table>
   );

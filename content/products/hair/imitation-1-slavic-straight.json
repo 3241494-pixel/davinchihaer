@@ -96,8 +96,296 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "9.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-90-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-10-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-10-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-10-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-10-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-10-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-10-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-10-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-10-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-10-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-10-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-10-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-10-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-10-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-10-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-10-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "1.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-10-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-30-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-30-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-30-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-30-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-30-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-30-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-30-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-30-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-30-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-30-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-30-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-30-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-30-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-30-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-30-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "3.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-30-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-40-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-40-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-40-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-40-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-40-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-40-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-40-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-40-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-40-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-40-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-40-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-40-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-40-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-40-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-40-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "4.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-40-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-70-50",
+      "length": 40,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-70-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-40-70-100",
+      "length": 40,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-40-70-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-70-50",
+      "length": 50,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-70-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-50-70-100",
+      "length": 50,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-50-70-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-70-50",
+      "length": 60,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-70-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-60-70-100",
+      "length": 60,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-70-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-70-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-70-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-70-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "7.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-70-100"
     },
     {
       "id": "imitation-1-slavic-straight-40-100-50",
@@ -168,7 +456,7 @@
       "weightGrams": 100,
       "tapesCount": 40,
       "color": "10.0",
-      "inStock": false,
+      "inStock": true,
       "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-100-100"
     },
     {
@@ -224,6 +512,24 @@
       "color": "12.0",
       "inStock": true,
       "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-60-120-100"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-120-50",
+      "length": 70,
+      "weightGrams": 50,
+      "tapesCount": 20,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-120-50"
+    },
+    {
+      "id": "imitation-1-slavic-straight-70-120-100",
+      "length": 70,
+      "weightGrams": 100,
+      "tapesCount": 40,
+      "color": "12.0",
+      "inStock": true,
+      "sku": "DEMO-IMITATION-1-SLAVIC-STRAIGHT-70-120-100"
     }
   ],
   "images": [
